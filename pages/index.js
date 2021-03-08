@@ -1,28 +1,28 @@
+import Link from "next/link";
 import Head from "next/head";
+import Layout, { siteTitle } from "../components/Layout/Layout";
 import styles from "../styles/Home.module.css";
+import utilStyles from "../styles/utils.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Layout home>
       <Head>
-        <title>Wellroun.dev</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
       </Head>
+      <section className={utilStyles.headingMd}>
+        <p>Hi! I am Pablo</p>
+        <p>These are my favourite tools an techniques</p>
+      </section>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Wellroun.dev</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by selecting your favourite tools an techniques
-        </p>
-
+      <div className={styles.container}>
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Frontend &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <Link href="/stacks/frontend">
+            <a className={styles.card} rel="noopener noreferrer">
+              <h3>Frontend &rarr;</h3>
+              <p>Find in-depth information about Next.js features and API.</p>
+            </a>
+          </Link>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
             <h3>Backend &rarr;</h3>
@@ -67,18 +67,7 @@ export default function Home() {
             </p>
           </a>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+      </div>
+    </Layout>
   );
 }
