@@ -2,7 +2,6 @@ import Link from "next/link";
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/Layout/Layout";
 import styles from "../styles/Home.module.css";
-import utilStyles from "../styles/utils.module.css";
 
 export default function Home() {
   return (
@@ -10,13 +9,13 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <section className="m-5 text-xl leading-6">
         <p>Hi! I am Pablo</p>
         <p>These are my favourite tools an techniques</p>
       </section>
 
-      <div className={styles.container}>
-        <div className={styles.grid}>
+      <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-wrap items-center justify-center max-w-full flex-col md:max-w-4xl md:flex-row">
           <Link href="/stacks/frontend">
             <a className={styles.card} rel="noopener noreferrer">
               <h3>Frontend &rarr;</h3>

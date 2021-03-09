@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "./layout.module.css";
-import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
 
 const name = "Pablo Porto";
@@ -9,7 +7,7 @@ export const siteTitle = "Wellrounded";
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div className="max-w-3xl px-0 py-4 mx-auto my-16">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -25,18 +23,20 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+      <header className="flex flex-col items-center">
         {home ? (
           <>
             <Image
               priority
               src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
+              className="rounded-full"
               height={144}
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className="text-4xl leading-5 font-extrabold tracking-tighter mt-6 mb-6">
+              {name}
+            </h1>
           </>
         ) : (
           <>
@@ -45,16 +45,16 @@ export default function Layout({ children, home }) {
                 <Image
                   priority
                   src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
+                  className="rounded-full"
                   height={108}
                   width={108}
                   alt={name}
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2 className="text-2xl leading-6 mt-4">
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a className="text-current">{name}</a>
               </Link>
             </h2>
           </>
@@ -62,20 +62,21 @@ export default function Layout({ children, home }) {
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <div className="mt-12">
           <Link href="/">
             <a>← Back to home</a>
           </Link>
         </div>
       )}
-      <footer className={styles.footer}>
+      <footer className="flex w-full h-28 items-center mt-8 justify-center border-t border-solid border-gray-100">
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
+          className="flex justify-center items-center"
         >
           Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          <img src="/vercel.svg" alt="Vercel Logo" className="ml-2 h-4" />
         </a>
       </footer>
     </div>
