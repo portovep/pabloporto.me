@@ -34,9 +34,6 @@ export default function Layout({ children, home }) {
               width={144}
               alt={name}
             />
-            <h1 className="text-4xl leading-5 font-extrabold tracking-tighter mt-6 mb-6">
-              {name}
-            </h1>
           </>
         ) : (
           <>

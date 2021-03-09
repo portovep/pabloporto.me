@@ -45,9 +45,10 @@ export default function Post({ postData }) {
           >
             {postData.title}
           </a>
-          <p className="mt-2 text-gray-600">
-            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-          </p>
+          <div
+            className="mt-2 text-gray-600"
+            dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+          />
         </div>
       </div>
     </Layout>

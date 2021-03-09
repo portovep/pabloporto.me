@@ -9,24 +9,31 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className="text-xl leading-6">
-        <p>Hi! I am Pablo</p>
-        <p>
-          You can access to some test articles
-          <Link href={`/posts`}>
-            <a
-              className="text-blue-500 hover:underline"
-              rel="noopener noreferrer"
-            >
-              {" "}
-              here.
-            </a>
-          </Link>
-        </p>
-        <p>These are my favourite tools an techniques.</p>
+      <section className="mt-12 text-xl leading-6">
+        <div className="max-w-2xl px-6 text-center mx-auto">
+          <h2 className="text-3xl font-semibold text-gray-800">
+            Hi,
+            <span className="bg-indigo-600 text-white rounded px-1">
+              I’m Pablo
+            </span>
+            . Nice to meet you.
+          </h2>
+          <p className="text-gray-600 mt-4">
+            You can access to some test articles
+            <Link href={`/posts`}>
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+              >
+                &nbsp;here.&nbsp;
+              </a>
+            </Link>
+            These are my favourite tools an techniques.
+          </p>
+        </div>
       </section>
 
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center mt-10">
         <div className="flex flex-wrap items-center justify-center max-w-full flex-col md:max-w-4xl md:flex-row">
           <Link href="/stacks/frontend">
             <a className={styles.card} rel="noopener noreferrer">
