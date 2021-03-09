@@ -9,9 +9,21 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className="m-5 text-xl leading-6">
+      <section className="text-xl leading-6">
         <p>Hi! I am Pablo</p>
-        <p>These are my favourite tools an techniques</p>
+        <p>
+          You can access to some test articles
+          <Link href={`/posts`}>
+            <a
+              className="text-blue-500 hover:underline"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              here.
+            </a>
+          </Link>
+        </p>
+        <p>These are my favourite tools an techniques.</p>
       </section>
 
       <div className="flex flex-col justify-center items-center">
