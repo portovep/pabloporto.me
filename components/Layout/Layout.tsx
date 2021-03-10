@@ -3,17 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 
 const name = "Pablo Porto";
-export const siteTitle = "Wellrounded";
+export const siteTitle = "Welcome - Pablo Porto Veloso";
 
-export default function Layout({ children, home }) {
+type LayoutProps = {
+  children: React.ReactNode;
+  home?: boolean;
+};
+
+export default function Layout({ children, home }: LayoutProps) {
   return (
     <div className="max-w-3xl px-0 py-4 mx-auto my-16">
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
+        <meta name="description" content="" />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(

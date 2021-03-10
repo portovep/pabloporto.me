@@ -1,7 +1,12 @@
 import Link from "next/link";
+import { PostData } from "../../lib/posts";
 import Date from "../Date/Date";
 
-export default function PostSummary(props) {
+type PostSummaryProps = {
+  postData: PostData;
+};
+
+export default function PostSummary(props: PostSummaryProps) {
   const { date, tag, title, id } = props.postData;
   return (
     <div className="mt-6">
@@ -14,7 +19,7 @@ export default function PostSummary(props) {
             href="#"
             className="px-2 py-1 bg-gray-600 text-gray-100 font-bold rounded hover:bg-gray-500"
           >
-            {tag || "Default"}
+            {tag || "Random"}
           </a>
         </div>
         <div className="mt-3 text-2xl text-gray-700 font-bold">{title}</div>
