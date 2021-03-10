@@ -6,7 +6,45 @@ import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
-const parsePost = async (fileName) => {
+export type PostData = {
+  id: string;
+  title: string;
+  contentHtml: string;
+  date: string;
+  tag?: string;
+};
+
+export const getPostData = async (id: string) => {
+  return await parsePost(`${id}.md`);
+};
+
+export const getSortedPostsData = async () => {
+  const fileNames = fs.readdirSync(postsDirectory);
+
+  const posts = await Promise.all(fileNames.map(parsePost));
+
+  return posts.sort((a: any, b: any) => {
+    if (a.date < b.date) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+};
+
+export const getAllPostIds = async () => {
+  const fileNames = fs.readdirSync(postsDirectory);
+
+  return fileNames.map((fileName) => {
+    return {
+      params: {
+        id: fileName.replace(/\.md$/, ""),
+      },
+    };
+  });
+};
+
+const parsePost = async (fileName: string) => {
   const id = fileName.replace(/\.md$/, "");
 
   const fullPath = path.join(postsDirectory, fileName);
@@ -23,35 +61,5 @@ const parsePost = async (fileName) => {
     id,
     contentHtml,
     ...matterResult.data,
-  };
+  } as PostData;
 };
-
-export async function getSortedPostsData() {
-  const fileNames = fs.readdirSync(postsDirectory);
-
-  const posts = await Promise.all(fileNames.map(parsePost));
-
-  return posts.sort((a: any, b: any) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
-}
-
-export async function getPostData(id) {
-  return await parsePost(`${id}.md`);
-}
-
-export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
-
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, ""),
-      },
-    };
-  });
-}
