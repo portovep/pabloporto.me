@@ -18,16 +18,19 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
-            - run: |
+            - name: Lint & Format checks
+              run: |
                 npm ci
                 npm run lint
                 npm run format
+            - name: Build
+              run: |
+                npm run build
             - name: Upload artifacts
               uses: actions/upload-artifact@v2
               with:
                 name: build-artifact
-                path: |
-                    .next
+                path: .next/
 
     preview:
         name: preview
