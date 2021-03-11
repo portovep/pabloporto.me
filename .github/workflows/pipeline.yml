@@ -14,10 +14,43 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
-            - name: Use Node.js ${{ matrix.node-version }}
+            - name: Build with Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
-            - run: npm ci
-            - run: npm run lint
-            - run: npm run prettier
+            - run: |
+                npm ci
+                npm run lint
+                npm run format
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v2
+              with:
+                name: build-artifact
+                path: |
+                    .next
+
+    preview:
+        name: preview
+        needs: build
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [14.x]
+
+        steps:
+            - name: Download build artifact
+              uses: actions/download-artifact@v2
+              with:
+                name: build-artifact
+            - name: Deploy to preview environment
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+              run: |
+                npm i -g vercel
+                vercel --token "$VERCEL_TOKEN" > deployment-url.txt
+             env:
+                VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+                VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+                VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
