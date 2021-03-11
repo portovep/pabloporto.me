@@ -6,8 +6,10 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "eslint --fix . --ignore-path ./.gitignore",
-        "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+        "lint": "eslint . --ignore-path ./.gitignore",
+        "lint:fix": "eslint --fix . --ignore-path ./.gitignore",
+        "format": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+        "format:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
     },
     "dependencies": {
         "date-fns": "^2.19.0",
