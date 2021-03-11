@@ -23,17 +23,9 @@ jobs:
                 npm ci
                 npm run lint
                 npm run format
-            - name: Build
-              run: |
-                npm run build
-            - name: Upload artifacts
-              uses: actions/upload-artifact@v2
-              with:
-                name: build-artifact
-                path: .next/
 
     preview:
-        name: preview
+        name: Deploy for preview
         needs: build
         runs-on: ubuntu-latest
 
@@ -42,18 +34,21 @@ jobs:
                 node-version: [14.x]
 
         steps:
-            - name: Download build artifact
-              uses: actions/download-artifact@v2
-              with:
-                name: build-artifact
-            - name: Deploy to preview environment
+            - uses: actions/checkout@v2
+            - name: Deploy with Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
-            - run: |
+            - name: Deploy to preview environment
+              run: |
                 npm i -g vercel
                 vercel --token "$VERCEL_TOKEN" > deployment-url.txt
               env:
                 VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
                 VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
                 VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v2
+              with:
+                name: preview-deployment-url
+                path: deployment-url.txt
