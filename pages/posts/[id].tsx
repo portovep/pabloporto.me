@@ -19,16 +19,14 @@ export default function Post({ postData }: PostProps) {
                     <span className="font-light text-gray-600">
                         <Date dateString={postData.date} />
                     </span>
-                    <a
-                        className="px-2 py-1 bg-gray-600 text-gray-100 font-bold rounded hover:bg-gray-500"
-                        href="#">
+                    <span className="px-2 py-1 bg-gray-600 text-gray-100 font-bold rounded hover:bg-gray-500">
                         {postData.tag || 'Random'}
-                    </a>
+                    </span>
                 </div>
                 <div className="mt-2">
-                    <a className="text-2xl text-gray-700 font-bold hover:text-gray-600" href="#">
+                    <h2 className="text-2xl text-gray-700 font-bold hover:text-gray-600">
                         {postData.title}
-                    </a>
+                    </h2>
                     <div
                         className="mt-2 text-gray-600"
                         dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
