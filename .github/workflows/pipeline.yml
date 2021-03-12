@@ -74,10 +74,11 @@ jobs:
                   node-version: ${{ matrix.node-version }}
             - name: Check performance
               run: |
-                export DEPLOYMENT_URL=$(cat preview-deployment-url.txt)
-                echo "Target URL: $DEPLOYMENT_URL"
+                ls -la 
+                deployment_url=`cat preview-deployment-url.txt`
+                echo Target URL: $deployment_url
                 npm i -g @lhci/cli@0.7.x
-                lhci autorun --collect.url=$DEPLOYMENT_URL
+                lhci autorun --collect.url=$deployment_url
             - name: Upload artifacts
               uses: actions/upload-artifact@v2
               with:
