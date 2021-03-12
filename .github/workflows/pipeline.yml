@@ -63,11 +63,11 @@ jobs:
                 node-version: [14.x]
 
         steps:
+            - uses: actions/checkout@v2
             - name: Download preview deployment URL
               uses: actions/download-artifact@v2
               with:
                 name: preview-deployment-url
-            - uses: actions/checkout@v2
             - name: Run with Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v1
               with:
