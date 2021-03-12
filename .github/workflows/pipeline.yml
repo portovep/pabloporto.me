@@ -1,4 +1,4 @@
-name: Build, Test & Deploy
+name: CD Pipeline
 
 on:
     push:
@@ -87,6 +87,7 @@ jobs:
         name: Deploy to prod
         needs: check-performance
         runs-on: ubuntu-latest
+        if: github.ref == 'refs/heads/main'
 
         strategy:
             matrix:
