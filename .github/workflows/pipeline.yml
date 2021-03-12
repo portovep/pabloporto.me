@@ -52,3 +52,57 @@ jobs:
               with:
                 name: preview-deployment-url
                 path: deployment-url.txt
+  
+    check-performance:
+        name: Check performance with Lighthouse
+        needs: preview
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [14.x]
+
+        steps:
+            - name: Download preview deployment URL
+              uses: actions/download-artifact@v2
+              with:
+                name: preview-deployment-url
+            - uses: actions/checkout@v2
+            - name: Run with Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: Check performance
+              run: |
+                export DEPLOYMENT_URL=$(cat preview-deployment-url.txt)
+                npm i -g @lhci/cli@0.7.x
+                lhci autorun --collect.url=$DEPLOYMENT_URL
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v2
+              with:
+                name: lighthouse-report
+                path: .lighthouseci/
+
+    deploy-prod:
+        name: Deploy to prod
+        needs: check-performance
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [14.x]
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Deploy with Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: Deploy to prod environment
+              run: |
+                npm i -g vercel
+                vercel --token "$VERCEL_TOKEN" --prod
+              env:
+                VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+                VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+                VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
