@@ -74,9 +74,7 @@ jobs:
                   node-version: ${{ matrix.node-version }}
             - name: Check performance
               run: |
-                ls -la 
                 deployment_url=`cat preview-deployment-url.txt`
-                echo Target URL: $deployment_url
                 npm i -g @lhci/cli@0.7.x
                 lhci autorun --collect.url=$deployment_url
             - name: Upload artifacts
