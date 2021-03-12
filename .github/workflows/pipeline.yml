@@ -81,7 +81,7 @@ jobs:
               uses: actions/upload-artifact@v2
               with:
                 name: lighthouse-report
-                path: .lighthouseci/
+                path: .lighthouseci/lhr-*.html
 
     deploy-prod:
         name: Deploy to prod
