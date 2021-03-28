@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Date from '../../components/Date/Date';
 import Layout from '../../components/Layout/Layout';
+import PostBody from '../../components/PostBody/PostBody';
 import { getAllPostIds, getPostData, PostData } from '../../lib/posts';
 
 type PostProps = {
@@ -23,14 +24,11 @@ export default function Post({ postData }: PostProps) {
                         {postData.tag || 'Random'}
                     </span>
                 </div>
-                <div className="mt-2">
-                    <h2 className="text-2xl text-gray-700 font-bold hover:text-gray-600">
+                <div className="mt-9">
+                    <h2 className="text-5xl text-gray-700 font-bold hover:text-gray-600">
                         {postData.title}
                     </h2>
-                    <div
-                        className="mt-2 text-gray-600"
-                        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-                    />
+                    <PostBody contentHtml={postData.contentHtml} />
                 </div>
             </article>
         </Layout>
