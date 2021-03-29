@@ -11,7 +11,7 @@ I work as a software consultant for a company called [ThoughtWorks](https://www.
 
 I am currently working for a government organisation helping to evolve a loan assessment platform. Although all the answers reflect my experience as a developer in this specific project, I think they can be applied to most of the projects I have been involved with recently.
 
-**_What are the most common tools that developers use?_**
+## What are the most common tools that developers use?
 
 Most of the developers use IntelliJ as IDE for JavaScript, Clojure and Java. We really like the integration with Jest to run individual tests with a simple keyboard shortcut. We use the [Cursive](https://cursive-ide.com/) plugin to deal with Clojure’s parenthesis in a productive way. While the IDE is not enforced, having the same one with a shared setup proves more efficient for pair programming.
 
@@ -19,13 +19,13 @@ Git and Gitlab are used for source control, combined with [DevKit](https://githu
 
 We run our development environment in a Vagrant VM running CentOS (RHEL in production) on a Windows host. Developers use [GoCD](https://www.gocd.org/) for CI/CD, Kibana (ELK) for logging, Graphite for metrics and Icinga for monitoring and alerting.
 
-**_Which languages do developers code in?_**
+## Which languages do developers code in?
 
 Most of our backend (micro)services are written in Clojure, with some written in Java 8. We have around 25 in total. New services are usually created in Clojure. We are able to spin up a new one quite quickly by combining automation techniques like a [service template](https://www.thoughtworks.com/radar/techniques/tailored-service-template) for [Leiningen](https://leiningen.org/) that includes all the common libraries and [pipeline as code](https://www.thoughtworks.com/radar/techniques/pipelines-as-code) for GoCD.
 
 For the back office web application we are slowly refactoring a 4 years old single page application with React/Redux using ES6 JavaScript. This frontend was built with a mix of vanilla JavaScript, jQuery and Knockout . We develop new functionality features using the new stack.
 
-**_What is the development process like? (the lifecycle of a piece of committed code)_**
+## What is the development process like? (the lifecycle of a piece of committed code)
 
 The requirements for a new product or feature usually come from Government’s policy. These requirements ultimately get split into user stories and assigned to a cross-functional team. The developers help the business analysts (BAs) and quality analysts (QAs) in the team to review the story from a technical perspective. When [the three amigos](<https://www.agilealliance.org/glossary/three-amigos/#q=~(filters~(postType~(~'page~'post~'aa_book~'aa_event_session~'aa_experience_report~'aa_glossary~'aa_research_paper~'aa_video)~tags~(~'three*20amigos))~searchTerm~'~sort~false~sortDirection~'asc~page~1)>) think that the story is ready to be played, it is moved to the next stage in our physical (and digital) Kanban wall, “ready for dev”.
 
@@ -33,19 +33,19 @@ After that, a pair of developers start working on the story. We swap pairs every
 
 When the QA finishes and the product owner (PO) is available, the story is showcased to the PO to get it signed off, authorising it to be released. If the PO is happy, the story is moved into ready for release, usually being released the next day.
 
-**_What is code review like?_**
+## What is code review like?
 
 We don’t have many code reviews. We work on the principle that all production code should be delivered by doing pair programming. Developers pair with their peers and always push changes to master ([trunk-based development](https://paulhammant.com/2013/04/05/what-is-trunk-based-development/)). We do use additional branches to explore technical solutions, like assessing a new library or a new design.
 
 Sometimes, the tech lead or feature leads review other people code **after they pushed to master** to ensure the technical direction is kept and new changes do not break or impact the design of a service or the system as a whole.
 
-**_How is testing done, and what kind of tests are run?_**
+## How is testing done, and what kind of tests are run?
 
 Developers write unit (we follow TDD), integration, service/functional level tests. They also help the QAs to write automated end to end tests that exercise the whole system, some of them through the UI. We also have [snapshot tests](https://storybook.js.org/testing/structural-testing/) for our reusable React components (thanks to Storybook.js and Jest) and some contract tests between microservices and external services using [Pact](https://docs.pact.io/).
 
 In addition to the local development environment, all these tests run in the build and deployment pipelines of our continuous delivery pipeline. The QAs also perform some exploratory testing in a staging environment, mostly through the UI and sometimes through Swagger, the tool we use to document our REST APIs.
 
-**_How is code deployed?_**
+## How is code deployed?
 
 We push to master all the time, which means that each individual commit must be able to be deployed in production without breaking functionality or must be under a [feature flag](https://martinfowler.com/articles/feature-toggles.html). Each commit has a story number and the names of the pair that authored it, that is how we track each piece of work.
 
@@ -57,7 +57,7 @@ Given this constrain, quite common in organisations like this, we usually deploy
 
 When the deployment is authorised, the pair organising promotes the new version of the assessment service and the other services included in the deployment into a pre-production environment and conducts some smoke tests. The new functionality is then deployed during the release window agreed with CM. We then check our monitoring and alerting systems to verify if any of the new changes have broken the system.
 
-**_What is an average day-in-the-life of someone on one of the development teams?_**
+## What is an average day-in-the-life of someone on one of the development teams?
 
 The development team working on the assessment platform is split into smaller teams following [Spotify’s squads model](https://medium.com/project-management-learnings/spotify-squad-framework-part-i-8f74bcfcd761). Each squad is cross-functional, formed by Devs, QAs, BAs and a a developer that acts as technical leader. Each squad owns a piece of the functionality of the platform.
 
@@ -69,7 +69,7 @@ The squad holds showcase sessions every two weeks to share what they have done w
 
 We tried to follow the [“you build it, you run it”](https://www.thoughtworks.com/insights/blog/there-no-such-thing-devops-team) principle, which implies that some times, as a developer, you will be pairing with someone from other squad to support the production system during working hours. This requires working with the customer support teams in investigating production issues and trying to solve them. An additional developer from the client is on call outside working hours.
 
-**_What makes this project a special place to be a developer?_**
+## What makes this project a special place to be a developer?
 
 I will quote one of the answers from the original article.
 

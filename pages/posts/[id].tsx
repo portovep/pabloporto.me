@@ -15,7 +15,7 @@ export default function Post({ postData }: PostProps) {
             <Head>
                 <title>{postData.title}</title>
             </Head>
-            <article className="max-w-4xl px-10 my-4 py-6 bg-white rounded-lg shadow-md">
+            <article className="max-w-5xl px-10 my-4 py-6 bg-white rounded-lg shadow-md">
                 <div className="flex justify-between items-center">
                     <span className="font-light text-gray-600">
                         <Date dateString={postData.date} />

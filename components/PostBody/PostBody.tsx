@@ -1,5 +1,3 @@
-import styles from './PostBody.module.css';
-
 type PostBodyProps = {
     contentHtml: string;
 };
@@ -7,7 +5,7 @@ type PostBodyProps = {
 export default function PostBody(props: PostBodyProps) {
     return (
         <div
-            className={styles['markdown']}
+            className="mt-10 prose lg:prose-xl prose-purple"
             dangerouslySetInnerHTML={{ __html: props.contentHtml }}
         />
     );
