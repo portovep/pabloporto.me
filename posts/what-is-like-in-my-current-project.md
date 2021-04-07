@@ -1,6 +1,7 @@
 ---
 title: 'What it’s like to be a developer in my current project'
 date: '2017-10-05'
+type: 'Post'
 ---
 
 I recently came across [a really interesting article](https://increment.com/development/what-its-like-to-be-a-developer-at/) published on Increment, a digital magazine that shares ideas on how effective software teams work together. The author asks a set of questions to software developers and managers from what can be considered great product companies in the software industry about how is it to be a developer in their teams.

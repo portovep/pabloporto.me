@@ -20,7 +20,7 @@ export default function Home() {
                         You can access to some test articles
                         <Link href={`/posts`}>
                             <a
-                                className="text-indigo-600 hover:underline"
+                                className="text-indigo-600 hover:text-indigo-800"
                                 rel="noopener noreferrer">
                                 &nbsp;here.&nbsp;
                             </a>

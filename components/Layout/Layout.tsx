@@ -59,9 +59,9 @@ export default function Layout({ children, home }: LayoutProps) {
                     </>
                 )}
             </header>
-            <main>{children}</main>
+            <main className="mx-4">{children}</main>
             {!home && (
-                <div className="mt-12">
+                <div className="mx-4 mt-12">
                     <Link href="/">
                         <a>← Back to home</a>
                     </Link>

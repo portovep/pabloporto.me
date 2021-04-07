@@ -1,6 +1,7 @@
 ---
 title: 'Component libraries: A tale of a migration'
 date: '2018-01-22'
+type: 'Post'
 tag: 'Draft'
 ---
 
