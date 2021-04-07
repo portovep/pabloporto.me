@@ -67,14 +67,18 @@ export default function Layout({ children, home }: LayoutProps) {
                     </Link>
                 </div>
             )}
-            <footer className="flex w-full h-28 items-center mt-8 justify-center border-t border-solid border-gray-100">
-                <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex justify-center items-center">
-                    Powered by <img src="/vercel.svg" alt="Vercel Logo" className="ml-2 h-4" />
-                </a>
+            <footer className="flex w-full h-28 items-center mt-8 justify-center border-t border-solid border-gray-200">
+                <div className="flex justify-center items-center">
+                    Made with &nbsp;
+                    <span aria-label="heart" role="img">
+                        ♥️
+                    </span>
+                    &nbsp; and decaf &nbsp;
+                    <span aria-label="heart" role="img">
+                        ☕️
+                    </span>
+                    &nbsp; in Spain, 2021™
+                </div>
             </footer>
         </div>
     );
