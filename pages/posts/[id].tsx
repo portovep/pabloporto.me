@@ -9,7 +9,7 @@ type PostProps = {
     postData: PostData;
 };
 
-export default function Post({ postData }: PostProps) {
+export default function Post({ postData }: PostProps): JSX.Element {
     return (
         <Layout>
             <Head>

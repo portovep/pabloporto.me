@@ -10,7 +10,7 @@ type LayoutProps = {
     home?: boolean;
 };
 
-export default function Layout({ children, home }: LayoutProps) {
+export default function Layout({ children, home }: LayoutProps): JSX.Element {
     return (
         <div className="max-w-3xl px-0 py-4 mx-auto my-16">
             <Head>

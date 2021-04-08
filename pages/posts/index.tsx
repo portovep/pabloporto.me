@@ -8,7 +8,7 @@ type BlogProps = {
     allPostsData: PostData[];
 };
 
-export default function Blog({ allPostsData }: BlogProps) {
+export default function Blog({ allPostsData }: BlogProps): JSX.Element {
     return (
         <Layout>
             <Head>

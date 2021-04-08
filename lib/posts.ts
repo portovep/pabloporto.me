@@ -16,16 +16,16 @@ export type PostData = {
     tag?: string;
 };
 
-export const getPostData = async (id: string) => {
+export const getPostData = async (id: string): Promise<PostData> => {
     return await parsePost(`${id}.md`);
 };
 
-export const getSortedPostsData = async () => {
+export const getSortedPostsData = async (): Promise<PostData[]> => {
     const fileNames = fs.readdirSync(postsDirectory);
 
     const posts = await Promise.all(fileNames.map(parsePost));
 
-    return posts.sort((a: any, b: any) => {
+    return posts.sort((a: PostData, b: PostData) => {
         if (a.date < b.date) {
             return 1;
         } else {
@@ -34,7 +34,7 @@ export const getSortedPostsData = async () => {
     });
 };
 
-export const getAllPostIds = async () => {
+export const getAllPostIds = async (): Promise<{ params: { id: string } }[]> => {
     const fileNames = fs.readdirSync(postsDirectory);
 
     return fileNames.map((fileName) => {

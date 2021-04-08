@@ -25,7 +25,7 @@ const postLink = (postData: PostData) =>
         </a>
     );
 
-export default function PostSummary(props: PostSummaryProps) {
+export default function PostSummary(props: PostSummaryProps): JSX.Element {
     const { date, type, title } = props.postData;
     return (
         <div className="mt-6">
