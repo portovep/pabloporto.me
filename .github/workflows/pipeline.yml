@@ -25,9 +25,10 @@ jobs:
                 npm run format
 
     preview:
-        name: Deploy for preview
+        name: Deploy to preview
         needs: build
         runs-on: ubuntu-latest
+        if: github.ref == 'refs/heads/main'
 
         strategy:
             matrix:
@@ -57,6 +58,7 @@ jobs:
         name: Check performance with Lighthouse
         needs: preview
         runs-on: ubuntu-latest
+        if: github.ref == 'refs/heads/main'
 
         strategy:
             matrix:
