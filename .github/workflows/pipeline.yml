@@ -3,43 +3,38 @@ name: CD Pipeline
 on:
     push:
 
+env:
+  NODE_VERSION: "14.x"
+
 jobs:
     build:
         name: Build
         runs-on: ubuntu-latest
 
-        strategy:
-            matrix:
-                node-version: [14.x]
-
         steps:
             - uses: actions/checkout@v2
-            - name: Build with Node.js ${{ matrix.node-version }}
+            - name: Build with Node.js ${{ env.NODE_VERSION }}
               uses: actions/setup-node@v1
               with:
-                  node-version: ${{ matrix.node-version }}
+                  node-version: ${{ env.NODE_VERSION }}
             - name: Lint & Format checks
               run: |
                 npm ci
                 npm run lint
                 npm run format
 
-    preview:
+    deploy-preview:
         name: Deploy to preview
         needs: build
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/main'
 
-        strategy:
-            matrix:
-                node-version: [14.x]
-
         steps:
             - uses: actions/checkout@v2
-            - name: Deploy with Node.js ${{ matrix.node-version }}
+            - name: Deploy with Node.js ${{ env.NODE_VERSION }}
               uses: actions/setup-node@v1
               with:
-                  node-version: ${{ matrix.node-version }}
+                  node-version: ${{ env.NODE_VERSION }}
             - name: Deploy to preview environment
               run: |
                 npm i -g vercel
@@ -60,20 +55,16 @@ jobs:
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/main'
 
-        strategy:
-            matrix:
-                node-version: [14.x]
-
         steps:
             - uses: actions/checkout@v2
             - name: Download preview deployment URL
               uses: actions/download-artifact@v2
               with:
                 name: preview-deployment-url
-            - name: Run with Node.js ${{ matrix.node-version }}
+            - name: Run with Node.js ${{ env.NODE_VERSION }}
               uses: actions/setup-node@v1
               with:
-                  node-version: ${{ matrix.node-version }}
+                  node-version: ${{ env.NODE_VERSION }}
             - name: Check performance
               run: |
                 deployment_url=`cat preview-deployment-url.txt`
@@ -91,16 +82,12 @@ jobs:
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/main'
 
-        strategy:
-            matrix:
-                node-version: [14.x]
-
         steps:
             - uses: actions/checkout@v2
-            - name: Deploy with Node.js ${{ matrix.node-version }}
+            - name: Deploy with Node.js ${{ env.NODE_VERSION }}
               uses: actions/setup-node@v1
               with:
-                  node-version: ${{ matrix.node-version }}
+                  node-version: ${{ env.NODE_VERSION }}
             - name: Deploy to prod environment
               run: |
                 npm i -g vercel
