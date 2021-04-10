@@ -12,8 +12,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v2
-            - name: Build with Node.js ${{ env.NODE_VERSION }}
+            - name: Checkout code
+              uses: actions/checkout@v2
+            - name: Setup Node.js ${{ env.NODE_VERSION }}
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ env.NODE_VERSION }}
@@ -30,7 +31,8 @@ jobs:
         if: github.ref == 'refs/heads/main'
 
         steps:
-            - uses: actions/checkout@v2
+            - name: Checkout code
+              uses: actions/checkout@v2
             - name: Deploy with Node.js ${{ env.NODE_VERSION }}
               uses: actions/setup-node@v1
               with:
@@ -50,13 +52,14 @@ jobs:
                 path: preview-deployment-url.txt
   
     check-performance:
-        name: Check performance with Lighthouse
+        name: Check performance
         needs: deploy-preview
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/main'
 
         steps:
-            - uses: actions/checkout@v2
+            - name: Checkout code
+              uses: actions/checkout@v2
             - name: Download preview deployment URL
               uses: actions/download-artifact@v2
               with:
@@ -65,7 +68,7 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ env.NODE_VERSION }}
-            - name: Check performance
+            - name: Check performance with Lighthouse
               run: |
                 deployment_url=`cat preview-deployment-url.txt`
                 npm i -g @lhci/cli@0.7.x
@@ -83,7 +86,8 @@ jobs:
         if: github.ref == 'refs/heads/main'
 
         steps:
-            - uses: actions/checkout@v2
+            - name: Checkout code
+              uses: actions/checkout@v2
             - name: Deploy with Node.js ${{ env.NODE_VERSION }}
               uses: actions/setup-node@v1
               with:
