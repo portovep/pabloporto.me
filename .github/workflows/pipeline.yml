@@ -51,7 +51,7 @@ jobs:
   
     check-performance:
         name: Check performance with Lighthouse
-        needs: preview
+        needs: deploy-preview
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/main'
 
