@@ -12,7 +12,7 @@ type LayoutProps = {
 
 export default function Layout({ children, home }: LayoutProps): JSX.Element {
     return (
-        <div className="max-w-3xl px-0 py-4 mx-auto my-16">
+        <div className="max-w-4xl px-0 py-4 mx-auto my-16">
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="description" content="" />
