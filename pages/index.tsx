@@ -18,13 +18,13 @@ export default function Home(): JSX.Element {
                     <p className="text-gray-600 mt-4">
                         I am a Lead Software Consultant at&nbsp;
                         <a
-                            href="https//thoughtworks.com"
+                            href="https://thoughtworks.com"
                             target="_blank"
                             className="text-indigo-600 hover:text-indigo-800 font-medium"
                             rel="noopener noreferrer">
                             ThoughtWorks
                         </a>
-                        &nbsp; that loves building digital products.&nbsp;I also like traveling and
+                        &nbsp;that loves building digital products.&nbsp;I also like traveling and
                         discovering new places.
                     </p>
                 </div>
