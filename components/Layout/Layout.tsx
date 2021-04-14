@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Footer from '../Footer/Footer';
 
 const name = 'Pablo Porto';
-export const siteTitle = 'Welcome - Pablo Porto Veloso';
+export const siteTitle = 'Pablo Porto Veloso';
 
 type LayoutProps = {
     children: React.ReactNode;

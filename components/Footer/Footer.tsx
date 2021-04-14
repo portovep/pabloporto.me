@@ -16,40 +16,46 @@ export default function Footer(): JSX.Element {
             </div>
             <div className="flex justify-center items-center mt-4">
                 <a
-                    className="mr-1"
+                    className="mr-3.5"
                     href="https://twitter.com/portovep"
                     target="_blank"
                     rel="noopener noreferrer">
                     <Image
                         src="/images/logos/twitter.svg"
                         alt="Twitter Logo"
-                        width="18"
-                        height="18"
-                    />
-                </a>
-
-                <a href="https://github.com/portovep" target="_blank" rel="noopener noreferrer">
-                    <Image
-                        src="/images/logos/github.svg"
-                        alt="Github Logo"
-                        width="18"
-                        height="18"
+                        width="20"
+                        height="20"
                     />
                 </a>
 
                 <a
+                    className="mr-3"
+                    href="https://github.com/portovep"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <Image
+                        src="/images/logos/github.svg"
+                        alt="Github Logo"
+                        width="20"
+                        height="20"
+                    />
+                </a>
+
+                <a
+                    className="mr-3"
                     href="https://www.instagram.com/porto.vga"
                     target="_blank"
                     rel="noopener noreferrer">
                     <Image
                         src="/images/logos/instagram.svg"
                         alt="Instagram Logo"
-                        width="28"
-                        height="28"
+                        width="20"
+                        height="20"
                     />
                 </a>
 
                 <a
+                    className="mr-3"
                     href="https://linkedin.com/in/pabloportoveloso"
                     target="_blank"
                     rel="noopener noreferrer">

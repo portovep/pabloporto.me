@@ -17,7 +17,7 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <meta name="Description" content="Pablo Porto Veloso - Personal website" />
+                    <meta name="Description" content="Pablo Porto Veloso" />
                 </Head>
                 <body className="bg-gray-50">
                     <Main />
