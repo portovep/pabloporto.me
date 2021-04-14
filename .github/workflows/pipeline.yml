@@ -74,6 +74,7 @@ jobs:
                 npm i -g @lhci/cli@0.7.x
                 lhci autorun --collect.url=$deployment_url
             - name: Upload artifacts
+              if: ${{ always() }}
               uses: actions/upload-artifact@v2
               with:
                 name: lighthouse-report
