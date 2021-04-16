@@ -40,6 +40,7 @@ export default function Home(): JSX.Element {
                     <Card
                         title="Working"
                         description="Find in-depth information about Next.js features and API."
+                        linkURL="/working"
                     />
                     <Card
                         title="Traveling"
