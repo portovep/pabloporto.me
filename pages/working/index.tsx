@@ -16,7 +16,7 @@ export default function Working({ allProjectData }: WorkingProps): JSX.Element {
             </Head>
 
             <section className="mt-8 text-xl leading-6">
-                <h1 className="text-xl font-bold text-gray-700 md:text-2xl">My Experience</h1>
+                <h1 className="ml-2 text-xl font-bold text-gray-700 md:text-2xl">My Experience</h1>
                 <ul className="mt-8">
                     {allProjectData.map((project) => (
                         <li className="mb-10" key={project.id}>

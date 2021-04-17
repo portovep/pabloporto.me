@@ -65,7 +65,12 @@ export default function Layout({ children, home }: LayoutProps): JSX.Element {
                 <div className="text-lg ml-7 mt-12">
                     <Link href="/">
                         <a rel="noopener noreferrer">
-                            <span className="hover:text-indigo-600">← Back to home</span>
+                            <span className="hover:text-indigo-600">
+                                <span aria-hidden="true" className="mr-2">
+                                    ←
+                                </span>
+                                Back to home
+                            </span>
                         </a>
                     </Link>
                 </div>

@@ -11,7 +11,7 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="pl-4 sm:pl-6 flex justify-between items-start">
                 <div className="my-5">
-                    <h3 className="text-2xl leading-6 font-medium text-gray-900">{name}</h3>
+                    <h3 className="text-2xl leading-6 font-semibold text-gray-900">{name}</h3>
                     <p className="mt-2 max-w-2xl text-lg text-gray-500">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

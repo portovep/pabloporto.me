@@ -13,7 +13,10 @@ const postLink = (postData: PostData) =>
             <a
                 className="text-indigo-600 hover:text-indigo-800 font-medium"
                 rel="noopener noreferrer">
-                Read more &rarr;
+                Read more
+                <span aria-hidden="true" className="ml-2">
+                    →
+                </span>
             </a>
         </Link>
     ) : (
@@ -22,7 +25,10 @@ const postLink = (postData: PostData) =>
             target="_blank"
             className="text-indigo-600 hover:text-indigo-800 font-medium"
             rel="noopener noreferrer">
-            Check it out &rarr;
+            Check it out
+            <span aria-hidden="true" className="ml-2">
+                →
+            </span>
         </a>
     );
 
