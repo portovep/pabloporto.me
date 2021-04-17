@@ -38,15 +38,15 @@ export default function PostSummary(props: PostSummaryProps): JSX.Element {
         <div className="mt-6">
             <div className="max-w-4xl pl-10 py-6 bg-white rounded-lg shadow-md">
                 <div className="flex justify-between items-center">
-                    <span className="font-light text-gray-600">
+                    <span className="font-light text-lg text-gray-600">
                         <Date dateString={date} />
                     </span>
                     <div className="items-end">
                         <Label text={type || 'Post'} />
                     </div>
                 </div>
-                <div className="mt-5 text-2xl text-gray-700 font-bold">{title}</div>
-                <div className="flex justify-between items-center mt-4">
+                <div className="mt-4 text-2xl text-gray-700 font-bold">{title}</div>
+                <div className="flex justify-between items-center mt-5">
                     {postLink(props.postData)}
                 </div>
             </div>
