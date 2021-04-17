@@ -15,7 +15,7 @@ export default function Home(): JSX.Element {
                         <span className="bg-indigo-600 text-white rounded px-1">I’m Pablo</span>.
                         Nice to meet you.
                     </h2>
-                    <p className="text-gray-600 mt-4">
+                    <p className="text-gray-600 mt-7">
                         I am a Lead Software Consultant at&nbsp;
                         <a
                             href="https://thoughtworks.com"

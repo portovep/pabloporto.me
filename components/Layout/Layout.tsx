@@ -62,9 +62,11 @@ export default function Layout({ children, home }: LayoutProps): JSX.Element {
             </header>
             <main className="mx-4">{children}</main>
             {!home && (
-                <div className="mx-4 mt-12">
+                <div className="text-lg ml-7 mt-12">
                     <Link href="/">
-                        <a>← Back to home</a>
+                        <a rel="noopener noreferrer">
+                            <span className="hover:text-indigo-600">← Back to home</span>
+                        </a>
                     </Link>
                 </div>
             )}
