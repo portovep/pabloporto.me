@@ -34,21 +34,21 @@ export default function Home(): JSX.Element {
                 <div className="flex flex-wrap items-center justify-center max-w-full flex-col md:max-w-4xl md:flex-row">
                     <Card
                         title="Writing"
-                        description="Find in-depth information about Next.js features and API."
+                        description="A collection of half-baked articles, research, and other written stuff."
                         linkURL="/posts"
                     />
                     <Card
                         title="Working"
-                        description="Find in-depth information about Next.js features and API."
+                        description="What I do for a living. Some of my experience in the software industry."
                         linkURL="/working"
                     />
                     <Card
                         title="Traveling"
-                        description="Find in-depth information about Next.js features and API."
+                        description="Some of my best photos, taken while discovering the world."
                     />
                     <Card
                         title="About"
-                        description="Find in-depth information about Next.js features and API."
+                        description="More information about me, in case you want to get in touch."
                     />
                 </div>
             </div>
