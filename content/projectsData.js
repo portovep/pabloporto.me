@@ -4,6 +4,7 @@ export const projects = [
         name: 'Site to site VPN on AWS',
         date: 2018,
         role: 'Infrastructure Engineer',
+        location: 'Manchester',
         description:
             '<p>Pablo was assigned as a platform engineer to help build a secure site to site VPN on the cloud between two big organisations in the UK. The VPN provides a mechanism for these organisations to exchange very confidential user information in a secure manner' +
             'In his role, Pablo contributed to bring the platform into production by:</p>' +
@@ -23,6 +24,7 @@ export const projects = [
         name: 'Loan assessment platform',
         date: 2017,
         role: 'Fullstack Developer',
+        location: 'Glasgow',
         description:
             '<p>Pablo was assigned as a fullstack engineer to help evolving a loans assessment platform for the government. ' +
             'In his role, Pablo contributed to bring the platform into production by:</p>' +
@@ -42,6 +44,7 @@ export const projects = [
         name: 'Private PaaS for a bank',
         date: 2016,
         role: 'Infrastructure Engineer',
+        location: 'Madrid',
         description:
             '<p>Pablo was assigned as a platform engineer to build a custom PaaS solution for one of the biggest banks in Spain. The PaaS was built using Openshift/Kubernetes and deployed on top of AWS first and then OpenStack. The goals were to minimise the time to market of the different digital services the bank offers, reduce costs and improve the developer experience. In his role, Pablo contributed to the platform by:</p>' +
             '<ul>' +
@@ -61,6 +64,7 @@ export const projects = [
         name: 'Digital membership cloud platform',
         date: 2016,
         role: 'Infrastructure Engineer',
+        location: 'Manchester',
         description:
             '<p>Pablo was assigned as a software consultant to help reduce the gap and bring together the ' +
             'development and platform teams within a programme to replatform and rebuild a digital membership service for a ' +
@@ -86,6 +90,7 @@ export const projects = [
         name: 'Mobile web application and platform',
         date: 2015,
         role: 'Fullstack Developer',
+        location: 'Hamburg',
         description:
             '<p>Pablo was assigned as a full stack developer to deliver a custom mobile web application for a ' +
             'big wholesale retailer. The system, build with a React/Redux stack for the front-end and Spring/Cassandra for ' +
@@ -108,6 +113,7 @@ export const projects = [
         name: 'Custom CMS',
         date: 2014,
         role: 'Fullstack Developer',
+        location: 'Manchester',
         description:
             '<p>Pablo was assigned as a full-stack developer to deliver and operate a custom content-management ' +
             'system for thoughtworks.com. The system, build with a Ruby/Sinatra/Javascript stack, enables content managers and ' +

@@ -5,13 +5,19 @@ export type Project = {
     name: string;
     date: number;
     role: string;
+    location: string;
     description: string;
     teamSize: number;
-    technologies: string;
+    technologies: string[];
 };
 
 export const getSortedPojectData = async (): Promise<Project[]> => {
-    return projectsData.sort((a: Project, b: Project) => {
+    const projects = projectsData.map((project) => ({
+        ...project,
+        technologies: project.technologies.split(',')
+    }));
+
+    return projects.sort((a: Project, b: Project) => {
         if (a.date < b.date) {
             return 1;
         } else {
