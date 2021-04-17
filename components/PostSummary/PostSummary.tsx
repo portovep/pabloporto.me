@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PostData } from '../../lib/posts';
+import Label from '../Label/Label';
 import Date from '../Date/Date';
 
 type PostSummaryProps = {
@@ -34,11 +35,9 @@ export default function PostSummary(props: PostSummaryProps): JSX.Element {
                     <span className="font-light text-gray-600">
                         <Date dateString={date} />
                     </span>
-                    <span className="px-2 py-1 bg-gray-600 text-gray-100 font-bold rounded hover:bg-gray-500">
-                        {type || 'Post'}
-                    </span>
+                    <Label text={type || 'Post'} />
                 </div>
-                <div className="mt-3 text-2xl text-gray-700 font-bold">{title}</div>
+                <div className="mt-5 text-2xl text-gray-700 font-bold">{title}</div>
                 <div className="flex justify-between items-center mt-4">
                     {postLink(props.postData)}
                 </div>

@@ -1,4 +1,5 @@
 import { Project } from '../../lib/projects';
+import Label from '../Label/Label';
 
 type ProjectSummaryProps = {
     project: Project;
@@ -7,10 +8,15 @@ type ProjectSummaryProps = {
 export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element {
     const { name, date, role, technologies, teamSize, description } = props.project;
     return (
-        <div className="bg-white shadow overflow-hidden sm:rounded-lg">
-            <div className="px-4 py-5 sm:px-6">
-                <h3 className="text-lg leading-6 font-medium text-gray-900">{name}</h3>
-                <p className="mt-1 max-w-2xl text-sm text-gray-500">{date}</p>
+        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="px-4 sm:px-6 flex justify-between items-start">
+                <div className="my-5">
+                    <h3 className="text-2xl leading-6 font-medium text-gray-900">{name}</h3>
+                    <p className="mt-2 max-w-2xl text-lg text-gray-500">{date}</p>
+                </div>
+                <div className="my-5">
+                    <Label text={role} />
+                </div>
             </div>
             <div className="border-t border-gray-200">
                 <dl>
