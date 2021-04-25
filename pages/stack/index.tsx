@@ -9,14 +9,14 @@ export default function Stacks(): JSX.Element {
                 <title>Pablo Porto - My Stack</title>
             </Head>
             <section className="mt-8 text-xl leading-6">
-                <h1 className="ml-2 text-2xl sm:text-5xl lg:text-6xl font-bold text-gray-700 md:text-4xl">
+                <h1 className="ml-2 text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-700 md:text-4xl">
                     My Stack
                 </h1>
-                <p className="ml-2 mt-4 text-lg sm:text-xl sm:leading-10 space-y-6 mb-6 max-w-3xl">
+                <p className="ml-2 mt-5 text-lg sm:text-xl sm:leading-10 space-y-6 max-w-3xl">
                     Some of the tools in my professional toolbox. Over the years, these have become
-                    my sensible defaults for build software.
+                    my sensible defaults to build high quality software.
                 </p>
-                <ul className="flex flex-col mt-8">
+                <ul className="mt-4 flex flex-col max-w-3xl">
                     <StackItem
                         name="TypeScript"
                         link="https://www.typescriptlang.org"
@@ -50,7 +50,17 @@ export default function Stacks(): JSX.Element {
                     <StackItem
                         name="Terraform"
                         link="https://www.terraform.io"
-                        description="A flexible tool to write infrastructure as code. I have being using since 2016 and keeps being my default choice."
+                        description="A flexible tool to write infrastructure as code. I have being using since 2016 and keeps being my default choice"
+                    />
+                    <StackItem
+                        name="Vercel"
+                        link="https://vercel.com/"
+                        description="I really like Vercel user experience, my tool of choice to deploy a static website or app across the globe"
+                    />
+                    <StackItem
+                        name="Spring Boot"
+                        link="https://spring.io/projects/spring-boot"
+                        description="My choice when I have to quickly create and API or other type of backend service with Java or Kotlin"
                     />
                 </ul>
             </section>

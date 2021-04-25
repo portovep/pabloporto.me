@@ -9,13 +9,14 @@ type StackItemProps = {
 export default function StackItem(props: StackItemProps): JSX.Element {
     const { name, description, link } = props;
     return (
-        <li>
-            <a
-                className="flex py-4 px-2 bg-gray-800 bg-opacity-0 rounded  hover:bg-opacity-5"
-                href={link}>
+        <li className="mt-6 border-2 border-gray-200 bg-white rounded-lg hover:bg-white hover:shadow-lg hover:border-indigo-400 transition-colors duration-150">
+            <a className="flex py-4 px-4 rounded" href={link}>
                 <Image
                     className="border border-gray-100 rounded-xl"
-                    src={`/images/stack/${name.toLowerCase().replace('.', '')}.svg`}
+                    src={`/images/stack/${name
+                        .toLowerCase()
+                        .replace('.', '')
+                        .replace(' ', '')}.svg`}
                     alt={`${name} Logo`}
                     width="60"
                     height="90"
