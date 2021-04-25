@@ -35,8 +35,8 @@ const postLink = (postData: PostData) =>
 export default function PostSummary(props: PostSummaryProps): JSX.Element {
     const { date, type, title } = props.postData;
     return (
-        <div className="mt-6">
-            <div className="max-w-4xl pl-10 py-6 bg-white rounded-lg shadow-md">
+        <div className="mt-6 border-2 border-gray-200 bg-white rounded-lg hover:bg-white hover:shadow-lg">
+            <div className="max-w-4xl pl-10 py-6">
                 <div className="flex justify-between items-center">
                     <span className="font-light text-lg text-gray-600">
                         <Date dateString={date} />

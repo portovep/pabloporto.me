@@ -12,9 +12,9 @@ export default function Stacks(): JSX.Element {
                 <h1 className="ml-2 text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-700 md:text-4xl">
                     My Stack
                 </h1>
-                <p className="ml-2 mt-5 text-lg sm:text-xl sm:leading-10 space-y-6 max-w-3xl">
-                    Some of the tools in my professional toolbox. Over the years, these have become
-                    my sensible defaults to build high quality software.
+                <p className="ml-2 mt-5 text-lg sm:text-xl sm:leading-8 space-y-6 max-w-3xl">
+                    Some of the tools in my professional toolbox over the years. They have become my
+                    sensible defaults to build different types of software products.
                 </p>
                 <ul className="mt-4 flex flex-col max-w-3xl">
                     <StackItem

@@ -15,9 +15,13 @@ export default function Blog({ allPostsData }: BlogProps): JSX.Element {
                 <title>{`${siteTitle} - Blog`}</title>
             </Head>
 
-            <section className="text-xl leading-6">
-                <h1 className="ml-2 text-xl font-bold text-gray-700 md:text-2xl">Posts</h1>
-                <ul className="mt-5">
+            <section className="mt-8 text-xl leading-6">
+                <h1 className="ml-2 text-4xl font-bold text-gray-700 md:text-4xl">My blog</h1>
+                <p className="ml-2 mt-5 text-lg sm:text-xl sm:leading-10 space-y-6 max-w-3xl">
+                    A collection of articles and papers I wrote about software engineering over the
+                    years.
+                </p>
+                <ul className="mt-8">
                     {allPostsData.map((postData) => (
                         <li key={postData.id}>
                             <PostSummary postData={postData} />
