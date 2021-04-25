@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Layout from '../../components/Layout/Layout';
+import SectionDescription from '../../components/SectionDescription/SectionDescription';
+import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import StackItem from '../../components/StackItem/StackItem';
 
 export default function Stacks(): JSX.Element {
@@ -9,14 +11,12 @@ export default function Stacks(): JSX.Element {
                 <title>Pablo Porto - My Stack</title>
             </Head>
             <section className="mt-8 text-xl leading-6">
-                <h1 className="ml-2 text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-700 md:text-4xl">
-                    My Stack
-                </h1>
-                <p className="ml-2 mt-5 text-lg sm:text-xl sm:leading-8 space-y-6 max-w-3xl">
+                <SectionTitle text="My Stack" />
+                <SectionDescription>
                     Some of the tools in my professional toolbox over the years. They have become my
                     sensible defaults to build different types of software products.
-                </p>
-                <ul className="mt-4 flex flex-col max-w-3xl">
+                </SectionDescription>
+                <ul className="mt-4 flex flex-col">
                     <StackItem
                         name="TypeScript"
                         link="https://www.typescriptlang.org"
