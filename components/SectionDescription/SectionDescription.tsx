@@ -1,5 +1,5 @@
 type SectionDescriptionProps = {
-    children: React.ReactChild | React.ReactChild[];
+    children: React.ReactNode;
 };
 
 export default function SectionDescription({ children }: SectionDescriptionProps): JSX.Element {
