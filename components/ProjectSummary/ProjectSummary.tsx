@@ -1,5 +1,4 @@
 import { Project } from '../../lib/projects';
-import Label from '../Label/Label';
 
 type ProjectSummaryProps = {
     project: Project;
@@ -29,24 +28,9 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                         {date}
                     </p>
                 </div>
-                <div className="my-5 items-end">
-                    <Label text={role} />
-                </div>
             </div>
             <div className="border-t border-gray-200">
                 <dl>
-                    <div className="bg-gray-100 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                        <dt className="text-sm font-medium text-gray-500">Tech stack</dt>
-                        <dd className="mt-2  text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                            {technologies.map((technology) => (
-                                <span
-                                    key={technology}
-                                    className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-gray-400 text-white">
-                                    {technology}
-                                </span>
-                            ))}
-                        </dd>
-                    </div>
                     <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                         <dt className="text-sm font-medium text-gray-500">Team size</dt>
                         <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
@@ -66,7 +50,15 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                             x {teamSize}
                         </dd>
                     </div>
-                    <div className="bg-gray-100 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt className="text-sm font-medium text-gray-500">Role</dt>
+                        <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            <span className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-gray-400 text-white">
+                                {role}
+                            </span>
+                        </dd>
+                    </div>
+                    <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                         <dt className="text-sm font-medium text-gray-500">Location</dt>
                         <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                             <svg
@@ -89,6 +81,18 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                                 />
                             </svg>
                             {location}
+                        </dd>
+                    </div>
+                    <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt className="text-sm font-medium text-gray-500">Tech stack</dt>
+                        <dd className="mt-2  text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            {technologies.map((technology) => (
+                                <span
+                                    key={technology}
+                                    className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-gray-400 text-white">
+                                    {technology}
+                                </span>
+                            ))}
                         </dd>
                     </div>
                     <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
