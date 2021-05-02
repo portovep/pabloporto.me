@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Date from '../../components/Date/Date';
 import Layout from '../../components/Layout/Layout';
@@ -11,10 +10,7 @@ type PostProps = {
 
 export default function Post({ postData }: PostProps): JSX.Element {
     return (
-        <Layout>
-            <Head>
-                <title>{postData.title}</title>
-            </Head>
+        <Layout pageTitle={postData.title}>
             <article className="max-w-5xl px-10 my-4 py-6 bg-white rounded-lg shadow-md">
                 <div className="flex justify-between items-center">
                     <span className="font-light text-gray-600">
