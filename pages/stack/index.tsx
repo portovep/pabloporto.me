@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import Layout from '../../components/Layout/Layout';
+import Layout, { siteTitle } from '../../components/Layout/Layout';
+import Metadata from '../../components/Metadata/Metadata';
 import SectionDescription from '../../components/SectionDescription/SectionDescription';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import StackItem from '../../components/StackItem/StackItem';
@@ -8,7 +9,7 @@ export default function Stacks(): JSX.Element {
     return (
         <Layout>
             <Head>
-                <title>Pablo Porto - My Stack</title>
+                <Metadata title={`${siteTitle} - My stack`} />
             </Head>
             <section className="mt-8 text-xl leading-6">
                 <SectionTitle text="My Stack" />

@@ -2,9 +2,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '../Footer/Footer';
+import Metadata from '../Metadata/Metadata';
 
 const name = 'Pablo Porto';
-export const siteTitle = 'Pablo Porto Veloso';
+export const siteTitle = 'Pablo Porto';
+const siteDescription =
+    'Software developer, tech lead, and traveller. Currently helping companies go digital at ThoughtWorks.';
 
 type LayoutProps = {
     children: React.ReactNode;
@@ -16,15 +19,11 @@ export default function Layout({ children, home }: LayoutProps): JSX.Element {
         <div className="max-w-4xl px-0 py-4 mx-auto mt-16">
             <Head>
                 <link rel="icon" href="/favicon.ico" />
-                <meta name="description" content="" />
-                <meta
-                    property="og:image"
-                    content={`https://og-image.vercel.app/${encodeURI(
-                        siteTitle
-                    )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+                <Metadata
+                    title={siteTitle}
+                    description={siteDescription}
+                    imageURL="/images/profile.jpg"
                 />
-                <meta name="og:title" content={siteTitle} />
-                <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <header className="flex flex-col items-center">
                 {home ? (

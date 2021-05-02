@@ -1,13 +1,9 @@
-import Head from 'next/head';
-import Layout, { siteTitle } from '../components/Layout/Layout';
+import Layout from '../components/Layout/Layout';
 import Card from '../components/Card/Card';
 
 export default function Home(): JSX.Element {
     return (
         <Layout home>
-            <Head>
-                <title>{siteTitle}</title>
-            </Head>
             <section className="mt-12 text-xl leading-6">
                 <div className="max-w-2xl px-6 text-center mx-auto">
                     <h2 className="text-3xl font-semibold text-gray-800">

@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../../components/Layout/Layout';
+import Metadata from '../../components/Metadata/Metadata';
 import PostSummary from '../../components/PostSummary/PostSummary';
 import SectionDescription from '../../components/SectionDescription/SectionDescription';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
@@ -14,7 +15,7 @@ export default function Blog({ allPostsData }: BlogProps): JSX.Element {
     return (
         <Layout>
             <Head>
-                <title>{`${siteTitle} - Blog`}</title>
+                <Metadata title={`${siteTitle} - Blog`} />
             </Head>
 
             <section className="mt-8 text-xl leading-6">
