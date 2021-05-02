@@ -7,7 +7,7 @@ const name = 'Pablo Porto';
 const siteUrl = 'https://live.pabloporto.me/';
 export const siteTitle = 'Pablo Porto';
 const siteDescription =
-    'Software developer, tech lead, and traveller. Currently helping companies go digital at ThoughtWorks.';
+    'Software developer. Traveller. Currently helping companies go digital at ThoughtWorks.';
 
 type LayoutProps = {
     children: React.ReactNode;
