@@ -9,7 +9,7 @@ type StackItemProps = {
 export default function StackItem(props: StackItemProps): JSX.Element {
     const { name, description, link } = props;
     return (
-        <li className="mt-6 border-2 border-gray-200 bg-white rounded-lg hover:bg-white hover:shadow-lg hover:border-indigo-400 transition-colors duration-150">
+        <li className="mt-6 border-2 border-gray-200 bg-white rounded-lg hover:bg-white hover:shadow-lg hover:border-emerald-400 transition-colors duration-150">
             <a className="flex py-4 px-4 rounded" href={link}>
                 <Image
                     className="border border-gray-100 rounded-xl"

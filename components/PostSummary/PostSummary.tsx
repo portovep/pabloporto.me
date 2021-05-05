@@ -11,7 +11,7 @@ const postLink = (postData: PostData) =>
     postData.type === 'Post' ? (
         <Link href={`posts/${postData.id}`}>
             <a
-                className="text-indigo-600 hover:text-indigo-800 font-medium"
+                className="text-emerald-500 hover:text-emerald-600 font-medium"
                 rel="noopener noreferrer">
                 Read more
                 <span aria-hidden="true" className="ml-2">
@@ -23,7 +23,7 @@ const postLink = (postData: PostData) =>
         <a
             href={postData.link}
             target="_blank"
-            className="text-indigo-600 hover:text-indigo-800 font-medium"
+            className="text-emerald-500 hover:text-emerald-600 font-medium"
             rel="noopener noreferrer">
             Check it out
             <span aria-hidden="true" className="ml-2">

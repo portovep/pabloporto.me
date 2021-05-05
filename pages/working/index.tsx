@@ -22,7 +22,7 @@ export default function Working({ allProjectData }: WorkingProps): JSX.Element {
                     You can also
                     <Link href="/stack">
                         <a
-                            className="text-indigo-600 hover:text-indigo-800 font-medium"
+                            className="text-emerald-500 hover:text-emerald-600 font-medium"
                             rel="noopener noreferrer">
                             &nbsp;check my preferred tech stack.
                         </a>

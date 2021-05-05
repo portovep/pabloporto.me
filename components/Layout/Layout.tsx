@@ -79,7 +79,7 @@ export default function Layout({ children, home, pageTitle }: LayoutProps): JSX.
                 <div className="text-lg ml-7 mt-12">
                     <Link href="/">
                         <a rel="noopener noreferrer">
-                            <span className="hover:text-indigo-600">
+                            <span className="hover:text-emerald-600 font-medium">
                                 <span aria-hidden="true" className="mr-2">
                                     ←
                                 </span>

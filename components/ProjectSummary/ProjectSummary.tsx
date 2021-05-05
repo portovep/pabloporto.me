@@ -53,7 +53,7 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                     <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                         <dt className="text-sm font-medium text-gray-500">Role</dt>
                         <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                            <span className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-gray-400 text-white">
+                            <span className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-emerald-400 text-white">
                                 {role}
                             </span>
                         </dd>
@@ -89,7 +89,7 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                             {technologies.map((technology) => (
                                 <span
                                     key={technology}
-                                    className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-gray-400 text-white">
+                                    className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-emerald-400 text-white">
                                     {technology}
                                 </span>
                             ))}
