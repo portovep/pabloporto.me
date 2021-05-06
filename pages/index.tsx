@@ -40,7 +40,7 @@ export default function Home(): JSX.Element {
                     />
                     <Card
                         title="Traveling"
-                        description="Some of my best photos, taken while discovering the world."
+                        description="Some of my best photos, taken while exploring the world."
                     />
                     <Card
                         title="About"

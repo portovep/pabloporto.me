@@ -1,5 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Date from '../../components/Date/Date';
+import Label from '../../components/Label/Label';
 import Layout from '../../components/Layout/Layout';
 import PostBody from '../../components/PostBody/PostBody';
 import { getAllPostIds, getPostData, PostData } from '../../lib/posts';
@@ -16,9 +17,7 @@ export default function Post({ postData }: PostProps): JSX.Element {
                     <span className="font-light text-gray-600">
                         <Date dateString={postData.date} />
                     </span>
-                    <span className="px-2 py-1 bg-gray-600 text-gray-100 font-bold rounded hover:bg-gray-500">
-                        {postData.tag || 'Random'}
-                    </span>
+                    <Label text={postData.tag || 'Random'} />
                 </div>
                 <div className="mt-9">
                     <h2 className="text-5xl text-gray-700 font-bold hover:text-gray-600">
