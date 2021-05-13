@@ -16,17 +16,21 @@ export default function Working({ allProjectData }: WorkingProps): JSX.Element {
             <section className="mt-10 text-xl leading-6">
                 <SectionTitle text="At work" />
                 <SectionDescription>
-                    As a software consultant, I get to work for different clients building
-                    differrent types of software systems with different techniques and tools. In
-                    this page you can see some of the projects I took part over the last 7+ years.
-                    You can also
-                    <Link href="/stack">
-                        <a
-                            className="text-emerald-500 hover:text-emerald-600 font-medium"
-                            rel="noopener noreferrer">
-                            &nbsp;check my preferred tech stack.
-                        </a>
-                    </Link>
+                    <p>
+                        As a software consultant, I get to work for different clients building
+                        differrent types of software systems with different techniques and tools.
+                    </p>
+                    <p>
+                        In this page you can see some of the projects I took part over the last 7+
+                        years. You can also
+                        <Link href="/stack">
+                            <a
+                                className="text-emerald-500 hover:text-emerald-600 font-medium"
+                                rel="noopener noreferrer">
+                                &nbsp;check my preferred tech stack.
+                            </a>
+                        </Link>
+                    </p>
                 </SectionDescription>
                 <ul className="mt-10">
                     {allProjectData.map((project) => (

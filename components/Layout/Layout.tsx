@@ -12,13 +12,14 @@ const siteDescription =
 type LayoutProps = {
     children: React.ReactNode;
     home?: boolean;
+    wide?: boolean;
     pageTitle?: string;
 };
 
-export default function Layout({ children, home, pageTitle }: LayoutProps): JSX.Element {
+export default function Layout({ children, home, wide, pageTitle }: LayoutProps): JSX.Element {
     const title = pageTitle || siteTitle;
     return (
-        <div className="max-w-4xl px-0 py-4 mx-auto mt-16">
+        <div className={`${wide ? 'max-w-6xl' : 'max-w-4xl'} px-0 py-4 mx-auto mt-16`}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <title>{title}</title>
@@ -74,7 +75,7 @@ export default function Layout({ children, home, pageTitle }: LayoutProps): JSX.
                     </>
                 )}
             </header>
-            <main className="mx-4">{children}</main>
+            <main className="mx-4 antialiased">{children}</main>
             {!home && (
                 <div className="text-lg ml-7 mt-12">
                     <Link href="/">
