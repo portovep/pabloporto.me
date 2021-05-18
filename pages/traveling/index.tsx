@@ -13,7 +13,7 @@ export default function Traveling(): JSX.Element {
                         <p>Some of my best photos, taken while exploring the world.</p>
                     </SectionDescription>
 
-                    <div className="mt-12   grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
+                    <div className="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
                         <PhotoCard
                             title="Taj Mahal"
                             location="Jaipur, India"
