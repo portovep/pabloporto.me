@@ -9,7 +9,8 @@
         "lint": "eslint . --ignore-path ./.gitignore",
         "lint:fix": "eslint --fix . --ignore-path ./.gitignore",
         "format": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-        "format:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+        "format:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+        "performance:check": "./scripts/performance-check.sh"
     },
     "dependencies": {
         "date-fns": "^2.20.0",
