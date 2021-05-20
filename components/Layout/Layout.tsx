@@ -70,7 +70,7 @@ export default function Layout({
                             <Link href="/about">
                                 <a>
                                     <div className="flex justify-around">
-                                        <span className="relative inline-flex rounded-md shadow-sm">
+                                        <span className="relative inline-flex">
                                             <Image
                                                 priority
                                                 src="/images/profile.jpg"
