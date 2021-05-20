@@ -11,12 +11,19 @@ const siteDescription =
 
 type LayoutProps = {
     children: React.ReactNode;
+    hideHeader?: boolean;
     home?: boolean;
     wide?: boolean;
     pageTitle?: string;
 };
 
-export default function Layout({ children, home, wide, pageTitle }: LayoutProps): JSX.Element {
+export default function Layout({
+    children,
+    home,
+    hideHeader,
+    wide,
+    pageTitle
+}: LayoutProps): JSX.Element {
     const title = pageTitle || siteTitle;
     return (
         <div className={`${wide ? 'max-w-6xl' : 'max-w-4xl'} px-0 py-4 mx-auto mt-16`}>
@@ -41,40 +48,46 @@ export default function Layout({ children, home, wide, pageTitle }: LayoutProps)
                 <meta name="robots" content="index,follow" />
                 <meta name="googlebot" content="index,follow" />
             </Head>
-            <header className="flex flex-col items-center">
-                {home ? (
-                    <>
-                        <Image
-                            priority
-                            src="/images/profile.jpg"
-                            className="rounded-full"
-                            height={144}
-                            width={144}
-                            alt={name}
-                        />
-                    </>
-                ) : (
-                    <>
-                        <Link href="/">
-                            <a>
-                                <Image
-                                    priority
-                                    src="/images/profile.jpg"
-                                    className="rounded-full"
-                                    height={108}
-                                    width={108}
-                                    alt={name}
-                                />
-                            </a>
-                        </Link>
-                        <h2 className="text-2xl leading-6 mt-4">
-                            <Link href="/">
-                                <a className="text-current">{name}</a>
+            {!hideHeader && (
+                <header className="flex flex-col items-center">
+                    {home ? (
+                        <>
+                            <Link href="/about">
+                                <a>
+                                    <Image
+                                        priority
+                                        src="/images/profile.jpg"
+                                        className="rounded-full"
+                                        height={144}
+                                        width={144}
+                                        alt={name}
+                                    />
+                                </a>
                             </Link>
-                        </h2>
-                    </>
-                )}
-            </header>
+                        </>
+                    ) : (
+                        <>
+                            <Link href="/about">
+                                <a>
+                                    <Image
+                                        priority
+                                        src="/images/profile.jpg"
+                                        className="rounded-full"
+                                        height={108}
+                                        width={108}
+                                        alt={name}
+                                    />
+                                </a>
+                            </Link>
+                            <h2 className="text-2xl leading-6 mt-4">
+                                <Link href="/about">
+                                    <a className="text-current">{name}</a>
+                                </Link>
+                            </h2>
+                        </>
+                    )}
+                </header>
+            )}
             <main className="mx-4 antialiased">{children}</main>
             {!home && (
                 <div className="text-lg ml-7 mt-12">

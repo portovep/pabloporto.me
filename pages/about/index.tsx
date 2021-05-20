@@ -2,7 +2,7 @@ import Layout, { siteTitle } from '../../components/Layout/Layout';
 
 export default function About(): JSX.Element {
     return (
-        <Layout wide pageTitle={`${siteTitle} - About`}>
+        <Layout wide hideHeader pageTitle={`${siteTitle} - About`}>
             <section className="text-xl sm:text-2xl leading-6 text-gray-600">
                 <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
                     <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">

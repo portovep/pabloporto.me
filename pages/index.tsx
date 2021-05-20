@@ -44,8 +44,8 @@ export default function Home(): JSX.Element {
                         linkURL="/traveling"
                     />
                     <Card
-                        title="About"
-                        description="More information about me, in case you want to get in touch."
+                        title="Making"
+                        description="A collection of pet projects and other apps I made. "
                     />
                 </div>
             </div>
