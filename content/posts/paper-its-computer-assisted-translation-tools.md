@@ -1,6 +1,6 @@
 ---
 title: 'ITS2.0 and Computer Assisted Translation Tools'
 date: '2013'
-link: 'http://www.localisation.ie/news/archive/information/localisation-focus-volume-12-issue-1-available-free-download%C2%A073mb'
+link: 'https://www.semanticscholar.org/paper/ITS2.0-and-Computer-Assisted-Translation-Tools-Porto-Lewis/e168572b431c0b7a67d4c917fe5f5cb667c60aa2'
 type: 'Paper'
 ---
