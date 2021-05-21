@@ -8,7 +8,7 @@ export default function Home(): JSX.Element {
                 <div className="max-w-2xl px-6 text-center mx-auto">
                     <h2 className="text-3xl font-semibold text-gray-800">
                         Hi,
-                        <span className="rounded text-emerald-500 font-bold px-1">I’m Pablo</span>.
+                        <span className="rounded text-emerald-500 font-bold pl-1">I’m Pablo</span>.
                         Nice to meet you.
                     </h2>
                     <p className="text-gray-600 mt-7">

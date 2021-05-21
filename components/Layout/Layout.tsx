@@ -56,6 +56,7 @@ export default function Layout({
                                 <a>
                                     <Image
                                         priority
+                                        quality="100"
                                         src="/images/profile.jpg"
                                         className="rounded-full"
                                         height={144}
@@ -73,6 +74,7 @@ export default function Layout({
                                         <span className="relative inline-flex">
                                             <Image
                                                 priority
+                                                quality="100"
                                                 src="/images/profile.jpg"
                                                 className="rounded-full"
                                                 height={108}
