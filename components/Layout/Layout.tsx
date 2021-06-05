@@ -29,6 +29,11 @@ export default function Layout({
         <div className={`${wide ? 'max-w-6xl' : 'max-w-4xl'} px-0 py-4 mx-auto mt-16`}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+                <link rel="manifest" href="/site.webmanifest" />
+
                 <title>{title}</title>
                 <meta name="description" content={siteDescription} />
                 <meta property="og:title" content={title} />
