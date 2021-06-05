@@ -6,7 +6,7 @@ import Footer from '../Footer/Footer';
 const name = 'Pablo Porto';
 export const siteTitle = 'Pablo Porto';
 const siteUrl = 'https://live.pabloporto.me/';
-const siteImage = `${siteUrl}/images/about.jpg`;
+const siteImage = `${siteUrl}images/about.jpg`;
 const siteDescription =
     'Software developer. Traveller. I help companies go digital at ThoughtWorks.';
 
@@ -39,7 +39,7 @@ export default function Layout({
                 <meta name="description" content={siteDescription} />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={siteDescription} />
-                <meta property="og:image" content={`${siteUrl}/images/profile.jpg`} />
+                <meta property="og:image" content={siteImage} />
                 <meta property="og:image:alt" content="Pablo Porto"></meta>
                 <meta property="og:locale" content="en_US"></meta>
                 <meta property="og:type" content="website" />
