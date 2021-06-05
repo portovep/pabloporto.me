@@ -25,7 +25,7 @@ export default function About(): JSX.Element {
                         <img
                             className="object-cover object-center rounded"
                             alt="hero"
-                            src="/images/photos/about.jpeg"
+                            src="/images/about.jpeg"
                         />
                     </div>
                 </div>
