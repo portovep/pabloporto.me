@@ -12,4 +12,5 @@ npx lhci autorun \
     --collect.url="${target_url}"/stack \
     --collect.url="${target_url}"/traveling \
     --collect.url="${target_url}"/working \
+    --collect.url="${target_url}"/making \
     --collect.url="${target_url}"/ 

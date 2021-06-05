@@ -35,17 +35,18 @@ export default function Home(): JSX.Element {
                     />
                     <Card
                         title="Working"
-                        description="What I do for a living. My experience as a software engineer."
+                        description="What I do at work. My experience as a software engineer."
                         linkURL="/working"
                     />
                     <Card
                         title="Traveling"
-                        description="Some of my best photos, taken while exploring the world."
+                        description="One of my hobbies is traveling. Explore some of my best shoots."
                         linkURL="/traveling"
                     />
                     <Card
                         title="Making"
-                        description="A collection of pet projects and other apps I made. "
+                        description="I like to build stuff. Check some of the things I made."
+                        linkURL="/making"
                     />
                 </div>
             </div>
