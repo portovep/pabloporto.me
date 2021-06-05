@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 export default function Footer(): JSX.Element {
     return (
-        <footer className="group flex-col w-full h-28 items-center mt-14 justify-center border-t border-solid border-gray-300">
-            <div className="flex justify-center items-center mt-4 text-base sm:text-xl cursor-default">
+        <footer className="group h-28 mt-14 flex-col items-center justify-center w-full border-t border-gray-300 border-solid">
+            <div className="sm:text-xl flex items-center justify-center mt-4 text-base cursor-default">
                 Made with &nbsp;
                 <span className="group-hover:text-red-600" aria-label="heart" role="img">
                     ♥️
@@ -14,7 +14,7 @@ export default function Footer(): JSX.Element {
                 </span>
                 &nbsp; in Spain, 2021™
             </div>
-            <div className="flex justify-center items-center mt-4">
+            <div className="flex items-center justify-center mt-4">
                 <a
                     className="mr-3.5"
                     href="https://twitter.com/portovep"

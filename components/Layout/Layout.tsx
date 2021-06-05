@@ -87,15 +87,15 @@ export default function Layout({
                                                 width={108}
                                                 alt={name}
                                             />
-                                            <span className="flex absolute h-3 w-3 top-0 right-2 -mt-1 -mr-1">
-                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
-                                                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
+                                            <span className="right-2 absolute top-0 flex w-3 h-3 -mt-1 -mr-1">
+                                                <span className="animate-ping bg-emerald-300 absolute inline-flex w-full h-full rounded-full opacity-75"></span>
+                                                <span className="bg-emerald-400 relative inline-flex w-3 h-3 rounded-full"></span>
                                             </span>
                                         </span>
                                     </div>
                                 </a>
                             </Link>
-                            <h2 className="text-2xl leading-6 mt-4">
+                            <h2 className="mt-4 text-2xl leading-6">
                                 <Link href="/about">
                                     <a className="text-current">{name}</a>
                                 </Link>
@@ -106,7 +106,7 @@ export default function Layout({
             )}
             <main className="mx-4 antialiased">{children}</main>
             {!home && (
-                <div className="text-lg ml-7 mt-12">
+                <div className="ml-7 mt-12 text-lg">
                     <Link href="/">
                         <a rel="noopener noreferrer">
                             <span className="hover:text-emerald-600 font-medium">

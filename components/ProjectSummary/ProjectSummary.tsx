@@ -7,11 +7,11 @@ type ProjectSummaryProps = {
 export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element {
     const { name, date, role, location, technologies, teamSize, description } = props.project;
     return (
-        <div className="overflow-hidden border-2 border-gray-200 bg-white rounded-lg hover:bg-white hover:shadow-lg">
-            <div className="pl-4 sm:pl-6 flex justify-between items-start">
+        <div className="hover:bg-white hover:shadow-lg overflow-hidden bg-white border-2 border-gray-200 rounded-lg">
+            <div className="sm:pl-6 flex items-start justify-between pl-4">
                 <div className="my-5">
-                    <h3 className="text-2xl leading-6 font-semibold text-gray-900">{name}</h3>
-                    <p className="mt-2 max-w-2xl text-lg text-gray-500">
+                    <h3 className="text-2xl font-semibold leading-6 text-gray-900">{name}</h3>
+                    <p className="max-w-2xl mt-2 text-lg text-gray-500">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="inline h-4 w-4 mr-1.5 align-baseline"
@@ -31,12 +31,12 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
             </div>
             <div className="border-t border-gray-200">
                 <dl>
-                    <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 px-4 py-5 bg-white">
                         <dt className="text-sm font-medium text-gray-500">Team size</dt>
-                        <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        <dd className="sm:mt-0 sm:col-span-2 mt-1 text-sm text-gray-900">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-5 w-5 mr-1 inline align-top"
+                                className="inline w-5 h-5 mr-1 align-top"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor">
@@ -50,20 +50,20 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                             x {teamSize}
                         </dd>
                     </div>
-                    <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 px-4 py-5 bg-white">
                         <dt className="text-sm font-medium text-gray-500">Role</dt>
-                        <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        <dd className="sm:mt-0 sm:col-span-2 mt-1 text-sm text-gray-900">
                             <span className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-emerald-400 text-white">
                                 {role}
                             </span>
                         </dd>
                     </div>
-                    <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 px-4 py-5 bg-white">
                         <dt className="text-sm font-medium text-gray-500">Location</dt>
-                        <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        <dd className="sm:mt-0 sm:col-span-2 mt-1 text-sm text-gray-900">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="inline h-5 w-5 mr-1 align-top"
+                                className="inline w-5 h-5 mr-1 align-top"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor">
@@ -83,9 +83,9 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                             {location}
                         </dd>
                     </div>
-                    <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 px-4 py-5 bg-white">
                         <dt className="text-sm font-medium text-gray-500">Tech stack</dt>
-                        <dd className="mt-2  text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        <dd className="sm:mt-0 sm:col-span-2 mt-2 text-sm text-gray-900">
                             {technologies.map((technology) => (
                                 <span
                                     key={technology}
@@ -95,11 +95,11 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                             ))}
                         </dd>
                     </div>
-                    <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 px-4 py-5 bg-white">
                         <dt className="text-sm font-medium text-gray-500">About</dt>
-                        <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        <dd className="sm:mt-0 sm:col-span-2 mt-1 text-sm text-gray-900">
                             <div
-                                className="prose lg:prose-sm prose-purple"
+                                className="lg:prose-sm prose-purple prose"
                                 dangerouslySetInnerHTML={{ __html: description }}
                             />
                         </dd>

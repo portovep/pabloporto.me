@@ -12,7 +12,7 @@ export default function Stacks(): JSX.Element {
                     Some of the tools in my toolbox. They have become my sensible defaults to build
                     different types of software products.
                 </SectionDescription>
-                <ul className="mt-4 flex flex-col">
+                <ul className="flex flex-col mt-4">
                     <StackItem
                         name="TypeScript"
                         link="https://www.typescriptlang.org"

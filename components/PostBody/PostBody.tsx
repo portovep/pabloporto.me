@@ -5,7 +5,7 @@ type PostBodyProps = {
 export default function PostBody(props: PostBodyProps): JSX.Element {
     return (
         <div
-            className="mt-10 prose lg:prose-xl"
+            className="lg:prose-xl mt-10 prose"
             dangerouslySetInnerHTML={{ __html: props.contentHtml }}
         />
     );

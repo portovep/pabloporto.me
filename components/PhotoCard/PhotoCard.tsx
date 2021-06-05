@@ -8,7 +8,7 @@ type PhotoCardProps = {
 
 export default function PhotoCard({ imageURL, location, title }: PhotoCardProps): JSX.Element {
     return (
-        <div className="overflow-hidden shadow-lg rounded-lg md:h-90 md:w-80 cursor-pointer m-auto">
+        <div className="md:h-90 md:w-80 m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer">
             <div className="h-96 w-72 sm:h-96 sm:w-96 relative">
                 <Image
                     alt={`${title} taken at ${location}`}

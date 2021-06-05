@@ -6,14 +6,14 @@ import SectionDescription from '../../components/SectionDescription/SectionDescr
 export default function Making(): JSX.Element {
     return (
         <Layout wide pageTitle={`${siteTitle} - Making`}>
-            <section className="text-gray-600 body-font mt-10">
+            <section className="body-font mt-10 text-gray-600">
                 <SectionTitle text="Making" />
                 <SectionDescription>
                     <p>Some of the things I made.</p>
                 </SectionDescription>
-                <div className="container mx-auto mt-10 flex pt-10 border-b pb-14 mb-10 border-gray-300 md:flex-row flex-col items-center">
-                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <h1 className="title-font text-4xl mb-4 font-medium text-gray-900">
+                <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mt-10 mb-10 border-b border-gray-300">
+                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
+                        <h1 className="title-font mb-4 text-4xl font-medium text-gray-900">
                             1Stream
                         </h1>
                         <p className="mb-8 leading-relaxed">
@@ -25,7 +25,7 @@ export default function Making(): JSX.Element {
                             synchronizes video playback between you and your friend so you can be
                             sure you’re watching exactly the same frame at the same time.
                         </p>
-                        <div className="flex justify-center bg-gray-100 py-0 px-0 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+                        <div className="hover:bg-gray-200 focus:outline-none flex items-center justify-center px-0 py-0 bg-gray-100 rounded-lg">
                             <a href="https://chrome.google.com/webstore/detail/1stream/ckgaafkgiajiabimkgpgkiamnolncfkg">
                                 <Image
                                     alt="chrome-store-link"
@@ -38,7 +38,7 @@ export default function Making(): JSX.Element {
                     </div>
                     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
                         <Image
-                            className="object-center rounded-b-none rounded"
+                            className="object-center rounded rounded-b-none"
                             alt="1Scream screenshoot"
                             src="/images/projects/1stream_screenshot.png"
                             height="540"
@@ -46,9 +46,9 @@ export default function Making(): JSX.Element {
                         />
                     </div>
                 </div>
-                <div className="container mx-auto flex pt-10  border-b pb-14 mb-10 border-gray-300 md:flex-row flex-col items-center">
-                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <h1 className="title-font text-4xl mb-4 font-medium text-gray-900">
+                <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
+                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
+                        <h1 className="title-font mb-4 text-4xl font-medium text-gray-900">
                             Cloujera
                         </h1>
                         <p className="mb-8 leading-relaxed">
@@ -65,12 +65,12 @@ export default function Making(): JSX.Element {
                         </p>
                         <div className="flex justify-center">
                             <a href="https://github.com/portovep/cloujera">
-                                <button className="inline-flex text-white bg-emerald-500 border-0 py-2 px-6 focus:outline-none hover:bg-emerald-600 rounded text-lg">
+                                <button className="bg-emerald-500 focus:outline-none hover:bg-emerald-600 inline-flex px-6 py-2 text-lg text-white border-0 rounded">
                                     <svg
                                         width="24"
                                         height="24"
                                         fill="currentColor"
-                                        className="text-purple-600 mr-3 text-opacity-50 transform">
+                                        className="mr-3 text-purple-600 text-opacity-50 transform">
                                         <path
                                             fillRule="evenodd"
                                             clipRule="evenodd"
@@ -91,9 +91,9 @@ export default function Making(): JSX.Element {
                         />
                     </div>
                 </div>
-                <div className="container mx-auto flex pt-10  border-b pb-14 mb-10 border-gray-300 md:flex-row flex-col items-center">
-                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <h1 className="title-font text-4xl mb-4 font-medium text-gray-900">
+                <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
+                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
+                        <h1 className="title-font mb-4 text-4xl font-medium text-gray-900">
                             EcoShifter
                             <br className="inline-block" />
                             RESTful API
@@ -113,7 +113,7 @@ export default function Making(): JSX.Element {
                         </p>
                         <div className="flex justify-center">
                             <a href="https://play.google.com/store/apps/details?id=com.ecoshifter.beta">
-                                <button className="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+                                <button className="hover:bg-gray-200 focus:outline-none inline-flex items-center px-5 py-3 bg-gray-100 rounded-lg">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="currentColor"
@@ -121,8 +121,8 @@ export default function Making(): JSX.Element {
                                         viewBox="0 0 512 512">
                                         <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
                                     </svg>
-                                    <span className="ml-4 flex items-start flex-col leading-none">
-                                        <span className="text-xs text-gray-600 mb-1">
+                                    <span className="flex flex-col items-start ml-4 leading-none">
+                                        <span className="mb-1 text-xs text-gray-600">
                                             GET IT ON
                                         </span>
                                         <span className="title-font font-medium">Google Play</span>
@@ -131,9 +131,9 @@ export default function Making(): JSX.Element {
                             </a>
                         </div>
                     </div>
-                    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 flex justify-center">
+                    <div className="lg:max-w-lg lg:w-full md:w-1/2 flex justify-center w-5/6">
                         <Image
-                            className="object-center object-cover rounded"
+                            className="object-cover object-center rounded"
                             alt="Ecoshifter screenshoot"
                             src="/images/projects/ecoshifter.webp"
                             height="500"
@@ -141,9 +141,9 @@ export default function Making(): JSX.Element {
                         />
                     </div>
                 </div>
-                <div className="container mx-auto flex pt-10 pb-14 mb-10 md:flex-row flex-col items-center">
-                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <h1 className="title-font text-4xl mb-4 font-medium text-gray-900">
+                <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10">
+                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
+                        <h1 className="title-font mb-4 text-4xl font-medium text-gray-900">
                             Crowdtransport
                         </h1>
                         <p className="mb-8 leading-relaxed">
@@ -160,12 +160,12 @@ export default function Making(): JSX.Element {
                         </p>
                         <div className="flex justify-center">
                             <a href="https://github.com/portovep/crowdtransport">
-                                <button className="inline-flex text-white bg-emerald-500 border-0 py-2 px-6 focus:outline-none hover:bg-emerald-600 rounded text-lg">
+                                <button className="bg-emerald-500 focus:outline-none hover:bg-emerald-600 inline-flex px-6 py-2 text-lg text-white border-0 rounded">
                                     <svg
                                         width="24"
                                         height="24"
                                         fill="currentColor"
-                                        className="text-purple-600 mr-3 text-opacity-50 transform">
+                                        className="mr-3 text-purple-600 text-opacity-50 transform">
                                         <path
                                             fillRule="evenodd"
                                             clipRule="evenodd"
@@ -176,7 +176,7 @@ export default function Making(): JSX.Element {
                             </a>
                         </div>
                     </div>
-                    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 flex justify-center">
+                    <div className="lg:max-w-lg lg:w-full md:w-1/2 flex justify-center w-5/6">
                         <Image
                             className="object-cover object-center rounded"
                             alt="Crowdtransport screenshoot"

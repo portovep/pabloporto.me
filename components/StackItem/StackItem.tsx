@@ -9,10 +9,10 @@ type StackItemProps = {
 export default function StackItem(props: StackItemProps): JSX.Element {
     const { name, description, link } = props;
     return (
-        <li className="mt-6 border-2 border-gray-200 bg-white rounded-lg hover:bg-white hover:shadow-lg hover:border-emerald-400 transition-colors duration-150">
-            <a className="flex py-4 px-4 rounded" href={link}>
+        <li className="hover:bg-white hover:shadow-lg hover:border-emerald-400 mt-6 transition-colors duration-150 bg-white border-2 border-gray-200 rounded-lg">
+            <a className="flex px-4 py-4 rounded" href={link}>
                 <Image
-                    className="border border-gray-100 rounded-xl"
+                    className="rounded-xl border border-gray-100"
                     src={`/images/stack/${name
                         .toLowerCase()
                         .replace('.', '')
@@ -21,10 +21,10 @@ export default function StackItem(props: StackItemProps): JSX.Element {
                     width="60"
                     height="90"
                 />
-                <div className="justify-center pl-5 space-y-2 ">
-                    <div className="space-y-1 ">
-                        <p className="mt-2 font-medium text-primary">{name}</p>
-                        <p className="text-base font-normal leading-snug text-tertiary max-w-2xl">
+                <div className=" justify-center pl-5 space-y-2">
+                    <div className=" space-y-1">
+                        <p className="text-primary mt-2 font-medium">{name}</p>
+                        <p className="text-tertiary max-w-2xl text-base font-normal leading-snug">
                             {description}
                         </p>
                     </div>

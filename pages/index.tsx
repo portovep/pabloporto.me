@@ -5,13 +5,13 @@ export default function Home(): JSX.Element {
     return (
         <Layout home>
             <section className="mt-12 text-xl leading-6">
-                <div className="max-w-2xl px-6 text-center mx-auto">
+                <div className="max-w-2xl px-6 mx-auto text-center">
                     <h2 className="text-3xl font-semibold text-gray-800">
                         Hi,
-                        <span className="rounded text-emerald-500 font-bold pl-1">I’m Pablo</span>.
+                        <span className="text-emerald-500 pl-1 font-bold rounded">I’m Pablo</span>.
                         Nice to meet you.
                     </h2>
-                    <p className="text-gray-600 mt-7">
+                    <p className="mt-7 text-gray-600">
                         I am a Lead Software Consultant at&nbsp;
                         <a
                             href="https://thoughtworks.com"
@@ -26,8 +26,8 @@ export default function Home(): JSX.Element {
                 </div>
             </section>
 
-            <div className="flex flex-col justify-center items-center mt-10">
-                <div className="flex flex-wrap items-center justify-center max-w-full flex-col md:max-w-4xl md:flex-row">
+            <div className="flex flex-col items-center justify-center mt-10">
+                <div className="md:max-w-4xl md:flex-row flex flex-col flex-wrap items-center justify-center max-w-full">
                     <Card
                         title="Writing"
                         description="A collection of half-baked articles, research, and other written stuff."

@@ -4,7 +4,7 @@ type SectionDescriptionProps = {
 
 export default function SectionDescription({ children }: SectionDescriptionProps): JSX.Element {
     return (
-        <div className="ml-2 text-2xl sm:leading-8 space-y-4 font-light text-gray-500">
+        <div className="sm:leading-8 ml-2 space-y-4 text-2xl font-light text-gray-500">
             {children}
         </div>
     );
