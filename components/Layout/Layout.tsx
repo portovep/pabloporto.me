@@ -4,10 +4,11 @@ import Link from 'next/link';
 import Footer from '../Footer/Footer';
 
 const name = 'Pablo Porto';
-const siteUrl = 'https://live.pabloporto.me/';
 export const siteTitle = 'Pablo Porto';
+const siteUrl = 'https://live.pabloporto.me/';
+const siteImage = `${siteUrl}/images/about.jpg`;
 const siteDescription =
-    'Software developer. Traveller. Currently helping companies go digital at ThoughtWorks.';
+    'Software developer. Traveller. I help companies go digital at ThoughtWorks.';
 
 type LayoutProps = {
     children: React.ReactNode;
@@ -45,7 +46,7 @@ export default function Layout({
                 <meta property="og:url" content={siteUrl}></meta>
                 <meta name="twitter:title" content={title} />
                 <meta name="twitter:description" content={siteDescription} />
-                <meta name="twitter:image" content={`${siteUrl}/images/profile.jpg`} />
+                <meta name="twitter:image" content={siteImage} />
                 <meta name="twitter:creator" content="@portovep"></meta>
                 <meta name="twitter:site" content="@portovep"></meta>
                 <meta name="twitter:card" content="summary_large_image" />
