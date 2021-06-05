@@ -14,7 +14,7 @@ export default function About(): JSX.Element {
                         </h2>
                         <p className="mb-8 leading-relaxed">
                             As a software consultant, I help companies of all shapes and sizes to
-                            build new software systems nd evolve their digital products. I helped
+                            build new software systems and evolve their digital products. I helped
                             startups build MVPs to find product/market fit, scale-ups evolve their
                             teams and practices to deliver quality software at speed and big
                             enterprises to build infrastructure in the cloud to enable their
@@ -33,10 +33,10 @@ export default function About(): JSX.Element {
                     <div className="container px-5 mx-auto">
                         <div className="text-center mb-20">
                             <h2 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-                                My core skills and practices
+                                Core skills and practices
                             </h2>
                             <p className="leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-                                The practices, skills and principles that drive my work.
+                                The principles, practices and skills that drive my work.
                             </p>
                         </div>
                         <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-20 -mx-2 text-xl">
