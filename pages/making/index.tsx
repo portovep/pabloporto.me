@@ -12,7 +12,7 @@ export default function Making(): JSX.Element {
                     <p>Some of the things I made.</p>
                 </SectionDescription>
                 <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mt-10 mb-10 border-b border-gray-300">
-                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
+                    <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
                         <h1 className="title-font mb-4 text-4xl font-medium text-gray-900">
                             1Stream
                         </h1>
@@ -28,6 +28,7 @@ export default function Making(): JSX.Element {
                         <div className="hover:bg-gray-200 focus:outline-none flex items-center justify-center px-0 py-0 bg-gray-100 rounded-lg">
                             <a href="https://chrome.google.com/webstore/detail/1stream/ckgaafkgiajiabimkgpgkiamnolncfkg">
                                 <Image
+                                    priority
                                     alt="chrome-store-link"
                                     src="/images/projects/chrome_store.png"
                                     height="90"
@@ -36,8 +37,9 @@ export default function Making(): JSX.Element {
                             </a>
                         </div>
                     </div>
-                    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8">
                         <Image
+                            priority
                             className="object-center rounded rounded-b-none"
                             alt="1Scream screenshoot"
                             src="/images/projects/1stream_screenshot.png"
@@ -47,7 +49,7 @@ export default function Making(): JSX.Element {
                     </div>
                 </div>
                 <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
-                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
+                    <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
                         <h1 className="title-font mb-4 text-4xl font-medium text-gray-900">
                             Cloujera
                         </h1>
@@ -81,7 +83,7 @@ export default function Making(): JSX.Element {
                             </a>
                         </div>
                     </div>
-                    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 border border-gray-200">
+                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8 border border-gray-200">
                         <Image
                             className="object-center rounded"
                             alt="Cloujera screenshoot"
@@ -92,7 +94,7 @@ export default function Making(): JSX.Element {
                     </div>
                 </div>
                 <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
-                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
+                    <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
                         <h1 className="title-font mb-4 text-4xl font-medium text-gray-900">
                             EcoShifter
                             <br className="inline-block" />
@@ -131,7 +133,7 @@ export default function Making(): JSX.Element {
                             </a>
                         </div>
                     </div>
-                    <div className="lg:max-w-lg lg:w-full md:w-1/2 flex justify-center w-5/6">
+                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 flex justify-center w-5/6 mb-8">
                         <Image
                             className="object-cover object-center rounded"
                             alt="Ecoshifter screenshoot"
@@ -142,7 +144,7 @@ export default function Making(): JSX.Element {
                     </div>
                 </div>
                 <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10">
-                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
+                    <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
                         <h1 className="title-font mb-4 text-4xl font-medium text-gray-900">
                             Crowdtransport
                         </h1>
@@ -176,7 +178,7 @@ export default function Making(): JSX.Element {
                             </a>
                         </div>
                     </div>
-                    <div className="lg:max-w-lg lg:w-full md:w-1/2 flex justify-center w-5/6">
+                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 flex justify-center w-5/6 mb-8">
                         <Image
                             className="object-cover object-center rounded"
                             alt="Crowdtransport screenshoot"

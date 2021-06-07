@@ -15,8 +15,7 @@ export default function Blog({ allPostsData }: BlogProps): JSX.Element {
             <section className="mt-8 text-xl leading-6">
                 <SectionTitle text="My Blog" />
                 <SectionDescription>
-                    A collection of articles and papers I wrote about software engineering over the
-                    years.
+                    A collection of articles and papers about software engineering.
                 </SectionDescription>
                 <ul className="mt-8">
                     {allPostsData.map((postData) => (
