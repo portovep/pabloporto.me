@@ -9,8 +9,8 @@ export default function Stacks(): JSX.Element {
             <section className="mt-8 text-xl leading-6">
                 <SectionTitle text="My Stack" />
                 <SectionDescription>
-                    Some of the tools in my toolbox. They have become my sensible defaults to build
-                    different types of software products.
+                    Some of the tools in my toolbox. They are my sensible defaults to build
+                    different types of software systems.
                 </SectionDescription>
                 <ul className="flex flex-col mt-4">
                     <StackItem
