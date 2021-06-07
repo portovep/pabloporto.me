@@ -2,7 +2,7 @@
 
 [![CD Pipeline](https://github.com/portovep/pabloporto.me/actions/workflows/pipeline.yml/badge.svg?branch=main)](https://github.com/portovep/pabloporto.me/actions/workflows/pipeline.yml)
 
-This is my personal website, you can check it out at [pablo.porto.me](https://pablo.porto.me).
+This is the frontend starter template I created while building a new version of my personal website, you can check out the result at [pabloporto.me](https://pabloporto.me).
 
 ## Motivation
 
@@ -64,6 +64,7 @@ TBC
 -   [ ] Unit test with Jest/React testing library
 -   [ ] Acceptance test with Cypress.js
 -   [ ] Automated secret scanning
+-   [ ] Support for i18n
 
 ## API Reference
 
