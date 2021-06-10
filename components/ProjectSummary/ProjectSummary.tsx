@@ -7,7 +7,7 @@ type ProjectSummaryProps = {
 export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element {
     const { name, date, role, location, technologies, teamSize, description } = props.project;
     return (
-        <div className="hover:bg-white hover:shadow-lg overflow-hidden bg-white border-2 border-gray-200 rounded-lg">
+        <div className="overflow-hidden bg-white border-2 border-gray-200 rounded-lg">
             <div className="sm:pl-6 flex items-start justify-between pl-4">
                 <div className="my-5">
                     <h3 className="text-2xl font-semibold leading-6 text-gray-900">{name}</h3>

@@ -8,10 +8,10 @@ type CardProps = {
 
 export default function Card({ title, description, linkURL }: CardProps): JSX.Element {
     return (
-        <div className="group md:w-5/12 hover:bg-white hover:shadow-lg hover:border-emerald-400 p-6 m-2 text-left transition-colors duration-150 bg-white border-2 border-gray-200 rounded-lg">
+        <div className="lg:group md:w-5/12 lg:hover:bg-white lg:hover:shadow-lg lg:hover:border-emerald-400 p-6 m-2 text-left transition-colors duration-150 bg-white border-2 border-gray-200 rounded-lg">
             <Link href={linkURL || '/404'}>
                 <a rel="noopener noreferrer">
-                    <h3 className="group-hover:text-emerald-600 mb-4 text-2xl font-semibold">
+                    <h3 className="lg:group-hover:text-emerald-600 mb-4 text-2xl font-semibold">
                         {title}
                         <span aria-hidden="true" className="align-text ml-1">
                             →

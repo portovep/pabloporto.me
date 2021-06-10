@@ -12,7 +12,7 @@ type PostProps = {
 export default function Post({ postData }: PostProps): JSX.Element {
     return (
         <Layout pageTitle={postData.title}>
-            <article className="max-w-5xl px-10 py-6 my-4 bg-white rounded-lg shadow-md">
+            <article className="md:px-10 max-w-5xl px-4 py-6 my-4 bg-white rounded-lg shadow-md">
                 <div className="flex items-center justify-between">
                     <span className="font-light text-gray-600">
                         <Date dateString={postData.date} />
@@ -20,7 +20,7 @@ export default function Post({ postData }: PostProps): JSX.Element {
                     <Label text={postData.tag || 'Random'} />
                 </div>
                 <div className="mt-9">
-                    <h2 className="hover:text-gray-600 text-5xl font-bold text-gray-700">
+                    <h2 className="md:text-5xl text-4xl font-bold text-gray-700">
                         {postData.title}
                     </h2>
                     <PostBody contentHtml={postData.contentHtml} />

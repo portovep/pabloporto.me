@@ -11,7 +11,7 @@ const postLink = (postData: PostData) =>
     postData.type === 'Post' ? (
         <Link href={`posts/${postData.id}`}>
             <a
-                className="text-emerald-500 group-hover:text-emerald-600 font-medium"
+                className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium"
                 rel="noopener noreferrer">
                 Read more
                 <span aria-hidden="true" className="ml-2">
@@ -23,7 +23,7 @@ const postLink = (postData: PostData) =>
         <a
             href={postData.link}
             target="_blank"
-            className="text-emerald-500 group-hover:text-emerald-600 font-medium"
+            className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium"
             rel="noopener noreferrer">
             Check it out
             <span aria-hidden="true" className="ml-2">
@@ -35,7 +35,7 @@ const postLink = (postData: PostData) =>
 export default function PostSummary(props: PostSummaryProps): JSX.Element {
     const { date, type, title } = props.postData;
     return (
-        <div className="group hover:bg-white hover:shadow-lg mt-6 bg-white border-2 border-gray-200 rounded-lg">
+        <div className="lg:group lg:hover:bg-white lg:hover:shadow-lg mt-6 bg-white border-2 border-gray-200 rounded-lg">
             <div className="md:pl-10 max-w-4xl py-6 pl-6">
                 <div className="flex items-center justify-between">
                     <span className="text-lg font-light text-gray-600">
