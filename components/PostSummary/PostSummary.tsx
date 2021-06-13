@@ -9,7 +9,7 @@ type PostSummaryProps = {
 
 const postLink = (postData: PostData) =>
     postData.type === 'Post' ? (
-        <Link href={`posts/${postData.id}`}>
+        <Link href={`blog/${postData.id}`}>
             <a
                 className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium"
                 rel="noopener noreferrer">
