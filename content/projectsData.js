@@ -6,8 +6,8 @@ export const projects = [
         role: 'Infrastructure Engineer',
         location: 'Manchester',
         description:
-            '<p>Pablo was assigned as a platform engineer to help build a secure site to site VPN on the cloud between two big organisations in the UK. The VPN provides a mechanism for these organisations to exchange very confidential user information in a secure manner' +
-            'In his role, Pablo contributed to bring the platform into production by:</p>' +
+            '<p>I was assigned as a platform engineer to help build a secure site to site VPN on the cloud between two big organisations in the UK. The VPN provides a mechanism for these organisations to exchange very confidential user information in a secure manner' +
+            'In my role, I contributed to bring the platform into production by:</p>' +
             '<ul>' +
             '<li>Automate the configuration of an off-the-shell VPN product (Sophos UTM) using Python/Pytest and orchestrating this configuration using Gitlab CI/CD.</li>' +
             '<li>Helping training and coaching team members on how to do infrastructure as code following continuous delivery practices.</li>' +
@@ -26,8 +26,8 @@ export const projects = [
         role: 'Fullstack Developer',
         location: 'Glasgow',
         description:
-            '<p>Pablo was assigned as a fullstack engineer to help evolving a loans assessment platform for the government. ' +
-            'In his role, Pablo contributed to bring the platform into production by:</p>' +
+            '<p>I was assigned as a fullstack engineer to help evolving a loans assessment platform for the government. ' +
+            'In my role, I contributed to bring the platform into production by:</p>' +
             '<ul>' +
             '<li>Leading the design and implementation of a SPA application using React/Redux/ES6.</li>' +
             '<li>Leading the effort to introduce a shared design system and react component library to enable the different teams to deliver UI functionality faster.</li>' +
@@ -46,7 +46,7 @@ export const projects = [
         role: 'Infrastructure Engineer',
         location: 'Madrid',
         description:
-            '<p>Pablo was assigned as a platform engineer to build a custom PaaS solution for one of the biggest banks in Spain. The PaaS was built using Openshift/Kubernetes and deployed on top of AWS first and then OpenStack. The goals were to minimise the time to market of the different digital services the bank offers, reduce costs and improve the developer experience. In his role, Pablo contributed to the platform by:</p>' +
+            '<p>I was assigned as a platform engineer to build a custom PaaS solution for one of the biggest banks in Spain. The PaaS was built using Openshift/Kubernetes and deployed on top of AWS first and then OpenStack. The goals were to minimise the time to market of the different digital services the bank offers, reduce costs and improve the developer experience. In my role, I contributed to the platform by:</p>' +
             '<ul>' +
             '<li>Deploying a scalable and reliable Openshift/Kubernetes cluster in AWS using Terraform, Ansible and ConcourseCI.</li>' +
             '<li>Designing and implementing multi-region and multi-AZ network topologies in AWS to meet scalability and resilience requirements.</li>' +
@@ -66,9 +66,9 @@ export const projects = [
         role: 'Infrastructure Engineer',
         location: 'Manchester',
         description:
-            '<p>Pablo was assigned as a software consultant to help reduce the gap and bring together the ' +
+            '<p>I was assigned as a software consultant to help reduce the gap and bring together the ' +
             'development and platform teams within a programme to replatform and rebuild a digital membership service for a ' +
-            'big company in the retail industry. In his role, Pablo contributed to bring the platform into production by:</p>' +
+            'big company in the retail industry. In my role, I contributed to bring the platform into production by:</p>' +
             '<ul>' +
             '<li>Helping with the design and implementation of a continuous delivery pipeline using Jenkins.</li>' +
             '<li>Advising and helping the development teams to build self-deployable microservices. Removing coupling ' +
@@ -92,7 +92,7 @@ export const projects = [
         role: 'Fullstack Developer',
         location: 'Hamburg',
         description:
-            '<p>Pablo was assigned as a full stack developer to deliver a custom mobile web application for a ' +
+            '<p>I was assigned as a full stack developer to deliver a custom mobile web application for a ' +
             'big wholesale retailer. The system, build with a React/Redux stack for the front-end and Spring/Cassandra for ' +
             'the back-end, helps drivers with the process of delivering goods to customers. Other tasks:</p>' +
             '<ul>' +
@@ -115,7 +115,7 @@ export const projects = [
         role: 'Fullstack Developer',
         location: 'Manchester',
         description:
-            '<p>Pablo was assigned as a full-stack developer to deliver and operate a custom content-management ' +
+            '<p>I was assigned as a full-stack developer to deliver and operate a custom content-management ' +
             'system for thoughtworks.com. The system, build with a Ruby/Sinatra/Javascript stack, enables content managers and ' +
             'editors from different business capabilities (marketing, recruitment, sales) to easily inline edit, create and ' +
             'publish heterogeneous content using the same user interface as the company’s website. Other tasks:</p>' +
