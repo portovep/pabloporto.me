@@ -22,7 +22,7 @@ export default function Working({ allProjectData }: WorkingProps): JSX.Element {
                             <a
                                 className="text-emerald-500 hover:text-emerald-600 font-medium"
                                 rel="noopener noreferrer">
-                                &nbsp;check my preferred tech stack.
+                                &nbsp;take a look at my preferred tech stack.
                             </a>
                         </Link>
                     </p>

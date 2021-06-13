@@ -11,6 +11,7 @@ export default function PhotoCard({ imageURL, location, title }: PhotoCardProps)
         <div className="md:h-90 md:w-80 m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer">
             <div className="h-96 w-72 sm:h-96 sm:w-96 relative">
                 <Image
+                    priority
                     alt={`${title} taken at ${location}`}
                     src={imageURL}
                     layout="fill"

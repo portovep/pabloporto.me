@@ -8,7 +8,7 @@ export default function Traveling(): JSX.Element {
         <Layout wide pageTitle={`${siteTitle} - Traveling`}>
             <section className="mt-10 text-xl leading-6">
                 <div className="w-full p-6 pt-4">
-                    <SectionTitle text="Lastest photos" />
+                    <SectionTitle text="Traveling" />
                     <SectionDescription>
                         <p>Some of my best photos, taken while exploring the world.</p>
                     </SectionDescription>
@@ -20,43 +20,43 @@ export default function Traveling(): JSX.Element {
                             imageURL="/images/photos/IMG_20200217_080528.jpeg"
                         />
                         <PhotoCard
-                            title="TBD"
-                            location="TBD"
+                            title="Taj Mahal Facade"
+                            location="Jaipur, India"
                             imageURL="/images/photos/IMG_20200217_071819.jpeg"
                         />
                         <PhotoCard
-                            title="TBD"
-                            location="TBD"
+                            title="Monkey jump"
+                            location="Jaipur, India"
                             imageURL="/images/photos/IMG_20180701_063735.jpeg"
                         />
                         <PhotoCard
-                            title="TBD"
-                            location="TBD"
+                            title="Beach house"
+                            location="Faro, Portugal"
                             imageURL="/images/photos/IMG_20150525_104418.jpeg"
                         />
                         <PhotoCard
-                            title="TBD"
-                            location="TBD"
+                            title="Maldives water"
+                            location="Maldives"
                             imageURL="/images/photos/IMG_20200225_125124.jpeg"
                         />
                         <PhotoCard
-                            title="TBD"
-                            location="TBD"
+                            title="Lonely Elephant"
+                            location="Sri Lanka"
                             imageURL="/images/photos/IMG_20200303_152059.jpeg"
                         />
                         <PhotoCard
-                            title="TBD"
-                            location="TBD"
+                            title="Edinburgh landscape"
+                            location="Edinburgh, Scotland"
                             imageURL="/images/photos/IMG_20180224_145152.jpeg"
                         />
                         <PhotoCard
-                            title="TBD"
-                            location="TBD"
+                            title="Sunset"
+                            location="Galicia"
                             imageURL="/images/photos/IMG_20180814_213428.jpeg"
                         />
                         <PhotoCard
-                            title="TBD"
-                            location="TBD"
+                            title="Chid helping his father"
+                            location="Jaipur, India"
                             imageURL="/images/photos/IMG_20180630_212048.jpeg"
                         />
                     </div>

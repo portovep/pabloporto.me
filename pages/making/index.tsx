@@ -9,13 +9,14 @@ export default function Making(): JSX.Element {
             <section className="body-font mt-10 text-gray-600">
                 <SectionTitle text="Making" />
                 <SectionDescription>
-                    <p>Some of the things I made.</p>
+                    <p>
+                        I love building things to learn new skills. These are some of the apps I
+                        made.
+                    </p>
                 </SectionDescription>
                 <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mt-10 mb-10 border-b border-gray-300">
                     <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
-                        <h1 className="title-font mb-4 text-4xl font-medium text-gray-900">
-                            1Stream
-                        </h1>
+                        <h1 className="title-font mb-4 text-4xl font-medium">1Stream</h1>
                         <p className="mb-8 leading-relaxed">
                             1Stream allows you to watch Netflix or Youtube streams in sync remotely
                             with friends
@@ -50,9 +51,7 @@ export default function Making(): JSX.Element {
                 </div>
                 <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
                     <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
-                        <h1 className="title-font mb-4 text-4xl font-medium text-gray-900">
-                            Cloujera
-                        </h1>
+                        <h1 className="title-font mb-4 text-4xl font-medium">Cloujera</h1>
                         <p className="mb-8 leading-relaxed">
                             Cloujera lets you do a fine-grained search for spoken words in
                             Coursera&#39;s videos. We built Cloujera to enhance Coursera&#39;s
@@ -95,23 +94,28 @@ export default function Making(): JSX.Element {
                 </div>
                 <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
                     <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
-                        <h1 className="title-font mb-4 text-4xl font-medium text-gray-900">
+                        <h1 className="title-font mb-4 text-4xl font-medium">
                             EcoShifter
                             <br className="inline-block" />
-                            RESTful API
+                            Personal Cloud
                         </h1>
                         <p className="mb-8 leading-relaxed">
-                            Developed a personal cloud for the smart driving Android app EcoShifter
-                            allowing users to upload their car profiles to the cloud and keep them
-                            synchronized between all their devices.
+                            Ecoshifter personal cloud allows app users to upload their car profiles
+                            to the cloud and keep them synchronized between all their devices. I
+                            developed this REST API for my friend&nbsp;
+                            <a
+                                className="text-emerald-500 hover:text-emerald-600 font-medium"
+                                href="https://ivanc.uk">
+                                Ivan&rsquo;s
+                            </a>
+                            &nbsp;smart driving Android app EcoShifter.
                         </p>
                         <p className="mb-8 leading-relaxed">
                             Users of older versions of EcoShifter had to create again the same
                             profiles for their cars each time they switch devices. Moreover, they
-                            had to enter information like the make and model of the car manually. I
-                            have helped the project by developing a new backend that solves these
-                            problems by allowing users to choose existing makes and models offered
-                            and to save their car profiles on the cloud.
+                            had to enter information like the make and model of the car manually.
+                            The new API allows users to choose existing makes and models offered and
+                            to save their car profiles on the cloud.
                         </p>
                         <div className="flex justify-center">
                             <a href="https://play.google.com/store/apps/details?id=com.ecoshifter.beta">
@@ -145,20 +149,18 @@ export default function Making(): JSX.Element {
                 </div>
                 <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10">
                     <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
-                        <h1 className="title-font mb-4 text-4xl font-medium text-gray-900">
-                            Crowdtransport
-                        </h1>
+                        <h1 className="title-font mb-4 text-4xl font-medium">Crowdtransport</h1>
                         <p className="mb-8 leading-relaxed">
-                            Platform based on a mobile app and a REST web service that provides real
-                            time public transport information using crowdsourcing techniques. The
-                            app allows users to share with others valuable public transport
-                            geolocation data while enabling real time visualization of the
-                            geolocation of buses and taxis.
+                            Crowdtransport provides their users with real time public transport
+                            information leveraging crowdsourcing techniques. The app allows users to
+                            share with others valuable public transport geolocation data while
+                            enabling real time visualization of where buses and taxis are located.
                         </p>
                         <p className="mb-8 leading-relaxed">
-                            Awarded final year project based on an idea of my own and involving the
-                            usage of state of the art Android technologies like text to speech
-                            processing (TTS), GPS tracking, Maps API and Google Cloud Messaging.
+                            The platform is based on a mobile app and a REST web service. It was
+                            awarded final year project of the year and involved the usage of state
+                            of the art Android technologies like text to speech processing (TTS),
+                            GPS tracking, Maps API and Google Cloud Messaging.
                         </p>
                         <div className="flex justify-center">
                             <a href="https://github.com/portovep/crowdtransport">
