@@ -14,7 +14,7 @@ export default function Stacks(): JSX.Element {
                 </SectionDescription>
                 <ul className="flex flex-col mt-4">
                     <StackItem
-                        name="TypeScript"
+                        name="Typescript2"
                         link="https://www.typescriptlang.org"
                         description="The default choice for building mantainable frontend web applications"
                     />
