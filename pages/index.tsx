@@ -31,7 +31,7 @@ export default function Home(): JSX.Element {
                     <Card
                         title="Writing"
                         description="A collection of half-baked articles, research, and other written stuff."
-                        linkURL="/posts"
+                        linkURL="/blog"
                     />
                     <Card
                         title="Working"

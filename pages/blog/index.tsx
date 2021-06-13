@@ -13,7 +13,7 @@ export default function Blog({ allPostsData }: BlogProps): JSX.Element {
     return (
         <Layout pageTitle={`${siteTitle} - Blog`}>
             <section className="mt-8 text-xl leading-6">
-                <SectionTitle text="My Blog" />
+                <SectionTitle text="Blog" />
                 <SectionDescription>
                     A collection of articles and papers about software engineering.
                 </SectionDescription>
