@@ -1,5 +1,5 @@
 ---
-title: 'What it’s like to be a developer in my current project'
+title: 'What it’s like to be a software developer at ThoughtWorks'
 date: '2017-10-05'
 type: 'Post'
 ---

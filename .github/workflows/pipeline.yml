@@ -41,6 +41,7 @@ jobs:
               run: |
                 npm i -g vercel
                 vercel --token "$VERCEL_TOKEN" > preview-deployment-url.txt
+                cat preview-deployment-url.txt
               env:
                 VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
                 VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
