@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer';
 
 const name = 'Pablo Porto';
 export const siteTitle = 'Pablo Porto';
-const siteUrl = 'https://live.pabloporto.me/';
+const siteUrl = 'https://pabloporto.me/';
 const siteImage = `${siteUrl}images/about.jpeg`;
 const siteDescription =
     'Software developer. Traveller. I help companies go digital at ThoughtWorks.';
