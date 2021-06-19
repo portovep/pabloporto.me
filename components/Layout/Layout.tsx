@@ -8,7 +8,7 @@ export const siteTitle = 'Pablo Porto';
 const siteUrl = 'https://pabloporto.me/';
 const siteImage = `${siteUrl}images/about.jpeg`;
 const siteDescription =
-    'Software developer. Traveller. I help companies go digital at ThoughtWorks.';
+    'I enjoy making software and traveling the world. Currently helping companies go digital at ThoughtWorks.';
 
 type LayoutProps = {
     children: React.ReactNode;
