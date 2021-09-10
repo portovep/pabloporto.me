@@ -1,27 +1,51 @@
-import { projects as projectsData } from '../content/projectsData';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import remark from 'remark';
+import html from 'remark-html';
 
-export type Project = {
-    id: number;
+const projectDirectory = path.join(process.cwd(), 'content/projects');
+
+export type ProjectData = {
+    id: string;
     name: string;
-    date: number;
+    date: string;
     role: string;
     location: string;
     description: string;
     teamSize: number;
     technologies: string[];
+    contentHtml?: string;
 };
 
-export const getSortedPojectData = async (): Promise<Project[]> => {
-    const projects = projectsData.map((project) => ({
-        ...project,
-        technologies: project.technologies.split(',')
-    }));
+export const getSortedProjectData = async (): Promise<ProjectData[]> => {
+    const fileNames = fs.readdirSync(projectDirectory);
 
-    return projects.sort((a: Project, b: Project) => {
+    const posts = await Promise.all(fileNames.map(parseProject));
+
+    return posts.sort((a: ProjectData, b: ProjectData) => {
         if (a.date < b.date) {
             return 1;
         } else {
             return -1;
         }
     });
+};
+
+const parseProject = async (fileName: string) => {
+    const id = fileName.replace(/\.md$/, '');
+
+    const fullPath = path.join(projectDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+    const matterResult = matter(fileContents);
+
+    const processedContent = await remark().use(html).process(matterResult.content);
+    const contentHtml = processedContent.toString();
+
+    return {
+        id,
+        contentHtml,
+        ...matterResult.data
+    } as ProjectData;
 };

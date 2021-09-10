@@ -4,10 +4,10 @@ import Layout, { siteTitle } from '../../components/Layout/Layout';
 import ProjectSummary from '../../components/ProjectSummary/ProjectSummary';
 import SectionDescription from '../../components/SectionDescription/SectionDescription';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
-import { getSortedPojectData, Project } from '../../lib/projects';
+import { getSortedProjectData, ProjectData } from '../../lib/projects';
 
 type WorkingProps = {
-    allProjectData: Project[];
+    allProjectData: ProjectData[];
 };
 
 export default function Working({ allProjectData }: WorkingProps): JSX.Element {
@@ -40,7 +40,7 @@ export default function Working({ allProjectData }: WorkingProps): JSX.Element {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const allProjectData = await getSortedPojectData();
+    const allProjectData = await getSortedProjectData();
     return {
         props: {
             allProjectData: allProjectData

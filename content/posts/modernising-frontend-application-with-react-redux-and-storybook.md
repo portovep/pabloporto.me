@@ -5,7 +5,7 @@ type: 'Post'
 tag: 'Draft'
 ---
 
-Around a year ago my team started the journey of modernising the frontend stack of a back office web application. The application helps assessors to manage the lifecycle of a student loan.
+Around a year ago my team started the journey of modernizing the frontend stack of a back-office web application. The application helps assessors to manage the lifecycle of a student loan.
 
 The web application is part of a system of 30 microservices and it has to interact with almost all of them. Three crossfunctional teams work on the frontend application, each of them in part of the UI that interact with the microservices that hold the business logic for their specific domain.
 

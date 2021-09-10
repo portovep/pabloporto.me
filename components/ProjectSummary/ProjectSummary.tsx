@@ -1,11 +1,11 @@
-import { Project } from '../../lib/projects';
+import { ProjectData } from '../../lib/projects';
 
 type ProjectSummaryProps = {
-    project: Project;
+    project: ProjectData;
 };
 
 export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element {
-    const { name, date, role, location, technologies, teamSize, description } = props.project;
+    const { name, date, role, location, technologies, teamSize, contentHtml } = props.project;
     return (
         <div className="overflow-hidden bg-white border-2 border-gray-200 rounded-lg">
             <div className="sm:pl-6 flex items-start justify-between pl-4">
@@ -100,7 +100,7 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                         <dd className="sm:mt-0 sm:col-span-2 mt-1 text-sm text-gray-900">
                             <div
                                 className="lg:prose-sm prose-purple prose"
-                                dangerouslySetInnerHTML={{ __html: description }}
+                                dangerouslySetInnerHTML={{ __html: contentHtml }}
                             />
                         </dd>
                     </div>
