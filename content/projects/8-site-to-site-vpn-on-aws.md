@@ -1,6 +1,6 @@
 ---
 name: 'Site to site VPN on AWS'
-date: 2018
+date: '2018-07-01'
 role: 'Infrastructure Engineer'
 location: 'Manchester'
 teamSize: 6

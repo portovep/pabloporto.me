@@ -1,6 +1,6 @@
 ---
 name: 'Mobile web application and platform'
-date: 2015
+date: '2015-09-01'
 role: 'Fullstack Developer'
 location: 'Hamburg'
 teamSize: 7

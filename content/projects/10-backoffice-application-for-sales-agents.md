@@ -1,6 +1,6 @@
 ---
 name: 'Back office application to manage sales agent accounts'
-date: 2020
+date: '2020-04-01'
 role: 'Infrastructure engineer'
 location: 'Barcelona'
 teamSize: 8

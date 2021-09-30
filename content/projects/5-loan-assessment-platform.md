@@ -1,6 +1,6 @@
 ---
 name: 'Loan assessment platform'
-date: 2017
+date: '2016-09-01'
 role: 'Fullstack Developer'
 location: 'Glasgow'
 teamSize: 12

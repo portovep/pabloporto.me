@@ -1,6 +1,6 @@
 ---
 name: 'Custom CMS'
-date: 2014
+date: '2014-03-01'
 role: 'Fullstack Developer'
 location: 'Manchester'
 teamSize: 12
@@ -20,6 +20,6 @@ I was assigned as a full-stack developer to deliver and operate a custom content
 
 -   Enabling continuous delivery by supporting and managing monitoring (collectd and Graphite), logging (logstash and Kibana), and CI/CD tools (GoCD).
 
--   Improving provisioning, deployment and build scripts to enable migration from snowflake servers to phoenix servers.
+-   Improving provisioning, deployment, and build scripts to enable migration from snowflake servers to phoenix servers.
 
 -   Adopt Docker to easily build local development environments.

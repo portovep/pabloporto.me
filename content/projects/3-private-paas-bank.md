@@ -1,6 +1,6 @@
 ---
 name: 'Private PaaS for a bank'
-date: 2016
+date: '2016-06-01'
 role: 'Infrastructure Engineer'
 location: 'Madrid'
 teamSize: 7

@@ -1,6 +1,6 @@
 ---
 name: 'Flight Search engine and B2B platform for air cargo startup'
-date: 2018
+date: '2018-11-01'
 role: 'Tech lead'
 location: 'Barcelona'
 teamSize: 9

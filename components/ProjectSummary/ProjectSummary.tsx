@@ -1,4 +1,5 @@
 import { ProjectData } from '../../lib/projects';
+import Date, { DATE_FORMAT_YEAR } from '../Date/Date';
 
 type ProjectSummaryProps = {
     project: ProjectData;
@@ -25,7 +26,7 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                                 d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                             />
                         </svg>
-                        {date}
+                        <Date dateString={date} dateFormat={DATE_FORMAT_YEAR} />
                     </p>
                 </div>
             </div>

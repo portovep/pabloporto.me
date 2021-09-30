@@ -1,6 +1,6 @@
 ---
 name: 'Lead agile software development trainer'
-date: 2018
+date: '2018-05-01'
 role: 'Infrastructure Engineer'
 location: 'Pune, India'
 teamSize: 32

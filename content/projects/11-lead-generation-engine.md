@@ -1,6 +1,6 @@
 ---
 name: 'Lead generation engine for real state listings'
-date: 2020
+date: '2020-07-01'
 role: 'Tech Lead'
 location: 'Barcelona'
 teamSize: 5

@@ -1,6 +1,6 @@
 ---
 name: 'Digital membership cloud platform'
-date: 2016
+date: '2016-01-01'
 role: 'Infrastructure Engineer'
 location: 'Manchester'
 technologies:
