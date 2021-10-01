@@ -31,12 +31,12 @@ export default function Stacks(): JSX.Element {
                     <StackItem
                         name="Clojure"
                         link="https://clojure.org"
-                        description="My favourity language to build microservices, concise and simple, but not easy"
+                        description="My favourite language to build microservices, concise and simple, but not easy"
                     />
                     <StackItem
                         name="Kotlin"
                         link="https://kotlinlang.org"
-                        description="My choise for the backend when time to market is crucial. It allows me to combine functional and OOP styles"
+                        description="My choice for the backend when time to market is crucial. It allows me to combine functional and OOP styles"
                     />
                     <StackItem
                         name="AWS"
