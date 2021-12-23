@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import Footer from '../Footer/Footer';
 
 const name = 'Pablo Porto';
 export const siteTitle = 'Pablo Porto';
@@ -119,7 +118,6 @@ export default function Layout({
                     </Link>
                 </div>
             )}
-            <Footer />
         </div>
     );
 }
