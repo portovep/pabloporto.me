@@ -13,7 +13,7 @@ type PostProps = {
 export default function Post({ postData }: PostProps): JSX.Element {
     return (
         <Layout pageTitle={postData.title}>
-            <div className="flex justify-around">
+            <div className="md:-mb-10 flex justify-around -mb-10">
                 <span className="relative inline-flex">
                     <Image
                         priority

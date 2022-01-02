@@ -54,7 +54,7 @@ export default function Layout({
                 <meta name="googlebot" content="index,follow" />
             </Head>
             {!hideHeader && (
-                <header className="md:mt-20 flex flex-col items-center mt-8">
+                <header className="md:mt-20 mt-14 flex flex-col items-center">
                     {home && (
                         <>
                             <Link href="/about">
