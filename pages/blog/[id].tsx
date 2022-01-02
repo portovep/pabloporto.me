@@ -1,4 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
+import Image from 'next/image';
 import Date from '../../components/Date/Date';
 import Label from '../../components/Label/Label';
 import Layout from '../../components/Layout/Layout';
@@ -12,6 +13,19 @@ type PostProps = {
 export default function Post({ postData }: PostProps): JSX.Element {
     return (
         <Layout pageTitle={postData.title}>
+            <div className="flex justify-around">
+                <span className="relative inline-flex">
+                    <Image
+                        priority
+                        quality="100"
+                        src="/images/profile.jpg"
+                        className="rounded-full"
+                        height={108}
+                        width={108}
+                        alt={'Author photo'}
+                    />
+                </span>
+            </div>
             <article className="md:px-10 max-w-5xl px-4 py-6 my-4 bg-white rounded-lg shadow-md">
                 <div className="flex items-center justify-between">
                     <span className="font-light text-gray-600">
