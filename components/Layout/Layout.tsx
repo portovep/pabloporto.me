@@ -26,7 +26,7 @@ export default function Layout({
 }: LayoutProps): JSX.Element {
     const title = pageTitle || siteTitle;
     return (
-        <div className={`${wide ? 'max-w-6xl' : 'max-w-4xl'} px-0 py-4 mx-auto mt-16`}>
+        <div className={`${wide ? 'max-w-6xl' : 'max-w-4xl'} px-0 py-0 mx-auto mt-4`}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -54,8 +54,8 @@ export default function Layout({
                 <meta name="googlebot" content="index,follow" />
             </Head>
             {!hideHeader && (
-                <header className="flex flex-col items-center">
-                    {home ? (
+                <header className="md:mt-20 flex flex-col items-center mt-8">
+                    {home && (
                         <>
                             <Link href="/about">
                                 <a>
@@ -70,35 +70,6 @@ export default function Layout({
                                     />
                                 </a>
                             </Link>
-                        </>
-                    ) : (
-                        <>
-                            <Link href="/about">
-                                <a>
-                                    <div className="flex justify-around">
-                                        <span className="relative inline-flex">
-                                            <Image
-                                                priority
-                                                quality="100"
-                                                src="/images/profile.jpg"
-                                                className="rounded-full"
-                                                height={108}
-                                                width={108}
-                                                alt={name}
-                                            />
-                                            <span className="right-2 absolute top-0 flex w-3 h-3 -mt-1 -mr-1">
-                                                <span className="animate-ping bg-emerald-300 absolute inline-flex w-full h-full rounded-full opacity-75"></span>
-                                                <span className="bg-emerald-400 relative inline-flex w-3 h-3 rounded-full"></span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </a>
-                            </Link>
-                            <h2 className="mt-4 text-2xl leading-6">
-                                <Link href="/about">
-                                    <a className="text-current">{name}</a>
-                                </Link>
-                            </h2>
                         </>
                     )}
                 </header>
