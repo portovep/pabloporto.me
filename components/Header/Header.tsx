@@ -59,7 +59,7 @@ export default function Header(): JSX.Element {
                         )}
                     </button>
                     <div
-                        className={`top-20 opacity-90 fixed right-0 z-10 w-full h-full overflow-y-auto ${
+                        className={`top-[73px] opacity-90 fixed right-0 z-10 w-full h-full overflow-y-auto ${
                             showMobileMenu ? 'duration-300' : 'duration-100'
                         } ease-in transform ${
                             showMobileMenu ? 'translate-x-0' : 'translate-x-full'
