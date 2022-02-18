@@ -14,10 +14,12 @@ export default function About(): JSX.Element {
                         </h2>
                         <p className="mb-8 leading-relaxed">
                             As a software consultant, I help companies of all shapes and sizes to
-                            build new software systems and evolve their digital products. I helped
-                            startups build MVPs to find product/market fit, scale-ups evolve their
-                            teams and practices to deliver quality software at speed and big
-                            enterprises to build infrastructure in the cloud to enable their
+                            build new software systems and evolve their digital products.
+                        </p>
+                        <p className="leading-relaxed">
+                            I helped startups build MVPs to find product/market fit, scale-ups
+                            evolve their teams and practices to deliver quality software at speed
+                            and big enterprises to build infrastructure in the cloud to enable their
                             delivery teams.
                         </p>
                     </div>
@@ -33,10 +35,11 @@ export default function About(): JSX.Element {
                     <div className="container px-5 mx-auto">
                         <div className="mb-20 text-center">
                             <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
-                                Core skills and practices
+                                Principles and practices
                             </h2>
                             <p className="xl:w-2/4 lg:w-3/4 mx-auto leading-relaxed">
-                                The principles, practices and skills that drive my work.
+                                The software engineering principles and practices that drive my
+                                work.
                             </p>
                         </div>
                         <div className="lg:w-4/5 sm:mx-auto sm:mb-20 flex flex-wrap -mx-2 text-xl">
