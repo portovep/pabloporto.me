@@ -1,9 +1,24 @@
 import Layout from '../components/Layout/Layout';
 import Card from '../components/Card/Card';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home(): JSX.Element {
     return (
         <Layout home>
+            <header className="md:mt-20 mt-14 flex flex-col items-center">
+                <Link href="/about">
+                    <Image
+                        priority
+                        quality="100"
+                        src="/images/profile.jpg"
+                        className="rounded-full"
+                        height={144}
+                        width={144}
+                        alt="Profile picture of myself in India"
+                    />
+                </Link>
+            </header>
             <section className="mt-12 text-xl leading-6">
                 <div className="max-w-2xl px-6 mx-auto text-center">
                     <h2 className="text-3xl font-semibold text-gray-800">

@@ -1,8 +1,6 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 
-const name = 'Pablo Porto';
 export const siteTitle = 'Pablo Porto';
 const siteUrl = 'https://pabloporto.me/';
 const siteImage = `${siteUrl}images/about.jpeg`;
@@ -11,19 +9,12 @@ const siteDescription =
 
 type LayoutProps = {
     children: React.ReactNode;
-    hideHeader?: boolean;
     home?: boolean;
     wide?: boolean;
     pageTitle?: string;
 };
 
-export default function Layout({
-    children,
-    home,
-    hideHeader,
-    wide,
-    pageTitle
-}: LayoutProps): JSX.Element {
+export default function Layout({ children, home, wide, pageTitle }: LayoutProps): JSX.Element {
     const title = pageTitle || siteTitle;
     return (
         <div className={`${wide ? 'max-w-6xl' : 'max-w-4xl'} px-0 py-0 mx-auto mt-4`}>
@@ -53,27 +44,6 @@ export default function Layout({
                 <meta name="robots" content="index,follow" />
                 <meta name="googlebot" content="index,follow" />
             </Head>
-            {!hideHeader && (
-                <header className="md:mt-20 mt-14 flex flex-col items-center">
-                    {home && (
-                        <>
-                            <Link href="/about">
-                                <a>
-                                    <Image
-                                        priority
-                                        quality="100"
-                                        src="/images/profile.jpg"
-                                        className="rounded-full"
-                                        height={144}
-                                        width={144}
-                                        alt={name}
-                                    />
-                                </a>
-                            </Link>
-                        </>
-                    )}
-                </header>
-            )}
             <main className="mx-4 antialiased">{children}</main>
             {!home && (
                 <div className="ml-7 mt-12 text-lg">
