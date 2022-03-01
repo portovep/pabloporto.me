@@ -1,7 +1,6 @@
 import Layout, { siteTitle } from '../../components/Layout/Layout';
 import Image from 'next/image';
-import SectionTitle from '../../components/SectionTitle/SectionTitle';
-import SectionDescription from '../../components/SectionDescription/SectionDescription';
+import { SectionDescription, SectionTitle } from '../../components/ui';
 
 export default function Making(): JSX.Element {
     return (

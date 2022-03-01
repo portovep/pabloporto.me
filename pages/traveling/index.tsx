@@ -1,7 +1,6 @@
 import Layout, { siteTitle } from '../../components/Layout/Layout';
 import PhotoCard from '../../components/PhotoCard/PhotoCard';
-import SectionDescription from '../../components/SectionDescription/SectionDescription';
-import SectionTitle from '../../components/SectionTitle/SectionTitle';
+import { SectionDescription, SectionTitle } from '../../components/ui';
 
 export default function Traveling(): JSX.Element {
     return (

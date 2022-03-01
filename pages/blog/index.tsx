@@ -1,8 +1,7 @@
 import { GetStaticProps } from 'next';
 import Layout, { siteTitle } from '../../components/Layout/Layout';
 import PostSummary from '../../components/PostSummary/PostSummary';
-import SectionDescription from '../../components/SectionDescription/SectionDescription';
-import SectionTitle from '../../components/SectionTitle/SectionTitle';
+import { SectionDescription, SectionTitle } from '../../components/ui';
 import { getSortedPostsData, PostData } from '../../lib/posts';
 
 type BlogProps = {

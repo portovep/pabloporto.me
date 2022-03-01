@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { PostData } from '../../lib/posts';
-import Label from '../Label/Label';
-import Date from '../Date/Date';
+import { Date, Label } from '../ui';
 
 type PostSummaryProps = {
     postData: PostData;

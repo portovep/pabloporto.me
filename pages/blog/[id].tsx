@@ -1,10 +1,9 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Image from 'next/image';
-import Date from '../../components/Date/Date';
-import Label from '../../components/Label/Label';
 import Layout from '../../components/Layout/Layout';
 import PostBody from '../../components/PostBody/PostBody';
 import { getAllPostIds, getPostData, PostData } from '../../lib/posts';
+import { Date, Label } from '../../components/ui';
 
 type PostProps = {
     postData: PostData;

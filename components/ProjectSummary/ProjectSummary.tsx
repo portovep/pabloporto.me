@@ -1,9 +1,11 @@
 import { ProjectData } from '../../lib/projects';
-import Date, { DATE_FORMAT_YEAR } from '../Date/Date';
+import { Date } from '../ui';
 
 type ProjectSummaryProps = {
     project: ProjectData;
 };
+
+const DATE_FORMAT_YEAR = 'yyyy';
 
 export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element {
     const { name, date, role, location, technologies, teamSize, contentHtml } = props.project;

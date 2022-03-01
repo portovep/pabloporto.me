@@ -6,7 +6,6 @@ type DateProps = {
 };
 
 const DATE_FORMAT_MONTH_DAY_YEAR = 'LLLL d, yyyy';
-export const DATE_FORMAT_YEAR = 'yyyy';
 
 export default function Date({
     dateString,

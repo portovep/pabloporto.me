@@ -1,7 +1,5 @@
 import Layout, { siteTitle } from '../../components/Layout/Layout';
-import SectionDescription from '../../components/SectionDescription/SectionDescription';
-import SectionTitle from '../../components/SectionTitle/SectionTitle';
-import StackItem from '../../components/StackItem/StackItem';
+import { SectionDescription, SectionTitle, StackItem } from '../../components/ui';
 
 export default function Stacks(): JSX.Element {
     return (

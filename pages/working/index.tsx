@@ -2,8 +2,7 @@ import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Layout, { siteTitle } from '../../components/Layout/Layout';
 import ProjectSummary from '../../components/ProjectSummary/ProjectSummary';
-import SectionDescription from '../../components/SectionDescription/SectionDescription';
-import SectionTitle from '../../components/SectionTitle/SectionTitle';
+import { SectionDescription, SectionTitle } from '../../components/ui';
 import { getSortedProjectData, ProjectData } from '../../lib/projects';
 
 type WorkingProps = {
