@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
-import Layout, { siteTitle } from '../../components/Layout/Layout';
+import Layout from '../../components/Layout/Layout';
 import ProjectSummary from '../../components/ProjectSummary/ProjectSummary';
 import { SectionDescription, SectionTitle } from '../../components/ui';
 import { getSortedProjectData, ProjectData } from '../../lib/projects';
@@ -11,7 +11,7 @@ type WorkingProps = {
 
 export default function Working({ allProjectData }: WorkingProps): JSX.Element {
     return (
-        <Layout pageTitle={`${siteTitle} - At work`}>
+        <Layout pageTitle="At work">
             <section className="mt-10 text-xl leading-6">
                 <SectionTitle text="At work" />
                 <SectionDescription>

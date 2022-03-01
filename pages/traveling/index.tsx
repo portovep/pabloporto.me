@@ -1,10 +1,10 @@
-import Layout, { siteTitle } from '../../components/Layout/Layout';
+import Layout from '../../components/Layout/Layout';
 import PhotoCard from '../../components/PhotoCard/PhotoCard';
 import { SectionDescription, SectionTitle } from '../../components/ui';
 
 export default function Traveling(): JSX.Element {
     return (
-        <Layout wide pageTitle={`${siteTitle} - Traveling`}>
+        <Layout wide pageTitle="Traveling">
             <section className="mt-10 text-xl leading-6">
                 <div className="w-full p-6 pt-4">
                     <SectionTitle text="Traveling" />

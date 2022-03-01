@@ -1,9 +1,9 @@
-import Layout, { siteTitle } from '../../components/Layout/Layout';
+import Layout from '../../components/Layout/Layout';
 import { SectionDescription, SectionTitle, StackItem } from '../../components/ui';
 
 export default function Stacks(): JSX.Element {
     return (
-        <Layout pageTitle={`${siteTitle} - My stack`}>
+        <Layout pageTitle="My stack">
             <section className="mt-8 text-xl leading-6">
                 <SectionTitle text="My Stack" />
                 <SectionDescription>

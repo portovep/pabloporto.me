@@ -1,10 +1,10 @@
-import Layout, { siteTitle } from '../../components/Layout/Layout';
+import Layout from '../../components/Layout/Layout';
 import Image from 'next/image';
 import { SectionDescription, SectionTitle } from '../../components/ui';
 
 export default function Making(): JSX.Element {
     return (
-        <Layout wide pageTitle={`${siteTitle} - Making`}>
+        <Layout wide pageTitle="Making">
             <section className="body-font mt-10 text-gray-600">
                 <SectionTitle text="Making" />
                 <SectionDescription>

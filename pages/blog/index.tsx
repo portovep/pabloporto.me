@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import Layout, { siteTitle } from '../../components/Layout/Layout';
+import Layout from '../../components/Layout/Layout';
 import PostSummary from '../../components/PostSummary/PostSummary';
 import { SectionDescription, SectionTitle } from '../../components/ui';
 import { getSortedPostsData, PostData } from '../../lib/posts';
@@ -10,7 +10,7 @@ type BlogProps = {
 
 export default function Blog({ allPostsData }: BlogProps): JSX.Element {
     return (
-        <Layout pageTitle={`${siteTitle} - Blog`}>
+        <Layout pageTitle="Blog">
             <section className="mt-8 text-xl leading-6">
                 <SectionTitle text="Blog" />
                 <SectionDescription>
