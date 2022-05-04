@@ -16,12 +16,13 @@ export default function Working({ allProjectData }: WorkingProps): JSX.Element {
                 <SectionTitle text="At work" />
                 <SectionDescription>
                     <p>
-                        Some of the projects I took part over the last 7+ years. You can also
+                        Some of the projects and products I worked on over the last years. You can
+                        also
                         <Link href="/stack">
                             <a
                                 className="text-emerald-500 hover:text-emerald-600 font-medium"
                                 rel="noopener noreferrer">
-                                &nbsp;take a look at my preferred tech stack.
+                                &nbsp;take a look at my preferred tools.
                             </a>
                         </Link>
                     </p>

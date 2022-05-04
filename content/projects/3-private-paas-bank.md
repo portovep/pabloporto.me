@@ -21,7 +21,7 @@ technologies:
     ]
 ---
 
-I was assigned as a platform engineer to build a custom PaaS solution for one of the biggest banks in Spain. The PaaS was built using Openshift/Kubernetes and deployed on top of AWS first and then in OpenStack. The goals were to minimize the time to market for the different digital services the bank offers, reduce costs and improve the developer experience. In my role, I contributed to the platform by:
+I worked as a platform engineer to build a custom PaaS solution for one of the biggest banks in Spain. The PaaS was built using Openshift/Kubernetes and deployed on top of AWS first and then in OpenStack. The goals were to minimize the time to market for the different digital services the bank offers, reduce costs and improve the developer experience. In my role, I contributed to the platform by:
 
 -   Deploying a scalable and reliable Openshift/Kubernetes cluster in AWS using Terraform, Ansible, and ConcourseCI.
 -   Designing and implementing multi-region and multi-AZ network topologies in AWS to meet scalability and resilience requirements.
