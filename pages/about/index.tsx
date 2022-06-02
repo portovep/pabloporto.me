@@ -32,7 +32,7 @@ export default function About(): JSX.Element {
                     </div>
                 </div>
                 <section className="text-gray-600">
-                    <div className="container px-5 mx-auto">
+                    <div className="container px-5 mx-auto mb-20">
                         <div className="mb-20 text-center">
                             <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
                                 Principles and practices
@@ -267,6 +267,38 @@ export default function About(): JSX.Element {
                                     <span className="title-font font-medium">Refactoring</span>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="mb-20 text-gray-600">
+                    <div className="container mx-auto">
+                        <div className="mb-16 text-center">
+                            <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
+                                Talks
+                            </h2>
+                        </div>
+                        <div className="mx-5 mb-20 text-center">
+                            <ul className="space-y-5 list-none">
+                                <li>
+                                    Improving observability with distributed tracing and Zipkin -
+                                    @Client
+                                </li>
+                                <li>
+                                    Design systems and UI component libraries with React and
+                                    Storybook - @Thoughtworks
+                                </li>
+                                <li>
+                                    How we built a component library to scale frontend development
+                                    across multiple teams - @Client
+                                </li>
+                                <li>Introduction to the phoenix server pattern - @Thoughtworks</li>
+                                <li>
+                                    Creating a living style-guide for ThoughtWorks.com -
+                                    @Thoughtworks
+                                </li>
+                                <li>How is it to be a developer @TW - @Meetup</li>
+                                <li>Securing web applications 101 - @Thoughtworks</li>
+                            </ul>
                         </div>
                     </div>
                 </section>
