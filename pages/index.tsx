@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function Home(): JSX.Element {
     return (
         <Layout home>
-            <header className="md:mt-20 mt-14 flex flex-col items-center">
+            <div className="md:mt-20 mt-14 flex flex-col items-center">
                 <Link href="/about">
                     <Image
                         priority
@@ -18,8 +18,8 @@ export default function Home(): JSX.Element {
                         alt="Profile picture of myself in India"
                     />
                 </Link>
-            </header>
-            <section className="mt-12 text-xl leading-6">
+            </div>
+            <div className="mt-12 text-xl leading-6">
                 <div className="max-w-2xl px-6 mx-auto text-center">
                     <h2 className="text-3xl font-semibold text-gray-800">
                         Hi,
@@ -33,13 +33,13 @@ export default function Home(): JSX.Element {
                             target="_blank"
                             className="text-emerald-500 hover:text-emerald-600 font-medium"
                             rel="noopener noreferrer">
-                            ThoughtWorks
+                            Thoughtworks
                         </a>
                         &nbsp;that loves building digital products.&nbsp;I also like traveling and
                         discovering new places.
                     </p>
                 </div>
-            </section>
+            </div>
 
             <div className="flex flex-col items-center justify-center mt-10">
                 <div className="md:max-w-4xl md:flex-row flex flex-col flex-wrap items-center justify-center max-w-full">

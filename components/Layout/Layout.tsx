@@ -10,9 +10,9 @@ type LayoutProps = {
 
 export default function Layout({ children, home, wide, pageTitle }: LayoutProps): JSX.Element {
     return (
-        <div className={`${wide ? 'max-w-6xl' : 'max-w-4xl'} px-0 py-0 mx-auto mt-4`}>
+        <main className={`${wide ? 'max-w-6xl' : 'max-w-4xl'} px-0 py-0 mx-auto mt-4 grow`}>
             <Meta pageTitle={pageTitle} />
-            <main className="mx-4 antialiased">{children}</main>
+            <section className="mx-4 antialiased">{children}</section>
             {!home && (
                 <div className="ml-7 mt-12 text-lg">
                     <Link href="/">
@@ -27,6 +27,6 @@ export default function Layout({ children, home, wide, pageTitle }: LayoutProps)
                     </Link>
                 </div>
             )}
-        </div>
+        </main>
     );
 }

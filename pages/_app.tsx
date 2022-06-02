@@ -5,10 +5,10 @@ import Footer from '../components/Footer/Footer';
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
     return (
-        <>
+        <div className="bg-gray-50 flex flex-col min-h-screen">
             <Header />
             <Component {...pageProps} />
             <Footer />
-        </>
+        </div>
     );
 }

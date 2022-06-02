@@ -4,7 +4,7 @@ import { useState } from 'react';
 export default function Header(): JSX.Element {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
     return (
-        <div className="border-b-1 sticky top-0 z-20 py-5 mb-6 bg-white border-b border-gray-300 border-solid">
+        <header className="border-b-1 sticky top-0 z-20 py-5 mb-6 bg-white border-b border-gray-300 border-solid">
             <div className="lg:max-w-4xl md:px-0 container flex items-center justify-between px-6 mx-auto">
                 <Link href="/">
                     <div className="flex justify-start mr-2">
@@ -123,6 +123,6 @@ export default function Header(): JSX.Element {
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     );
 }
