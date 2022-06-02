@@ -4,16 +4,33 @@ date: '2021-03-01'
 role: 'Tech Lead'
 location: 'Barcelona | Remote'
 teamSize: 7
-technologies: [Scala, Spark, AWS Redshift, AWS Glue, AWS EMR, AWS Lambda, dbt, deequ]
+technologies:
+    [
+        Scala,
+        ScalaTest,
+        Spark,
+        AWS Redshift,
+        AWS Glue,
+        AWS EMR,
+        AWS Lambda,
+        Datadog,
+        dbt,
+        Deequ,
+        ScalaCheck
+    ]
 ---
 
-I worked as a technical lead for a data engineer team in charge of building a data product. The data product provides insights about several usage KPIs of a healthcare platform. Some of the tasks I performed:
+I worked as a technical lead for a data engineer team in charge of building a data product. The solution generates insights about usage KPIs of a healthcare platform. Some of the tasks I helped with:
 
--   Build an ETL data pipeline with Spark/Scala.
--   Develop ELT health data transformations with dbt in AWS Redshift.
--   Optimising the performance of the data processing by leveraging Redshift Spectrum and materialized views.
--   Work with client's data architect to design the next generation of their data ingestion architecture.
--   Improve the reliability and observability of the data pipeline.
--   Work with the head of big data to tailor requirements and evolve the architecture of the solution.
--   Work with data analysts evolving the data model to build an embedded BI dashboard with Tableau.
--   Help the team supporting the operations team responsible for data quality, data monitoring, and pipeline health. Ensuring incidents and outages are mitigated appropriately.
+-   Build ETL data pipelines with Spark/Scala/AWS EMR.
+-   Build ELT data transformations with dbt/SQL in AWS Redshift.
+-   Adopt Redshift Spectrum and materialized views to optimize performance.
+-   Support the growth and impact of team members via 1-1s.
+-   Manage relationships with other teams and key stakeholders.
+-   Work with the data architect to modernise client's data ingestion architecture.
+-   Work with data analysts to evolve the data model for an embedded BI dashboard in Tableau.
+-   Support the operations team responsible for data quality, data monitoring, and pipeline health. Ensuring incidents and outages are mitigated appropriately.
+-   Be the team's point of contact and lead for a proof of concept to assess the technical feasibility of providing an embedded analytics solution to end-users.
+-   Managing and visualizing technical debt.
+-   Generate synthetic test data with ScalaCheck.
+-   Foster a continuous learning environment by establishing sessions where team members can share what they learned.
