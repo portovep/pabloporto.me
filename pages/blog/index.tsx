@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next';
+import Link from 'next/link';
 import Layout from '../../components/Layout/Layout';
 import PostSummary from '../../components/PostSummary/PostSummary';
 import { SectionDescription, SectionTitle } from '../../components/ui';
@@ -17,11 +18,29 @@ export default function Blog({ allPostsData }: BlogProps): JSX.Element {
                     A collection of articles and papers about software engineering.
                 </SectionDescription>
                 <ul className="mt-8">
-                    {allPostsData.map((postData) => (
-                        <li key={postData.id}>
-                            <PostSummary postData={postData} />
-                        </li>
-                    ))}
+                    {allPostsData.map((postData) => {
+                        return (
+                            <li key={postData.id}>
+                                {postData.type === 'Post' ? (
+                                    <Link href={`blog/${postData.id}`}>
+                                        <a
+                                            className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium"
+                                            rel="noopener noreferrer">
+                                            <PostSummary postData={postData} />
+                                        </a>
+                                    </Link>
+                                ) : (
+                                    <a
+                                        href={postData.link}
+                                        target="_blank"
+                                        className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium"
+                                        rel="noopener noreferrer">
+                                        <PostSummary postData={postData} />
+                                    </a>
+                                )}
+                            </li>
+                        );
+                    })}
                 </ul>
             </section>
         </Layout>
