@@ -1,6 +1,7 @@
 import Layout from '../../components/Layout/Layout';
 import PhotoCard from '../../components/PhotoCard/PhotoCard';
 import { SectionDescription, SectionTitle } from '../../components/ui';
+import WorldMap from '../../components/WorldMap/WorldMap';
 
 export default function Traveling(): JSX.Element {
     return (
@@ -8,6 +9,11 @@ export default function Traveling(): JSX.Element {
             <section className="mt-10 text-xl leading-6">
                 <div className="w-full p-6 pt-4">
                     <SectionTitle text="Traveling" />
+
+                    <div className="mt-14 mb-8">
+                        <WorldMap />
+                    </div>
+
                     <SectionDescription>
                         <p>Some of my best photos, taken while exploring the world.</p>
                     </SectionDescription>
