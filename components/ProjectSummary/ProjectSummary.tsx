@@ -20,8 +20,7 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                             className="inline h-4 w-4 mr-1.5 align-baseline"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
+                            stroke="currentColor">
                             <path
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
@@ -43,8 +42,7 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                                 className="inline w-5 h-5 mr-1 align-top"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
+                                stroke="currentColor">
                                 <path
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
@@ -71,8 +69,7 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                                 className="inline w-5 h-5 mr-1 align-top"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
+                                stroke="currentColor">
                                 <path
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
@@ -95,8 +92,7 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                             {technologies.map((technology) => (
                                 <span
                                     key={technology}
-                                    className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-emerald-400 text-white"
-                                >
+                                    className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-emerald-400 text-white">
                                     {technology}
                                 </span>
                             ))}

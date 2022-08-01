@@ -32,8 +32,7 @@ export default function Home(): JSX.Element {
                             href="https://thoughtworks.com"
                             target="_blank"
                             className="text-emerald-500 hover:text-emerald-600 font-medium"
-                            rel="noopener noreferrer"
-                        >
+                            rel="noopener noreferrer">
                             Thoughtworks
                         </a>
                         &nbsp;that loves building digital products.&nbsp;I also like traveling and

@@ -21,8 +21,7 @@ export default function Working({ allProjectData }: WorkingProps): JSX.Element {
                         <Link href="/stack">
                             <a
                                 className="text-emerald-500 hover:text-emerald-600 font-medium"
-                                rel="noopener noreferrer"
-                            >
+                                rel="noopener noreferrer">
                                 &nbsp;take a look at my preferred tools.
                             </a>
                         </Link>
