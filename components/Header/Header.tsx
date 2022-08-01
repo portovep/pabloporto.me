@@ -42,28 +42,33 @@ export default function Header(): JSX.Element {
                         onClick={() => setShowMobileMenu(!showMobileMenu)}
                         type="button"
                         className="focus:outline-none w-8 h-8 ml-1 mr-1 rounded"
-                        aria-label="Toggle mobile menu">
+                        aria-label="Toggle mobile menu"
+                    >
                         {showMobileMenu ? (
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20"
                                 fill="currentColor"
-                                className="text-gray-900">
+                                className="text-gray-900"
+                            >
                                 <path
                                     fillRule="evenodd"
                                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                    clipRule="evenodd"></path>
+                                    clipRule="evenodd"
+                                ></path>
                             </svg>
                         ) : (
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20"
                                 fill="currentColor"
-                                className="text-gray-900">
+                                className="text-gray-900"
+                            >
                                 <path
                                     fillRule="evenodd"
                                     d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                    clipRule="evenodd"></path>
+                                    clipRule="evenodd"
+                                ></path>
                             </svg>
                         )}
                     </button>
@@ -72,13 +77,15 @@ export default function Header(): JSX.Element {
                             showMobileMenu ? 'duration-300' : 'duration-100'
                         } ease-in transform ${
                             showMobileMenu ? 'translate-x-0' : 'translate-x-full'
-                        } bg-gray-200`}>
+                        } bg-gray-200`}
+                    >
                         <nav className="fixed h-full mt-8">
                             <div className="px-12 py-4">
                                 <Link href="/blog">
                                     <button
                                         className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                        onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                                        onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                    >
                                         Writing
                                     </button>
                                 </Link>
@@ -87,7 +94,8 @@ export default function Header(): JSX.Element {
                                 <Link href="/working">
                                     <button
                                         className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                        onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                                        onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                    >
                                         Working
                                     </button>
                                 </Link>
@@ -96,7 +104,8 @@ export default function Header(): JSX.Element {
                                 <Link href="/traveling">
                                     <button
                                         className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                        onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                                        onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                    >
                                         Traveling
                                     </button>
                                 </Link>
@@ -105,7 +114,8 @@ export default function Header(): JSX.Element {
                                 <Link href="/making">
                                     <button
                                         className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                        onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                                        onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                    >
                                         Making
                                     </button>
                                 </Link>
@@ -114,7 +124,8 @@ export default function Header(): JSX.Element {
                                 <Link href="/about">
                                     <button
                                         className="focus:text-emerald-600 mr-5 font-semibold transition-colors"
-                                        onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                                        onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                    >
                                         About
                                     </button>
                                 </Link>

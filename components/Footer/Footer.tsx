@@ -19,7 +19,8 @@ export default function Footer(): JSX.Element {
                     className="mr-3.5"
                     href="https://twitter.com/portovep"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                >
                     <Image
                         src="/images/logos/twitter.svg"
                         alt="Twitter Logo"
@@ -32,7 +33,8 @@ export default function Footer(): JSX.Element {
                     className="mr-3"
                     href="https://github.com/portovep"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                >
                     <Image
                         src="/images/logos/github.svg"
                         alt="Github Logo"
@@ -45,7 +47,8 @@ export default function Footer(): JSX.Element {
                     className="mr-3"
                     href="https://www.instagram.com/porto.vga"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                >
                     <Image
                         src="/images/logos/instagram.svg"
                         alt="Instagram Logo"
@@ -58,7 +61,8 @@ export default function Footer(): JSX.Element {
                     className="mr-3"
                     href="https://linkedin.com/in/pabloportoveloso"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                >
                     <Image
                         src="/images/logos/linkedin.svg"
                         alt="Linkedin Logo"

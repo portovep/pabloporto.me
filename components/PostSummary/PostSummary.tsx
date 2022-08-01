@@ -11,7 +11,8 @@ const postLink = (postData: PostData) =>
         <Link href={`blog/${postData.id}`}>
             <a
                 className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+            >
                 Read more
                 <span aria-hidden="true" className="ml-2">
                     →
@@ -23,7 +24,8 @@ const postLink = (postData: PostData) =>
             href={postData.link}
             target="_blank"
             className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+        >
             Check it out
             <span aria-hidden="true" className="ml-2">
                 →

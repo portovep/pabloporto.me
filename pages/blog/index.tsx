@@ -25,7 +25,8 @@ export default function Blog({ allPostsData }: BlogProps): JSX.Element {
                                     <Link href={`blog/${postData.id}`}>
                                         <a
                                             className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium"
-                                            rel="noopener noreferrer">
+                                            rel="noopener noreferrer"
+                                        >
                                             <PostSummary postData={postData} />
                                         </a>
                                     </Link>
@@ -34,7 +35,8 @@ export default function Blog({ allPostsData }: BlogProps): JSX.Element {
                                         href={postData.link}
                                         target="_blank"
                                         className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer"
+                                    >
                                         <PostSummary postData={postData} />
                                     </a>
                                 )}
