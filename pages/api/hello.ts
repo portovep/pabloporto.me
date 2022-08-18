@@ -4,6 +4,6 @@ type Data = {
     name: string;
 };
 
-export default (_: NextApiRequest, res: NextApiResponse<Data>): void => {
+export default function hello(_: NextApiRequest, res: NextApiResponse<Data>): void {
     res.status(200).json({ name: 'Pablo Porto' });
-};
+}

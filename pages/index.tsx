@@ -12,7 +12,7 @@ export default function Home(): JSX.Element {
                         priority
                         quality="100"
                         src="/images/profile.jpg"
-                        className="rounded-full"
+                        className="hover:cursor-pointer rounded-full"
                         height={144}
                         width={144}
                         alt="Profile picture of myself in India"
