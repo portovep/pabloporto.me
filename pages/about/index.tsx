@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import Layout from '../../components/Layout/Layout';
+import aboutPagePhoto from '../../public/images/about.jpeg';
 
 export default function About(): JSX.Element {
     return (
@@ -24,10 +26,12 @@ export default function About(): JSX.Element {
                         </p>
                     </div>
                     <div className="lg:max-w-lg lg:w-3/6 md:w-3/6 w-full">
-                        <img
-                            className="object-cover object-center rounded"
-                            alt="hero"
-                            src="/images/about.jpeg"
+                        <Image
+                            priority
+                            alt="Me chilling in Sri Lanka"
+                            src={aboutPagePhoto}
+                            className="rounded"
+                            placeholder="blur"
                         />
                     </div>
                 </div>
