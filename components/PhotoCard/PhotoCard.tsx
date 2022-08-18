@@ -1,7 +1,7 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 type PhotoCardProps = {
-    imageURL: string;
+    imageURL: StaticImageData;
     location: string;
     title: string;
 };
@@ -15,6 +15,7 @@ export default function PhotoCard({ imageURL, location, title }: PhotoCardProps)
                     alt={`${title} taken at ${location}`}
                     src={imageURL}
                     layout="fill"
+                    placeholder="blur"
                     objectFit="cover"
                 />
             </div>

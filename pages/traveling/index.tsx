@@ -2,6 +2,15 @@ import Layout from '../../components/Layout/Layout';
 import PhotoCard from '../../components/PhotoCard/PhotoCard';
 import { SectionDescription, SectionTitle } from '../../components/ui';
 import WorldMap from '../../components/WorldMap/WorldMap';
+import tajMahalPhoto from '../../public/images/photos/IMG_20200217_080528.jpeg';
+import tajMahalFacadePhoto from '../../public/images/photos/IMG_20200217_071819.jpeg';
+import monkeyJumpingPhoto from '../../public/images/photos/IMG_20180701_063735.jpeg';
+import beachHousePhoto from '../../public/images/photos/IMG_20150525_104418.jpeg';
+import maldivesBeachPhoto from '../../public/images/photos/IMG_20200225_125124.jpeg';
+import lonelyElephantPhoto from '../../public/images/photos/IMG_20200303_152059.jpeg';
+import edinburghLandscapePhoto from '../../public/images/photos/IMG_20180224_145152.jpeg';
+import galicianSunsetPhoto from '../../public/images/photos/IMG_20180814_213428.jpeg';
+import jaipurKidPhoto from '../../public/images/photos/IMG_20180630_212048.jpeg';
 
 export default function Traveling(): JSX.Element {
     return (
@@ -22,47 +31,47 @@ export default function Traveling(): JSX.Element {
                         <PhotoCard
                             title="Taj Mahal"
                             location="Jaipur, India"
-                            imageURL="/images/photos/IMG_20200217_080528.jpeg"
+                            imageURL={tajMahalPhoto}
                         />
                         <PhotoCard
                             title="Taj Mahal Facade"
                             location="Jaipur, India"
-                            imageURL="/images/photos/IMG_20200217_071819.jpeg"
+                            imageURL={tajMahalFacadePhoto}
                         />
                         <PhotoCard
                             title="Monkey jump"
                             location="Jaipur, India"
-                            imageURL="/images/photos/IMG_20180701_063735.jpeg"
+                            imageURL={monkeyJumpingPhoto}
                         />
                         <PhotoCard
                             title="Beach house"
                             location="Faro, Portugal"
-                            imageURL="/images/photos/IMG_20150525_104418.jpeg"
+                            imageURL={beachHousePhoto}
                         />
                         <PhotoCard
                             title="Maldives water"
                             location="Maldives"
-                            imageURL="/images/photos/IMG_20200225_125124.jpeg"
+                            imageURL={maldivesBeachPhoto}
                         />
                         <PhotoCard
                             title="Lonely Elephant"
                             location="Sri Lanka"
-                            imageURL="/images/photos/IMG_20200303_152059.jpeg"
+                            imageURL={lonelyElephantPhoto}
                         />
                         <PhotoCard
                             title="Edinburgh landscape"
                             location="Edinburgh, Scotland"
-                            imageURL="/images/photos/IMG_20180224_145152.jpeg"
+                            imageURL={edinburghLandscapePhoto}
                         />
                         <PhotoCard
                             title="Sunset"
                             location="Galicia"
-                            imageURL="/images/photos/IMG_20180814_213428.jpeg"
+                            imageURL={galicianSunsetPhoto}
                         />
                         <PhotoCard
                             title="Chid helping his father"
                             location="Jaipur, India"
-                            imageURL="/images/photos/IMG_20180630_212048.jpeg"
+                            imageURL={jaipurKidPhoto}
                         />
                     </div>
                 </div>
