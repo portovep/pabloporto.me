@@ -36,12 +36,12 @@ export default function Home(): JSX.Element {
                             rel="noopener noreferrer">
                             Thoughtworks
                         </a>
-                        .&nbsp;I also like traveling and living in new places. More about me&nbsp;
+                        .&nbsp;I also like traveling and living in new places. More&nbsp;
                         <Link href="/about">
                             <a
                                 className="text-emerald-500 hover:text-emerald-600 font-medium"
                                 rel="noopener noreferrer">
-                                here
+                                about me
                             </a>
                         </Link>
                         .
