@@ -44,7 +44,7 @@ export default function PostSummary(props: PostSummaryProps): JSX.Element {
                         <Label text={type || 'Post'} />
                     </div>
                 </div>
-                <div className="mt-4 text-2xl font-bold text-gray-700">{title}</div>
+                <div className="pr-6 mt-4 text-2xl font-bold text-gray-700">{title}</div>
                 <div className="flex items-center justify-between mt-5">
                     {postLink(props.postData)}
                 </div>

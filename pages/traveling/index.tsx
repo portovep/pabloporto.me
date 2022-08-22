@@ -16,64 +16,58 @@ export default function Traveling(): JSX.Element {
     return (
         <Layout wide pageTitle="Traveling">
             <section className="mt-10 text-xl leading-6">
-                <div className="w-full p-6 pt-4">
-                    <SectionTitle text="Traveling" />
+                <SectionTitle text="Traveling" />
 
-                    <div className="mt-14 mb-8">
-                        <WorldMap />
-                    </div>
+                <div className="mt-14 p-1 mb-8">
+                    <WorldMap />
+                </div>
 
-                    <SectionDescription>
-                        <p>Some of my best photos, taken while exploring the world.</p>
-                    </SectionDescription>
+                <SectionDescription>
+                    <p>Some of my best photos.</p>
+                </SectionDescription>
 
-                    <div className="md:grid-cols-2 xl:grid-cols-3 grid grid-cols-1 gap-12 mt-12">
-                        <PhotoCard
-                            title="Taj Mahal"
-                            location="Jaipur, India"
-                            imageURL={tajMahalPhoto}
-                        />
-                        <PhotoCard
-                            title="Taj Mahal Facade"
-                            location="Jaipur, India"
-                            imageURL={tajMahalFacadePhoto}
-                        />
-                        <PhotoCard
-                            title="Monkey jump"
-                            location="Jaipur, India"
-                            imageURL={monkeyJumpingPhoto}
-                        />
-                        <PhotoCard
-                            title="Beach house"
-                            location="Faro, Portugal"
-                            imageURL={beachHousePhoto}
-                        />
-                        <PhotoCard
-                            title="Maldives water"
-                            location="Maldives"
-                            imageURL={maldivesBeachPhoto}
-                        />
-                        <PhotoCard
-                            title="Lonely Elephant"
-                            location="Sri Lanka"
-                            imageURL={lonelyElephantPhoto}
-                        />
-                        <PhotoCard
-                            title="Edinburgh landscape"
-                            location="Edinburgh, Scotland"
-                            imageURL={edinburghLandscapePhoto}
-                        />
-                        <PhotoCard
-                            title="Sunset"
-                            location="Galicia"
-                            imageURL={galicianSunsetPhoto}
-                        />
-                        <PhotoCard
-                            title="Chid helping his father"
-                            location="Jaipur, India"
-                            imageURL={jaipurKidPhoto}
-                        />
-                    </div>
+                <div className="md:grid-cols-2 xl:grid-cols-3 grid grid-cols-1 gap-12 mt-12">
+                    <PhotoCard
+                        title="Taj Mahal"
+                        location="Jaipur, India"
+                        imageURL={tajMahalPhoto}
+                    />
+                    <PhotoCard
+                        title="Taj Mahal Facade"
+                        location="Jaipur, India"
+                        imageURL={tajMahalFacadePhoto}
+                    />
+                    <PhotoCard
+                        title="Monkey jump"
+                        location="Jaipur, India"
+                        imageURL={monkeyJumpingPhoto}
+                    />
+                    <PhotoCard
+                        title="Beach house"
+                        location="Faro, Portugal"
+                        imageURL={beachHousePhoto}
+                    />
+                    <PhotoCard
+                        title="Maldives water"
+                        location="Maldives"
+                        imageURL={maldivesBeachPhoto}
+                    />
+                    <PhotoCard
+                        title="Lonely Elephant"
+                        location="Sri Lanka"
+                        imageURL={lonelyElephantPhoto}
+                    />
+                    <PhotoCard
+                        title="Edinburgh landscape"
+                        location="Edinburgh, Scotland"
+                        imageURL={edinburghLandscapePhoto}
+                    />
+                    <PhotoCard title="Sunset" location="Galicia" imageURL={galicianSunsetPhoto} />
+                    <PhotoCard
+                        title="Chid helping his father"
+                        location="Jaipur, India"
+                        imageURL={jaipurKidPhoto}
+                    />
                 </div>
             </section>
         </Layout>

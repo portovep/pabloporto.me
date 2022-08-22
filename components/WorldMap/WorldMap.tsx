@@ -39,7 +39,7 @@ export default function WorldMap(): JSX.Element {
             />
             <section className="body-font text-gray-600">
                 <div className="container px-5 py-12 mx-auto">
-                    <div className="flex flex-col w-full mb-20 text-center">
+                    <div className="mb-14 flex flex-col w-full text-center">
                         <h1 className="sm:text-3xl title-font mb-4 text-2xl font-medium text-gray-900">
                             Exploring the world
                         </h1>

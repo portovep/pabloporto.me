@@ -27,7 +27,8 @@ export default function Home(): JSX.Element {
                         Nice to meet you.
                     </h2>
                     <p className="mt-7 text-gray-600">
-                        I am a Lead Software Consultant at&nbsp;
+                        I am interested in software engineering, health and personal finance. I work
+                        as a Lead Software Consultant at&nbsp;
                         <a
                             href="https://thoughtworks.com"
                             target="_blank"
@@ -35,8 +36,15 @@ export default function Home(): JSX.Element {
                             rel="noopener noreferrer">
                             Thoughtworks
                         </a>
-                        &nbsp;that loves building digital products.&nbsp;I also like traveling and
-                        discovering new places.
+                        .&nbsp;I also like traveling and living in new places. More about me&nbsp;
+                        <Link href="/about">
+                            <a
+                                className="text-emerald-500 hover:text-emerald-600 font-medium"
+                                rel="noopener noreferrer">
+                                here
+                            </a>
+                        </Link>
+                        .
                     </p>
                 </div>
             </div>
