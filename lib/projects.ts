@@ -1,8 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import remark from 'remark';
-import html from 'remark-html';
+import { micromark } from 'micromark';
+import { gfm, gfmHtml } from 'micromark-extension-gfm';
+import { parseMarkdownContent } from './markdown';
 
 const projectDirectory = path.join(process.cwd(), 'content/projects');
 
@@ -40,7 +41,7 @@ const parseProject = async (fileName: string) => {
 
     const matterResult = matter(fileContents);
 
-    const processedContent = await remark().use(html).process(matterResult.content);
+    const processedContent = parseMarkdownContent(matterResult.content);
     const contentHtml = processedContent.toString();
 
     return {
