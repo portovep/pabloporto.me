@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import remark from 'remark';
-import html from 'remark-html';
+import { micromark } from 'micromark';
+import { gfm, gfmHtml } from 'micromark-extension-gfm';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
@@ -53,8 +53,10 @@ const parsePost = async (fileName: string) => {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     const matterResult = matter(fileContents);
-
-    const processedContent = await remark().use(html).process(matterResult.content);
+    const processedContent = micromark(matterResult.content, {
+        extensions: [gfm()],
+        htmlExtensions: [gfmHtml()]
+    });
     const contentHtml = processedContent.toString();
 
     return {
