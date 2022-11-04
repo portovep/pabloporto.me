@@ -2,13 +2,13 @@
 
 [![CD Pipeline](https://github.com/portovep/pabloporto.me/actions/workflows/pipeline.yml/badge.svg?branch=main)](https://github.com/portovep/pabloporto.me/actions/workflows/pipeline.yml)
 
-This is the frontend starter template I created while building a new version of my personal website, you can check out the result at [pabloporto.me](https://pabloporto.me).
+Pablo's personal website built with React, TypeScipt, NextJS and Tailwind. You can check it live at [pabloporto.me](https://pabloporto.me).
 
 ## Motivation
 
-Every few years, I change the tech stack that use to build my personal website. I started using Wordpress, then moved to Jekyll, then React/Redux and finally Next.js. I do this to have a playground in which to test new frontend and CI/CD technologies.
+I change the tech stack that use to build my personal website every few years. I started using Wordpress, then moved to Jekyll, then React/Redux and finally Next.js. I do this to have a playground where I can play around with new frontend and CI/CD technologies.
 
-The mission of this repository is to provide an example on how to create a continuous deployment pipeline with Github Actions for a website/webapp built with Next.js. It includes automatic code formatting, linting, dependecy checks and [web vitals checks](https://web.dev/vitals/).
+You can use this project as an example on how to create a continuous deployment pipeline with Github Actions for a website/webapp built with Next.js. The CI/CD pipeline includes automated code formatting, linting, dependecy checks and [web vitals checks](https://web.dev/vitals/).
 
 ## How To Use
 
@@ -79,3 +79,7 @@ TBC
 ## Contribute
 
 Suggestions on new tools to try and things to add are welcome. 🙏
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
