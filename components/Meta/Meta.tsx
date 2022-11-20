@@ -4,14 +4,14 @@ export const siteTitle = 'Pablo Porto';
 const siteUrl = 'https://pabloporto.me/';
 const siteImage = `${siteUrl}images/about.jpeg`;
 const siteDescription =
-    'I enjoy making software and traveling the world. Currently helping companies go digital at ThoughtWorks.';
+    'I enjoy making software and exploring the world. Currently helping companies go digital at Thoughtworks.';
 
 type MetaProps = {
     pageTitle?: string;
 };
 
 export default function Meta({ pageTitle }: MetaProps): JSX.Element {
-    const title = pageTitle ? `${siteTitle} - ${pageTitle}` : siteTitle;
+    const title = pageTitle ? `${pageTitle} · ${siteTitle}` : siteTitle;
     return (
         <Head>
             <link rel="icon" href="/favicon.ico" />
