@@ -8,7 +8,7 @@ npx lhci autorun \
     --collect.numberOfRuns=3 \
     --collect.url="${target_url}"/about \
     --collect.url="${target_url}"/blog \
-    --collect.url="${target_url}"/blog/what-is-like-to-be-a-developer-at-thoughtworks \
+    --collect.url="${target_url}"/blog/what-its-like-to-be-a-developer-in-a-modern-software-engineering-team \
     --collect.url="${target_url}"/stack \
     --collect.url="${target_url}"/traveling \
     --collect.url="${target_url}"/working \
