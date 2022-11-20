@@ -1,12 +1,12 @@
 ---
-title: 'What it’s like to be a software developer at ThoughtWorks'
+title: "What it's like to be a developer in a modern software engineering team"
 date: '2017-10-05'
 type: 'Post'
 ---
 
 I recently came across [a really interesting article](https://increment.com/development/what-its-like-to-be-a-developer-at/) published on Increment, a digital magazine that shares ideas on how effective software teams work together. The author asks a set of questions to software developers and managers from what can be considered great product companies in the software industry about how is it to be a developer in their teams.
 
-I don’t work or have worked for a product company, but I thought it would be interesting to answer the same set of questions so that I can see how my current experience in an agile software development team may differ from the ones in the original article.
+I don’t work for a product company but I thought it would be interesting to answer the same set of questions so that I can see how my current experience in an agile software development team may differ from the ones in the original article.
 
 I work as a software consultant for a company called [ThoughtWorks](https://www.thoughtworks.com/). As part of my job, I usually get involved in the delivery of at least a couple of software products every year, mostly by advising our clients to improve the ways they engineer those products and pairing with their engineering teams to build them.
 
