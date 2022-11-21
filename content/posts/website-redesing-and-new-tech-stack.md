@@ -106,7 +106,7 @@ As you can see, this website has changed quite a lot over the years. Writing thi
 
 I still think the main ROI of these efforts has been the ability to have a playground to learn and develop new front-end skills that I could apply in my day-to-day job. I have many examples of technologies I was able to understand better after applying them to my website: CSS, SaSS, TypeScript, Storybook, and Next.js. TailwindCSS, Atomic Design. GitHub Actions...
 
-I am always checking other people's websites [to get inspiration](https://austinkleon.com/steal/). Do you have one you want to share? Reach out to me on [Twitter](https://twitter.com/portovep). To end this post as it is starting to look like a book, I wanted to share some of the personal the websites that inspired me.
+I am always checking other people's websites [to get inspiration](https://austinkleon.com/steal/). Do you have one you want to share? Reach out to me on [Twitter](https://twitter.com/portovep). Finally, I want to share some of the personal websites that inspired me to improve mine and write this.
 
 -   [brianlovin.com](https://brianlovin.com/writing/how-my-website-works?utm_source=pocket_reader)
 -   [kentcdodds.com](https://kentcdodds.com/blog/how-i-built-a-modern-website-in-2021)
