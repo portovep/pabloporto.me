@@ -15,15 +15,15 @@ export default function Layout({ children, home, wide, pageTitle }: LayoutProps)
             <section className="mx-4 antialiased">{children}</section>
             {!home && (
                 <div className="ml-7 mt-12 text-lg">
-                    <Link href="/">
-                        <a rel="noopener noreferrer">
-                            <span className="hover:text-emerald-600 font-medium">
-                                <span aria-hidden="true" className="mr-2">
-                                    ←
-                                </span>
-                                Back to home
+                    <Link href="/" rel="noopener noreferrer">
+
+                        <span className="hover:text-emerald-600 font-medium">
+                            <span aria-hidden="true" className="mr-2">
+                                ←
                             </span>
-                        </a>
+                            Back to home
+                        </span>
+
                     </Link>
                 </div>
             )}

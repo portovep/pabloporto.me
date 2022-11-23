@@ -18,12 +18,13 @@ export default function Working({ allProjectData }: WorkingProps): JSX.Element {
                     <p>
                         Some of the projects and products I worked on over the last years. You can
                         also
-                        <Link href="/stack">
-                            <a
-                                className="text-emerald-500 hover:text-emerald-600 font-medium"
-                                rel="noopener noreferrer">
+                        <Link
+                            href="/stack"
+                            className="text-emerald-500 hover:text-emerald-600 font-medium"
+                            rel="noopener noreferrer">
+                            
                                 &nbsp;take a look at my preferred tools.
-                            </a>
+                            
                         </Link>
                     </p>
                 </SectionDescription>

@@ -1,5 +1,5 @@
 import Layout from '../../components/Layout/Layout';
-import Image from 'next/image';
+import Image from "next/image";
 import { SectionDescription, SectionTitle } from '../../components/ui';
 
 export default function Making(): JSX.Element {
@@ -50,7 +50,10 @@ export default function Making(): JSX.Element {
                                     src="/images/projects/chrome_store.png"
                                     height="60"
                                     width="225"
-                                />
+                                    style={{
+                                        maxWidth: "100%",
+                                        height: "auto"
+                                    }} />
                             </a>
                         </div>
                     </div>
@@ -62,7 +65,10 @@ export default function Making(): JSX.Element {
                             src="/images/projects/1stream_screenshot.png"
                             height="540"
                             width="900"
-                        />
+                            style={{
+                                maxWidth: "100%",
+                                height: "auto"
+                            }} />
                     </div>
                 </div>
                 <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
@@ -105,7 +111,10 @@ export default function Making(): JSX.Element {
                             src="/images/projects/cloujera.png"
                             height="540"
                             width="900"
-                        />
+                            style={{
+                                maxWidth: "100%",
+                                height: "auto"
+                            }} />
                     </div>
                 </div>
                 <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
@@ -160,7 +169,10 @@ export default function Making(): JSX.Element {
                             src="/images/projects/ecoshifter.webp"
                             height="500"
                             width="300"
-                        />
+                            style={{
+                                maxWidth: "100%",
+                                height: "auto"
+                            }} />
                     </div>
                 </div>
                 <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10">
@@ -203,7 +215,10 @@ export default function Making(): JSX.Element {
                             src="/images/projects/media_crowdtransport_1.png"
                             height="500"
                             width="300"
-                        />
+                            style={{
+                                maxWidth: "100%",
+                                height: "auto"
+                            }} />
                     </div>
                 </div>
             </section>

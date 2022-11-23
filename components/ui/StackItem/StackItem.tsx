@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 type StackItemProps = {
     name: string;
@@ -20,7 +20,10 @@ export default function StackItem(props: StackItemProps): JSX.Element {
                     alt={`${name} Logo`}
                     width="60"
                     height="90"
-                />
+                    style={{
+                        maxWidth: "100%",
+                        height: "auto"
+                    }} />
                 <div className=" justify-center pl-5 space-y-2">
                     <div className=" space-y-1">
                         <p className="text-primary mt-2 font-medium">{name}</p>

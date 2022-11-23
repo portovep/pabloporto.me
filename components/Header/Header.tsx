@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import Link from 'next/link';
 import { useState } from 'react';
 import websiteLogo from '../../public/android-chrome-192x192.png';
@@ -9,39 +9,38 @@ export default function Header(): JSX.Element {
         <header className="border-b-1 sticky top-0 z-20 py-5 mb-6 bg-white border-b border-gray-300 border-solid">
             <div className="lg:max-w-4xl md:px-0 container flex items-center justify-between px-6 mx-auto">
                 <Link href="/">
-                    <a>
-                        <div className="flex justify-start mr-2">
-                            <div className="sm:h-10 sm:w-10 relative w-8 h-8">
-                                <Image
-                                    priority
-                                    alt="Website logo"
-                                    src={websiteLogo}
-                                    layout="fill"
-                                />
-                            </div>
+
+                    <div className="flex justify-start mr-2">
+                        <div className="sm:h-10 sm:w-10 relative w-8 h-8">
+                            <Image priority alt="Website logo" src={websiteLogo} fill sizes="100vw" />
                         </div>
-                    </a>
+                    </div>
+
                 </Link>
-                <Link href="/">
-                    <a className="font-bold tracking-wider text-gray-900 transition-colors">
+                <Link
+                    href="/"
+                    className="font-bold tracking-wider text-gray-900 transition-colors">
+                    
                         Pablo Porto
-                    </a>
+                    
                 </Link>
                 <nav className="md:flex md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex-wrap items-center justify-center hidden text-base">
-                    <Link href="/blog">
-                        <a className="hover:text-emerald-600 mr-5 transition-colors">Writing</a>
+                    <Link href="/blog" className="hover:text-emerald-600 mr-5 transition-colors">
+                        Writing
                     </Link>
-                    <Link href="/working">
-                        <a className="hover:text-emerald-600 mr-5 transition-colors">Working</a>
+                    <Link href="/working" className="hover:text-emerald-600 mr-5 transition-colors">
+                        Working
                     </Link>
-                    <Link href="/traveling">
-                        <a className="hover:text-emerald-600 mr-5 transition-colors">Traveling</a>
+                    <Link
+                        href="/traveling"
+                        className="hover:text-emerald-600 mr-5 transition-colors">
+                        Traveling
                     </Link>
-                    <Link href="/making">
-                        <a className="hover:text-emerald-600 mr-5 transition-colors">Making</a>
+                    <Link href="/making" className="hover:text-emerald-600 mr-5 transition-colors">
+                        Making
                     </Link>
-                    <Link href="/about">
-                        <a className="hover:text-emerald-600 mr-5 transition-colors">About</a>
+                    <Link href="/about" className="hover:text-emerald-600 mr-5 transition-colors">
+                        About
                     </Link>
                 </nav>
                 <div className="sm:hidden item-center flex">
@@ -82,7 +81,7 @@ export default function Header(): JSX.Element {
                         } bg-gray-200`}>
                         <nav className="fixed h-full mt-8">
                             <div className="px-12 py-4">
-                                <Link href="/blog">
+                                <Link href="/blog" legacyBehavior>
                                     <button
                                         className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
                                         onClick={() => setShowMobileMenu(!showMobileMenu)}>
@@ -91,7 +90,7 @@ export default function Header(): JSX.Element {
                                 </Link>
                             </div>
                             <div className="px-12 py-4">
-                                <Link href="/working">
+                                <Link href="/working" legacyBehavior>
                                     <button
                                         className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
                                         onClick={() => setShowMobileMenu(!showMobileMenu)}>
@@ -100,7 +99,7 @@ export default function Header(): JSX.Element {
                                 </Link>
                             </div>
                             <div className="px-12 py-4">
-                                <Link href="/traveling">
+                                <Link href="/traveling" legacyBehavior>
                                     <button
                                         className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
                                         onClick={() => setShowMobileMenu(!showMobileMenu)}>
@@ -109,7 +108,7 @@ export default function Header(): JSX.Element {
                                 </Link>
                             </div>
                             <div className="px-12 py-4">
-                                <Link href="/making">
+                                <Link href="/making" legacyBehavior>
                                     <button
                                         className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
                                         onClick={() => setShowMobileMenu(!showMobileMenu)}>
@@ -118,7 +117,7 @@ export default function Header(): JSX.Element {
                                 </Link>
                             </div>
                             <div className="px-12 py-4">
-                                <Link href="/about">
+                                <Link href="/about" legacyBehavior>
                                     <button
                                         className="focus:text-emerald-600 mr-5 font-semibold transition-colors"
                                         onClick={() => setShowMobileMenu(!showMobileMenu)}>

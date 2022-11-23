@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import Layout from '../../components/Layout/Layout';
 import aboutPagePhoto from '../../public/images/about.jpeg';
 
@@ -32,7 +32,10 @@ export default function About(): JSX.Element {
                             src={aboutPagePhoto}
                             className="rounded"
                             placeholder="blur"
-                        />
+                            style={{
+                                maxWidth: "100%",
+                                height: "auto"
+                            }} />
                     </div>
                 </div>
                 <section className="text-gray-600">
