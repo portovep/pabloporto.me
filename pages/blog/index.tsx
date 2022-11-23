@@ -22,14 +22,12 @@ export default function Blog({ allPostsData }: BlogProps): JSX.Element {
                         return (
                             <li key={postData.id}>
                                 {postData.type === 'Post' ? (
-                                    (<Link
+                                    <Link
                                         href={`blog/${postData.id}`}
                                         className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium"
                                         rel="noopener noreferrer">
-
                                         <PostSummary postData={postData} />
-
-                                    </Link>)
+                                    </Link>
                                 ) : (
                                     <a
                                         href={postData.link}

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Footer(): JSX.Element {
     return (
@@ -26,9 +26,10 @@ export default function Footer(): JSX.Element {
                         width="20"
                         height="20"
                         style={{
-                            maxWidth: "100%",
-                            height: "auto"
-                        }} />
+                            maxWidth: '100%',
+                            height: 'auto'
+                        }}
+                    />
                 </a>
 
                 <a
@@ -42,9 +43,10 @@ export default function Footer(): JSX.Element {
                         width="20"
                         height="20"
                         style={{
-                            maxWidth: "100%",
-                            height: "auto"
-                        }} />
+                            maxWidth: '100%',
+                            height: 'auto'
+                        }}
+                    />
                 </a>
 
                 <a
@@ -58,9 +60,10 @@ export default function Footer(): JSX.Element {
                         width="20"
                         height="20"
                         style={{
-                            maxWidth: "100%",
-                            height: "auto"
-                        }} />
+                            maxWidth: '100%',
+                            height: 'auto'
+                        }}
+                    />
                 </a>
 
                 <a
@@ -74,9 +77,10 @@ export default function Footer(): JSX.Element {
                         width="28"
                         height="28"
                         style={{
-                            maxWidth: "100%",
-                            height: "auto"
-                        }} />
+                            maxWidth: '100%',
+                            height: 'auto'
+                        }}
+                    />
                 </a>
             </div>
         </footer>

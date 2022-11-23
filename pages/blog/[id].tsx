@@ -1,5 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
-import Image from "next/image";
+import Image from 'next/image';
 import Layout from '../../components/Layout/Layout';
 import PostBody from '../../components/PostBody/PostBody';
 import { getAllPostIds, getPostData, PostData } from '../../lib/posts';
@@ -46,9 +46,10 @@ export default function Post({ postData }: PostProps): JSX.Element {
                         width={108}
                         alt={'Author photo'}
                         style={{
-                            maxWidth: "100%",
-                            height: "auto"
-                        }} />
+                            maxWidth: '100%',
+                            height: 'auto'
+                        }}
+                    />
                 </span>
             </div>
             <article className="md:px-10 max-w-5xl px-4 py-6 my-4 bg-white rounded-lg shadow-md">

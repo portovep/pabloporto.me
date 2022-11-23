@@ -16,14 +16,12 @@ export default function Layout({ children, home, wide, pageTitle }: LayoutProps)
             {!home && (
                 <div className="ml-7 mt-12 text-lg">
                     <Link href="/" rel="noopener noreferrer">
-
                         <span className="hover:text-emerald-600 font-medium">
                             <span aria-hidden="true" className="mr-2">
                                 ←
                             </span>
                             Back to home
                         </span>
-
                     </Link>
                 </div>
             )}

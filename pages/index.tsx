@@ -1,7 +1,7 @@
 import Layout from '../components/Layout/Layout';
 import Card from '../components/Card/Card';
 import Link from 'next/link';
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Home(): JSX.Element {
     return (
@@ -17,9 +17,10 @@ export default function Home(): JSX.Element {
                         width={144}
                         alt="Profile picture of myself in India"
                         style={{
-                            maxWidth: "100%",
-                            height: "auto"
-                        }} />
+                            maxWidth: '100%',
+                            height: 'auto'
+                        }}
+                    />
                 </Link>
             </div>
             <div className="mt-12 text-xl leading-6">
@@ -44,9 +45,7 @@ export default function Home(): JSX.Element {
                             href="/about"
                             className="text-emerald-500 hover:text-emerald-600 font-medium"
                             rel="noopener noreferrer">
-                            
-                                about me
-                            
+                            about me
                         </Link>
                         .
                     </p>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import websiteLogo from '../../public/android-chrome-192x192.png';
@@ -9,20 +9,20 @@ export default function Header(): JSX.Element {
         <header className="border-b-1 sticky top-0 z-20 py-5 mb-6 bg-white border-b border-gray-300 border-solid">
             <div className="lg:max-w-4xl md:px-0 container flex items-center justify-between px-6 mx-auto">
                 <Link href="/">
-
                     <div className="flex justify-start mr-2">
                         <div className="sm:h-10 sm:w-10 relative w-8 h-8">
-                            <Image priority alt="Website logo" src={websiteLogo} fill sizes="100vw" />
+                            <Image
+                                priority
+                                alt="Website logo"
+                                src={websiteLogo}
+                                fill
+                                sizes="100vw"
+                            />
                         </div>
                     </div>
-
                 </Link>
-                <Link
-                    href="/"
-                    className="font-bold tracking-wider text-gray-900 transition-colors">
-                    
-                        Pablo Porto
-                    
+                <Link href="/" className="font-bold tracking-wider text-gray-900 transition-colors">
+                    Pablo Porto
                 </Link>
                 <nav className="md:flex md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex-wrap items-center justify-center hidden text-base">
                     <Link href="/blog" className="hover:text-emerald-600 mr-5 transition-colors">
