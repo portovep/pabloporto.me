@@ -22,7 +22,7 @@
         "react-dom": "^18.2.0"
     },
     "devDependencies": {
-        "@svgr/webpack": "^6.2.1",
+        "@svgr/webpack": "^6.5.1",
         "@tailwindcss/typography": "^0.5.7",
         "@types/node": "^18.11.9",
         "@types/react": "^17.0.38",
