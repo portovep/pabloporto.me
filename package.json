@@ -13,7 +13,7 @@
         "performance:check": "./scripts/performance-check.sh"
     },
     "dependencies": {
-        "date-fns": "^2.28.0",
+        "date-fns": "^2.29.3",
         "gray-matter": "^4.0.3",
         "micromark": "^3.1.0",
         "micromark-extension-gfm": "^2.0.1",
