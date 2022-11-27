@@ -2,6 +2,7 @@
 title: 'The four key metrics of personal finance'
 date: '2022-11-27'
 type: 'Post'
+tag: 'Finance'
 ---
 
 ![Photo by Towfiqu barbhuiya on Unsplash](/images/posts/money-minimalist.jpeg 'Photo by Towfiqu barbhuiya on Unsplash')
@@ -16,7 +17,11 @@ In this post I will describe the 4 metrics I choose and the thinking process tha
 
 Over the last few years, I became more interested in personal finances and began to educate myself on the topic. I like to apply a lean mindset to managing my finances as I don't enjoy spending too many hours tracking expenses and money in and out of my accounts. Since the beginning, I want to have a system that gives me a high-level view of my financial health and performance.
 
-My long-term goal is to create a system that allows me to achieve [financial freedom](https://www.investopedia.com/articles/personal-finance/112015/these-10-habits-will-help-you-reach-financial-freedom.asp). This term could have several meanings, freedom means different things to different people. In my case, I understand financial freedom as a state where money doesn't condition my lifestyle decisions. That doesn't necessarily mean that I would like to stop working and retire to an isolated island but I do want to have the flexibility and the privilege to not having to worry too much about money.
+My long-term goal is to create a system that allows me to achieve [financial freedom](https://www.investopedia.com/articles/personal-finance/112015/these-10-habits-will-help-you-reach-financial-freedom.asp). This term could have several meanings, freedom means different things to different people. In my case, I understand financial freedom as a state where money doesn't condition my lifestyle decisions.
+
+Achieving financial freedom doesn't necesarialy mean that I would like to stop working and retire to an isolated island. Still I want to have the flexibility and the privilege to not having to worry too much about money and do the things I like, e.g. continue traveling the world.
+
+![4 key metrics of personal finance](/images/posts/money-naval-tweet.png '4 key metrics of personal finance')
 
 ## The selection criteria
 
@@ -45,5 +50,9 @@ I believe all of these metrics are great leading indicators of how I am doing fi
 Tracking these metrics already triggered possitive results. They help me reflect on my finances and make adjustments if needed. They give me a lean and practical way to manage my wealth creation process.
 
 I review my finances and manually update the data required to calculate these metrics monthly. Similar to what we do in software delivery teams, I would like to start automating the process of gathering the data to calculate them automatically. I have a few ideas on how to do it. I may try to cover some of them in a future post.
+
+I want to show you a sneak peak of what I am building. The data displayed is not real.
+
+![4 key metrics of personal finance](/images/posts/money-four-key-metrics-personal-finance.png '4 key metrics of personal finance')
 
 And you, do you agree with these metrics? What are the financial metrics you track? Feel free to reach out by email or on Twitter. I am always willing to learn more about this topic and improve my current system.
