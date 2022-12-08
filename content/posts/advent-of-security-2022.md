@@ -7,9 +7,9 @@ tag: 'Security'
 
 ![Photo by Ales Nesetril on Unsplash](/images/posts/advent-security-2022.jpeg 'Photo by Ales Nesetril on Unsplash')
 
-Following the idea of the [Advent Of Code](https://adventofcode.com/2022/about), the Advent of Security is an advent calendar of small actions that helps us improve the level of security and privacy in our digital lives. The intent is for people to use them as a guided way to review their current online security and privacy setup.
+Following the idea of the [Advent Of Code](https://adventofcode.com/2022/about), the Advent of Security is an advent calendar of small steps that helps us improve the security and privacy in our digital lives. The intent is for people to use them as a guided way to review their current online security and privacy setup.
 
-I will be sharing the actions I will be completing this year in case you also want to complete this challenge. The actions will be easy to follow and they can be completed by anyone with basic digital skills.
+I will be sharing the steps I will be completing this year in case you want to follow along. Each of them will be easy to follow and can be completed by anyone with basic digital skills.
 
 Let's begin!
 
@@ -67,7 +67,7 @@ On day 5 we are going to create a list with our key digital assets. A key digita
 -   Phones numbers
 -   MFA or second-factor authentication service
 -   Personal email accounts
-    -   I bet that we don't want anyone to be able to access the thousands of personal emails you forgot to delete over the years.
+    -   I bet that we don't want anyone to be able to access the thousands of personal emails you forgot to delete over the years
 -   Work email account
 -   Cloud file storage services like GDrive, OneDrive, and iCloud
 -   Social accounts like Instagram, Facebook, WhatsApp, Twitter...
@@ -81,3 +81,11 @@ For day 6 we are going to add a extra layer of security to our key digital asset
 -   Enable a second factor authentication method using the services we configured during day two.
 -   If the online service has a phone number associated with it, make sure is up to date and it is a phone number that you have access to.
 -   For online services with mobile apps (like bank accounts, email, etc), make sure those apps are protected with an additional PIN or biometric authentication mechanism. Some smarphones allow to add this extra layer of security even if the native app doesn't support it.
+
+## Day 7 - Enable storage encryption for your physical devices
+
+The challenge for day seven is to review if the storage encryption option is enabled in our devices. Storage encryption ensures that our [data at rest is protected](https://securitystudio.com/data-at-rest-vs-data-in-transit/) even if our devices get lost or stolen. We can use the list of physical assets created in day five to prioritize the devices that need to be protected.
+
+Some devices already ship with this option enabled, for example my phone running on Android 12. Other devices like portable SSD disks may ship with third party software that allows you to encrypt them.
+
+In some cases, like when you use FileVault on MacOS, you will have to generate a recovery code. You can save this code in a secure place like your password manager.
