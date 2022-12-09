@@ -89,3 +89,14 @@ The challenge for day seven is to review if the storage encryption option is ena
 Some devices already ship with this option enabled, for example my phone running on Android 12. Other devices like portable SSD disks may ship with third party software that allows you to encrypt them.
 
 In some cases, like when you use FileVault on MacOS, you will have to generate a recovery code. You can save this code in a secure place like your password manager.
+
+## Day 8 - Reduce the amount of permissions granted to the apps installed in our devices
+
+On day eight we will review the app privacy settings for each of our devices to reduce the level of access we give to the apps we have installed. It's a simple action that will improve our privacy online and will give us control over our data.
+
+We should pay attention to the permissions that allow acces to the private data we value the most. Some examples are:
+
+-   Our location
+-   Our contact list
+-   Our devices inputs like camera and microphone
+-   Screen recording and input monitoring
