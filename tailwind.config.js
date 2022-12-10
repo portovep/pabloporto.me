@@ -1,5 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const colors = require('tailwindcss/colors');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
     content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -16,6 +17,11 @@ module.exports = {
             emerald: colors.emerald,
             yellow: colors.yellow,
             red: colors.red
+        },
+        extend: {
+            fontFamily: {
+                sans: ['var(--font-inter)', fontFamily.sans]
+            }
         }
     },
     plugins: [require('@tailwindcss/typography')]
