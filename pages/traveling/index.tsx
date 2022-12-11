@@ -1,30 +1,28 @@
 import Layout from '../../components/Layout/Layout';
 import PhotoCard from '../../components/PhotoCard/PhotoCard';
-import { SectionDescription, SectionTitle } from '../../components/ui';
+import { PageHeader } from '../../components/ui';
 import WorldMap from '../../components/WorldMap/WorldMap';
-import tajMahalPhoto from '../../public/images/photos/IMG_20200217_080528.jpeg';
-import tajMahalFacadePhoto from '../../public/images/photos/IMG_20200217_071819.jpeg';
-import monkeyJumpingPhoto from '../../public/images/photos/IMG_20180701_063735.jpeg';
 import beachHousePhoto from '../../public/images/photos/IMG_20150525_104418.jpeg';
+import edinburghLandscapePhoto from '../../public/images/photos/IMG_20180224_145152.jpeg';
+import jaipurKidPhoto from '../../public/images/photos/IMG_20180630_212048.jpeg';
+import monkeyJumpingPhoto from '../../public/images/photos/IMG_20180701_063735.jpeg';
+import galicianSunsetPhoto from '../../public/images/photos/IMG_20180814_213428.jpeg';
+import tajMahalFacadePhoto from '../../public/images/photos/IMG_20200217_071819.jpeg';
+import tajMahalPhoto from '../../public/images/photos/IMG_20200217_080528.jpeg';
 import maldivesBeachPhoto from '../../public/images/photos/IMG_20200225_125124.jpeg';
 import lonelyElephantPhoto from '../../public/images/photos/IMG_20200303_152059.jpeg';
-import edinburghLandscapePhoto from '../../public/images/photos/IMG_20180224_145152.jpeg';
-import galicianSunsetPhoto from '../../public/images/photos/IMG_20180814_213428.jpeg';
-import jaipurKidPhoto from '../../public/images/photos/IMG_20180630_212048.jpeg';
 
 export default function Traveling(): JSX.Element {
     return (
         <Layout wide pageTitle="Traveling">
             <section className="mt-10 text-xl leading-6">
-                <SectionTitle text="Traveling" />
+                <PageHeader title="Traveling" />
 
                 <div className="mt-14 p-1 mb-8">
                     <WorldMap />
                 </div>
 
-                <SectionDescription>
-                    <p>Some of my best photos.</p>
-                </SectionDescription>
+                <h2 className="font-semibol text-3xl tracking-tight">Some of my best photos</h2>
 
                 <div className="md:grid-cols-2 xl:grid-cols-3 grid grid-cols-1 gap-12 mt-12">
                     <PhotoCard

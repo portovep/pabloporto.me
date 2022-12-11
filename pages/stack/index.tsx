@@ -1,15 +1,14 @@
 import Layout from '../../components/Layout/Layout';
-import { SectionDescription, SectionTitle, StackItem } from '../../components/ui';
+import { PageHeader, StackItem } from '../../components/ui';
 
 export default function Stacks(): JSX.Element {
     return (
         <Layout pageTitle="My stack">
             <section className="mt-8 text-xl leading-6">
-                <SectionTitle text="My Stack" />
-                <SectionDescription>
+                <PageHeader title="My Stack">
                     Some of the tools in my toolbox. They are the tools I default to when building
                     different types of software systems.
-                </SectionDescription>
+                </PageHeader>
                 <ul className="flex flex-col mt-4">
                     <StackItem
                         name="Typescript"

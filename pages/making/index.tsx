@@ -1,18 +1,14 @@
-import Layout from '../../components/Layout/Layout';
 import Image from 'next/image';
-import { SectionDescription, SectionTitle } from '../../components/ui';
+import Layout from '../../components/Layout/Layout';
+import { PageHeader } from '../../components/ui';
 
 export default function Making(): JSX.Element {
     return (
         <Layout wide pageTitle="Making">
             <section className="body-font mt-10 text-gray-600">
-                <SectionTitle text="Making" />
-                <SectionDescription>
-                    <p>
-                        I love building things to learn new skills. These are some of the apps I
-                        made.
-                    </p>
-                </SectionDescription>
+                <PageHeader title="Making">
+                    A collection of articles and papers about software engineering.
+                </PageHeader>
                 <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mt-10 mb-10 border-b border-gray-300">
                     <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
                         <h1 className="title-font mb-4 text-4xl font-medium">1Stream</h1>

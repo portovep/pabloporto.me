@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Layout from '../../components/Layout/Layout';
 import PostSummary from '../../components/PostSummary/PostSummary';
-import { SectionDescription, SectionTitle } from '../../components/ui';
+import { PageHeader } from '../../components/ui';
 import { getSortedPostsData, PostData } from '../../lib/posts';
 
 type BlogProps = {
@@ -13,10 +13,9 @@ export default function Blog({ allPostsData }: BlogProps): JSX.Element {
     return (
         <Layout pageTitle="Blog">
             <section className="mt-8 text-xl leading-6">
-                <SectionTitle text="Blog" />
-                <SectionDescription>
+                <PageHeader title="Blog">
                     A collection of articles and papers about software engineering.
-                </SectionDescription>
+                </PageHeader>
                 <ul className="mt-8">
                     {allPostsData.map((postData) => {
                         return (
