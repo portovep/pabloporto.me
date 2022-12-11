@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function Home(): JSX.Element {
     return (
         <Layout home>
-            <div className="md:mt-20 mt-14 flex flex-col items-center">
+            <div className="md:mt-10 mt-14 flex flex-col items-center">
                 <Link href="/about" legacyBehavior>
                     <Image
                         priority
@@ -23,14 +23,14 @@ export default function Home(): JSX.Element {
                     />
                 </Link>
             </div>
-            <div className="mt-12 text-xl leading-6">
+            <div className="pt-6 text-xl leading-6">
                 <div className="max-w-2xl px-6 mx-auto text-center">
-                    <h2 className="text-3xl font-semibold text-gray-800">
+                    <h2 className="sm:text-5xl md:text-6xl text-3xl font-bold tracking-tighter">
                         Hi,
                         <span className="text-emerald-500 pl-1 font-bold rounded">I’m Pablo</span>.
                         Nice to meet you.
                     </h2>
-                    <p className="mt-7 text-gray-600">
+                    <p className="mt-7 text-slate-700 sm:text-xl sm:leading-8 leading-normal">
                         I am interested in software engineering, health and personal finance. I work
                         as a Lead Software Consultant at&nbsp;
                         <a
