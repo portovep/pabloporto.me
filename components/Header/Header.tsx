@@ -25,21 +25,29 @@ export default function Header(): JSX.Element {
                     Pablo Porto
                 </Link>
                 <nav className="md:flex md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex-wrap items-center justify-center hidden text-base">
-                    <Link href="/blog" className="hover:text-emerald-600 mr-5 transition-colors">
+                    <Link
+                        href="/blog"
+                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors">
                         Writing
                     </Link>
-                    <Link href="/working" className="hover:text-emerald-600 mr-5 transition-colors">
+                    <Link
+                        href="/working"
+                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors">
                         Working
                     </Link>
                     <Link
                         href="/traveling"
-                        className="hover:text-emerald-600 mr-5 transition-colors">
+                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors">
                         Traveling
                     </Link>
-                    <Link href="/making" className="hover:text-emerald-600 mr-5 transition-colors">
+                    <Link
+                        href="/making"
+                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors">
                         Making
                     </Link>
-                    <Link href="/about" className="hover:text-emerald-600 mr-5 transition-colors">
+                    <Link
+                        href="/about"
+                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors">
                         About
                     </Link>
                 </nav>
