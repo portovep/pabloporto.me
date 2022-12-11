@@ -25,10 +25,6 @@ export default function Footer(): JSX.Element {
                         alt="Twitter Logo"
                         width="20"
                         height="20"
-                        style={{
-                            maxWidth: '100%',
-                            height: 'auto'
-                        }}
                     />
                 </a>
 
@@ -42,10 +38,6 @@ export default function Footer(): JSX.Element {
                         alt="Github Logo"
                         width="20"
                         height="20"
-                        style={{
-                            maxWidth: '100%',
-                            height: 'auto'
-                        }}
                     />
                 </a>
 
@@ -59,10 +51,6 @@ export default function Footer(): JSX.Element {
                         alt="Instagram Logo"
                         width="20"
                         height="20"
-                        style={{
-                            maxWidth: '100%',
-                            height: 'auto'
-                        }}
                     />
                 </a>
 
@@ -76,10 +64,6 @@ export default function Footer(): JSX.Element {
                         alt="Linkedin Logo"
                         width="28"
                         height="28"
-                        style={{
-                            maxWidth: '100%',
-                            height: 'auto'
-                        }}
                     />
                 </a>
             </div>

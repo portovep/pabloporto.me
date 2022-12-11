@@ -4,6 +4,7 @@ import Layout from '../../components/Layout/Layout';
 import PostBody from '../../components/PostBody/PostBody';
 import { getAllPostIds, getPostData, PostData } from '../../lib/posts';
 import { Date, Label } from '../../components/ui';
+import profilePic from '../../public/images/profile.jpg';
 
 type PostProps = {
     postData: PostData;
@@ -40,15 +41,11 @@ export default function Post({ postData }: PostProps): JSX.Element {
                     <Image
                         priority
                         quality="100"
-                        src="/images/profile.jpg"
-                        className="rounded-full"
+                        src={profilePic}
+                        className="h-auto max-w-full rounded-full"
                         height={108}
                         width={108}
                         alt={'Author photo'}
-                        style={{
-                            maxWidth: '100%',
-                            height: 'auto'
-                        }}
                     />
                 </span>
             </div>

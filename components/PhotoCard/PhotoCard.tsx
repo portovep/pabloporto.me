@@ -14,11 +14,8 @@ export default function PhotoCard({ imageURL, location, title }: PhotoCardProps)
                     alt={`${title} taken at ${location}`}
                     src={imageURL}
                     placeholder="blur"
+                    className="object-cover"
                     fill
-                    sizes="100vw"
-                    style={{
-                        objectFit: 'cover'
-                    }}
                 />
             </div>
         </div>

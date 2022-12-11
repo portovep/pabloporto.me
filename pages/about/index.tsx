@@ -30,12 +30,8 @@ export default function About(): JSX.Element {
                             priority
                             alt="Me chilling in Sri Lanka"
                             src={aboutPagePhoto}
-                            className="rounded"
+                            className="h-auto max-w-full rounded"
                             placeholder="blur"
-                            style={{
-                                maxWidth: '100%',
-                                height: 'auto'
-                            }}
                         />
                     </div>
                 </div>

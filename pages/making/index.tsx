@@ -2,12 +2,18 @@ import Image from 'next/image';
 import Layout from '../../components/Layout/Layout';
 import { PageHeader } from '../../components/ui';
 
+import chromeStoreCTA from '../../public/images/projects/chrome_store.png';
+import cloujeraScreenshot from '../../public/images/projects/cloujera.png';
+import ecoshifterScreenshot from '../../public/images/projects/ecoshifter.webp';
+import crowdtransportScreenshot from '../../public/images/projects/media_crowdtransport_1.png';
+import oneStreamScreenshot from '../../public/images/projects/1stream_screenshot.png';
+
 export default function Making(): JSX.Element {
     return (
         <Layout wide pageTitle="Making">
             <section className="body-font mt-10 text-gray-600">
                 <PageHeader title="Making">
-                    A collection of articles and papers about software engineering.
+                    I love building things to learn new skills. These are some of the apps I made.
                 </PageHeader>
                 <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mt-10 mb-10 border-b border-gray-300">
                     <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
@@ -43,13 +49,9 @@ export default function Making(): JSX.Element {
                                 <Image
                                     priority
                                     alt="chrome-store-link"
-                                    src="/images/projects/chrome_store.png"
+                                    src={chromeStoreCTA}
                                     height="60"
                                     width="225"
-                                    style={{
-                                        maxWidth: '100%',
-                                        height: 'auto'
-                                    }}
                                 />
                             </a>
                         </div>
@@ -59,13 +61,9 @@ export default function Making(): JSX.Element {
                             priority
                             className="object-center rounded rounded-b-none"
                             alt="1Scream screenshoot"
-                            src="/images/projects/1stream_screenshot.png"
+                            src={oneStreamScreenshot}
                             height="540"
                             width="900"
-                            style={{
-                                maxWidth: '100%',
-                                height: 'auto'
-                            }}
                         />
                     </div>
                 </div>
@@ -106,13 +104,10 @@ export default function Making(): JSX.Element {
                         <Image
                             className="object-center rounded"
                             alt="Cloujera screenshoot"
-                            src="/images/projects/cloujera.png"
+                            src={cloujeraScreenshot}
                             height="540"
                             width="900"
-                            style={{
-                                maxWidth: '100%',
-                                height: 'auto'
-                            }}
+                            placeholder="blur"
                         />
                     </div>
                 </div>
@@ -165,13 +160,10 @@ export default function Making(): JSX.Element {
                         <Image
                             className="object-cover object-center rounded"
                             alt="Ecoshifter screenshoot"
-                            src="/images/projects/ecoshifter.webp"
+                            src={ecoshifterScreenshot}
                             height="500"
                             width="300"
-                            style={{
-                                maxWidth: '100%',
-                                height: 'auto'
-                            }}
+                            placeholder="blur"
                         />
                     </div>
                 </div>
@@ -212,13 +204,10 @@ export default function Making(): JSX.Element {
                         <Image
                             className="object-cover object-center rounded"
                             alt="Crowdtransport screenshoot"
-                            src="/images/projects/media_crowdtransport_1.png"
+                            src={crowdtransportScreenshot}
                             height="500"
                             width="300"
-                            style={{
-                                maxWidth: '100%',
-                                height: 'auto'
-                            }}
+                            placeholder="blur"
                         />
                     </div>
                 </div>

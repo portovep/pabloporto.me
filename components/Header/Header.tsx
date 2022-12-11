@@ -11,13 +11,7 @@ export default function Header(): JSX.Element {
                 <Link href="/">
                     <div className="flex justify-start mr-2">
                         <div className="sm:h-10 sm:w-10 relative w-8 h-8">
-                            <Image
-                                priority
-                                alt="Website logo"
-                                src={websiteLogo}
-                                fill
-                                sizes="100vw"
-                            />
+                            <Image priority alt="Website logo" src={websiteLogo} />
                         </div>
                     </div>
                 </Link>
