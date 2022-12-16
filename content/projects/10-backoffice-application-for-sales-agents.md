@@ -1,7 +1,7 @@
 ---
 name: 'Back office application to manage sales agent accounts'
 date: '2020-04-01'
-role: 'Infrastructure engineer'
+roles: ['Infrastructure consultant', 'Fullstack Developer']
 location: 'Barcelona'
 teamSize: 8
 technologies: [Vue.js, Nuxt, Zipkin, Grafana, Ansible, Terraform, tfsec]

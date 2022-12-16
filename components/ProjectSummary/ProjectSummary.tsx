@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { ProjectData } from '../../lib/projects';
 import { Date } from '../ui';
 
@@ -8,7 +9,7 @@ type ProjectSummaryProps = {
 const DATE_FORMAT_YEAR = 'yyyy';
 
 export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element {
-    const { name, date, role, location, technologies, teamSize, contentHtml } = props.project;
+    const { name, date, roles, location, technologies, teamSize, contentHtml } = props.project;
     return (
         <div className="overflow-hidden bg-white border-2 border-gray-200 rounded-lg">
             <div className="sm:pl-6 flex items-start justify-between pl-4">
@@ -56,9 +57,13 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                     <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 px-4 py-5 bg-white">
                         <dt className="text-sm font-medium text-gray-500">Role</dt>
                         <dd className="sm:mt-0 sm:col-span-2 mt-1 text-sm text-gray-900">
-                            <span className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-emerald-400 text-white">
-                                {role}
-                            </span>
+                            {roles.map((role) => (
+                                <span
+                                    key={role}
+                                    className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-emerald-400 text-white">
+                                    {role}
+                                </span>
+                            ))}
                         </dd>
                     </div>
                     <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 px-4 py-5 bg-white">

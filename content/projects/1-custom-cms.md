@@ -1,7 +1,7 @@
 ---
 name: 'Custom CMS'
 date: '2014-03-01'
-role: 'Fullstack Developer'
+roles: ['Fullstack Developer']
 location: 'Manchester'
 teamSize: 12
 technologies:

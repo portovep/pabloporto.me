@@ -1,7 +1,7 @@
 ---
 name: 'Cloud infrastructure platform for government digital teams'
 date: '2018-03-01'
-role: 'Infrastructure Engineer'
+roles: ['Infrastructure Engineer']
 location: 'Manchester'
 teamSize: 12
 technologies:

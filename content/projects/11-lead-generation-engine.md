@@ -1,7 +1,7 @@
 ---
 name: 'Lead generation engine for real state listings'
 date: '2020-07-01'
-role: 'Tech Lead'
+roles: ['Tech Lead', 'Fullstack Developer']
 location: 'Barcelona'
 teamSize: 5
 technologies:

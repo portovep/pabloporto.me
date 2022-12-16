@@ -1,7 +1,7 @@
 ---
 name: 'Healthcare KPIs data product'
 date: '2021-03-01'
-role: 'Tech Lead'
+roles: ['Tech Lead', 'Data Engineer']
 location: 'Barcelona | Remote'
 teamSize: 7
 technologies:

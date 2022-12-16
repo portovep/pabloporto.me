@@ -11,7 +11,7 @@ export type ProjectData = {
     id: string;
     name: string;
     date: string;
-    role: string;
+    roles: string[];
     location: string;
     description: string;
     teamSize: number;

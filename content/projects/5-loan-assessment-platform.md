@@ -1,7 +1,7 @@
 ---
 name: 'Loan assessment platform'
 date: '2016-09-01'
-role: 'Fullstack Developer'
+roles: ['Fullstack Developer']
 location: 'Glasgow'
 teamSize: 12
 technologies: [React, Redux, JavaScript, Storybook, Clojure, Java 8, RabbitMQ, Dropwizard, GoCD]

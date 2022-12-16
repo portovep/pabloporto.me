@@ -1,7 +1,7 @@
 ---
 name: 'Lead agile software development trainer'
 date: '2018-05-01'
-role: 'Infrastructure Engineer'
+roles: ['Trainer']
 location: 'Pune, India'
 teamSize: 32
 technologies: [Agile/Lean, XP, Continuous Delivery, TDD, Pairing, Trunk base development, OOP]
