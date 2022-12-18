@@ -3,7 +3,7 @@ import Layout from '../../components/Layout/Layout';
 import { PageHeader } from '../../components/ui';
 
 import chromeStoreCTA from '../../public/images/projects/chrome_store.png';
-import cloujeraScreenshot from '../../public/images/projects/cloujera.png';
+import cloujeraScreenshot from '../../public/images/projects/cloujera_framed.png';
 import ecoshifterScreenshot from '../../public/images/projects/ecoshifter.webp';
 import crowdtransportScreenshot from '../../public/images/projects/media_crowdtransport_1.png';
 import oneStreamScreenshot from '../../public/images/projects/1stream_screenshot.png';
@@ -64,6 +64,7 @@ export default function Making(): JSX.Element {
                             src={oneStreamScreenshot}
                             height="540"
                             width="900"
+                            placeholder="blur"
                         />
                     </div>
                 </div>
@@ -100,9 +101,9 @@ export default function Making(): JSX.Element {
                             </a>
                         </div>
                     </div>
-                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8 border border-gray-200">
+                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8">
                         <Image
-                            className="object-center rounded"
+                            className="object-center rounded rounded-b-none"
                             alt="Cloujera screenshoot"
                             src={cloujeraScreenshot}
                             height="540"
@@ -207,7 +208,6 @@ export default function Making(): JSX.Element {
                             src={crowdtransportScreenshot}
                             height="500"
                             width="300"
-                            placeholder="blur"
                         />
                     </div>
                 </div>
