@@ -20,7 +20,7 @@ export default function Home(): JSX.Element {
                     />
                 </Link>
             </div>
-            <div className="pt-6 text-xl leading-6">
+            <div data-testid="home-intro" className="pt-6 text-xl leading-6">
                 <div className="max-w-2xl px-6 mx-auto text-center">
                     <h2 className="sm:text-5xl md:text-6xl text-3xl font-bold tracking-tighter">
                         Hi,

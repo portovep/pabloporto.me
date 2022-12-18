@@ -11,11 +11,13 @@ import oneStreamScreenshot from '../../public/images/projects/1stream_screenshot
 export default function Making(): JSX.Element {
     return (
         <Layout wide pageTitle="Making">
-            <section className="body-font mt-10 text-gray-600">
+            <section data-testid="making-intro" className="body-font mt-10 text-gray-600">
                 <PageHeader title="Making">
                     I love building things to learn new skills. These are some of the apps I made.
                 </PageHeader>
-                <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mt-10 mb-10 border-b border-gray-300">
+                <div
+                    data-testid="making-project"
+                    className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mt-10 mb-10 border-b border-gray-300">
                     <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
                         <h1 className="title-font mb-4 text-4xl font-medium">1Stream</h1>
                         <p className="mb-8 leading-relaxed">
@@ -68,7 +70,9 @@ export default function Making(): JSX.Element {
                         />
                     </div>
                 </div>
-                <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
+                <div
+                    data-testid="making-project"
+                    className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
                     <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
                         <h1 className="title-font mb-4 text-4xl font-medium">Cloujera</h1>
                         <p className="mb-8 leading-relaxed">
@@ -112,7 +116,9 @@ export default function Making(): JSX.Element {
                         />
                     </div>
                 </div>
-                <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
+                <div
+                    data-testid="making-project"
+                    className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
                     <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
                         <h1 className="title-font mb-4 text-4xl font-medium">
                             EcoShifter
@@ -168,7 +174,9 @@ export default function Making(): JSX.Element {
                         />
                     </div>
                 </div>
-                <div className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10">
+                <div
+                    data-testid="making-project"
+                    className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10">
                     <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
                         <h1 className="title-font mb-4 text-4xl font-medium">Crowdtransport</h1>
                         <p className="mb-8 leading-relaxed">

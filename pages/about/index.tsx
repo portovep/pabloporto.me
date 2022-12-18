@@ -7,7 +7,9 @@ export default function About(): JSX.Element {
         <Layout wide pageTitle="About">
             <section className="sm:text-2xl text-xl leading-6 text-gray-600">
                 <div className="md:flex-row container flex flex-col items-center px-5 py-24 mx-auto">
-                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
+                    <div
+                        data-testid="about-intro"
+                        className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
                         <h1 className="sm:text-5xl md:text-4xl mb-4 text-4xl font-bold text-gray-800">
                             Pablo Porto
                         </h1>

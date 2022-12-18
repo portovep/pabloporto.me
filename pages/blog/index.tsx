@@ -16,10 +16,10 @@ export default function Blog({ allPostsData }: BlogProps): JSX.Element {
                 <PageHeader title="Blog">
                     A collection of articles and papers about software engineering.
                 </PageHeader>
-                <ul className="mt-8">
+                <ul data-testid="writing-intro" className="mt-8">
                     {allPostsData.map((postData) => {
                         return (
-                            <li key={postData.id}>
+                            <li data-testid="post-summary" key={postData.id}>
                                 {postData.type === 'Post' ? (
                                     <Link
                                         href={`blog/${postData.id}`}

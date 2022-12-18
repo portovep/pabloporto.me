@@ -4,7 +4,7 @@ import { PageHeader, StackItem } from '../../components/ui';
 export default function Stacks(): JSX.Element {
     return (
         <Layout pageTitle="My stack">
-            <section className="mt-8 text-xl leading-6">
+            <section data-testid="stack-intro" className="mt-8 text-xl leading-6">
                 <PageHeader title="My Stack">
                     Some of the tools in my toolbox. They are the tools I default to when building
                     different types of software systems.

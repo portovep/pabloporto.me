@@ -15,7 +15,7 @@ import lonelyElephantPhoto from '../../public/images/photos/IMG_20200303_152059.
 export default function Traveling(): JSX.Element {
     return (
         <Layout wide pageTitle="Traveling">
-            <section className="mt-10 text-xl leading-6">
+            <section data-testid="traveling-intro" className="mt-10 text-xl leading-6">
                 <PageHeader title="Traveling" />
 
                 <div className="mt-14 p-1 mb-8">

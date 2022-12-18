@@ -12,7 +12,7 @@ type WorkingProps = {
 export default function Working({ allProjectData }: WorkingProps): JSX.Element {
     return (
         <Layout pageTitle="At work">
-            <section className="mt-10 text-xl leading-6">
+            <section data-testid="working-intro" className="mt-10 text-xl leading-6">
                 <PageHeader title="At work">
                     Some of the projects and products I worked on over the last years. You can also
                     <Link
@@ -24,7 +24,7 @@ export default function Working({ allProjectData }: WorkingProps): JSX.Element {
                 </PageHeader>
                 <ul className="mt-10">
                     {allProjectData.map((project) => (
-                        <li className="mb-10" key={project.id}>
+                        <li data-testid="project-summary" className="mb-10" key={project.id}>
                             <ProjectSummary project={project} />
                         </li>
                     ))}
