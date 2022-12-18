@@ -14,7 +14,16 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+Cypress.on('window:before:load', (win) => {
+    cy.spy(win.console, 'error').as('console.error');
+});
+
+afterEach(() => {
+    cy.log('Checking for errors in the page');
+    cy.get('@console.error').should('not.be.called');
+});

@@ -6,30 +6,6 @@ type PostSummaryProps = {
     postData: PostData;
 };
 
-const postLink = (postData: PostData) =>
-    postData.type === 'Post' ? (
-        <Link
-            href={`blog/${postData.id}`}
-            className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium"
-            rel="noopener noreferrer">
-            Read more
-            <span aria-hidden="true" className="ml-2">
-                →
-            </span>
-        </Link>
-    ) : (
-        <a
-            href={postData.link}
-            target="_blank"
-            className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium"
-            rel="noopener noreferrer">
-            Check it out
-            <span aria-hidden="true" className="ml-2">
-                →
-            </span>
-        </a>
-    );
-
 export default function PostSummary(props: PostSummaryProps): JSX.Element {
     const { date, type, title } = props.postData;
     return (
@@ -45,7 +21,12 @@ export default function PostSummary(props: PostSummaryProps): JSX.Element {
                 </div>
                 <div className="pr-6 mt-4 text-2xl font-bold text-gray-700">{title}</div>
                 <div className="flex items-center justify-between mt-5">
-                    {postLink(props.postData)}
+                    <div className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium">
+                        {type === 'Post' ? 'Read more' : 'Check it out'}
+                        <span aria-hidden="true" className="ml-2">
+                            →
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
