@@ -9,5 +9,8 @@ module.exports = {
             loader: require.resolve('@svgr/webpack')
         });
         return config;
+    },
+    eslint: {
+        dirs: ['pages', 'components', 'lib', 'src', 'cypress']
     }
 };
