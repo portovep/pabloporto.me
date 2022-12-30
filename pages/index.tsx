@@ -28,16 +28,8 @@ export default function Home(): JSX.Element {
                         Nice to meet you.
                     </h2>
                     <p className="mt-7 text-slate-700 sm:text-xl sm:leading-8 leading-normal">
-                        I am interested in software engineering, health and personal finance. I work
-                        as a Lead Software Consultant at&nbsp;
-                        <a
-                            href="https://thoughtworks.com"
-                            target="_blank"
-                            className="text-emerald-500 hover:text-emerald-600 font-medium"
-                            rel="noopener noreferrer">
-                            Thoughtworks
-                        </a>
-                        .&nbsp;I also like traveling and living in new places. More&nbsp;
+                        This is my humble space on the Internet where I share my learnings in
+                        software engineering, health and personal finance. More&nbsp;
                         <Link
                             href="/about"
                             className="text-emerald-500 hover:text-emerald-600 font-medium"

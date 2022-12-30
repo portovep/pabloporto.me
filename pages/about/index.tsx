@@ -1,30 +1,29 @@
 import Image from 'next/image';
 import Layout from '../../components/Layout/Layout';
+import Link from 'next/link';
 import aboutPagePhoto from '../../public/images/about.jpeg';
+import { PageHeader } from 'components/ui';
 
 export default function About(): JSX.Element {
     return (
         <Layout wide pageTitle="About">
-            <section className="sm:text-2xl text-xl leading-6 text-gray-600">
+            <section className="sm:text-2xl mt-8 text-xl leading-6">
+                <PageHeader title="About" />
                 <div className="md:flex-row container flex flex-col items-center px-5 py-24 mx-auto">
                     <div
                         data-testid="about-intro"
                         className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
-                        <h1 className="sm:text-5xl md:text-4xl mb-4 text-4xl font-bold text-gray-800">
-                            Pablo Porto
-                        </h1>
-                        <h2 className="title-font sm:text-4xl mb-5 text-3xl font-medium text-gray-900">
+                        <h1 className="title-font sm:text-4xl mb-5 text-3xl font-medium text-gray-900">
                             Software Engineer, Technical lead, Traveler
-                        </h2>
+                        </h1>
                         <p className="mb-8 leading-relaxed">
-                            As a software consultant, I help companies of all shapes and sizes to
-                            build new software systems and evolve their digital products.
+                            I am Pablo, a sofware engineer, cyclist and traveler with a passion to
+                            become a well-rounded person helping the world to be a better place.
                         </p>
                         <p className="leading-relaxed">
-                            I helped startups build MVPs to find product/market fit, scale-ups
-                            evolve their teams and practices to deliver quality software at speed
-                            and big enterprises to build infrastructure in the cloud to enable their
-                            delivery teams.
+                            This is my humble space on the internet where I share ideas on software
+                            engineering, health and personal finance drived by my curiosity for
+                            learning and self-development
                         </p>
                     </div>
                     <div className="lg:max-w-lg lg:w-3/6 md:w-3/6 w-full">
@@ -37,11 +36,140 @@ export default function About(): JSX.Element {
                         />
                     </div>
                 </div>
-                <section className="text-gray-600">
+                <section className="w-full px-5">
+                    <div className="mb-10 text-center">
+                        <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
+                            What I like
+                        </h2>
+                    </div>
+                    <p className="pb-10 leading-relaxed">
+                        As a kid, I loved tinkering with computers and surfing the web. I spent
+                        quite a lot of time building websites for my hobbies in the early days of
+                        the Web 2.0 and assembling personal computers from scratch. All these
+                        passions led me to pursue an education in something related to computers. I
+                        end up studying a{' '}
+                        <a
+                            href="https://www.usc.gal/en/studies/degrees/engineering-and-architecture/computer-science-degree"
+                            target="_blank"
+                            className="text-emerald-500 hover:text-emerald-600 font-medium"
+                            rel="noopener noreferrer">
+                            BSC in Computer Science
+                        </a>{' '}
+                        at the University of Santiago and later on a{' '}
+                        <a
+                            href="https://www.scss.tcd.ie/personnel/networks-and-distributed-systems.php"
+                            target="_blank"
+                            className="text-emerald-500 hover:text-emerald-600 font-medium"
+                            rel="noopener noreferrer">
+                            MSC in Networks & Distributed Systems
+                        </a>{' '}
+                        at Trinity College, Dublin.
+                    </p>
+                    <p className="pb-10 leading-relaxed">
+                        While speding hours and hours styduing, I realized how lucky I was of
+                        spending time learning something I was passionate about and with great
+                        career possibilities. I also realized that I will keep learning all my life
+                        which motivated me to spend time getting better with personal productivity
+                        and all things related to{' '}
+                        <a
+                            href="https://www.kaizen.com/what-is-kaizen"
+                            target="_blank"
+                            className="text-emerald-500 hover:text-emerald-600 font-medium"
+                            rel="noopener noreferrer">
+                            kaizen
+                        </a>
+                        .
+                    </p>
+                    <p className="pb-10 leading-relaxed">
+                        As of 2023, I try to live a minimalist lifestyle from my current base in
+                        Barcelona, Spain. In my spare time, I enjoy{' '}
+                        <Link
+                            href="/traveling"
+                            className="text-emerald-500 hover:text-emerald-600 font-medium"
+                            rel="noopener noreferrer">
+                            traveling
+                        </Link>{' '}
+                        all over the world for both work and fun, playing and watching sports (I am
+                        a big F1 fan), and{' '}
+                        <Link
+                            href="/making"
+                            className="text-emerald-500 hover:text-emerald-600 font-medium"
+                            rel="noopener noreferrer">
+                            building things on the internet
+                        </Link>
+                        .
+                    </p>
+                </section>
+                <section className="w-full px-5">
+                    <div className="mt-10 mb-10 text-center">
+                        <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
+                            What I do
+                        </h2>
+                    </div>
+                    <p className="pb-10 leading-relaxed">
+                        During my career, I have taken multiple roles, from full-stack software
+                        engineer to other roles like infrastructure and data engineer delivering
+                        many products in multiple sectors from retail to healthcare, travel, and
+                        others. I have been working in digital products and digital platforms for
+                        close to a decade.
+                    </p>
+                    <ul className="pl-15 px-10 pb-10 space-y-5 list-disc">
+                        <li>
+                            I help companies build digital products right with modern software and
+                            data engineering tools and practices.
+                        </li>
+                        <li>
+                            I collaborate with product and business people to build the right
+                            digital products for the right customer problems.
+                        </li>
+                        <li>
+                            I help teams to embrace and scale effective software engineering
+                            practices.
+                        </li>
+                        <li>
+                            I lead and build{' '}
+                            <a
+                                href="https://www.svpg.com/empowered-product-teams/"
+                                target="_blank"
+                                className="text-emerald-500 hover:text-emerald-600 font-medium"
+                                rel="noopener noreferrer">
+                                empowered
+                            </a>{' '}
+                            product and platform teams.
+                        </li>
+                        <li>
+                            I train, coach, and mentor people on modern software delivery practices,
+                            agile/lean ways of working, and technical leadership.
+                        </li>
+                        <li>
+                            I write and{' '}
+                            <Link
+                                href="/blog"
+                                className="text-emerald-500 hover:text-emerald-600 font-medium"
+                                rel="noopener noreferrer">
+                                share what I learn and build in public
+                            </Link>
+                            .
+                        </li>
+                    </ul>
+                    <p className="pb-10 leading-relaxed">
+                        Currently, I work as Lead Software Consultant at{' '}
+                        <a
+                            href="https://thoughtworks.com"
+                            target="_blank"
+                            className="text-emerald-500 hover:text-emerald-600 font-medium"
+                            rel="noopener noreferrer">
+                            Thoughtworks
+                        </a>{' '}
+                        where I build and lead high-performing delivery teams building data and
+                        digital products for our clients.
+                    </p>
+                </section>
+                <section className="w-full px-5">
                     <div className="container px-5 mx-auto mb-20">
-                        <div className="mb-20 text-center">
+                        <div className="mt-10 mb-10 text-center">
                             <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
-                                Principles and practices
+                                How I do it
                             </h2>
                             <p className="xl:w-2/4 lg:w-3/4 mx-auto leading-relaxed">
                                 The software engineering principles and practices that drive my
@@ -273,18 +401,41 @@ export default function About(): JSX.Element {
                                     <span className="title-font font-medium">Refactoring</span>
                                 </div>
                             </div>
+                            <div className="sm:w-1/2 w-full p-2">
+                                <div className="flex items-center h-full p-4 bg-gray-100 rounded">
+                                    <svg
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="3"
+                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        viewBox="0 0 24 24">
+                                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                        <path d="M22 4L12 14.01l-3-3"></path>
+                                    </svg>
+                                    <span className="title-font font-medium">Empowered teams</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
-                <section className="mb-20 text-gray-600">
+                <section className="w-full px-5">
                     <div className="container mx-auto">
-                        <div className="mb-16 text-center">
+                        <div className="mt-10 mb-10 text-center">
                             <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
                                 Talks
                             </h2>
+                            <p className="xl:w-2/4 lg:w-3/4 mx-auto leading-relaxed">
+                                I like to share and teach what I learn. These are some talks I did.
+                            </p>
                         </div>
-                        <div className="mx-5 mb-20 text-center">
-                            <ul className="space-y-5 list-none">
+                        <div className="w-full px-5">
+                            <ul className="px-10 space-y-5 list-disc">
+                                <li>
+                                    A data project post-mortem through Data Mesh lenses -
+                                    @Thoughtworks
+                                </li>
                                 <li>
                                     Improving observability with distributed tracing and Zipkin -
                                     @Client
@@ -307,6 +458,36 @@ export default function About(): JSX.Element {
                             </ul>
                         </div>
                     </div>
+                </section>
+                <section className="w-full px-5 mt-20">
+                    <div className="mt-10 mb-10 text-center">
+                        <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
+                            Let&apos;s get in touch!
+                        </h2>
+                    </div>
+                    <p className="pb-10 leading-relaxed">
+                        Feel free to reach out if you think I can help you, you want us to work on
+                        something together or just to simple say hi.
+                    </p>
+                    <p className="pb-10 leading-relaxed">
+                        You can find me at{' '}
+                        <a
+                            href="https://twitter.com/portovep"
+                            target="_blank"
+                            className="text-emerald-500 hover:text-emerald-600 font-medium"
+                            rel="noopener noreferrer">
+                            Twitter
+                        </a>{' '}
+                        where I share things mostly related with my work but also on{' '}
+                        <a
+                            href="https://www.instagram.com/porto.vga/"
+                            target="_blank"
+                            className="text-emerald-500 hover:text-emerald-600 font-medium"
+                            rel="noopener noreferrer">
+                            Instagram
+                        </a>{' '}
+                        where I share my favourite pics from my travels.
+                    </p>
                 </section>
             </section>
         </Layout>
