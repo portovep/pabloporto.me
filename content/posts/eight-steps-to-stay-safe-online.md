@@ -1,5 +1,5 @@
 ---
-title: '8 simple steps to stay safe online'
+title: '8 steps to stay safe online'
 date: '2022-12-06'
 type: 'Post'
 tag: 'Draft'
@@ -10,6 +10,17 @@ tag: 'Draft'
 At the end of each year I complete what I like to call "an end of the year security review". The idea is to follow a set of small steps to review and improve my online security and privacy setup.
 
 This year I consolidated all the steps in a checklist and I decided to share it in case you want to use the list as a guide to review your current setup and stay safer on the Internet. Each of the steps I propose are easy to follow and can be completed by anyone with basic digital skills so you could even send the checklist to any of your friends and loved ones.
+
+This is a TL;DR; checklist with the steps we will cover:
+
+-   [ ] Use a password manager
+-   [ ] Use a multifactor authentication app (MFA)
+-   [ ] Enable automatic software updates on your devices
+-   [ ] Review your browser extensions
+-   [ ] Create a list of your key digital assets
+-   [ ] Enable two factor authentication for your key digital assets
+-   [ ] Enable storage encryption for your physical devices
+-   [ ] Reduce the amount of permissions granted to the apps you use to the minimum
 
 Let's begin!
 
@@ -33,7 +44,7 @@ If you already use an MFA service, the action for us is to improve how we use it
 
 -   Making sure we can access the MFA services from at least two devices. This ensures that if we lose our phone, we can still access accounts with MFA enabled.
 -   If the MFA service uses a backup password or recovery code, let's ensure we store it in a secure place and, of course, we remember where.
--   Let's perform a security drill: let's leave our phones in another room and go to our sofa with our laptops. First, open an incognito window. Second, check if we can still access the digital services where MFA is enabled. Did you have to leave your sofa and go to the other room to grab your phone?
+-   Let's perform a security drill: let's leave our phones in another room and go to our sofa with our laptops. First, open an incognito window. Second, check if we can still access the digital services where MFA is enabled. Did you have to leave your sofa and go to the other room to grab your phone? If the answer is yes, then congratulations on a successful MFA setup."
 
 ## Enable automatic software updates on your devices
 
@@ -101,19 +112,8 @@ We should pay attention to the permissions that grant apps access to the private
 -   Our devices inputs like camera and microphone
 -   Screen recording and input monitoring
 
-## Summary and cheat sheet
+## Nex steps
 
-If you made it until here congratulations!. Here is the same list as a cheat sheet in case you want to save it for your own use:
+You made it until here, congratulations!. Hope you found it useful. As a next step, I recommend you to do like me and create a reminder in your calendar to schedule your next security review.
 
--   [ ] Use a password manager
--   [ ] Use a multifactor authentication app (MFA)
--   [ ] Enable automatic software updates on your devices
--   [ ] Review your browser extensions
--   [ ] Create a list of your key digital assets
--   [ ] Enable two factor authentication for your key digital assets
--   [ ] Enable storage encryption for your physical devices
--   [ ] Reduce the amount of permissions granted to the apps you use to the minimum
-
-Here is the same list as a Notion template for Notion so you can just use it straight away [add link]
-
-Hope you found th useful. If you have any suggestion for any additional steps that you take please let me know so I can added them to the list :)
+If you have any suggestion for additional steps you think can be useful please let me know so I can add them to the list :)
