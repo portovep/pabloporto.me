@@ -4,7 +4,8 @@ date: '2018-11-01'
 roles: ['Tech lead', 'Fullstack Developer']
 location: 'Barcelona'
 teamSize: 9
-technologies: [
+technologies:
+    [
         Neo4J,
         Kotlin,
         Spring Boot,
