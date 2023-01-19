@@ -6,16 +6,16 @@ import { PageHeader } from 'components/ui';
 
 export default function About(): JSX.Element {
     return (
-        <Layout wide pageTitle="About">
+        <Layout pageTitle="About">
             <section className="sm:text-2xl mt-8 text-xl leading-6">
                 <PageHeader title="About" />
-                <div className="md:flex-row container flex flex-col items-center px-5 py-24 mx-auto">
+                <h1 className="title-font sm:text-4xl mt-16 text-3xl font-medium text-gray-900">
+                    Software Engineer • Technical lead • Traveler
+                </h1>
+                <div className="md:flex-row container flex flex-col items-center pt-10 pb-24 mx-auto">
                     <div
                         data-testid="about-intro"
-                        className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
-                        <h1 className="title-font sm:text-4xl mb-5 text-3xl font-medium text-gray-900">
-                            Software Engineer, Technical lead, Traveler
-                        </h1>
+                        className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-14 md:items-start md:mb-0 flex flex-col items-center mb-16">
                         <p className="mb-8 leading-relaxed">
                             I am Pablo, a sofware engineer, cyclist and traveler with a passion to
                             become a well-rounded person helping the world to be a better place.
@@ -36,7 +36,7 @@ export default function About(): JSX.Element {
                         />
                     </div>
                 </div>
-                <section className="w-full px-5">
+                <section className="w-full">
                     <div className="mb-10 text-center">
                         <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
                             What I like
@@ -100,31 +100,31 @@ export default function About(): JSX.Element {
                         .
                     </p>
                 </section>
-                <section className="w-full px-5">
+                <section className="w-full leading-relaxed">
                     <div className="mt-10 mb-10 text-center">
                         <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
                             What I do
                         </h2>
                     </div>
-                    <p className="pb-10 leading-relaxed">
+                    <p className="pb-10">
                         During my career, I have taken multiple roles, from full-stack software
                         engineer to other roles like infrastructure and data engineer delivering
                         many products in multiple sectors from retail to healthcare, travel, and
                         others. I have been working in digital products and digital platforms for
                         close to a decade.
                     </p>
-                    <ul className="pl-15 px-10 pb-10 space-y-5 list-disc">
+                    <ul className="pl-15 xl:w-11/12 px-10 pb-10 space-y-5 list-disc">
                         <li>
-                            I help companies build digital products right with modern software and
-                            data engineering tools and practices.
+                            I help companies build software and data systems right with modern
+                            software and data engineering tools and practices.
                         </li>
                         <li>
-                            I collaborate with product and business people to build the right
-                            digital products for the right customer problems.
+                            I work with product and business people to incrementally design easy to
+                            use products that address complex customer problems.
                         </li>
                         <li>
-                            I help teams to embrace and scale effective software engineering
-                            practices.
+                            I bring software engineering and platform thinking to help teams adopt
+                            and scale effective software engineering practices.
                         </li>
                         <li>
                             I lead and build{' '}
@@ -135,14 +135,14 @@ export default function About(): JSX.Element {
                                 rel="noopener noreferrer">
                                 empowered
                             </a>{' '}
-                            product and platform teams.
+                            and multi-disciplinary product and platform teams.
                         </li>
                         <li>
                             I train, coach, and mentor people on modern software delivery practices,
                             agile/lean ways of working, and technical leadership.
                         </li>
                         <li>
-                            I write and{' '}
+                            Finally, I write and{' '}
                             <Link
                                 href="/blog"
                                 className="text-emerald-500 hover:text-emerald-600 font-medium"
@@ -161,11 +161,11 @@ export default function About(): JSX.Element {
                             rel="noopener noreferrer">
                             Thoughtworks
                         </a>{' '}
-                        where I build and lead high-performing delivery teams building data and
-                        digital products for our clients.
+                        where I lead high-performing delivery teams building data and digital
+                        products for our clients.
                     </p>
                 </section>
-                <section className="w-full px-5">
+                <section className="w-full">
                     <div className="container px-5 mx-auto mb-20">
                         <div className="mt-10 mb-10 text-center">
                             <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
@@ -176,7 +176,7 @@ export default function About(): JSX.Element {
                                 work.
                             </p>
                         </div>
-                        <div className="lg:w-4/5 sm:mx-auto sm:mb-20 flex flex-wrap -mx-2 text-xl">
+                        <div className="sm:mx-auto sm:mb-20 flex flex-wrap -mx-2 text-xl">
                             <div className="sm:w-1/2 w-full p-2">
                                 <div className="flex items-center h-full p-4 bg-gray-100 rounded">
                                     <svg
@@ -277,7 +277,7 @@ export default function About(): JSX.Element {
                                         <path d="M22 4L12 14.01l-3-3"></path>
                                     </svg>
                                     <span className="title-font font-medium">
-                                        Technical leardership
+                                        Technical leadership
                                     </span>
                                 </div>
                             </div>
@@ -420,13 +420,13 @@ export default function About(): JSX.Element {
                         </div>
                     </div>
                 </section>
-                <section className="w-full px-5">
+                <section className="w-full leading-relaxed">
                     <div className="container mx-auto">
                         <div className="mt-10 mb-10 text-center">
                             <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
                                 Talks
                             </h2>
-                            <p className="xl:w-2/4 lg:w-3/4 mx-auto leading-relaxed">
+                            <p className="xl:w-2/4 lg:w-3/4 mx-auto">
                                 I like to share and teach what I learn. These are some talks I did.
                             </p>
                         </div>
@@ -453,13 +453,13 @@ export default function About(): JSX.Element {
                                     Creating a living style-guide for ThoughtWorks.com -
                                     @Thoughtworks
                                 </li>
-                                <li>How is it to be a developer @TW - @Meetup</li>
+                                <li>The roles on our agile teams - @Meetup</li>
                                 <li>Securing web applications 101 - @Thoughtworks</li>
                             </ul>
                         </div>
                     </div>
                 </section>
-                <section className="w-full px-5 mt-20">
+                <section className="w-full mt-20">
                     <div className="mt-10 mb-10 text-center">
                         <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
                             Let&apos;s get in touch!

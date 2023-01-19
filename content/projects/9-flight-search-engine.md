@@ -15,7 +15,7 @@ technologies: [
         Auth0,
         CircleCI,
         Terraform,
-        Docker
+        Docker,
         Cypress.js
     ]
 ---
