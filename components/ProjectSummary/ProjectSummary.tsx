@@ -25,7 +25,7 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                     open && 'bg-gray-100'
                 } focus:ring-4 focus:ring-gray-200 hover:bg-gray-100 flex items-center justify-between w-full p-5 text-left`}>
                 <div className="my-5">
-                    <h3 className="text-2xl font-semibold leading-6 text-gray-900">{name}</h3>
+                    <h3 className="font-semibol text-2xl font-bold text-gray-700">{name}</h3>
                     <p className="max-w-2xl mt-2 text-lg text-gray-500">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
