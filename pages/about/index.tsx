@@ -17,8 +17,9 @@ export default function About(): JSX.Element {
                         data-testid="about-intro"
                         className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-14 md:items-start md:mb-0 flex flex-col items-center mb-16">
                         <p className="mb-8 leading-relaxed">
-                            I am Pablo, a sofware engineer, cyclist and traveler with a passion to
-                            become a well-rounded person helping the world to be a better place.
+                            I am Pablo, a sofware engineer, amateur cyclist and traveler with a
+                            passion to become a well-rounded person helping the world to be a better
+                            place.
                         </p>
                         <p className="leading-relaxed">
                             This is my humble space on the internet where I share ideas on software
@@ -66,11 +67,11 @@ export default function About(): JSX.Element {
                         at Trinity College, Dublin.
                     </p>
                     <p className="pb-10 leading-relaxed">
-                        While speding hours and hours styduing, I realized how lucky I was of
+                        While spending hours and hours studying, I realized how lucky I was of
                         spending time learning something I was passionate about and with great
-                        career possibilities. I also realized that I will keep learning all my life
-                        which motivated me to spend time getting better with personal productivity
-                        and all things related to{' '}
+                        career possibilities. I also began to understand that I will have to keep
+                        learning all my life which motivated me to spend time getting better with
+                        personal knowledge management, productivity, and all things related to{' '}
                         <a
                             href="https://www.kaizen.com/what-is-kaizen"
                             target="_blank"
@@ -81,16 +82,14 @@ export default function About(): JSX.Element {
                         .
                     </p>
                     <p className="pb-10 leading-relaxed">
-                        As of 2023, I try to live a minimalist lifestyle from my current base in
-                        Barcelona, Spain. In my spare time, I enjoy{' '}
+                        As of 2023, I am based in Barcelona, Spain. In my spare time, I enjoy{' '}
                         <Link
                             href="/traveling"
                             className="text-emerald-500 hover:text-emerald-600 font-medium"
                             rel="noopener noreferrer">
                             traveling
                         </Link>{' '}
-                        all over the world for both work and fun, playing and watching sports (I am
-                        a big F1 fan), and{' '}
+                        for both work and fun, playing and watching sports (I am a big F1 fan), and{' '}
                         <Link
                             href="/making"
                             className="text-emerald-500 hover:text-emerald-600 font-medium"

@@ -1,5 +1,5 @@
 ---
-title: '8 steps to stay safe online'
+title: 'How to stay safe online in eight steps'
 date: '2022-12-06'
 type: 'Post'
 tag: 'Draft'
