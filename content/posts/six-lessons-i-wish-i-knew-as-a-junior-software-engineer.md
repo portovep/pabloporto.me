@@ -17,11 +17,11 @@ The result is a list of the advice I would give to a junior software engineer st
 
 > Not all experience is created equal
 
-Early on your professional journey prioritize learning opportunities over money or convenience. Learning and growing in your job is far more important than money.
+Early on in your professional journey prioritize learning opportunities over money or convenience. Learning and growing in your job is far more important than money.
 
-**Not all experience is created equal. Doesn't matter how many years of experience you have. What matters is what you were doing all those years and with whom.** Treat being in the right learning environment as a priority for your first couple of jobs.
+**Not all experience is created equal. Doesn't matter how many years of experience you have. What matters is what you were doing all those years and with whom.** Treat being in the right learning environment a priority for your first couple of jobs.
 
-The best career decision I made by far was moving out of my home country and getting a job abroad. Being around passionate people that care about their craft pushed me to learn new practices and discover new technologies that I wouldn't know about otherwise. With remote working, people don't have to leave their places anymore, they can join this type of high-growth environment from anywhere.
+The best career decision I made by far was moving out of my home country and getting a job abroad. Being around a diverse group of passionate people that care about their craft pushed me to learn new practices and discover new technologies that I wouldn't know about otherwise. With remote working, people don't have to leave their places anymore, they can join this type of high-growth diverse environment from anywhere.
 
 Don't forget to study and train a bit each day. That daily hour of study will compound fast over the first years. Invest early in understanding how you best learn and find ways to apply what you learn at work. What works for me is reading articles and books and trying to apply new technologies and tools to the problems I am trying to solve at work.
 
@@ -65,7 +65,7 @@ Try to learn and get experience in different areas: delivery, operations, fronte
 
 You can achieve this by volunteering to do the exploratory testing of a new piece of work, work with the operations team to build observability into your service, or fix and improve that broken continuous delivery pipeline. There are always opportunities to explore and cross the frontiers of your current role.
 
-This can be controversial advice, but I believe the best engineers I worked with were well-rounded. They understood the end-to-end software development process and the product they were trying to build. They were not afraid to speak up and suggest improvements in areas not related with their main rol.
+This can be controversial advice, but I believe the best engineers I worked with were well-rounded. They understood the end-to-end software development process and the product they were trying to build. They were not afraid to speak up and suggest improvements in areas not related with their main role.
 
 ## 6. Share your journey
 
