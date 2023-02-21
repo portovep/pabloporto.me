@@ -40,10 +40,16 @@ Following the principle of [shifting left security](https://snyk.io/learn/shift-
 -   Setup a strong password for your OS user and enable touchid if required.
 -   Install your password manager of choise so we can login into services and apps going forward. I use and recommend [1Password](https://1password.com/).
 -   Install any pending security updates.
+-   Enable automatic updates for security patches and apps installed via the App Store.
 
-### Setting up automatic updates
+### Setting up automatic updates for brew packages
 
-Coming soon...
+Brew has a feature to enable automatic updates called [autoupdate](https://github.com/Homebrew/homebrew-autoupdate). The tool will run brew update in the background once every 24 hours. You can customize the time interval.
+
+```bash
+# Set auto-updates every 7 days
+brew autoupdate start --upgrade 604800
+```
 
 ## The terminal
 
