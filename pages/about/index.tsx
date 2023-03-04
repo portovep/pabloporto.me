@@ -432,28 +432,49 @@ export default function About(): JSX.Element {
                         <div className="w-full px-5">
                             <ul className="px-10 space-y-5 list-disc">
                                 <li>
-                                    A data project post-mortem through Data Mesh lenses -
+                                    2022 - Learning continous delivery with examples - @Factoria5
+                                    bootcamp
+                                </li>
+                                <li>
+                                    2022 - A data project post-mortem through Data Mesh lenses -
                                     @Thoughtworks
                                 </li>
                                 <li>
-                                    Improving observability with distributed tracing and Zipkin -
-                                    @Client
+                                    2021 - Introduction to functional programming - @Factoria5
+                                    bootcamp
                                 </li>
                                 <li>
-                                    Design systems and UI component libraries with React and
+                                    2020 - Improving observability with distributed tracing and
+                                    Zipkin - @Client
+                                </li>
+                                <li>
+                                    2020 - Improving observability with distributed tracing and
+                                    Zipkin - @Client
+                                </li>
+                                <li>
+                                    2019 - Introducting to agile software development - @Factoria5
+                                    bootcamp
+                                </li>
+                                <li>
+                                    2018 - Design systems and UI component libraries with React and
                                     Storybook - @Thoughtworks
                                 </li>
                                 <li>
-                                    How we built a component library to scale frontend development
-                                    across multiple teams - @Client
+                                    2017 - How we built a component library to scale frontend
+                                    development across multiple teams - @Client
                                 </li>
-                                <li>Introduction to the phoenix server pattern - @Thoughtworks</li>
                                 <li>
-                                    Creating a living style-guide for ThoughtWorks.com -
+                                    2016 - Introduction to the phoenix server pattern -
                                     @Thoughtworks
                                 </li>
-                                <li>The roles on our agile teams - @Meetup</li>
-                                <li>Securing web applications 101 - @Thoughtworks</li>
+                                <li>
+                                    2016 - Creating a living style-guide for ThoughtWorks.com -
+                                    @Thoughtworks
+                                </li>
+                                <li>
+                                    2016 - What are the different roles in Agile teams - @Meetup
+                                </li>
+                                <li>2015 - Securing web applications 101 - @Thoughtworks</li>
                             </ul>
                         </div>
                     </div>
