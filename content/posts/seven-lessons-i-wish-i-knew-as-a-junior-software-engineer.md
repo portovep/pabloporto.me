@@ -6,11 +6,11 @@ type: 'Post'
 
 ![Thoughtworks office views](/images/posts/manchester-office.jpeg 'Thoughtworks office views')
 
-Nine years ago I moved to Manchester to start my journey as a junior software engineer. To mark my ninth work anniversary, I sat down with a nice cup of barista coffee and **gathered my thoughts on what I think are the most important lessons I learned along the way**.
+Nine years ago I moved to Manchester to start my journey as a junior software engineer. To mark my ninth work anniversary, I sat down with a nice cup of [barista coffee](https://imgflip.com/i/2h15z3) and **gathered my thoughts on what I think are the most important lessons I learned along the way**.
 
 These are the seven things I think **every junior software engineer** starting their career in 2023 should start considering doing **to create a long and fulfilling career in tech**.
 
-## 1. Optimize for learning not money
+## 1. Optimize for learning over money
 
 > Not all experience is created equal
 
@@ -45,7 +45,8 @@ Try to adopt the habits and rituals that allow you to have a decent work-life ba
 -   No work related stuff on the weekends
 -   Disconnect from the computer in the evenings
 -   Remove any work related stuff from my smartphone
--   Reduce my screen time after work. Find hobbies that get me out there, like traveling and MTB.
+-   Reduce my screen time after work
+-   Find hobbies that get me out there, like traveling and MTB
 
 Of course, there are periods where we break these rules and put more time into career related projects or self-learning. **That is totally fine as long as you are aware and you are willing to make that compromise for what you are getting out of the time you invest on them.**
 
@@ -71,7 +72,7 @@ Don't just stop at the tech and the tools. Learn about product management, agile
 
 **This can be a bit of a controversial advice, but I believe the best engineers I worked with were well-rounded.** They understood the end-to-end software development process, the product and the business problem they were trying to solve. They were not afraid to speak up and suggest improvements in areas not related with their main role.
 
-Becoming a [generalizing specialist](https://www.agilemodeling.com/essays/generalizingSpecialists.htm) has allowed me to make an impact quicker when starting a new project from scrach or jumping into an existing one. **Going broad and learning how to be well-rounded is the second best super-skill you can spend time on after learning how to learn.**
+Becoming a [generalizing specialist](https://www.agilemodeling.com/essays/generalizingSpecialists.htm) allowed me to make an impact quicker when starting a new project from scrach or jumping into an existing one. **Going broad and learning how to be well-rounded is the second best super-skill you can spend time on after learning how to learn.**
 
 ## 7. Share your journey
 
@@ -85,6 +86,6 @@ Writing your ideas and learnings down and sharing them with other people will al
 
 ## Conclusion
 
-This curated list of lessons it is what have resonated the most with me over the last nine years. **What's the number one lesson you've learned since starting in tech as a junior engineer?** Ping me at [@portovep](https://twitter.com/portovep) and share your story.
+These are the lessons that have resonated the most with me over the last nine years. I hope you find them useful to set the foundations for a long and fulfilling career as a software engineer.
 
-I hope you find them useful and they help you set the foundations for a long and fulfilling career as a software engineer.
+**What's your one lesson you've learned since starting in tech as a junior engineer?** Feel free to ping me at [@portovep](https://twitter.com/portovep) and share it.
