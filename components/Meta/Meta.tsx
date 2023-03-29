@@ -4,7 +4,7 @@ export const siteTitle = 'Pablo Porto';
 const siteUrl = 'https://pabloporto.me/';
 const siteImage = `${siteUrl}images/about.jpeg`;
 const siteDescription =
-    'I enjoy making software and exploring the world. Currently helping companies go digital at Thoughtworks.';
+    'I enjoy making software and exploring the world. Currently building distributed systems and high-performing teams at Thoughtworks.';
 
 type MetaProps = {
     pageTitle?: string;

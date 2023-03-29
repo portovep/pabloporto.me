@@ -110,7 +110,9 @@ export default function About(): JSX.Element {
                         engineer to other roles like infrastructure and data engineer delivering
                         many products in multiple sectors from retail to healthcare, travel, and
                         others. I have been working in digital products and digital platforms for
-                        close to a decade.
+                        close to a decade. Currently, I help companies apply modern software
+                        engineering practices to data management so that they can unlock value from
+                        their data and become data-driven.
                     </p>
                     <ul className="pl-15 xl:w-11/12 px-10 pb-10 space-y-5 list-disc">
                         <li>
