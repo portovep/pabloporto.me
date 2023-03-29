@@ -6,11 +6,11 @@ type: 'Post'
 
 ![Thoughtworks office views](/images/posts/manchester-office.jpeg 'Thoughtworks office views')
 
-Nine years ago I moved to Manchester to start my journey as a junior software engineer. To mark my ninth work anniversary, I sat down with a nice cup of barista coffee and **gathered my thoughts on what were the most important lessons I learned along the way**.
+Nine years ago I moved to Manchester to start my journey as a junior software engineer. To mark my ninth work anniversary, I sat down with a nice cup of barista coffee and **gathered my thoughts on what I think are the most important lessons I learned along the way**.
 
-In this short article I share with you the seven things I think **every junior software engineer** starting their career in 2023 could start doing **to create a long and fulfilling career in tech**.
+These are the seven things I think **every junior software engineer** starting their career in 2023 should start considering doing **to create a long and fulfilling career in tech**.
 
-## 1. Optimize for learning
+## 1. Optimize for learning not money
 
 > Not all experience is created equal
 
@@ -21,8 +21,6 @@ The knowledge you will gather during the first years of your career will compoun
 **The best career decision I made by far was leaving my comfort zone, move abroad and start my professional journey in a great working environment**. Working with a group of international and passionate people that cared about their craft expedited my learning more than anything else. With remote working, you can now find these type of places without having to leave your home.
 
 **Being in a great learning environment during working hours is only the first step. Don't forget to study and train a bit each day.** That daily hour of study will also compound fast over the first years.
-
-Invest time early in understanding how you best learn and find ways to apply what you learn at work. For example, I realise that what works for me is reading articles and books to immediatly apply the concepts and ideas I read into the problems I am trying to solve at work.
 
 ## 2. Focus on principles and practices
 
@@ -47,7 +45,7 @@ Try to adopt the habits and rituals that allow you to have a decent work-life ba
 -   No work related stuff on the weekends
 -   Disconnect from the computer in the evenings
 -   Remove any work related stuff from my smartphone
--   Reduce my screen time after work. Find hobbies that get me out there.
+-   Reduce my screen time after work. Find hobbies that get me out there, like traveling and MTB.
 
 Of course, there are periods where we break these rules and put more time into career related projects or self-learning. **That is totally fine as long as you are aware and you are willing to make that compromise for what you are getting out of the time you invest on them.**
 
@@ -87,4 +85,6 @@ Writing your ideas and learnings down and sharing them with other people will al
 
 ## Conclusion
 
-These are the lessons that have resonated the most with me. I hope you find them useful and they help you set the foundations for a long and fulfilling career as a software engineer.
+This curated list of lessons it is what have resonated the most with me over the last nine years. **What's the number one lesson you've learned since starting in tech as a junior engineer?** Ping me at [@portovep](https://twitter.com/portovep) and share your story.
+
+I hope you find them useful and they help you set the foundations for a long and fulfilling career as a software engineer.
