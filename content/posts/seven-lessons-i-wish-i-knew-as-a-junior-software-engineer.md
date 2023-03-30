@@ -40,7 +40,7 @@ I was lucky to be in an environment where my colleagues emphasized the importanc
 
 Try to adopt the habits and rituals that allow you to have a decent work-life balance if you want to have a long and fulfilling career. **Investing additional time early in your career, like that extra hour studying every day I mentioned, doesn't mean that you should forget other areas of your life** like your health and relationships.
 
-**To avoid burning down, you should balance times where you invest more in your career and others where you can just relax and just do your 9 to 5 shift**. These are some of the rules I set:
+**To avoid burning out, you should balance times where you invest more in your career and others where you can just relax and just do your 9 to 5 shift**. These are some of the rules I set:
 
 -   No work related stuff on the weekends
 -   Disconnect from the computer in the evenings
@@ -88,4 +88,4 @@ Writing your ideas and learnings down and sharing them with other people will al
 
 These are the lessons that have resonated the most with me over the last nine years. I hope you find them useful to set the foundations for a long and fulfilling career as a software engineer.
 
-**What's your one lesson you've learned since starting in tech as a junior engineer?** Feel free to ping me at [@portovep](https://twitter.com/portovep) and share it.
+**What's the most important lesson you've learned since starting in tech as a junior engineer?** Feel free to ping me at [@portovep](https://twitter.com/portovep) and share it with all of us.
