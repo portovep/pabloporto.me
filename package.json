@@ -29,7 +29,7 @@
         "@svgr/webpack": "^6.2.1",
         "@tailwindcss/typography": "^0.5.7",
         "@types/node": "^18.11.17",
-        "@types/react": "^18.0.25",
+        "@types/react": "^18.0.34",
         "@typescript-eslint/eslint-plugin": "^5.47.0",
         "@typescript-eslint/parser": "^5.57.1",
         "autoprefixer": "^10.4.14",
