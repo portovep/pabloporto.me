@@ -6,19 +6,24 @@ export default function WorldMap(): JSX.Element {
         { id: 'IE', title: 'Ireland' },
         { id: 'GB', title: 'United Kingdom' },
         { id: 'DE', title: 'Germany' },
-        { id: 'IN', title: 'India' }
+        { id: 'IN', title: 'India' },
+        { id: 'GR', title: 'Greece' }
     ];
     const visited = [
+        { id: 'IE', title: 'Ireland' },
+        { id: 'GB', title: 'United Kingdom' },
         { id: 'PT', title: 'Portugal' },
+        { id: 'DE', title: 'Germany' },
         { id: 'FR', title: 'France' },
         { id: 'IS', title: 'Iceland' },
         { id: 'PL', title: 'Poland' },
         { id: 'DK', title: 'Denmark' },
         { id: 'AT', title: 'Austria' },
+        { id: 'AD', title: 'Andorra' },
         { id: 'HU', title: 'Hungary' },
         { id: 'AE', title: 'United Arab Emirates' },
         { id: 'LK', title: 'Sri Lanka' },
-        { id: 'LK', title: 'Sri Lanka' },
+        { id: 'IN', title: 'India' },
         { id: 'TH', title: 'Thailand' },
         { id: 'NL', title: 'Netherlands' },
         { id: 'MA', title: 'Morocco' },
@@ -28,7 +33,8 @@ export default function WorldMap(): JSX.Element {
         { id: 'GR', title: 'Greece' },
         { id: 'CR', title: 'Costa Rica' },
         { id: 'SV', title: 'El Salvador' },
-        { id: 'CH', title: 'Switzerland' }
+        { id: 'CH', title: 'Switzerland' },
+        { id: 'CZ', title: 'Czech Republic' }
     ];
     return (
         <div>
@@ -47,7 +53,7 @@ export default function WorldMap(): JSX.Element {
                             In <span className="text-emerald-500 font-extrabold">green</span> are
                             the countries I visited so far, in
                             <span className="font-extrabold text-black"> black</span> the ones were
-                            I lived for at least a few months.
+                            I lived for at least one month.
                         </p>
                     </div>
                     <div className="flex flex-wrap -m-4 text-center">
