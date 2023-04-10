@@ -10,8 +10,8 @@ export default function PhotoCard({ imageURL, location, title }: PhotoCardProps)
     return (
         <div
             data-testid="photo-card"
-            className="md:h-90 md:w-80 rounded-xl shadow-gray-500 m-auto overflow-hidden shadow-xl cursor-pointer">
-            <div className="h-96 w-72 sm:h-96 sm:w-96 relative">
+            className="h-96 w-72 rounded-xl shadow-gray-500 m-auto overflow-hidden shadow-xl cursor-pointer">
+            <div className="h-96 w-72 relative">
                 <Image
                     alt={`${title} taken at ${location}`}
                     src={imageURL}
