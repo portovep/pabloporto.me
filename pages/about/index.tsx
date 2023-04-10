@@ -7,15 +7,15 @@ import { PageHeader } from 'components/ui';
 export default function About(): JSX.Element {
     return (
         <Layout pageTitle="About">
-            <section className="sm:text-2xl mt-8 text-xl leading-6">
+            <section className="max-w-3xl mt-8 text-xl leading-6">
                 <PageHeader title="About" />
-                <h1 className="title-font sm:text-4xl mt-16 text-3xl font-medium text-gray-900">
+                <h1 className="title-font sm:text-3xl mt-6 text-3xl font-medium text-gray-900">
                     Software Engineer • Technical lead • Traveler
                 </h1>
                 <div className="md:flex-row container flex flex-col items-center pt-10 pb-24 mx-auto">
                     <div
                         data-testid="about-intro"
-                        className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-14 md:items-start md:mb-0 flex flex-col items-center mb-16">
+                        className="lg:flex-grow md:w-1/2 lg:pr-10 md:pr-14 md:items-start md:mb-0 flex flex-col items-center mb-16">
                         <p className="mb-8 leading-relaxed">
                             I am Pablo, a sofware engineer, amateur cyclist and traveler with a
                             passion to become a well-rounded person helping the world to be a better
@@ -167,7 +167,7 @@ export default function About(): JSX.Element {
                     </p>
                 </section>
                 <section className="w-full">
-                    <div className="container px-5 mx-auto mb-20">
+                    <div className="container mx-auto mb-20">
                         <div className="mt-10 mb-10 text-center">
                             <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
                                 How I do it
@@ -425,13 +425,13 @@ export default function About(): JSX.Element {
                     <div className="container mx-auto">
                         <div className="mt-10 mb-10 text-center">
                             <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
-                                Talks
+                                Speaking
                             </h2>
                             <p className="xl:w-2/4 lg:w-3/4 mx-auto">
                                 I like to share and teach what I learn. These are some talks I did.
                             </p>
                         </div>
-                        <div className="w-full px-5">
+                        <div className="w-full">
                             <ul className="px-10 space-y-5 list-disc">
                                 <li>
                                     2022 - Learning continous delivery with examples - @Factoria5
