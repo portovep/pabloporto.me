@@ -11,6 +11,9 @@ import tajMahalFacadePhoto from '../../public/images/photos/IMG_20200217_071819.
 import tajMahalPhoto from '../../public/images/photos/IMG_20200217_080528.jpeg';
 import maldivesBeachPhoto from '../../public/images/photos/IMG_20200225_125124.jpeg';
 import lonelyElephantPhoto from '../../public/images/photos/IMG_20200303_152059.jpeg';
+import birdCostaRicaPhoto from '../../public/images/photos/IMG-20220518-WA0027.jpeg';
+import laFortunaWaterfallPhoto from '../../public/images/photos/IMG-20220508-WA0053.jpeg';
+import islaDeArosaPhoto from '../../public/images/photos/IMG_20170821_162359.jpeg';
 
 export default function Traveling(): JSX.Element {
     return (
@@ -65,6 +68,21 @@ export default function Traveling(): JSX.Element {
                         title="Chid helping his father"
                         location="Jaipur, India"
                         imageURL={jaipurKidPhoto}
+                    />
+                    <PhotoCard
+                        title="Tropical Bird"
+                        location="Costa Rica"
+                        imageURL={birdCostaRicaPhoto}
+                    />
+                    <PhotoCard
+                        title="Waterfall"
+                        location="La Fortuna, Costa Rica"
+                        imageURL={laFortunaWaterfallPhoto}
+                    />
+                    <PhotoCard
+                        title="Isla de Arosa"
+                        location="Galicia"
+                        imageURL={islaDeArosaPhoto}
                     />
                 </div>
             </section>
