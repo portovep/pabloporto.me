@@ -2,7 +2,7 @@
 title: 'How to stay safe online in eight steps'
 date: '2022-12-06'
 type: 'Post'
-tag: 'Draft'
+tag: 'Security'
 ---
 
 ![Photo by Ales Nesetril on Unsplash](/images/posts/advent-security-2022.jpeg 'Photo by Ales Nesetril on Unsplash')
