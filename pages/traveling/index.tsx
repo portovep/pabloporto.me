@@ -22,9 +22,9 @@ export default function Traveling(): JSX.Element {
                     <WorldMap />
                 </div>
 
-                <h2 className="font-semibol text-3xl tracking-tight">Some of my best photos</h2>
-
-                <div className="md:grid-cols-2 xl:grid-cols-3 grid grid-cols-1 gap-12 mt-12">
+                <h2 className="font-semibol text-3xl tracking-tight">Photography</h2>
+                <hr className="my-8 h-0.5 border-t-0 bg-gray-200 opacity-100 dark:opacity-50 w-10" />
+                <div className="md:grid-cols-2 xl:grid-cols-3 gap-x-14 gap-y-28 grid grid-cols-1 mt-12">
                     <PhotoCard
                         title="Taj Mahal"
                         location="Jaipur, India"
