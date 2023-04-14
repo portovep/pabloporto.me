@@ -14,7 +14,7 @@ export default function Footer(): JSX.Element {
                 <span aria-label="coffee" role="img">
                     ☕️
                 </span>
-                &nbsp; in Spain, 2021™
+                &nbsp; in Spain, {new Date().getFullYear()}™
             </div>
             <div className="flex items-center justify-center mt-4">
                 <a
