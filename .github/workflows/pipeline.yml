@@ -4,7 +4,7 @@ on:
     push:
 
 env:
-  NODE_VERSION: "14.x"
+    NODE_VERSION: '14.x'
 
 jobs:
     build:
@@ -20,13 +20,28 @@ jobs:
                   node-version: ${{ env.NODE_VERSION }}
             - name: Lint & Format checks
               run: |
-                npm ci
-                npm run lint
-                npm run format
+                  npm ci
+                  npm run lint
+                  npm run format
+
+    test:
+        name: Test
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Cypress run
+              uses: cypress-io/github-action@v2
+              with:
+                  build: npm run build
+                  start: npm start
+                  wait-on: http://localhost:3030
 
     deploy-preview:
         name: Deploy to preview
-        needs: build
+        needs: [build, test]
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/main'
 
@@ -39,19 +54,19 @@ jobs:
                   node-version: ${{ env.NODE_VERSION }}
             - name: Deploy to preview environment
               run: |
-                npm i -g vercel
-                vercel --token "$VERCEL_TOKEN" > preview-deployment-url.txt
-                cat preview-deployment-url.txt
+                  npm i -g vercel
+                  vercel --token "$VERCEL_TOKEN" > preview-deployment-url.txt
+                  cat preview-deployment-url.txt
               env:
-                VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-                VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-                VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+                  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+                  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+                  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             - name: Upload artifacts
               uses: actions/upload-artifact@v2
               with:
-                name: preview-deployment-url
-                path: preview-deployment-url.txt
-  
+                  name: preview-deployment-url
+                  path: preview-deployment-url.txt
+
     check-performance:
         name: Check performance
         needs: deploy-preview
@@ -64,16 +79,16 @@ jobs:
             - name: Download preview deployment URL
               uses: actions/download-artifact@v2
               with:
-                name: preview-deployment-url
+                  name: preview-deployment-url
             - name: Run with Node.js ${{ env.NODE_VERSION }}
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ env.NODE_VERSION }}
             - name: Check performance with Lighthouse
               run: |
-                deployment_url=`cat preview-deployment-url.txt`
-                npm i -g @lhci/cli@0.7.x
-                npm run performance:check -- $deployment_url
+                  deployment_url=`cat preview-deployment-url.txt`
+                  npm i -g @lhci/cli@0.7.x
+                  npm run performance:check -- $deployment_url
 
     deploy-prod:
         name: Deploy to prod
@@ -90,9 +105,9 @@ jobs:
                   node-version: ${{ env.NODE_VERSION }}
             - name: Deploy to prod environment
               run: |
-                npm i -g vercel
-                vercel --token "$VERCEL_TOKEN" --prod
+                  npm i -g vercel
+                  vercel --token "$VERCEL_TOKEN" --prod
               env:
-                VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-                VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-                VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+                  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+                  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+                  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
