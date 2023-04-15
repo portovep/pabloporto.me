@@ -9,7 +9,7 @@ export default function About(): JSX.Element {
         <Layout pageTitle="About">
             <section className="max-w-3xl mt-8 text-xl leading-6">
                 <PageHeader title="About" />
-                <h1 className="title-font sm:text-3xl mt-6 text-3xl font-medium text-gray-900">
+                <h1 className="title-font mt-6 text-3xl font-medium text-gray-900">
                     Software Engineer • Technical lead • Traveler
                 </h1>
                 <div className="md:flex-row container flex flex-col items-center pt-10 pb-24 mx-auto">
