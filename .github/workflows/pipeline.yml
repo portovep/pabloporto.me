@@ -90,7 +90,7 @@ jobs:
             - name: Check performance with Lighthouse
               run: |
                   deployment_url=`cat preview-deployment-url.txt`
-                  npm i -g @lhci/cli@0.7.x
+                  npm i -g @lhci/cli@0.12.x
                   npm run performance:check -- $deployment_url
 
     deploy-prod:
