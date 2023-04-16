@@ -93,7 +93,7 @@ jobs:
                   npm i -g @lhci/cli@0.12.x
                   npm run performance:check -- $deployment_url
               env:
-                  LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+                  LHCI_GITHUB_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
     deploy-prod:
         name: Deploy to prod
