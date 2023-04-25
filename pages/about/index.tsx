@@ -433,6 +433,12 @@ export default function About(): JSX.Element {
                         </div>
                         <div className="w-full">
                             <ul className="px-10 space-y-5 list-disc">
+                                <li>2023 - Data Mesh 101 - @Commitconf</li>
+                                <li>
+                                    2023 - An overview of the data products lifecycle -
+                                    @Thoughtworks
+                                </li>
+                                <li>2023 - TDD in SQL - @Thoughtworks</li>
                                 <li>
                                     2022 - Learning continous delivery with examples - @Factoria5
                                     bootcamp
@@ -446,12 +452,8 @@ export default function About(): JSX.Element {
                                     bootcamp
                                 </li>
                                 <li>
-                                    2020 - Improving observability with distributed tracing and
-                                    Zipkin - @Client
-                                </li>
-                                <li>
-                                    2020 - Improving observability with distributed tracing and
-                                    Zipkin - @Client
+                                    2020 - Observability: An introduction to distributed tracing -
+                                    @Client
                                 </li>
                                 <li>
                                     2019 - Introducting to agile software development - @Factoria5
@@ -474,7 +476,7 @@ export default function About(): JSX.Element {
                                     @Thoughtworks
                                 </li>
                                 <li>
-                                    2016 - What are the different roles in Agile teams - @Meetup
+                                    2016 - What are the different roles in an agile team - @Meetup
                                 </li>
                                 <li>2015 - Securing web applications 101 - @Thoughtworks</li>
                             </ul>
