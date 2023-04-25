@@ -4,7 +4,7 @@ import Layout from '../../components/Layout/Layout';
 import PostBody from '../../components/PostBody/PostBody';
 import { getAllPostIds, getPostData, PostData } from '../../lib/posts';
 import { Date, Label } from '../../components/ui';
-import profilePic from '../../public/images/profile.jpg';
+import profilePic from '../../public/images/profile.png';
 
 type PostProps = {
     postData: PostData;

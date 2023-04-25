@@ -2,7 +2,7 @@ import Layout from '../components/Layout/Layout';
 import Card from '../components/Card/Card';
 import Link from 'next/link';
 import Image from 'next/image';
-import profilePic from '../public/images/profile.jpg';
+import profilePic from '../public/images/profile.png';
 
 export default function Home(): JSX.Element {
     return (
