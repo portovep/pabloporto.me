@@ -432,7 +432,16 @@ export default function About(): JSX.Element {
                             </p>
                         </div>
                         <div className="w-full">
-                            <ul className="px-10 space-y-5 list-disc">
+                            <ul className="space-y-5 list-disc">
+                                <li>
+                                    <a
+                                        href="https://www.youtube.com/watch?v=V0i2KyMp9pY&ab_channel=JOnTheBeach"
+                                        target="_blank"
+                                        className="text-emerald-500 hover:text-emerald-600 font-medium"
+                                        rel="noopener noreferrer">
+                                        2023 - Data Mesh 101 - @JonTheBeach
+                                    </a>
+                                </li>
                                 <li>2023 - Data Mesh 101 - @Commitconf</li>
                                 <li>
                                     2023 - An overview of the data products lifecycle -
