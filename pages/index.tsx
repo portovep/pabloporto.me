@@ -16,7 +16,7 @@ export default function Home(): JSX.Element {
                         className="hover:cursor-pointer h-auto max-w-full rounded-full"
                         height={144}
                         width={144}
-                        alt="Profile picture of me in India"
+                        alt="Profile picture"
                     />
                 </Link>
             </div>
