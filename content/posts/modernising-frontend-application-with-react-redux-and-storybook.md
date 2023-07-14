@@ -2,7 +2,6 @@
 title: 'Modernising a frontend application with React, Redux and Storybook'
 date: '2018-01-22'
 type: 'Post'
-tag: 'Draft'
 ---
 
 Around a year ago, my team started the journey of modernizing the frontend stack of a back-office web application. The application helps assessors to manage the lifecycle of a student loan.
