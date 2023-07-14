@@ -11,7 +11,7 @@ export default function Home(): JSX.Element {
                 <Link href="/about" legacyBehavior>
                     <Image
                         priority
-                        quality="100"
+                        quality="75"
                         src={profilePic}
                         className="hover:cursor-pointer h-auto max-w-full rounded-full"
                         height={144}
