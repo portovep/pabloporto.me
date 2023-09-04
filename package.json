@@ -39,7 +39,7 @@
         "eslint-config-next": "^13.4.9",
         "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-cypress": "^2.13.2",
-        "postcss": "^8.4.21",
+        "postcss": "^8.4.29",
         "prettier": "^3.0.0",
         "prettier-plugin-tailwind-css": "^1.5.0",
         "sharp": "^0.32.0",
