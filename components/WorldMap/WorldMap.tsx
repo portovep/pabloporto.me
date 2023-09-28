@@ -1,49 +1,7 @@
+import { travelingStats } from 'content/travels/travelingStats';
 import MapWithCountries from './worldmap.svg';
 
 export default function WorldMap(): JSX.Element {
-    const lived = [
-        { id: 'ES', title: 'Spain' },
-        { id: 'IE', title: 'Ireland' },
-        { id: 'GB', title: 'United Kingdom' },
-        { id: 'DE', title: 'Germany' },
-        { id: 'IN', title: 'India' },
-        { id: 'GR', title: 'Greece' },
-        { id: 'AL', title: 'Albania' }
-    ];
-    const visited = [
-        { id: 'IE', title: 'Ireland' },
-        { id: 'GB', title: 'United Kingdom' },
-        { id: 'PT', title: 'Portugal' },
-        { id: 'DE', title: 'Germany' },
-        { id: 'FR', title: 'France' },
-        { id: 'IS', title: 'Iceland' },
-        { id: 'PL', title: 'Poland' },
-        { id: 'DK', title: 'Denmark' },
-        { id: 'AT', title: 'Austria' },
-        { id: 'AD', title: 'Andorra' },
-        { id: 'HU', title: 'Hungary' },
-        { id: 'AE', title: 'United Arab Emirates' },
-        { id: 'LK', title: 'Sri Lanka' },
-        { id: 'IN', title: 'India' },
-        { id: 'TH', title: 'Thailand' },
-        { id: 'NL', title: 'Netherlands' },
-        { id: 'MA', title: 'Morocco' },
-        { id: 'IT', title: 'Italy' },
-        { id: 'US', title: 'United States' },
-        { id: 'MV', title: 'Maldives' },
-        { id: 'GR', title: 'Greece' },
-        { id: 'CR', title: 'Costa Rica' },
-        { id: 'SV', title: 'El Salvador' },
-        { id: 'CH', title: 'Switzerland' },
-        { id: 'CZ', title: 'Czech Republic' },
-        { id: 'AL', title: 'Albania' }
-    ];
-    const continents = [
-        { id: 'EU', title: 'Europe' },
-        { id: 'ASIA', title: 'Asia' },
-        { id: 'AFRICA', title: 'Africa' },
-        { id: 'NA', title: 'North America' }
-    ];
     return (
         <div>
             <MapWithCountries
@@ -68,7 +26,7 @@ export default function WorldMap(): JSX.Element {
                         <div className="md:w-1/3 sm:w-1/2 w-full p-4">
                             <div className="px-4 py-6 border-2 border-gray-200 rounded-lg">
                                 <h2 className="title-font text-3xl font-medium text-gray-900">
-                                    {visited.length}
+                                    {travelingStats.visited.length}
                                 </h2>
                                 <p className="leading-relaxed">countries visited</p>
                             </div>
@@ -76,7 +34,7 @@ export default function WorldMap(): JSX.Element {
                         <div className="md:w-1/3 sm:w-1/2 w-full p-4">
                             <div className="px-4 py-6 border-2 border-gray-200 rounded-lg">
                                 <h2 className="title-font text-3xl font-medium text-gray-900">
-                                    {lived.length}
+                                    {travelingStats.lived.length}
                                 </h2>
                                 <p className="leading-relaxed">countries lived</p>
                             </div>
@@ -84,7 +42,7 @@ export default function WorldMap(): JSX.Element {
                         <div className="md:w-1/3 sm:w-1/2 w-full p-4">
                             <div className="px-4 py-6 border-2 border-gray-200 rounded-lg">
                                 <h2 className="title-font text-3xl font-medium text-gray-900">
-                                    {continents.length}
+                                    {travelingStats.continents.length}
                                 </h2>
                                 <p className="leading-relaxed">continents visited</p>
                             </div>
