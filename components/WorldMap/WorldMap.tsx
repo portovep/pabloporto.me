@@ -7,7 +7,8 @@ export default function WorldMap(): JSX.Element {
         { id: 'GB', title: 'United Kingdom' },
         { id: 'DE', title: 'Germany' },
         { id: 'IN', title: 'India' },
-        { id: 'GR', title: 'Greece' }
+        { id: 'GR', title: 'Greece' },
+        { id: 'AL', title: 'Albania' }
     ];
     const visited = [
         { id: 'IE', title: 'Ireland' },
@@ -34,7 +35,14 @@ export default function WorldMap(): JSX.Element {
         { id: 'CR', title: 'Costa Rica' },
         { id: 'SV', title: 'El Salvador' },
         { id: 'CH', title: 'Switzerland' },
-        { id: 'CZ', title: 'Czech Republic' }
+        { id: 'CZ', title: 'Czech Republic' },
+        { id: 'AL', title: 'Albania' }
+    ];
+    const continents = [
+        { id: 'EU', title: 'Europe' },
+        { id: 'ASIA', title: 'Asia' },
+        { id: 'AFRICA', title: 'Africa' },
+        { id: 'NA', title: 'North America' }
     ];
     return (
         <div>
@@ -75,7 +83,9 @@ export default function WorldMap(): JSX.Element {
                         </div>
                         <div className="md:w-1/3 sm:w-1/2 w-full p-4">
                             <div className="px-4 py-6 border-2 border-gray-200 rounded-lg">
-                                <h2 className="title-font text-3xl font-medium text-gray-900">3</h2>
+                                <h2 className="title-font text-3xl font-medium text-gray-900">
+                                    {continents.length}
+                                </h2>
                                 <p className="leading-relaxed">continents visited</p>
                             </div>
                         </div>
