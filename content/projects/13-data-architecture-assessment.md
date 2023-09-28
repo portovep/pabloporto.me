@@ -1,5 +1,5 @@
 ---
-name: 'Data Architecture Tech Assessment'
+name: 'Data architecture technical assessment'
 date: '2022-05-01'
 roles: ['Data Engineer']
 location: 'Barcelona | Remote'
