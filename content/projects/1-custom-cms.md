@@ -4,6 +4,7 @@ date: '2014-03-01'
 roles: ['Fullstack Developer']
 location: 'Manchester'
 teamSize: 12
+industry: 'Technology'
 technologies:
     ['Ruby', 'JavaScript', 'JQuery', 'SASS', 'Graphite', 'GoCD', 'ELK', 'Rackspace', 'Docker']
 ---

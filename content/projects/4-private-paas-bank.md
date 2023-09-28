@@ -4,6 +4,7 @@ date: '2016-06-01'
 roles: ['Infrastructure Engineer']
 location: 'Madrid'
 teamSize: 7
+industry: 'Banking'
 technologies:
     [
         'Kubernetes',

@@ -18,6 +18,7 @@ technologies:
         'Jenkins'
     ]
 teamSize: 4
+industry: 'Retail and e-commerce'
 ---
 
 I worked as an infrastructure engineer to help reduce the gap and bring together the development and platform teams within a program to re-platform and rebuild a digital membership service for a big company in the retail industry.

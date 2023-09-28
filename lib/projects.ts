@@ -15,6 +15,7 @@ export type ProjectData = {
     location: string;
     description: string;
     teamSize: number;
+    industry: string;
     technologies: string[];
     contentHtml?: string;
 };

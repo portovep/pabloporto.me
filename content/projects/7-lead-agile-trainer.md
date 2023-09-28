@@ -4,6 +4,7 @@ date: '2018-05-01'
 roles: ['Trainer']
 location: 'Pune, India'
 teamSize: 32
+industry: 'Technology'
 technologies: [Agile/Lean, XP, Continuous Delivery, TDD, Pairing, Trunk base development, OOP]
 ---
 

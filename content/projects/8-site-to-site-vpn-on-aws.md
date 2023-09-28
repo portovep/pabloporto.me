@@ -4,6 +4,7 @@ date: '2018-07-01'
 roles: ['Infrastructure Engineer']
 location: 'Manchester'
 teamSize: 6
+industry: 'Public sector'
 technologies:
     [Terraform, Inspec, Python, PyTest, AWS, Sophos UTM, Gitlab CI/CD, Docker, Docker Compose]
 ---

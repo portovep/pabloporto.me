@@ -4,6 +4,7 @@ date: '2022-05-01'
 roles: ['Data Engineer']
 location: 'Barcelona | Remote'
 teamSize: 5
+industry: 'Technology'
 technologies: ['AWS', 'Data Streaming']
 ---
 

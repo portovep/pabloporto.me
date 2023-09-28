@@ -4,6 +4,7 @@ date: '2020-04-01'
 roles: ['Infrastructure consultant', 'Fullstack Developer']
 location: 'Barcelona'
 teamSize: 8
+industry: 'Energy'
 technologies: [Vue.js, Nuxt, Zipkin, Grafana, Ansible, Terraform, tfsec]
 ---
 

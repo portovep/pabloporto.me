@@ -4,6 +4,7 @@ date: '2015-09-01'
 roles: ['Fullstack Developer']
 location: 'Hamburg'
 teamSize: 7
+industry: 'Retail and e-commerce'
 technologies:
     ['React/Redux', 'HTML5', 'SASS', 'Java', 'GoCD', 'Kubernetes', 'Docker', 'Google Cloud']
 ---

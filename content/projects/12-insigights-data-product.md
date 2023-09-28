@@ -4,6 +4,7 @@ date: '2021-03-01'
 roles: ['Tech Lead', 'Data Engineer']
 location: 'Barcelona | Remote'
 teamSize: 7
+industry: 'Healthcare'
 technologies:
     [
         Scala,
@@ -20,7 +21,7 @@ technologies:
     ]
 ---
 
-I worked as a technical lead for a data engineer team in charge of building a data product. The solution generates insights about usage KPIs of a healthcare platform. Some of the tasks I helped with:
+I worked as a technical lead for a data engineering team in charge of building a data product. The solution generates insights about usage KPIs of a healthcare platform. Some of the tasks I helped with:
 
 -   Build ETL data pipelines with Spark/Scala/AWS EMR.
 -   Build ELT data transformations with dbt/SQL in AWS Redshift.

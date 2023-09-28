@@ -4,6 +4,7 @@ date: '2018-03-01'
 roles: ['Infrastructure Engineer']
 location: 'Manchester'
 teamSize: 12
+industry: 'Public sector'
 technologies:
     [
         Terraform,

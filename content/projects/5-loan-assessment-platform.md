@@ -1,10 +1,11 @@
 ---
 name: 'Loan assessment platform'
-date: '2016-09-01'
+date: '2016-10-01'
 roles: ['Fullstack Developer']
 location: 'Glasgow'
 teamSize: 12
 technologies: [React, Redux, JavaScript, Storybook, Clojure, Java 8, RabbitMQ, Dropwizard, GoCD]
+industry: 'Public sector'
 ---
 
 I worked as a full-stack engineer to help to evolve a loans assessment platform for the government. In my role, I contributed to bringing the platform into production by:

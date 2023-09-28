@@ -12,7 +12,8 @@ type ProjectSummaryProps = {
 const DATE_FORMAT_YEAR = 'yyyy';
 
 export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element {
-    const { name, date, roles, location, technologies, teamSize, contentHtml } = props.project;
+    const { name, date, roles, location, technologies, teamSize, industry, contentHtml } =
+        props.project;
     const [open, setOpen] = useState(false);
 
     return (
@@ -124,6 +125,12 @@ export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element 
                                         {technology}
                                     </span>
                                 ))}
+                            </dd>
+                        </div>
+                        <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 px-4 py-5 bg-white">
+                            <dt className="text-sm font-medium text-gray-500">Industry</dt>
+                            <dd className="sm:mt-0 sm:col-span-2 mt-1 text-sm text-gray-900">
+                                {industry}
                             </dd>
                         </div>
                         <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 px-4 py-5 bg-white">

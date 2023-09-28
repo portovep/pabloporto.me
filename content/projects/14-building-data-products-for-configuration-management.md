@@ -4,6 +4,7 @@ date: '2022-07-01'
 roles: ['Tech Lead', 'Data Engineer', 'System Architect']
 location: 'Barcelona | Remote'
 teamSize: 8
+industry: 'Healthcare'
 technologies:
     [
         dbt,
@@ -24,11 +25,11 @@ I worked as tech lead and data engineer within a team in charge of building data
 -   Building configuration management data products within the Data Mesh.
 -   Implementing data quality and data observability with Montecarlo and dbt tests.
 -   Orchestrating the deploying of data products in Snowflake with reliable DataOps.live pipelines
--   Complete effective performance reviews and growth the next generation of technical leaders within the team.
+-   Complete effective performance reviews and grow the next generation of technical leaders within the team.
 -   Collaboratively drive the system architecture and set the technical direction for the team
 -   Work with other system architects to build a robust and cohesive system architecture.
 -   Building a strong collaboration with the product stakeholders to deliver the right things well
--   Collaborate and support data product owner to define requirements to ensure data products upholds consumer requirements and help define SLOs and data product characteristics.
+-   Collaborate and support data product owners to define requirements to ensure data products uphold consumer requirements and help define SLOs and data product characteristics.
 -   Collaborate with the data platform team to identify and suggest DevEX platform improvements.
 
 -   Facilitate and promote technical innovations within and outside the data product team
