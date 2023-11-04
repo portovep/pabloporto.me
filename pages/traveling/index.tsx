@@ -16,6 +16,7 @@ import laFortunaWaterfallPhoto from '../../public/images/photos/IMG-20220508-WA0
 import islaDeArosaPhoto from '../../public/images/photos/IMG_20170821_162359.jpeg';
 import corfuMonastery from '../../public/images/photos/IMG20230925093628.jpeg';
 import albanianChurchPhoto from '../../public/images/photos/IMG20231004114145.jpg';
+import albanianAlpsLandscapePhoto from '../../public/images/photos/IMG-20231005-WA0139~2.jpg';
 
 export default function Traveling(): JSX.Element {
     return (
@@ -95,6 +96,12 @@ export default function Traveling(): JSX.Element {
                         title="Albanian church"
                         location="Theth, Albania"
                         imageURL={albanianChurchPhoto}
+                    />
+
+                    <PhotoCard
+                        title="Albanian alps landscape"
+                        location="Theth, Albania"
+                        imageURL={albanianAlpsLandscapePhoto}
                     />
                 </div>
             </section>
