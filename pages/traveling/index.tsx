@@ -14,6 +14,7 @@ import lonelyElephantPhoto from '../../public/images/photos/IMG_20200303_152059.
 import birdCostaRicaPhoto from '../../public/images/photos/IMG-20220518-WA0027.jpeg';
 import laFortunaWaterfallPhoto from '../../public/images/photos/IMG-20220508-WA0053.jpeg';
 import islaDeArosaPhoto from '../../public/images/photos/IMG_20170821_162359.jpeg';
+import corfuMonastery from '../../public/images/photos/IMG20230925093628.jpeg';
 
 export default function Traveling(): JSX.Element {
     return (
@@ -83,6 +84,11 @@ export default function Traveling(): JSX.Element {
                         title="Isla de Arosa"
                         location="Galicia"
                         imageURL={islaDeArosaPhoto}
+                    />
+                    <PhotoCard
+                        title="Greek Monastery"
+                        location="Corfu, Greece"
+                        imageURL={corfuMonastery}
                     />
                 </div>
             </section>
