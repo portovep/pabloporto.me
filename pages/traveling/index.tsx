@@ -15,6 +15,7 @@ import birdCostaRicaPhoto from '../../public/images/photos/IMG-20220518-WA0027.j
 import laFortunaWaterfallPhoto from '../../public/images/photos/IMG-20220508-WA0053.jpeg';
 import islaDeArosaPhoto from '../../public/images/photos/IMG_20170821_162359.jpeg';
 import corfuMonastery from '../../public/images/photos/IMG20230925093628.jpeg';
+import albanianChurchPhoto from '../../public/images/photos/IMG20231004114145.jpg';
 
 export default function Traveling(): JSX.Element {
     return (
@@ -89,6 +90,11 @@ export default function Traveling(): JSX.Element {
                         title="Greek Monastery"
                         location="Corfu, Greece"
                         imageURL={corfuMonastery}
+                    />
+                    <PhotoCard
+                        title="Albanian church"
+                        location="Theth, Albania"
+                        imageURL={albanianChurchPhoto}
                     />
                 </div>
             </section>
