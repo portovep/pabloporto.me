@@ -14,7 +14,14 @@ export default function Blog({ allPostsData }: BlogProps): JSX.Element {
         <Layout pageTitle="Blog">
             <section className="mt-8 text-xl leading-6">
                 <PageHeader title="Blog">
-                    A collection of articles and papers about software and data engineering.
+                    A collection of articles and papers about software and data engineering. You can
+                    also
+                    <Link
+                        href="https://medium.com/@pablo.porto"
+                        className="text-emerald-500 hover:text-emerald-600 font-medium"
+                        rel="noopener noreferrer">
+                        &nbsp;follow me on Medium.
+                    </Link>
                 </PageHeader>
                 <ul data-testid="writing-intro" className="mt-8">
                     {allPostsData.map((postData) => {
