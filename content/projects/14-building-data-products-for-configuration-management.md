@@ -1,7 +1,7 @@
 ---
 name: 'Building data products for a healthcare Data Mesh'
 date: '2022-07-01'
-roles: ['Tech Lead', 'Data Engineer', 'System Architect']
+roles: ['Tech Principal', 'Data Engineer', 'System Architect']
 location: 'Barcelona | Remote'
 teamSize: 8
 industry: 'Healthcare'
@@ -20,17 +20,16 @@ technologies:
     ]
 ---
 
-I worked as tech lead and data engineer within a team in charge of building data products for a pharmaceutical company's configuration management domain. Some of the tasks I helped with:
+I worked as technical principal and data engineer within a team building data products for the configuration management domain of one of the leading healthcare organisations. Some of the tasks I helped with:
 
--   Building configuration management data products within the Data Mesh.
--   Implementing data quality and data observability with Montecarlo and dbt tests.
--   Orchestrating the deploying of data products in Snowflake with reliable DataOps.live pipelines
--   Complete effective performance reviews and grow the next generation of technical leaders within the team.
--   Collaboratively drive the system architecture and set the technical direction for the team
--   Work with other system architects to build a robust and cohesive system architecture.
--   Building a strong collaboration with the product stakeholders to deliver the right things well
--   Collaborate and support data product owners to define requirements to ensure data products uphold consumer requirements and help define SLOs and data product characteristics.
--   Collaborate with the data platform team to identify and suggest DevEX platform improvements.
-
--   Facilitate and promote technical innovations within and outside the data product team
--   Promote good Data Mesh implementation practices and ensure quality is built into the solution.
+-   Design and build configuration management data products within the Data Mesh.
+-   Design, execute and evolve an effective technical strategy.
+-   Promote effective Data Mesh implementation practices and ensure quality is built-in into the solution.
+-   Apply modern software engineering practices to data systems.
+-   Implement data quality checks and data observability with Montecarlo and dbt tests.
+-   Conduct effective performance reviews and grow the next generation of technical leaders.
+-   Work with other system and data architects to support the evolution of the system architecture and facilitate the discussions to set the technical direction for the data teams.
+-   Effectively collaborate with product and business stakeholders to deliver data products that provide valuable insights to the business.
+-   Support data product owners in defining SLOs and data product characteristics based on user needs.
+-   Collaborate with the data platform team to suggest and design platform improvements to foster the developer experience.
+-   Participate in data governance discussions.
