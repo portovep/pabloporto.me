@@ -89,7 +89,23 @@ vim ~/Library/Application Support/Hyper/.hyper.js
 
 ## The code editor or IDE
 
-Coming soon..
+I use Visual Studio Code as lightweight code editor and IntelliJ as integrated developer environment (IDE).
+
+I default to VSCode for most of my development tasks but when I have to leverage refactoring functionality (e.g. when I work in backend services with Java or Kotlin) I prefer IntelliJ and its powerful refactoring shortcuts.
+
+Install IntelliJ Community Edition
+
+```bash
+brew install intellij-idea-ce
+```
+
+Disable the MacOS shortcuts `Cmd+Shift+A` to prevent a clash with the IntelliJ action command. Follow this [guide](https://apple.stackexchange.com/questions/422371/how-to-disable-cmdshifta-and-cmdshiftm-from-cli-in-macos).
+
+Install VSCode
+
+```bash
+brew install visual-studio-code
+```
 
 ## The version control system
 
@@ -205,6 +221,30 @@ export NVM_DIR="$HOME/.nvm"
 ### Java
 
 Coming soon..
+
+### Python
+
+I use Pyenv to manage the different Python versions I install on my Mac. I install Pyenv with Brew.
+
+```bash
+brew install pyenv
+```
+
+Configure [the shell environment](https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv).
+
+```bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+```
+
+Poetry is my preferred build tool for Python. Here is how I install it with Brew and pipx.
+
+```bash
+brew install pipx
+pipx ensurepath
+pipx install poetry
+```
 
 ## Docker as container runtime
 
