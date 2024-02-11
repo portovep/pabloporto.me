@@ -246,6 +246,27 @@ pipx ensurepath
 pipx install poetry
 ```
 
+### Ruby
+
+I use rbenv to manage the different Ruby versions I install on my Mac. I install rbenv with Brew.
+
+```bash
+brew install rbenv ruby-build
+rbenv init
+```
+
+Configure the shell environment.
+
+```bash
+echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
+```
+
+And finally, set a default Ruby version for your machine.
+
+```bash
+rbenv global 3.3.0
+```
+
 ## Docker as container runtime
 
 Since Docker Desktop change its licensing in mid 2021, several alternatives to run Docker in macOS popped up. My favourite so far is [Colima](https://github.com/abiosoft/colima).
