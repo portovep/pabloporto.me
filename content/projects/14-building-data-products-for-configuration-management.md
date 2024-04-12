@@ -15,6 +15,7 @@ technologies:
         AWS Lambda,
         Montecarlo,
         Collibra,
+        Immuta,
         Python,
         FastAPI
     ]

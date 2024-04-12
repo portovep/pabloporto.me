@@ -87,6 +87,15 @@ Next step is to edit the configuration. I increase the font size and leave every
 vim ~/Library/Application Support/Hyper/.hyper.js
 ```
 
+### Minimal CLI tools
+
+-   jq
+-   autojump
+-   git
+-   wget
+-   docker
+-   watch
+
 ## The code editor or IDE
 
 I use Visual Studio Code as lightweight code editor and IntelliJ as integrated developer environment (IDE).
@@ -279,6 +288,10 @@ brew install docker
 brew install docker-compose
 ```
 
+## API explorer
+
+Bruno. Coming soon..
+
 ## MacOS configuration
 
 Coming soon..
@@ -300,7 +313,6 @@ Other apps that I use to stay productive.
 | Chrome      | Browser                                   |
 | Slack       | Communication and communities             |
 | AppCleaner  | Managing MacOS apps not installed by brew |
-| Steam       | Games                                     |
 | Obsidian    | Secure notes                              |
 
 If you are curious what are my default choices for building frontend, backend and data applications you can check [my prefered tech stack](/stack).
