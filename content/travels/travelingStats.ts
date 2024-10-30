@@ -12,7 +12,8 @@ export const travelingStats: TravelingStats = {
         { id: 'DE', title: 'Germany' },
         { id: 'IN', title: 'India' },
         { id: 'GR', title: 'Greece' },
-        { id: 'AL', title: 'Albania' }
+        { id: 'AL', title: 'Albania' },
+        { id: 'HR', title: 'Croatia' }
     ],
     visited: [
         { id: 'IE', title: 'Ireland' },
@@ -40,7 +41,14 @@ export const travelingStats: TravelingStats = {
         { id: 'SV', title: 'El Salvador' },
         { id: 'CH', title: 'Switzerland' },
         { id: 'CZ', title: 'Czech Republic' },
-        { id: 'AL', title: 'Albania' }
+        { id: 'AL', title: 'Albania' },
+        { id: 'HR', title: 'Croatia' },
+        { id: 'BA', title: 'Bosnia' },
+        { id: 'ME', title: 'Montenegro' },
+        { id: 'RO', title: 'Romania' },
+        { id: 'HR', title: 'Croatia' },
+        { id: 'CY', title: 'Cyprus' },
+        { id: 'GE', title: 'Georgia' }
     ],
     continents: [
         { id: 'EU', title: 'Europe' },
