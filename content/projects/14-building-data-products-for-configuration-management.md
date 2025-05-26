@@ -21,7 +21,7 @@ technologies:
     ]
 ---
 
-I worked as technical principal and data engineer within a team building data products for the configuration management domain of one of the leading healthcare organisations. Some of the tasks I helped with:
+I worked as technical principal and data engineer within a team building data products for the configuration management domain of one of the leading healthcare organisations. The data products aim to increase operational efficiency and improve customer satisfaction. Some of the tasks I helped with:
 
 -   Design and build configuration management data products within the Data Mesh.
 -   Design, execute and evolve an effective technical strategy.
