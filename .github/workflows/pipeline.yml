@@ -13,9 +13,9 @@ jobs:
 
         steps:
             - name: Checkout code
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
             - name: Setup Node.js ${{ env.NODE_VERSION }}
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version: ${{ env.NODE_VERSION }}
             - name: Lint & Format checks
@@ -33,10 +33,10 @@ jobs:
 
         steps:
             - name: Checkout code
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: Cypress run
-              uses: cypress-io/github-action@v5
+              uses: cypress-io/github-action@v6
               with:
                   build: npm run build
                   start: npm start
@@ -50,9 +50,9 @@ jobs:
 
         steps:
             - name: Checkout code
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
             - name: Deploy with Node.js ${{ env.NODE_VERSION }}
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version: ${{ env.NODE_VERSION }}
             - name: Deploy to preview environment
@@ -65,7 +65,7 @@ jobs:
                   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
                   VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             - name: Upload artifacts
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: preview-deployment-url
                   path: preview-deployment-url.txt
@@ -78,13 +78,13 @@ jobs:
 
         steps:
             - name: Checkout code
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
             - name: Download preview deployment URL
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
                   name: preview-deployment-url
             - name: Run with Node.js ${{ env.NODE_VERSION }}
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version: ${{ env.NODE_VERSION }}
             - name: Check performance with Lighthouse
@@ -103,9 +103,9 @@ jobs:
 
         steps:
             - name: Checkout code
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
             - name: Deploy with Node.js ${{ env.NODE_VERSION }}
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version: ${{ env.NODE_VERSION }}
             - name: Deploy to prod environment
