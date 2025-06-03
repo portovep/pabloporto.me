@@ -1,7 +1,8 @@
+import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import { PageHeader, StackItem } from '../../components/ui';
 
-export default function Stacks(): JSX.Element {
+export default function Stacks(): React.ReactElement {
     return (
         <Layout pageTitle="My stack">
             <section data-testid="stack-intro" className="mt-8 text-xl leading-6">

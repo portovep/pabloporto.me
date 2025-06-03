@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import Meta from '../Meta/Meta';
 
@@ -8,7 +9,7 @@ type LayoutProps = {
     pageTitle?: string;
 };
 
-export default function Layout({ children, home, wide, pageTitle }: LayoutProps): JSX.Element {
+export default function Layout({ children, home, wide, pageTitle }: LayoutProps): React.ReactElement {
     return (
         <main className={`${wide ? 'max-w-6xl' : 'max-w-4xl'} px-0 py-0 mx-auto grow`}>
             <Meta pageTitle={pageTitle} />

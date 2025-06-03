@@ -1,10 +1,11 @@
+import React from 'react';
 import Image from 'next/image';
 import Layout from '../../components/Layout/Layout';
 import Link from 'next/link';
 import aboutPagePhoto from '../../public/images/about.jpeg';
 import { PageHeader } from 'components/ui';
 
-export default function About(): JSX.Element {
+export default function About(): React.ReactElement {
     return (
         <Layout pageTitle="About">
             <section className="max-w-3xl mt-8 text-xl leading-6">
@@ -15,7 +16,7 @@ export default function About(): JSX.Element {
                 <div className="md:flex-row container flex flex-col items-center pt-10 pb-24 mx-auto">
                     <div
                         data-testid="about-intro"
-                        className="lg:flex-grow md:w-1/2 lg:pr-10 md:pr-14 md:items-start md:mb-0 flex flex-col items-center mb-16">
+                        className="lg:grow md:w-1/2 lg:pr-10 md:pr-14 md:items-start md:mb-0 flex flex-col items-center mb-16">
                         <p className="mb-8 leading-relaxed">
                             I am Pablo, a sofware engineer, amateur cyclist and traveler with a
                             passion to become a well-rounded person helping the world to be a better
@@ -186,7 +187,7 @@ export default function About(): JSX.Element {
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth="3"
-                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        className="shrink-0 w-6 h-6 mr-4 text-green-500"
                                         viewBox="0 0 24 24">
                                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                         <path d="M22 4L12 14.01l-3-3"></path>
@@ -202,7 +203,7 @@ export default function About(): JSX.Element {
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth="3"
-                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        className="shrink-0 w-6 h-6 mr-4 text-green-500"
                                         viewBox="0 0 24 24">
                                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                         <path d="M22 4L12 14.01l-3-3"></path>
@@ -218,7 +219,7 @@ export default function About(): JSX.Element {
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth="3"
-                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        className="shrink-0 w-6 h-6 mr-4 text-green-500"
                                         viewBox="0 0 24 24">
                                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                         <path d="M22 4L12 14.01l-3-3"></path>
@@ -236,7 +237,7 @@ export default function About(): JSX.Element {
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth="3"
-                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        className="shrink-0 w-6 h-6 mr-4 text-green-500"
                                         viewBox="0 0 24 24">
                                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                         <path d="M22 4L12 14.01l-3-3"></path>
@@ -254,7 +255,7 @@ export default function About(): JSX.Element {
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth="3"
-                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        className="shrink-0 w-6 h-6 mr-4 text-green-500"
                                         viewBox="0 0 24 24">
                                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                         <path d="M22 4L12 14.01l-3-3"></path>
@@ -272,7 +273,7 @@ export default function About(): JSX.Element {
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth="3"
-                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        className="shrink-0 w-6 h-6 mr-4 text-green-500"
                                         viewBox="0 0 24 24">
                                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                         <path d="M22 4L12 14.01l-3-3"></path>
@@ -290,7 +291,7 @@ export default function About(): JSX.Element {
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth="3"
-                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        className="shrink-0 w-6 h-6 mr-4 text-green-500"
                                         viewBox="0 0 24 24">
                                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                         <path d="M22 4L12 14.01l-3-3"></path>
@@ -306,7 +307,7 @@ export default function About(): JSX.Element {
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth="3"
-                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        className="shrink-0 w-6 h-6 mr-4 text-green-500"
                                         viewBox="0 0 24 24">
                                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                         <path d="M22 4L12 14.01l-3-3"></path>
@@ -324,7 +325,7 @@ export default function About(): JSX.Element {
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth="3"
-                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        className="shrink-0 w-6 h-6 mr-4 text-green-500"
                                         viewBox="0 0 24 24">
                                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                         <path d="M22 4L12 14.01l-3-3"></path>
@@ -342,7 +343,7 @@ export default function About(): JSX.Element {
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth="3"
-                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        className="shrink-0 w-6 h-6 mr-4 text-green-500"
                                         viewBox="0 0 24 24">
                                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                         <path d="M22 4L12 14.01l-3-3"></path>
@@ -360,7 +361,7 @@ export default function About(): JSX.Element {
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth="3"
-                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        className="shrink-0 w-6 h-6 mr-4 text-green-500"
                                         viewBox="0 0 24 24">
                                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                         <path d="M22 4L12 14.01l-3-3"></path>
@@ -378,7 +379,7 @@ export default function About(): JSX.Element {
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth="3"
-                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        className="shrink-0 w-6 h-6 mr-4 text-green-500"
                                         viewBox="0 0 24 24">
                                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                         <path d="M22 4L12 14.01l-3-3"></path>
@@ -394,7 +395,7 @@ export default function About(): JSX.Element {
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth="3"
-                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        className="shrink-0 w-6 h-6 mr-4 text-green-500"
                                         viewBox="0 0 24 24">
                                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                         <path d="M22 4L12 14.01l-3-3"></path>
@@ -410,7 +411,7 @@ export default function About(): JSX.Element {
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth="3"
-                                        className="flex-shrink-0 w-6 h-6 mr-4 text-green-500"
+                                        className="shrink-0 w-6 h-6 mr-4 text-green-500"
                                         viewBox="0 0 24 24">
                                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                         <path d="M22 4L12 14.01l-3-3"></path>

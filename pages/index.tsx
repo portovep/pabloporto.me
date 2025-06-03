@@ -1,14 +1,15 @@
+import React from 'react';
 import Layout from '../components/Layout/Layout';
 import Card from '../components/Card/Card';
 import Link from 'next/link';
 import Image from 'next/image';
 import profilePic from '../public/images/profile.png';
 
-export default function Home(): JSX.Element {
+export default function Home(): React.ReactElement {
     return (
         <Layout home>
             <div className="md:mt-10 mt-14 flex flex-col items-center">
-                <Link href="/about" legacyBehavior>
+                <Link href="/about">
                     <Image
                         priority
                         quality="75"
@@ -24,7 +25,7 @@ export default function Home(): JSX.Element {
                 <div className="max-w-2xl px-6 mx-auto text-center">
                     <h2 className="sm:text-5xl md:text-6xl text-3xl font-bold tracking-tighter">
                         Hi,{' '}
-                        <span className="text-emerald-500 pl-1 font-bold rounded">I’m Pablo</span>.
+                        <span className="text-emerald-500 pl-1 font-bold rounded">I&apos;m Pablo</span>.
                         Nice to meet you.
                     </h2>
                     <p className="mt-7 text-slate-700 sm:text-xl sm:leading-8 leading-normal">

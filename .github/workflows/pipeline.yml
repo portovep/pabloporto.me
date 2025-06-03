@@ -4,7 +4,7 @@ on:
     push:
 
 env:
-    NODE_VERSION: '18.x'
+    NODE_VERSION: '20.x'
 
 jobs:
     build:
@@ -90,7 +90,7 @@ jobs:
             - name: Check performance with Lighthouse
               run: |
                   deployment_url=`cat preview-deployment-url.txt`
-                  npm i -g @lhci/cli@0.12.x
+                  npm i -g @lhci/cli@latest
                   npm run performance:check -- $deployment_url
               env:
                   LHCI_GITHUB_TOKEN: ${{ secrets.LHCI_GITHUB_TOKEN }}

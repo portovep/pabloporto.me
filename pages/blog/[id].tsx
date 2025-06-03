@@ -1,3 +1,4 @@
+import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Image from 'next/image';
 import Layout from '../../components/Layout/Layout';
@@ -10,13 +11,13 @@ type PostProps = {
     postData: PostData;
 };
 
-const showDraftAlert = (): JSX.Element => (
+const showDraftAlert = (): React.ReactElement => (
     <div
         className="dark:bg-gray-700 dark:text-gray-300 flex p-4 mt-4 mb-8 text-gray-700 bg-gray-100 rounded-lg"
         role="alert">
         <svg
             aria-hidden="true"
-            className="flex-shrink-0 inline w-5 h-5 mr-3"
+            className="shrink-0 inline w-5 h-5 mr-3"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +34,7 @@ const showDraftAlert = (): JSX.Element => (
     </div>
 );
 
-export default function Post({ postData }: PostProps): JSX.Element {
+export default function Post({ postData }: PostProps): React.ReactElement {
     return (
         <Layout pageTitle={postData.title}>
             <div className="md:-mb-10 flex justify-around -mb-10">

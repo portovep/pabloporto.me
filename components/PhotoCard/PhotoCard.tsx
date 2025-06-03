@@ -1,3 +1,4 @@
+import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 
 type PhotoCardProps = {
@@ -6,7 +7,7 @@ type PhotoCardProps = {
     title: string;
 };
 
-export default function PhotoCard({ imageURL, location, title }: PhotoCardProps): JSX.Element {
+export default function PhotoCard({ imageURL, location, title }: PhotoCardProps): React.ReactElement {
     return (
         <div
             data-testid="photo-card"

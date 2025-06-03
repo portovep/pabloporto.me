@@ -1,3 +1,4 @@
+import React from 'react';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Layout from '../../components/Layout/Layout';
@@ -9,7 +10,7 @@ type WorkingProps = {
     allProjectData: ProjectData[];
 };
 
-export default function Working({ allProjectData }: WorkingProps): JSX.Element {
+export default function Working({ allProjectData }: WorkingProps): React.ReactElement {
     return (
         <Layout pageTitle="At work">
             <section data-testid="working-intro" className="mt-10 text-xl leading-6">

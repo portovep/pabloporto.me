@@ -1,3 +1,4 @@
+import React from 'react';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Layout from '../../components/Layout/Layout';
@@ -9,7 +10,7 @@ type BlogProps = {
     allPostsData: PostData[];
 };
 
-export default function Blog({ allPostsData }: BlogProps): JSX.Element {
+export default function Blog({ allPostsData }: BlogProps): React.ReactElement {
     return (
         <Layout pageTitle="Blog">
             <section className="mt-8 text-xl leading-6">

@@ -1,14 +1,15 @@
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import websiteLogo from '../../public/android-chrome-192x192.png';
 
-export default function Header(): JSX.Element {
+export default function Header(): React.ReactElement {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
     return (
         <header
             data-testid="navbar"
-            className="border-b-1 sticky top-0 z-20 py-5 mb-6 bg-white border-b border-gray-300 border-solid">
+            className="border-b sticky top-0 z-20 py-5 mb-6 bg-white border-b border-gray-300 border-solid">
             <div className="lg:max-w-4xl md:px-0 container flex items-center justify-between px-6 mx-auto">
                 <Link href="/">
                     <div className="flex justify-start mr-2">
@@ -85,48 +86,48 @@ export default function Header(): JSX.Element {
                         } bg-gray-200`}>
                         <nav className="fixed h-full mt-8">
                             <div className="px-12 py-4">
-                                <Link href="/blog" legacyBehavior>
-                                    <button
-                                        className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                        onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                                        Writing
-                                    </button>
+                                <Link
+                                    href="/blog"
+                                    className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                >
+                                    Writing
                                 </Link>
                             </div>
                             <div className="px-12 py-4">
-                                <Link href="/working" legacyBehavior>
-                                    <button
-                                        className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                        onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                                        Working
-                                    </button>
+                                <Link
+                                    href="/working"
+                                    className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                >
+                                    Working
                                 </Link>
                             </div>
                             <div className="px-12 py-4">
-                                <Link href="/traveling" legacyBehavior>
-                                    <button
-                                        className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                        onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                                        Traveling
-                                    </button>
+                                <Link
+                                    href="/traveling"
+                                    className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                >
+                                    Traveling
                                 </Link>
                             </div>
                             <div className="px-12 py-4">
-                                <Link href="/making" legacyBehavior>
-                                    <button
-                                        className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                        onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                                        Making
-                                    </button>
+                                <Link
+                                    href="/making"
+                                    className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                >
+                                    Making
                                 </Link>
                             </div>
                             <div className="px-12 py-4">
-                                <Link href="/about" legacyBehavior>
-                                    <button
-                                        className="focus:text-emerald-600 mr-5 font-semibold transition-colors"
-                                        onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                                        About
-                                    </button>
+                                <Link
+                                    href="/about"
+                                    className="focus:text-emerald-600 mr-5 font-semibold transition-colors"
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                >
+                                    About
                                 </Link>
                             </div>
                         </nav>

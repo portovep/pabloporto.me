@@ -1,3 +1,4 @@
+import React from 'react';
 import { ReactNode } from 'react';
 import * as Collapsible from '@radix-ui/react-collapsible';
 import { useState } from 'react';
@@ -11,7 +12,7 @@ type ProjectSummaryProps = {
 
 const DATE_FORMAT_YEAR = 'yyyy';
 
-export default function ProjectSummary(props: ProjectSummaryProps): JSX.Element {
+export default function ProjectSummary(props: ProjectSummaryProps): React.ReactElement {
     const { name, date, roles, location, technologies, teamSize, industry, contentHtml } =
         props.project;
     const [open, setOpen] = useState(false);

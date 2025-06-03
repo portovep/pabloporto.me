@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 
 export const siteTitle = 'Pablo Porto';
@@ -10,7 +11,7 @@ type MetaProps = {
     pageTitle?: string;
 };
 
-export default function Meta({ pageTitle }: MetaProps): JSX.Element {
+export default function Meta({ pageTitle }: MetaProps): React.ReactElement {
     const title = pageTitle ? `${pageTitle} · ${siteTitle}` : siteTitle;
     return (
         <Head>

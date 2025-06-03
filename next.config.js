@@ -9,6 +9,6 @@ module.exports = {
         return config;
     },
     eslint: {
-        dirs: ['pages', 'components', 'lib', 'src', 'cypress']
+        dirs: ['pages', 'components', 'lib', 'cypress']
     }
 };

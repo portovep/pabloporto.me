@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 
 type StackItemProps = {
@@ -6,7 +7,7 @@ type StackItemProps = {
     link: string;
 };
 
-export default function StackItem(props: StackItemProps): JSX.Element {
+export default function StackItem(props: StackItemProps): React.ReactElement {
     const { name, description, link } = props;
     return (
         <li

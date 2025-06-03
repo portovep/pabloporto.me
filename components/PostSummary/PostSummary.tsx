@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import { PostData } from '../../lib/posts';
 import { Date, Label } from '../ui';
@@ -6,7 +7,7 @@ type PostSummaryProps = {
     postData: PostData;
 };
 
-export default function PostSummary(props: PostSummaryProps): JSX.Element {
+export default function PostSummary(props: PostSummaryProps): React.ReactElement {
     const { date, type, title } = props.postData;
     return (
         <div className="lg:group lg:hover:bg-white lg:hover:shadow-lg mt-6 bg-white border-2 border-gray-200 rounded-lg">

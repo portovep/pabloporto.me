@@ -1,0 +1,1 @@
+import pluginCypress from 'eslint-plugin-cypress'

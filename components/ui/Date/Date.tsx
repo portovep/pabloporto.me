@@ -1,3 +1,4 @@
+import React from 'react';
 import { parseISO, format } from 'date-fns';
 
 type DateProps = {
@@ -10,7 +11,7 @@ const DATE_FORMAT_MONTH_DAY_YEAR = 'LLLL d, yyyy';
 export default function Date({
     dateString,
     dateFormat = DATE_FORMAT_MONTH_DAY_YEAR
-}: DateProps): JSX.Element {
+}: DateProps): React.ReactElement {
     const date = parseISO(dateString);
     return <time dateTime={dateString}>{format(date, dateFormat)}</time>;
 }

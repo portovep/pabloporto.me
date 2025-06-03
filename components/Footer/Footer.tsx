@@ -1,6 +1,7 @@
+import React from 'react';
 import Image from 'next/image';
 
-export default function Footer(): JSX.Element {
+export default function Footer(): React.ReactElement {
     return (
         <footer
             data-testid="footer"

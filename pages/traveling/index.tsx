@@ -1,3 +1,4 @@
+import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import PhotoCard from '../../components/PhotoCard/PhotoCard';
 import { PageHeader } from '../../components/ui';
@@ -18,7 +19,7 @@ import corfuMonastery from '../../public/images/photos/IMG20230925093628.jpeg';
 import albanianChurchPhoto from '../../public/images/photos/IMG20231004114145.jpg';
 import albanianAlpsLandscapePhoto from '../../public/images/photos/IMG-20231005-WA0139~2.jpg';
 
-export default function Traveling(): JSX.Element {
+export default function Traveling(): React.ReactElement {
     return (
         <Layout wide pageTitle="Traveling">
             <section data-testid="traveling-intro" className="mt-10 text-xl leading-6">

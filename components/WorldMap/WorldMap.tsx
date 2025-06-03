@@ -1,7 +1,8 @@
+import React from 'react';
 import { travelingStats } from 'content/travels/travelingStats';
 import MapWithCountries from './worldmap.svg';
 
-export default function WorldMap(): JSX.Element {
+export default function WorldMap(): React.ReactElement {
     return (
         <div>
             <MapWithCountries

@@ -1,3 +1,4 @@
+import React from 'react';
 import '../styles/globals.css';
 import { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
@@ -11,7 +12,7 @@ const inter = Inter({
     variable: '--font-inter'
 });
 
-export default function App({ Component, pageProps }: AppProps): JSX.Element {
+export default function App({ Component, pageProps }: AppProps): React.ReactElement {
     return (
         <div
             className={`${inter.variable} font-sans text-slate-900 antialiased bg-gray-50 flex flex-col min-h-screen`}>

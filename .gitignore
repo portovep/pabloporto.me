@@ -36,3 +36,7 @@ deployment-url.txt
 
 # lighthouseci
 .lighthouseci
+
+#cypress
+cypress/screenshots
+cypress/videos  

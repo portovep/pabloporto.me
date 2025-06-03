@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 import Layout from '../../components/Layout/Layout';
 import { PageHeader } from '../../components/ui';
@@ -8,7 +9,7 @@ import ecoshifterScreenshot from '../../public/images/projects/ecoshifter.webp';
 import crowdtransportScreenshot from '../../public/images/projects/media_crowdtransport_1.png';
 import oneStreamScreenshot from '../../public/images/projects/1stream_screenshot.png';
 
-export default function Making(): JSX.Element {
+export default function Making(): React.ReactElement {
     return (
         <Layout wide pageTitle="Making">
             <section data-testid="making-intro" className="body-font mt-10 text-gray-600">
@@ -18,7 +19,7 @@ export default function Making(): JSX.Element {
                 <div
                     data-testid="making-project"
                     className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mt-10 mb-10 border-b border-gray-300">
-                    <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
+                    <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
                         <h1 className="title-font mb-4 text-4xl font-medium">1Stream</h1>
                         <p className="mb-8 leading-relaxed">
                             1Stream allows you to watch Netflix or Youtube streams in sync remotely
@@ -27,7 +28,7 @@ export default function Making(): JSX.Element {
                         <p className="mb-8 leading-relaxed">
                             Watch Netflix or Youtube streams remotely with friends. 1Stream
                             synchronizes video playback between you and your friend so you can be
-                            sure you’re watching exactly the same frame at the same time.
+                            sure you&apos;re watching exactly the same frame at the same time.
                         </p>
                         <div className="flex justify-center">
                             <a href="https://github.com/portovep/1stream">
@@ -73,18 +74,18 @@ export default function Making(): JSX.Element {
                 <div
                     data-testid="making-project"
                     className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
-                    <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
+                    <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
                         <h1 className="title-font mb-4 text-4xl font-medium">Cloujera</h1>
                         <p className="mb-8 leading-relaxed">
                             Cloujera lets you do a fine-grained search for spoken words in
-                            Coursera&#39;s videos. We built Cloujera to enhance Coursera&#39;s
+                            Coursera&apos;s videos. We built Cloujera to enhance Coursera&apos;s
                             limited search functionality, for those times when you want to quickly
                             search for and learn about a specific topic.
                         </p>
                         <p className="mb-8 leading-relaxed">
                             Cloujera was built in 48 hours for ClojureCup 2014. People and judges
                             found Cloujera highly useful and enjoy the design and performance of the
-                            app. We ended up winning the public&#39;s favourite award while
+                            app. We ended up winning the public&apos;s favourite award while
                             finishing second among the 100 teams that took part in the hackathon.
                         </p>
                         <div className="flex justify-center">
@@ -119,7 +120,7 @@ export default function Making(): JSX.Element {
                 <div
                     data-testid="making-project"
                     className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
-                    <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
+                    <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
                         <h1 className="title-font mb-4 text-4xl font-medium">
                             EcoShifter
                             <br className="inline-block" />
@@ -177,7 +178,7 @@ export default function Making(): JSX.Element {
                 <div
                     data-testid="making-project"
                     className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10">
-                    <div className="md:order-first lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
+                    <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
                         <h1 className="title-font mb-4 text-4xl font-medium">Crowdtransport</h1>
                         <p className="mb-8 leading-relaxed">
                             Crowdtransport provides their users with real time public transport
