@@ -42,11 +42,11 @@ Try to adopt the habits and rituals that allow you to have a decent work-life ba
 
 **To avoid burning out, you should balance times where you invest more in your career and others where you can just relax and just do your 9 to 5 shift**. These are some of the rules I set:
 
--   No work related stuff on the weekends
--   Disconnect from the computer in the evenings
--   Remove any work related stuff from my smartphone
--   Reduce my screen time after work
--   Find hobbies that get me out there, like traveling and MTB
+- No work related stuff on the weekends
+- Disconnect from the computer in the evenings
+- Remove any work related stuff from my smartphone
+- Reduce my screen time after work
+- Find hobbies that get me out there, like traveling and MTB
 
 Of course, there are periods where we break these rules and put more time into career related projects or self-learning. **That is totally fine as long as you are aware and you are willing to make that compromise for what you are getting out of the time you invest on them.**
 

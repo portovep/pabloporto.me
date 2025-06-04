@@ -89,8 +89,7 @@ export default function Header(): React.ReactElement {
                                 <Link
                                     href="/blog"
                                     className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
-                                >
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}>
                                     Writing
                                 </Link>
                             </div>
@@ -98,8 +97,7 @@ export default function Header(): React.ReactElement {
                                 <Link
                                     href="/working"
                                     className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
-                                >
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}>
                                     Working
                                 </Link>
                             </div>
@@ -107,8 +105,7 @@ export default function Header(): React.ReactElement {
                                 <Link
                                     href="/traveling"
                                     className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
-                                >
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}>
                                     Traveling
                                 </Link>
                             </div>
@@ -116,8 +113,7 @@ export default function Header(): React.ReactElement {
                                 <Link
                                     href="/making"
                                     className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
-                                >
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}>
                                     Making
                                 </Link>
                             </div>
@@ -125,8 +121,7 @@ export default function Header(): React.ReactElement {
                                 <Link
                                     href="/about"
                                     className="focus:text-emerald-600 mr-5 font-semibold transition-colors"
-                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
-                                >
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}>
                                     About
                                 </Link>
                             </div>

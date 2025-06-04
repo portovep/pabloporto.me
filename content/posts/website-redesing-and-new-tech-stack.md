@@ -108,7 +108,7 @@ I still think the main ROI of these efforts has been the ability to have a playg
 
 I am always checking other people's websites [to get inspiration](https://austinkleon.com/steal/). Do you have one you want to share? Reach out to me on [Twitter](https://twitter.com/portovep). Finally, I want to share some of the personal websites that inspired me to improve mine and write this.
 
--   [brianlovin.com](https://brianlovin.com/writing/how-my-website-works?utm_source=pocket_reader)
--   [kentcdodds.com](https://kentcdodds.com/blog/how-i-built-a-modern-website-in-2021)
--   [maggieappleton.com](https://maggieappleton.com/garden-history?utm_source=pocket_reader)
--   [taniarascia.com](https://www.taniarascia.com/redesign-version-6/)
+- [brianlovin.com](https://brianlovin.com/writing/how-my-website-works?utm_source=pocket_reader)
+- [kentcdodds.com](https://kentcdodds.com/blog/how-i-built-a-modern-website-in-2021)
+- [maggieappleton.com](https://maggieappleton.com/garden-history?utm_source=pocket_reader)
+- [taniarascia.com](https://www.taniarascia.com/redesign-version-6/)

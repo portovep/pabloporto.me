@@ -35,12 +35,12 @@ brew doctor
 
 Following the principle of [shifting left security](https://snyk.io/learn/shift-left-security/), lets first configure some sensible defaults to keep our Mac protected.
 
--   Enable file encryption with FileVault.
--   Enable the firewall.
--   Setup a strong password for your OS user and enable touchid if required.
--   Install your password manager of choise so we can login into services and apps going forward. I use and recommend [1Password](https://1password.com/).
--   Install any pending security updates.
--   Enable automatic updates for security patches and apps installed via the App Store.
+- Enable file encryption with FileVault.
+- Enable the firewall.
+- Setup a strong password for your OS user and enable touchid if required.
+- Install your password manager of choise so we can login into services and apps going forward. I use and recommend [1Password](https://1password.com/).
+- Install any pending security updates.
+- Enable automatic updates for security patches and apps installed via the App Store.
 
 ### Setting up automatic updates for brew packages
 
@@ -89,12 +89,12 @@ vim ~/Library/Application Support/Hyper/.hyper.js
 
 ### Minimal CLI tools
 
--   jq
--   autojump
--   git
--   wget
--   docker
--   watch
+- jq
+- autojump
+- git
+- wget
+- docker
+- watch
 
 ## The code editor or IDE
 

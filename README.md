@@ -46,25 +46,25 @@ TBC
 
 <b>Built with</b>
 
--   [TypeScript](https://www.typescriptlang.org/)
--   [React](https://reactjs.org/)
--   [Next.js](https://nextjs.org/)
--   [Tailwindcss](https://tailwindcss.com/)
--   [Vercel](https://vercel.com/)
--   [GitHub Actions](https://github.com/features/actions)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [Tailwindcss](https://tailwindcss.com/)
+- [Vercel](https://vercel.com/)
+- [GitHub Actions](https://github.com/features/actions)
 
 ## Features & roadmap
 
--   [x] Code formatting with Prettier
--   [x] Linting with ESLint
--   [x] Trunk base development and Continuous deployment with Github Actions
--   [x] Dependency check and auto-update with Dependabot
--   [x] Web Vitals check with lighthouseci
--   [x] CDN hosting with Vercel
--   [ ] Unit test with Jest/React testing library
--   [ ] Acceptance test with Cypress.js
--   [ ] Automated secret scanning
--   [ ] Support for i18n
+- [x] Code formatting with Prettier
+- [x] Linting with ESLint
+- [x] Trunk base development and Continuous deployment with Github Actions
+- [x] Dependency check and auto-update with Dependabot
+- [x] Web Vitals check with lighthouseci
+- [x] CDN hosting with Vercel
+- [ ] Unit test with Jest/React testing library
+- [ ] Acceptance test with Cypress.js
+- [ ] Automated secret scanning
+- [ ] Support for i18n
 
 ## API Reference
 

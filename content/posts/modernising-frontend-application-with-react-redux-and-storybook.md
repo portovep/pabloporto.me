@@ -74,10 +74,10 @@ We started writing stories to implement individual components and mapping the di
 
 We are still in the middle of the journey, but these are some of the lessons we learnt along the way:
 
--   Setting boundaries between different stacks helps to isolate the parts of the code that need to be replaced.
--   Having tests for the legacy parts help to understand the code and made the rewrite faster.
--   Rewrites are hard. Make sure you plan for them in advance and bring the business/product stakeholders along.
--   Invest in improving the developer experience to work with the different stacks.
--   Don't forget about the human aspect. Different people take different times to get up to speed with new technology, provide spaces to learn, and bring the whole team on a journey.
--   Creating a common vocabulary with designers and business people to name components fosters adoption across teams.
--   Tools like Storybook allow for the creation of reusable components and make it easy to maintain component libraries.
+- Setting boundaries between different stacks helps to isolate the parts of the code that need to be replaced.
+- Having tests for the legacy parts help to understand the code and made the rewrite faster.
+- Rewrites are hard. Make sure you plan for them in advance and bring the business/product stakeholders along.
+- Invest in improving the developer experience to work with the different stacks.
+- Don't forget about the human aspect. Different people take different times to get up to speed with new technology, provide spaces to learn, and bring the whole team on a journey.
+- Creating a common vocabulary with designers and business people to name components fosters adoption across teams.
+- Tools like Storybook allow for the creation of reusable components and make it easy to maintain component libraries.

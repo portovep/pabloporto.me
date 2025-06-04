@@ -23,20 +23,20 @@ In terms of measuring my overall health, I started focusing on what is called me
 
 Clinically speaking, metabolic health is defined by optimal levels of five markers:
 
--   Blood sugar levels
--   Triglycerides
--   High-density lipoprotein (HDL) cholesterol
--   Blood pressure
--   Waist circumference
+- Blood sugar levels
+- Triglycerides
+- High-density lipoprotein (HDL) cholesterol
+- Blood pressure
+- Waist circumference
 
 I consider these metrics more as lagging indicators that show whether I am doing things right or not. They are harder to track so I plan to monitor them once a year during my annual health checkup.
 
 However, there are also other metrics that can provide more immediate insights into potential improvements in my metabolic health. These metrics are what I think of leading indicators, and they include some usual suspects:
 
--   Weight
--   BMI
--   Fat percentage
--   Amount of sleep I get
+- Weight
+- BMI
+- Fat percentage
+- Amount of sleep I get
 
 ## My 4 key health metrics
 
@@ -54,8 +54,8 @@ To achieve this, I am working on expanding my knowledge about nutrition and bein
 
 My goal here is to build more muscle by changing my training routine from strength training to functional training. I have been going to the gym for years but I always felt that my training routine was not very effective.
 
--   **Strength training** builds muscle strength through isolated exercises
--   **Functional training** improves overall movement and performance in daily activities by targeting multiple muscle groups and enhancing coordination.
+- **Strength training** builds muscle strength through isolated exercises
+- **Functional training** improves overall movement and performance in daily activities by targeting multiple muscle groups and enhancing coordination.
 
 My goal is to reach 16% body fat. Let's see if I can make it happen...
 
@@ -75,9 +75,9 @@ For me, this means striving for an average of seven and a half hours of sleep ea
 
 Okay, I have my 4 key metrics, but what about tracking them? I need to design a system that is not very cumbersome and reduce the data capturing friction.
 
--   **Weight**: This is the easy one. I track it at least once a month at home using a scale.
--   **Body fat percentage**: I track it once a quarter using a special machine at the gym.
--   **Average steps and sleeps**: My Pixel Watch 2 and Fitbit allow me to continuously track this with a decent amount of accuracy.
+- **Weight**: This is the easy one. I track it at least once a month at home using a scale.
+- **Body fat percentage**: I track it once a quarter using a special machine at the gym.
+- **Average steps and sleeps**: My Pixel Watch 2 and Fitbit allow me to continuously track this with a decent amount of accuracy.
 
 I quickly capture and consolidate all the data within the Fitbit mobile app. I can use their API to export the data and do my own data analysis with it if needed.
 

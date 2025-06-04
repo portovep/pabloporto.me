@@ -25,8 +25,10 @@ export default function Home(): React.ReactElement {
                 <div className="max-w-2xl px-6 mx-auto text-center">
                     <h2 className="sm:text-5xl md:text-6xl text-3xl font-bold tracking-tighter">
                         Hi,{' '}
-                        <span className="text-emerald-500 pl-1 font-bold rounded">I&apos;m Pablo</span>.
-                        Nice to meet you.
+                        <span className="text-emerald-500 pl-1 font-bold rounded">
+                            I&apos;m Pablo
+                        </span>
+                        . Nice to meet you.
                     </h2>
                     <p className="mt-7 text-slate-700 sm:text-xl sm:leading-8 leading-normal">
                         This is my humble space on the Internet where I share my learnings in

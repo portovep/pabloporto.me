@@ -33,15 +33,15 @@ I already had a tracking system in place based on a spreadsheet so I went throug
 
 After completing this process, I arrived at the following 4 metrics that I consider key to understanding my financial health:
 
--   **Average Monthly Saving Rate**: Percentage of my total monthly income that I am able to save measured as an average over the last 12 months.
--   **Average Monthly Investment Rate**: Percentage of the total monthly income that I invest measured as an average over the last 12 months. This metrics cover the money that I invest in index funds and other assets.
--   **Total Debt**: Amount of money I owned. In general, prioritizing paying off debts above investing is a good idea. Although there are cases where the opposite is also true.
--   **Emergency Fund Runway**: Number of months with covered basic lifestyle expenses. In other words, how many months I could live out of my saved and easily accessible money? My goal is to have a runaway of 6 months or more based on my average spending per month.
+- **Average Monthly Saving Rate**: Percentage of my total monthly income that I am able to save measured as an average over the last 12 months.
+- **Average Monthly Investment Rate**: Percentage of the total monthly income that I invest measured as an average over the last 12 months. This metrics cover the money that I invest in index funds and other assets.
+- **Total Debt**: Amount of money I owned. In general, prioritizing paying off debts above investing is a good idea. Although there are cases where the opposite is also true.
+- **Emergency Fund Runway**: Number of months with covered basic lifestyle expenses. In other words, how many months I could live out of my saved and easily accessible money? My goal is to have a runaway of 6 months or more based on my average spending per month.
 
 I believe all of these metrics are great leading indicators of how I am doing financially. If we take the categorization from the original 4 key metrics by [DORA](https://www.devops-research.com/research.html) as a reference, we could also split the metrics into two main categories:
 
--   **Financial performance**: They help you to understand if you are improving the chances to increase your total wealth over time. By increasing your saving and investment rates you increase the likelihood of becoming wealthier over time.
--   **Financial stability**: They help you to understand how financially resilient you are if something unexpected happens, e.g. if you lose your job. Having several months of runway in your emergency fund and no debt to repay will allow you to overcome financial challenges more easily.
+- **Financial performance**: They help you to understand if you are improving the chances to increase your total wealth over time. By increasing your saving and investment rates you increase the likelihood of becoming wealthier over time.
+- **Financial stability**: They help you to understand how financially resilient you are if something unexpected happens, e.g. if you lose your job. Having several months of runway in your emergency fund and no debt to repay will allow you to overcome financial challenges more easily.
 
 > Disclaimer: I am not a financial advisor. This post is not meant to be used as financial advice. The metrics that work for me and my current situation may not work for everybody. I encourage you to take them only as a reference and come up with your own.
 

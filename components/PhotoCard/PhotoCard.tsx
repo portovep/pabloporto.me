@@ -7,7 +7,11 @@ type PhotoCardProps = {
     title: string;
 };
 
-export default function PhotoCard({ imageURL, location, title }: PhotoCardProps): React.ReactElement {
+export default function PhotoCard({
+    imageURL,
+    location,
+    title
+}: PhotoCardProps): React.ReactElement {
     return (
         <div
             data-testid="photo-card"

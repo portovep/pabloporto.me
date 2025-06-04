@@ -10,9 +10,9 @@ technologies: [Vue.js, Nuxt, Zipkin, Grafana, Ansible, Terraform, tfsec]
 
 I helped bootstrap a new team to modernize a back-office application that manages sales agent accounts for a company in the green energy sector. I was also responsible for providing advice to their infrastructure team. Some tasks:
 
--   Provide technical input in the discovery phase of the new features of the platform.
--   Help the team understand the system's architecture based on several PHP services built with different frameworks.
--   Guide the team during the first steps of working with an existing frontend application built with Vue/Nuxt.
--   Advice the client's infrastructure team on best practices about observability and infrastructure as code.
--   Create a proposal on how the client could scale their infrastructure team to reduce toil and make developers more effective.
--   Design and implement a proof of concept based on Zipkin to assess the best way to implement distributed tracing across the different microservices.
+- Provide technical input in the discovery phase of the new features of the platform.
+- Help the team understand the system's architecture based on several PHP services built with different frameworks.
+- Guide the team during the first steps of working with an existing frontend application built with Vue/Nuxt.
+- Advice the client's infrastructure team on best practices about observability and infrastructure as code.
+- Create a proposal on how the client could scale their infrastructure team to reduce toil and make developers more effective.
+- Design and implement a proof of concept based on Zipkin to assess the best way to implement distributed tracing across the different microservices.
