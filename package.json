@@ -11,7 +11,8 @@
         "lint:fix": "next lint --fix .",
         "format": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
         "format:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-        "performance:check": "./scripts/performance-check.sh"
+        "performance:check": "./scripts/performance-check.sh",
+        "prepare": "husky"
     },
     "dependencies": {
         "@radix-ui/react-collapsible": "^1.0.2",
@@ -36,6 +37,7 @@
         "eslint-config-next": "^15.3.3",
         "eslint-config-prettier": "^10.1.5",
         "eslint-plugin-cypress": "^5.1.0",
+        "husky": "^9.1.7",
         "micromark": "^4.0.2",
         "micromark-extension-gfm": "^3.0.0",
         "postcss": "^8.4.21",
