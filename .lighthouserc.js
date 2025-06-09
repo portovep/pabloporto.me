@@ -6,7 +6,7 @@ module.exports = {
                 'categories:accessibility': ['error', { minScore: 0.9 }],
                 'categories:best-practices': ['error', { minScore: 0.9 }],
                 'categories:seo': ['error', { minScore: 0.9 }],
-                'is-crawlable': ['off']
+                'is-crawlable': 'off'
             }
         },
         upload: {
