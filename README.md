@@ -8,7 +8,7 @@ My personal website built with React, TypeScript, NextJS and Tailwind. Live at [
 
 I change the tech stack that use to build my personal website every few years.
 I started using Wordpress, then moved to Jekyll, then React/Redux and finally
-Next.js. 
+Next.js.
 
 This project serves as my playground for experimenting with modern frontend technologies and CI/CD practices. It demonstrates a complete deployment pipeline with GitHub Actions, including automated code formatting, linting, dependecy checks and [web
 vitals checks](https://web.dev/vitals/).
@@ -68,7 +68,6 @@ npm run performance:check
 ## Git Hooks
 
 This project uses Husky for pre-commit hooks that run the formatter and linter. The hooks are automatically set up when you run `npm install`.
-
 
 ## Contributing
 
