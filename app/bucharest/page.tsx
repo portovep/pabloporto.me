@@ -84,8 +84,12 @@ export default function BucharestPage() {
                     <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
                         During my time in Romania's captivating capital, I discovered three things
                         that made Bucharest truly special: an incredible specialty coffee scene,
-                        stunning Belle Époque architecture, and really high quality restaurants. </p>
-                    <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">Here are my personal recommendations.</p>
+                        stunning Belle Époque architecture, and really high quality
+                        restaurants.{' '}
+                    </p>
+                    <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+                        Here are my personal recommendations.
+                    </p>
                     <div className="flex flex-col sm:flex-row gap-4 sm:space-x-4 sm:gap-0">
                         <Link
                             href="https://www.google.com/collections/s/list/krdxOwdcCxmD0ZHb-XqPOK9qyRD27g/CEagodeCYqI"
