@@ -7,7 +7,7 @@ import { MapPin, ExternalLink } from 'lucide-react';
 export const metadata: Metadata = {
     title: 'Bucharest Recommendations | Pablo Porto',
     description:
-        'Discover the best places to visit in Bucharest, Romania. A curated collection of restaurants, cafes, attractions, and hidden gems in the vibrant capital city.',
+        'My personal recommendations for Bucharest, Romania. Discover the incredible specialty coffee scene, stunning architecture, and exceptional fine cuisine that made this city special to me.',
     keywords: [
         'Bucharest',
         'Romania',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Bucharest Recommendations | Pablo Porto',
         description:
-            'Discover the best places to visit in Bucharest, Romania. A curated collection of restaurants, cafes, attractions, and hidden gems in the vibrant capital city.',
+            'My personal recommendations for Bucharest, Romania. Discover the incredible specialty coffee scene, stunning architecture, and exceptional fine cuisine that made this city special to me.',
         url: '/bucharest',
         siteName: 'Pablo Porto',
         images: [
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Bucharest Recommendations | Pablo Porto',
         description:
-            'Discover the best places to visit in Bucharest, Romania. A curated collection of restaurants, cafes, attractions, and hidden gems.',
+            'My personal recommendations for Bucharest: incredible specialty coffee scene, stunning architecture, and exceptional fine cuisine.',
         images: ['/images/bucharest-og.jpg'],
         creator: '@pabloporto'
     },
@@ -72,7 +72,7 @@ export default function BucharestPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
+            <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32 px-4 sm:px-6">
                 <div className="container mx-auto flex max-w-[64rem] flex-col items-center gap-4 text-center">
                     <div className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium flex items-center gap-2">
                         <MapPin className="h-4 w-4" />
@@ -82,17 +82,18 @@ export default function BucharestPage() {
                         Bucharest
                     </h1>
                     <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-                        Romania's vibrant capital where Belle Époque elegance meets modern European
-                        sophistication. A curated collection of the best places to discover.
-                    </p>
-                    <div className="space-x-4">
+                        During my time in Romania's captivating capital, I discovered three things
+                        that made Bucharest truly special: an incredible specialty coffee scene,
+                        stunning Belle Époque architecture, and really high quality restaurants. </p>
+                    <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">Here are my personal recommendations.</p>
+                    <div className="flex flex-col sm:flex-row gap-4 sm:space-x-4 sm:gap-0">
                         <Link
                             href="https://www.google.com/collections/s/list/krdxOwdcCxmD0ZHb-XqPOK9qyRD27g/CEagodeCYqI"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={cn(
                                 buttonVariants({ size: 'lg' }),
-                                'inline-flex items-center gap-2'
+                                'inline-flex items-center justify-center gap-2 w-full sm:w-auto'
                             )}>
                             <MapPin className="h-4 w-4" />
                             View Google Maps Places List
