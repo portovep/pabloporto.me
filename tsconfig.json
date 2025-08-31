@@ -22,7 +22,10 @@
         ],
         "strictNullChecks": true,
         "paths": {
-            "@/*": ["./app/*"]
+            "@/*": ["./*"],
+            "@/components/*": ["./components/*"],
+            "@/app/*": ["./app/*"],
+            "@/lib/*": ["./lib/*"]
         }
     },
     "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", ".next/types/**/*.ts"],
