@@ -34,7 +34,7 @@
     "devDependencies": {
         "@lhci/cli": "^0.14.0",
         "@svgr/webpack": "^8.1.0",
-        "@tailwindcss/postcss": "^4.1.8",
+        "@tailwindcss/postcss": "^4.1.16",
         "@tailwindcss/typography": "^0.5.16",
         "@types/node": "^22.15.21",
         "@types/react": "^19.1.5",
