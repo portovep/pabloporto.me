@@ -16,6 +16,7 @@
         "format": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
         "format:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
         "performance:check": "./scripts/performance-check.sh",
+        "literal:token": "node scripts/get-literal-token.js",
         "prepare": "husky"
     },
     "dependencies": {
