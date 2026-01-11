@@ -11,6 +11,8 @@ npx lhci autorun \
     --collect.url="${target_url}"/blog/what-its-like-to-be-a-developer-in-a-modern-software-engineering-team \
     --collect.url="${target_url}"/stack \
     --collect.url="${target_url}"/traveling \
+    --collect.url="${target_url}"/reading \
+    --collect.url="${target_url}"/speaking \
     --collect.url="${target_url}"/working \
     --collect.url="${target_url}"/making \
     --collect.url="${target_url}"/ 
