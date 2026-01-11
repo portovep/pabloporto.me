@@ -57,6 +57,11 @@ export default function Home(): React.ReactElement {
                         linkURL="/reading"
                     />
                     <Card
+                        title="Speaking"
+                        description="Talks and speaking engagements on software engineering and data."
+                        linkURL="/speaking"
+                    />
+                    <Card
                         title="Working"
                         description="What I do at work. My experience as a software engineer."
                         linkURL="/working"
