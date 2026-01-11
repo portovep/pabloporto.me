@@ -11,7 +11,7 @@ type BookCardProps = {
 export default function BookCard({ book, coverPath }: BookCardProps) {
     const authorsText = book.authors.map((author) => author.name).join(', ');
     const bookUrl = `https://literal.club/book/${book.slug}`;
-    const coverSrc = coverPath || book.cover || '/images/placeholder-book.jpg';
+    const coverSrc = coverPath || book.cover || '/images/books/placeholder-book.svg';
 
     return (
         <Link href={bookUrl} target="_blank" rel="noopener noreferrer">

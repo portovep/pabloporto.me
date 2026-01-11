@@ -1,0 +1,35 @@
+<svg width="400" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <!-- Book cover background -->
+  <rect width="400" height="600" fill="#e5e7eb"/>
+  
+  <!-- Book spine (left edge) -->
+  <rect x="0" y="0" width="12" height="600" fill="#9ca3af"/>
+  
+  <!-- Book pages edge (right side showing pages) -->
+  <rect x="388" y="0" width="12" height="600" fill="#d1d5db"/>
+  
+  <!-- Book cover border -->
+  <rect x="0" y="0" width="400" height="600" fill="none" stroke="#9ca3af" stroke-width="2"/>
+  
+  <!-- Book cover inner shadow -->
+  <rect x="12" y="12" width="376" height="576" fill="#f3f4f6"/>
+  
+  <!-- Book title area -->
+  <rect x="60" y="180" width="280" height="8" fill="#9ca3af" rx="2"/>
+  <rect x="60" y="200" width="220" height="6" fill="#d1d5db" rx="2"/>
+  
+  <!-- Book author area -->
+  <rect x="60" y="250" width="180" height="5" fill="#d1d5db" rx="2"/>
+  
+  <!-- Decorative book lines (pages) -->
+  <line x1="60" y1="320" x2="340" y2="320" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="60" y1="340" x2="340" y2="340" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="60" y1="360" x2="340" y2="360" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="60" y1="380" x2="340" y2="380" stroke="#d1d5db" stroke-width="1"/>
+  
+  <!-- Book binding detail (center) -->
+  <line x1="200" y1="100" x2="200" y2="500" stroke="#9ca3af" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Decorative corner element -->
+  <rect x="50" y="50" width="30" height="30" fill="none" stroke="#9ca3af" stroke-width="2" opacity="0.4"/>
+</svg>
