@@ -26,6 +26,10 @@ jobs:
             - name: Build
               run: |
                   npm run build
+              env:
+                  LITERAL_API_TOKEN: ${{ secrets.LITERAL_API_TOKEN }}
+                  LITERAL_PROFILE_ID: ${{ secrets.LITERAL_PROFILE_ID }}
+                  LITERAL_PROFILE_HANDLE: ${{ secrets.LITERAL_PROFILE_HANDLE }}
 
     test:
         name: Test
@@ -41,6 +45,10 @@ jobs:
                   build: npm run build
                   start: npm start
                   wait-on: http://localhost:3000
+              env:
+                  LITERAL_API_TOKEN: ${{ secrets.LITERAL_API_TOKEN }}
+                  LITERAL_PROFILE_ID: ${{ secrets.LITERAL_PROFILE_ID }}
+                  LITERAL_PROFILE_HANDLE: ${{ secrets.LITERAL_PROFILE_HANDLE }}
 
     deploy-preview:
         name: Deploy to preview
