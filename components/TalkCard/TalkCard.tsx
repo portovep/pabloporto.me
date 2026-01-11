@@ -9,7 +9,9 @@ type TalkCardProps = {
 
 export default function TalkCard({ talk }: TalkCardProps) {
     const content = (
-        <Card className="group transition-all hover:shadow-md border-gray-200 bg-white">
+        <Card
+            className="group transition-all hover:shadow-md border-gray-200 bg-white"
+            data-testid="talk-card">
             <CardContent className="p-6">
                 <div className="flex items-start justify-between gap-4">
                     <div className="flex-1 space-y-1">

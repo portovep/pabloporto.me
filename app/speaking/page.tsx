@@ -53,7 +53,7 @@ export default async function SpeakingPage() {
     return (
         <div className="container mx-auto px-4 sm:px-6 py-8 md:py-12 max-w-4xl">
             <div className="space-y-12 mb-12">
-                <div className="space-y-4">
+                <div className="space-y-4" data-testid="speaking-intro">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900">
                         Speaking
                     </h1>
