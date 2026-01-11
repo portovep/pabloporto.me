@@ -45,6 +45,9 @@ export const metadata: Metadata = {
     }
 };
 
+// Shelves to exclude from display
+const EXCLUDED_SHELF_SLUGS: string[] = ['work-2023-p92i4e5', 'career-vl09pnx'];
+
 async function getShelves(): Promise<Shelf[]> {
     const apiToken = process.env.LITERAL_API_TOKEN;
     const profileId = process.env.LITERAL_PROFILE_ID;
@@ -79,9 +82,14 @@ async function getShelves(): Promise<Shelf[]> {
             return [];
         }
 
+        // Filter out excluded shelves
+        const filteredShelves = shelves.filter(
+            (shelf) => !EXCLUDED_SHELF_SLUGS.includes(shelf.slug)
+        );
+
         // Fetch detailed book data for each shelf
         const shelvesWithBooks = await Promise.all(
-            shelves.map(async (shelf) => {
+            filteredShelves.map(async (shelf) => {
                 // Books are already included in getShelvesByProfileId response
                 return shelf;
             })
