@@ -55,6 +55,9 @@ jobs:
         needs: [build, test]
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/main'
+        env:
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+            VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
         environment:
             name: preview
             url: ${{ steps.deploy.outputs.url }}
@@ -62,22 +65,28 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
-            - name: Deploy with Node.js ${{ env.NODE_VERSION }}
+            - name: Setup Node.js ${{ env.NODE_VERSION }}
               uses: actions/setup-node@v4
               with:
                   node-version: ${{ env.NODE_VERSION }}
-            - name: Deploy to preview environment
+            - name: Install Vercel CLI
+              run: npm install --global vercel@latest
+            - name: Pull Vercel Environment Information
+              run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+            - name: Build Project Artifacts
+              id: build
+              run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+              env:
+                  LITERAL_API_TOKEN: ${{ secrets.LITERAL_API_TOKEN }}
+                  LITERAL_PROFILE_ID: ${{ secrets.LITERAL_PROFILE_ID }}
+                  LITERAL_PROFILE_HANDLE: ${{ secrets.LITERAL_PROFILE_HANDLE }}
+            - name: Deploy Project Artifacts to Vercel
               id: deploy
               run: |
-                  npm i -g vercel
-                  vercel --token "$VERCEL_TOKEN" > preview-deployment-url.txt
+                  vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} > preview-deployment-url.txt
                   deployment_url=$(cat preview-deployment-url.txt)
                   echo "url=$deployment_url" >> $GITHUB_OUTPUT
                   cat preview-deployment-url.txt
-              env:
-                  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-                  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-                  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             - name: Upload artifacts
               uses: actions/upload-artifact@v4
               with:
@@ -116,21 +125,28 @@ jobs:
         needs: check-performance
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/main'
+        env:
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+            VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
         environment:
             name: production
 
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
-            - name: Deploy with Node.js ${{ env.NODE_VERSION }}
+            - name: Setup Node.js ${{ env.NODE_VERSION }}
               uses: actions/setup-node@v4
               with:
                   node-version: ${{ env.NODE_VERSION }}
-            - name: Deploy to prod environment
-              run: |
-                  npm i -g vercel
-                  vercel --token "$VERCEL_TOKEN" --prod
+            - name: Install Vercel CLI
+              run: npm install --global vercel@latest
+            - name: Pull Vercel Environment Information
+              run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+            - name: Build Project Artifacts
+              run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
               env:
-                  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-                  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-                  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+                  LITERAL_API_TOKEN: ${{ secrets.LITERAL_API_TOKEN }}
+                  LITERAL_PROFILE_ID: ${{ secrets.LITERAL_PROFILE_ID }}
+                  LITERAL_PROFILE_HANDLE: ${{ secrets.LITERAL_PROFILE_HANDLE }}
+            - name: Deploy Project Artifacts to Vercel
+              run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
