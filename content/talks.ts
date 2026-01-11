@@ -59,7 +59,7 @@ export const talks: TalkData[] = [
     {
         id: 'agile-software-development-factoria5-2019',
         year: 2019,
-        title: 'Introducting to agile software development',
+        title: 'Introduction to agile software development',
         event: 'Factoria5 bootcamp'
     },
     {
