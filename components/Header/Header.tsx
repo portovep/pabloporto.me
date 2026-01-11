@@ -23,40 +23,49 @@ export default function Header(): React.ReactElement {
                 <Link href="/" className="font-bold tracking-wider text-gray-900 transition-colors">
                     Pablo Porto
                 </Link>
-                <nav className="md:flex md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex-wrap items-center justify-center hidden text-base">
+                <nav
+                    className="md:flex md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex-wrap items-center justify-center hidden text-base"
+                    data-testid="desktop-menu">
                     <Link
                         href="/blog"
-                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors">
+                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors"
+                        data-testid="desktop-menu-writing">
                         Writing
                     </Link>
                     <Link
                         href="/reading"
-                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors">
+                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors"
+                        data-testid="desktop-menu-reading">
                         Reading
                     </Link>
                     <Link
                         href="/speaking"
-                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors">
+                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors"
+                        data-testid="desktop-menu-speaking">
                         Speaking
                     </Link>
                     <Link
                         href="/working"
-                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors">
+                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors"
+                        data-testid="desktop-menu-working">
                         Working
                     </Link>
                     <Link
                         href="/traveling"
-                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors">
+                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors"
+                        data-testid="desktop-menu-traveling">
                         Traveling
                     </Link>
                     <Link
                         href="/making"
-                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors">
+                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors"
+                        data-testid="desktop-menu-making">
                         Making
                     </Link>
                     <Link
                         href="/about"
-                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors">
+                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors"
+                        data-testid="desktop-menu-about">
                         About
                     </Link>
                 </nav>
@@ -65,7 +74,8 @@ export default function Header(): React.ReactElement {
                         onClick={() => setShowMobileMenu(!showMobileMenu)}
                         type="button"
                         className="focus:outline-none w-8 h-8 ml-1 mr-1 rounded"
-                        aria-label="Toggle mobile menu">
+                        aria-label="Toggle mobile menu"
+                        data-testid="mobile-menu-toggle">
                         {showMobileMenu ? (
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -96,12 +106,13 @@ export default function Header(): React.ReactElement {
                         } ease-in transform ${
                             showMobileMenu ? 'translate-x-0' : 'translate-x-full'
                         } bg-gray-200`}>
-                        <nav className="fixed h-full mt-8">
+                        <nav className="fixed h-full mt-8" data-testid="mobile-menu">
                             <div className="px-12 py-4">
                                 <Link
                                     href="/blog"
                                     className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                    onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                    data-testid="mobile-menu-writing">
                                     Writing
                                 </Link>
                             </div>
@@ -109,7 +120,8 @@ export default function Header(): React.ReactElement {
                                 <Link
                                     href="/reading"
                                     className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                    onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                    data-testid="mobile-menu-reading">
                                     Reading
                                 </Link>
                             </div>
@@ -117,7 +129,8 @@ export default function Header(): React.ReactElement {
                                 <Link
                                     href="/speaking"
                                     className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                    onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                    data-testid="mobile-menu-speaking">
                                     Speaking
                                 </Link>
                             </div>
@@ -125,7 +138,8 @@ export default function Header(): React.ReactElement {
                                 <Link
                                     href="/working"
                                     className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                    onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                    data-testid="mobile-menu-working">
                                     Working
                                 </Link>
                             </div>
@@ -133,7 +147,8 @@ export default function Header(): React.ReactElement {
                                 <Link
                                     href="/traveling"
                                     className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                    onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                    data-testid="mobile-menu-traveling">
                                     Traveling
                                 </Link>
                             </div>
@@ -141,7 +156,8 @@ export default function Header(): React.ReactElement {
                                 <Link
                                     href="/making"
                                     className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
-                                    onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                    data-testid="mobile-menu-making">
                                     Making
                                 </Link>
                             </div>
@@ -149,7 +165,8 @@ export default function Header(): React.ReactElement {
                                 <Link
                                     href="/about"
                                     className="focus:text-emerald-600 mr-5 font-semibold transition-colors"
-                                    onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}
+                                    data-testid="mobile-menu-about">
                                     About
                                 </Link>
                             </div>

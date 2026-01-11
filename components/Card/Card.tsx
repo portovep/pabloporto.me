@@ -9,7 +9,9 @@ type CardProps = {
 
 export default function Card({ title, description, linkURL }: CardProps): React.ReactElement {
     return (
-        <div className="lg:group md:w-5/12 lg:hover:bg-white lg:hover:shadow-lg lg:hover:border-emerald-400 p-6 m-2 text-left transition-colors duration-150 bg-white border-2 border-gray-200 rounded-lg">
+        <div
+            className="lg:group md:w-5/12 lg:hover:bg-white lg:hover:shadow-lg lg:hover:border-emerald-400 p-6 m-2 text-left transition-colors duration-150 bg-white border-2 border-gray-200 rounded-lg"
+            data-testid={`home-card-${title.toLowerCase()}`}>
             <Link href={linkURL || '/404'} rel="noopener noreferrer">
                 <h3 className="lg:group-hover:text-emerald-600 mb-4 text-2xl font-semibold">
                     {title}
