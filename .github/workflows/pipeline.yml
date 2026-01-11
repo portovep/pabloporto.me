@@ -47,6 +47,9 @@ jobs:
         needs: [build, test]
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/main'
+        environment:
+            name: preview
+            url: ${{ steps.deploy.outputs.url }}
 
         steps:
             - name: Checkout code
@@ -56,9 +59,12 @@ jobs:
               with:
                   node-version: ${{ env.NODE_VERSION }}
             - name: Deploy to preview environment
+              id: deploy
               run: |
                   npm i -g vercel
                   vercel --token "$VERCEL_TOKEN" > preview-deployment-url.txt
+                  deployment_url=$(cat preview-deployment-url.txt)
+                  echo "url=$deployment_url" >> $GITHUB_OUTPUT
                   cat preview-deployment-url.txt
               env:
                   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -75,6 +81,8 @@ jobs:
         needs: deploy-preview
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/main'
+        environment:
+            name: preview
 
         steps:
             - name: Checkout code
@@ -100,6 +108,8 @@ jobs:
         needs: check-performance
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/main'
+        environment:
+            name: production
 
         steps:
             - name: Checkout code
