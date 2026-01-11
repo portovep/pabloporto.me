@@ -30,6 +30,11 @@ export default function Header(): React.ReactElement {
                         Writing
                     </Link>
                     <Link
+                        href="/reading"
+                        className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors">
+                        Reading
+                    </Link>
+                    <Link
                         href="/working"
                         className="hover:text-emerald-600 text-slate-600 sm:text-base mr-5 text-lg font-semibold transition-colors">
                         Working
@@ -93,6 +98,14 @@ export default function Header(): React.ReactElement {
                                     className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
                                     onClick={() => setShowMobileMenu(!showMobileMenu)}>
                                     Writing
+                                </Link>
+                            </div>
+                            <div className="px-12 py-4">
+                                <Link
+                                    href="/reading"
+                                    className="hover:text-emerald-600 mr-5 font-semibold transition-colors"
+                                    onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                                    Reading
                                 </Link>
                             </div>
                             <div className="px-12 py-4">
