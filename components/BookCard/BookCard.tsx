@@ -15,7 +15,9 @@ export default function BookCard({ book, coverPath }: BookCardProps) {
 
     return (
         <Link href={bookUrl} target="_blank" rel="noopener noreferrer">
-            <Card className="group h-full transition-all hover:shadow-lg border-gray-300 bg-white">
+            <Card
+                className="group h-full transition-all hover:shadow-lg border-gray-300 bg-white"
+                data-testid="book-card">
                 <CardContent className="p-0">
                     <div className="relative aspect-[2/3] w-full overflow-hidden bg-gray-100 flex items-center justify-center">
                         {coverSrc && (

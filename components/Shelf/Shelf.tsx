@@ -12,7 +12,7 @@ export default function Shelf({ shelf }: ShelfProps) {
     }
 
     return (
-        <section className="space-y-4">
+        <section className="space-y-4" data-testid="shelf">
             <div className="space-y-2">
                 <h2 className="text-2xl font-bold text-gray-900">{shelf.title}</h2>
                 {shelf.description && (
