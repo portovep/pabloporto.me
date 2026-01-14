@@ -1,7 +1,7 @@
 ---
 name: 'Back office application to manage sales agent accounts'
 date: '2020-04-01'
-roles: ['Infrastructure consultant', 'Fullstack Developer']
+roles: ['Infrastructure Engineer', 'Fullstack Developer']
 location: 'Barcelona'
 teamSize: 8
 industry: 'Energy'

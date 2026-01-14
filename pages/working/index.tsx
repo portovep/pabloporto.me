@@ -2,7 +2,7 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Layout from '../../components/Layout/Layout';
-import ProjectSummary from '../../components/ProjectSummary/ProjectSummary';
+import FilteredProjects from '../../components/FilteredProjects/FilteredProjects';
 import { PageHeader } from '../../components/ui';
 import { getSortedProjectData, ProjectData } from '../../lib/projects';
 
@@ -30,7 +30,7 @@ export default function Working({ allProjectData }: WorkingProps): React.ReactEl
                         engineering practices to data management so that they can unlock value from
                         their data and become data-driven.
                     </p>
-                    <ul className="pl-15 xl:w-11/12 px-10 pb-10 space-y-5 list-disc">
+                    <ul className="pl-15 px-10 pb-10 space-y-5 list-disc">
                         <li>
                             I help companies build software and data systems right with modern
                             software and data engineering tools and practices.
@@ -88,7 +88,7 @@ export default function Working({ allProjectData }: WorkingProps): React.ReactEl
                             <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
                                 How I do it
                             </h2>
-                            <p className="xl:w-2/4 lg:w-3/4 leading-relaxed">
+                            <p className="leading-relaxed">
                                 The software engineering principles and practices that drive my
                                 work.
                             </p>
@@ -342,7 +342,7 @@ export default function Working({ allProjectData }: WorkingProps): React.ReactEl
                         <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
                             Projects
                         </h2>
-                        <p className="xl:w-2/4 lg:w-3/4">
+                        <p>
                             Some of the projects and products I worked on over the last years. You
                             can also
                             <Link
@@ -353,13 +353,7 @@ export default function Working({ allProjectData }: WorkingProps): React.ReactEl
                             </Link>
                         </p>
                     </div>
-                    <ul className="mt-10">
-                        {allProjectData.map((project) => (
-                            <li data-testid="project-summary" className="mb-10" key={project.id}>
-                                <ProjectSummary project={project} />
-                            </li>
-                        ))}
-                    </ul>
+                    <FilteredProjects projects={allProjectData} />
                 </section>
             </section>
         </Layout>

@@ -1,7 +1,7 @@
 ---
 name: 'Flight search engine and B2B platform for air cargo startup'
 date: '2018-11-01'
-roles: ['Tech lead', 'Fullstack Developer']
+roles: ['Tech Lead', 'Fullstack Developer']
 location: 'Barcelona'
 teamSize: 9
 industry: 'Travel and transportation'
