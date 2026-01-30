@@ -8,6 +8,18 @@ export type TalkData = {
 
 export const talks: TalkData[] = [
     {
+        id: 'coding-assistants-2025-client',
+        year: 2025,
+        title: 'An introduction to coding assistants',
+        event: 'Client'
+    },
+    {
+        id: 'data-modeling-simplified-thoughtworks-2024',
+        year: 2024,
+        title: 'Data modeling simplified',
+        event: 'Thoughtworks'
+    },
+    {
         id: 'data-mesh-101-jonthebeach-2023',
         year: 2023,
         title: 'Data Mesh 101',
@@ -29,7 +41,7 @@ export const talks: TalkData[] = [
     {
         id: 'tdd-in-sql-thoughtworks-2023',
         year: 2023,
-        title: 'TDD in SQL',
+        title: 'Test-driven development in SQL',
         event: 'Thoughtworks'
     },
     {

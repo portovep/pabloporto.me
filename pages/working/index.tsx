@@ -15,20 +15,13 @@ export default function Working({ allProjectData }: WorkingProps): React.ReactEl
         <Layout pageTitle="At work">
             <section data-testid="working-intro" className="mt-10 text-xl leading-6">
                 <PageHeader title="At work" />
-                <section className="w-full leading-relaxed">
-                    <div className="mt-10 mb-10">
-                        <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
-                            What I do
-                        </h2>
-                    </div>
+                <section className="w-full leading-relaxed mt-10 mb-10">
                     <p className="pb-10">
-                        During my career, I have taken multiple roles, from full-stack software
-                        engineer to other roles like infrastructure and data engineer delivering
-                        many products in multiple sectors from retail to healthcare, travel, and
-                        others. I have been working in digital products and digital platforms for
-                        close to a decade. Currently, I help companies apply modern software
-                        engineering practices to data management so that they can unlock value from
-                        their data and become data-driven.
+                        With more than a decade of experience building digital products and
+                        platforms, I&apos;ve evolved from full-stack engineering to technical
+                        leadership roles across retail, healthcare, and travel sectors. I specialize
+                        in applying modern software engineering practices to data systems, helping
+                        organizations unlock value from their data and become truly data-driven.
                     </p>
                     <ul className="pl-15 px-10 pb-10 space-y-5 list-disc">
                         <li>
@@ -36,8 +29,10 @@ export default function Working({ allProjectData }: WorkingProps): React.ReactEl
                             software and data engineering tools and practices.
                         </li>
                         <li>
-                            I work with product and business people to incrementally design easy to
-                            use products that address complex customer problems.
+                            I work with product and business people to incrementally design
+                            easy-to-use digital products that address complex customer problems.
+                            I&apos;ve collaborated with technical directors to define tech and data
+                            strategies and translate business needs into technical roadmaps.
                         </li>
                         <li>
                             I bring software engineering and platform thinking to help teams adopt
@@ -52,33 +47,35 @@ export default function Working({ allProjectData }: WorkingProps): React.ReactEl
                                 rel="noopener noreferrer">
                                 empowered
                             </a>{' '}
-                            and multi-disciplinary product and platform teams.
+                            and multi-disciplinary product and platform teams, typically ranging
+                            from 4-8 engineers, fostering autonomy and ownership.
                         </li>
                         <li>
                             I train, coach, and mentor people on modern software delivery practices,
-                            agile/lean ways of working, and technical leadership.
+                            agile/lean ways of working, and technical leadership, helping grow the
+                            next generation of technical leaders.
                         </li>
                         <li>
-                            Finally, I write and{' '}
+                            I write and{' '}
                             <Link
                                 href="/blog"
                                 className="text-emerald-500 hover:text-emerald-600 font-medium"
                                 rel="noopener noreferrer">
                                 share what I learn and build in public
                             </Link>
-                            .
+                            , contributing to the broader engineering community.
                         </li>
                     </ul>
                     <p className="pb-10 leading-relaxed">
-                        Currently, I work as Lead Software Consultant at{' '}
+                        Currently, I work as <strong>tech principal consultant</strong> at{' '}
                         <a
                             href="https://thoughtworks.com"
                             target="_blank"
                             className="text-emerald-500 hover:text-emerald-600 font-medium"
                             rel="noopener noreferrer">
                             Thoughtworks
-                        </a>{' '}
-                        where I lead high-performing delivery teams building data and digital
+                        </a>
+                        , where I lead high-performing delivery teams building data and digital
                         products for our clients.
                     </p>
                 </section>
@@ -86,7 +83,7 @@ export default function Working({ allProjectData }: WorkingProps): React.ReactEl
                     <div className="container mx-auto mb-20">
                         <div className="mt-10 mb-10">
                             <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
-                                How I do it
+                                Principles and practices
                             </h2>
                             <p className="leading-relaxed">
                                 The software engineering principles and practices that drive my
@@ -343,17 +340,45 @@ export default function Working({ allProjectData }: WorkingProps): React.ReactEl
                             Projects
                         </h2>
                         <p>
-                            Some of the projects and products I worked on over the last years. You
-                            can also
+                            A selection of significant projects demonstrating my experience across
+                            data engineering, infrastructure engineering, and technical leadership.
+                            Each project showcases different aspects of my expertise—from building
+                            data products and platforms to improving engineering effectiveness at
+                            scale. You can also{' '}
                             <Link
                                 href="/stack"
                                 className="text-emerald-500 hover:text-emerald-600 font-medium"
                                 rel="noopener noreferrer">
-                                &nbsp;take a look at my preferred tools.
+                                explore my preferred tools and technologies
                             </Link>
+                            .
                         </p>
                     </div>
                     <FilteredProjects projects={allProjectData} />
+                </section>
+                <section className="w-full leading-relaxed mt-20 bg-gray-50 rounded-lg">
+                    <div className="mt-10 mb-10 py-10">
+                        <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
+                            Let&apos;s Connect
+                        </h2>
+                        <p className="text-gray-700 mb-6">
+                            I&apos;m always interested in discussing data engineering, platform
+                            engineering, or technical leadership opportunities. Feel free to reach
+                            out.
+                        </p>
+                        <div className="flex justify-start gap-4">
+                            <a
+                                href="mailto:pablo@pabloporto.me"
+                                className="px-6 py-3 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600">
+                                Get in Touch
+                            </a>
+                            <Link
+                                href="/blog"
+                                className="px-6 py-3 border border-emerald-500 text-emerald-600 rounded-lg hover:bg-emerald-50">
+                                Read My Blog
+                            </Link>
+                        </div>
+                    </div>
                 </section>
             </section>
         </Layout>
