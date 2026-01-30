@@ -423,6 +423,9 @@ chore(deps): update Next.js to 15.3.2
 - **MUST** reference issue numbers if applicable: `fix(blog): resolve #123`
 - **MUST NOT** commit directly to `main` branch
 - **MUST** create feature branches for changes
+- **MUST** always ask the user for explicit permission before committing changes
+- **MUST NOT** commit changes automatically without user approval
+- **MUST** show a summary of what will be committed before asking for permission
 
 ---
 
