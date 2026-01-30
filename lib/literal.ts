@@ -1,4 +1,4 @@
-const LITERAL_API_URL = 'https://literal.club/graphql/';
+const LITERAL_API_URL = 'https://api.literal.club/graphql';
 
 // TypeScript types based on Literal API fragments
 export type ReadingStatus = 'WANTS_TO_READ' | 'IS_READING' | 'FINISHED' | 'DROPPED' | 'NONE';
@@ -146,7 +146,7 @@ async function graphqlRequest<T>(
     if (!response.ok) {
         const errorText = await response.text();
         throw new Error(
-            `GraphQL request failed: ${response.status} ${response.statusText}. Response: ${errorText}`
+            `GraphQL request failed: ${response.status} ${response.statusText}. Response: ${errorText.substring(0, 500)}`
         );
     }
 
@@ -170,8 +170,10 @@ export async function getProfileByHandle(handle: string): Promise<Profile | null
         });
         return data.profile;
     } catch (error) {
+        // Log error but return null to prevent build failures
         console.error('Error fetching profile by handle:', error);
-        throw error;
+        console.warn('Returning null to allow build to continue');
+        return null;
     }
 }
 
@@ -199,10 +201,13 @@ export async function getShelvesByProfileId(
 
         return data.getShelvesByProfileId;
     } catch (error) {
+        // Log error but return empty array to prevent build failures
+        // This allows the build to succeed even if the API is unavailable
         console.error('Error fetching shelves by profile ID:', error);
         console.error('Profile ID:', profileId);
         console.error('Has token:', !!token);
-        throw error;
+        console.warn('Returning empty array to allow build to continue');
+        return [];
     }
 }
 
@@ -210,6 +215,12 @@ export async function getShelvesByProfileId(
  * Get profile ID from handle (helper function)
  */
 export async function getProfileIdFromHandle(handle: string): Promise<string | null> {
-    const profile = await getProfileByHandle(handle);
-    return profile?.id || null;
+    try {
+        const profile = await getProfileByHandle(handle);
+        return profile?.id || null;
+    } catch (error) {
+        console.error('Error fetching profile ID from handle:', error);
+        console.warn('Returning null to allow build to continue');
+        return null;
+    }
 }

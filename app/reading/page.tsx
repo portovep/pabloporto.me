@@ -53,24 +53,33 @@ async function getShelves(): Promise<Shelf[]> {
     const profileId = process.env.LITERAL_PROFILE_ID;
     const profileHandle = process.env.LITERAL_PROFILE_HANDLE;
 
+    // During build time, if env vars are not set, return empty array instead of throwing
     if (!profileId && !profileHandle) {
-        throw new Error(
-            'Either LITERAL_PROFILE_ID or LITERAL_PROFILE_HANDLE must be set in environment variables'
+        console.warn(
+            'Either LITERAL_PROFILE_ID or LITERAL_PROFILE_HANDLE must be set in environment variables. Returning empty shelves.'
         );
+        return [];
     }
 
     let finalProfileId = profileId;
 
     // If only handle is provided, fetch profile ID
     if (!finalProfileId && profileHandle) {
-        finalProfileId = await getProfileIdFromHandle(profileHandle);
-        if (!finalProfileId) {
-            throw new Error(`Could not find profile with handle: ${profileHandle}`);
+        try {
+            finalProfileId = await getProfileIdFromHandle(profileHandle);
+            if (!finalProfileId) {
+                console.warn(`Could not find profile with handle: ${profileHandle}`);
+                return [];
+            }
+        } catch (error) {
+            console.error('Error fetching profile ID from handle:', error);
+            return [];
         }
     }
 
     if (!finalProfileId) {
-        throw new Error('Profile ID is required');
+        console.warn('Profile ID is required. Returning empty shelves.');
+        return [];
     }
 
     try {
@@ -98,16 +107,20 @@ async function getShelves(): Promise<Shelf[]> {
         // Download all book covers
         const allBooks = shelvesWithBooks.flatMap((shelf) => shelf.books || []);
         if (allBooks.length > 0) {
-            await downloadBookCovers(allBooks);
+            try {
+                await downloadBookCovers(allBooks);
+            } catch (error) {
+                // Don't fail the build if cover download fails
+                console.warn('Error downloading book covers:', error);
+            }
         }
 
         return shelvesWithBooks;
     } catch (error) {
+        // During build time, return empty array instead of throwing to prevent build failures
         console.error('Error fetching shelves:', error);
-        // Re-throw with more context
-        throw new Error(
-            `Failed to fetch shelves: ${error instanceof Error ? error.message : String(error)}`
-        );
+        console.warn('Returning empty shelves array to allow build to continue');
+        return [];
     }
 }
 

@@ -6,7 +6,7 @@
  * Or set LITERAL_EMAIL and LITERAL_PASSWORD environment variables
  */
 
-const LITERAL_API_URL = 'https://literal.club/graphql/';
+const LITERAL_API_URL = 'https://api.literal.club/graphql';
 
 const LOGIN_MUTATION = `
   mutation login($email: String!, $password: String!) {
