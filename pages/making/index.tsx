@@ -31,7 +31,7 @@ export default function Making(): React.ReactElement {
                         </div>
                         <p className="mb-6 leading-relaxed text-gray-700">
                             Wanderpass lets you track your travels and collect digital passport
-                            stamps for every country you visit
+                            stamps for every country you visit.
                         </p>
                         <p className="mb-6 leading-relaxed text-gray-700">
                             Track your adventures on an interactive world map, collect digital
@@ -84,7 +84,7 @@ export default function Making(): React.ReactElement {
                         </div>
                         <p className="mb-6 leading-relaxed text-gray-700">
                             1Stream allows you to watch Netflix or Youtube streams in sync remotely
-                            with friends
+                            with friends.
                         </p>
                         <p className="mb-6 leading-relaxed text-gray-700">
                             Watch Netflix or Youtube streams remotely with friends. 1Stream

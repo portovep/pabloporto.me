@@ -45,7 +45,7 @@ export default function Home(): React.ReactElement {
             </div>
 
             <div className="flex flex-col items-center justify-center mt-10">
-                <div className="md:max-w-4xl md:flex-row flex flex-col flex-wrap items-stretch md:justify-start justify-center max-w-full">
+                <div className="md:max-w-4xl md:flex-row flex flex-col flex-wrap items-stretch md:justify-center justify-center max-w-full mx-auto px-6">
                     <Card
                         title="Writing"
                         description="A collection of half-baked articles, research, and other written stuff."
