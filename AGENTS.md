@@ -400,32 +400,65 @@ import { Card } from '../../components/ui/card';
 ### Commit Examples
 
 ```bash
-# ✅ CORRECT: Feature commit
+# ✅ CORRECT: Feature commit with why
 feat(blog): add pagination to blog listing page
 
-# ✅ CORRECT: Fix commit
+Improves page load performance by reducing initial render time for
+large blog archives. Users can now navigate through posts more efficiently.
+
+# ✅ CORRECT: Fix commit with why
 fix(header): resolve mobile menu closing issue
 
-# ✅ CORRECT: Refactor commit
+The menu was closing immediately after opening due to event propagation.
+Prevents accidental menu dismissal and improves mobile UX.
+
+# ✅ CORRECT: Refactor commit with why
 refactor(components): migrate Card to App Router pattern
 
-# ✅ CORRECT: Style commit
+Migrates Card component to use Server Components by default, reducing
+client bundle size and improving initial page load performance.
+
+# ✅ CORRECT: Style commit (why may be implicit)
 style: format all files with Prettier
 
-# ✅ CORRECT: Chore commit
+# ✅ CORRECT: Chore commit with why
 chore(deps): update Next.js to 15.3.2
+
+Includes security patches and performance improvements for static
+generation. Resolves CVE-2024-XXXXX.
 ```
 
 ### Commit Best Practices
 
 - **MUST** write clear, descriptive commit messages
 - **MUST** keep commits focused (one logical change per commit)
+- **MUST** state the "why" behind the change in the commit body when not immediately obvious
+- **MUST** keep commit message content concise (subject line ≤ 72 chars, body lines ≤ 100 chars)
+- **MUST** use the body to explain what and why, not just what changed
 - **MUST** reference issue numbers if applicable: `fix(blog): resolve #123`
 - **MUST NOT** commit directly to `main` branch
 - **MUST** create feature branches for changes
 - **MUST** always ask the user for explicit permission before committing changes
 - **MUST NOT** commit changes automatically without user approval
 - **MUST** show a summary of what will be committed before asking for permission
+
+### Commit Message Structure
+
+- **Subject line**: Concise summary (≤ 72 characters)
+    - Use imperative mood: "add" not "added" or "adds"
+    - No period at the end
+    - Capitalize first letter
+- **Body** (optional but recommended):
+
+    - Explain the "why" behind the change
+    - Separate from subject with blank line
+    - Wrap at 100 characters
+    - Use bullet points for multiple changes
+    - Focus on motivation and impact, not implementation details
+
+- **Footer** (optional):
+    - Reference issues: `Closes #123` or `Fixes #456`
+    - Breaking changes: `BREAKING CHANGE: description`
 
 ---
 
