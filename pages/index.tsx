@@ -31,8 +31,8 @@ export default function Home(): React.ReactElement {
                         . Nice to meet you.
                     </h2>
                     <p className="mt-7 text-slate-700 sm:text-xl sm:leading-8 leading-normal">
-                        This is my humble space on the Internet where I share my learnings in
-                        software engineering, health and personal finance. More&nbsp;
+                        I help engineering leaders build scalable and efficient systems while
+                        empowering their teams. More&nbsp;
                         <Link
                             href="/about"
                             className="text-emerald-500 hover:text-emerald-600 font-medium"
@@ -53,27 +53,27 @@ export default function Home(): React.ReactElement {
                     />
                     <Card
                         title="Reading"
-                        description="My book collection and reading lists from literal.club."
+                        description="The books that shaped my thinking."
                         linkURL="/reading"
                     />
                     <Card
                         title="Speaking"
-                        description="Talks and speaking engagements on software engineering and data."
+                        description="Talks and speaking engagements on software engineering."
                         linkURL="/speaking"
                     />
                     <Card
                         title="Working"
-                        description="What I do at work. My experience as a software engineer."
+                        description="My experience as a software engineer."
                         linkURL="/working"
                     />
                     <Card
                         title="Traveling"
-                        description="One of my hobbies is traveling. Explore some of my best shoots."
+                        description="Some of my favourite travel destinations and photos."
                         linkURL="/traveling"
                     />
                     <Card
                         title="Making"
-                        description="I like to build stuff. Check some of the things I made."
+                        description="Some of the things I built on the side."
                         linkURL="/making"
                     />
                 </div>
