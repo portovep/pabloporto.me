@@ -11,21 +11,21 @@ export default function About(): React.ReactElement {
             <section className="max-w-3xl mt-8 text-xl leading-6">
                 <PageHeader title="About" />
                 <p className="mt-6 text-xl font-medium text-gray-900">
-                    Software Engineer • Technical lead • Traveler
+                    Software Engineer • Coffee Lover • Traveler
                 </p>
                 <div className="md:flex-row container flex flex-col items-center pt-10 pb-24 mx-auto">
                     <div
                         data-testid="about-intro"
                         className="lg:grow md:w-1/2 lg:pr-10 md:pr-14 md:items-start md:mb-0 flex flex-col items-center mb-16">
                         <p className="mb-8 leading-relaxed">
-                            I am Pablo, a sofware engineer, amateur cyclist and traveler with a
-                            passion to become a well-rounded person helping the world to be a better
-                            place.
+                            I’m Pablo — a software engineer, coffee lover, and part time traveler
+                            driven by a desire to grow into a well-rounded person and contribute, in
+                            my own way, to making the world a little better.
                         </p>
                         <p className="leading-relaxed">
-                            This is my humble space on the internet where I share ideas on software
-                            engineering, health and personal finance drived by my curiosity for
-                            learning and self-development
+                            This is my small corner of the internet where I share thoughts and ideas
+                            on software engineering, health, and personal finance, all fueled by my
+                            curiosity and passion for continuous learning and self-development.
                         </p>
                     </div>
                     <div className="lg:max-w-lg lg:w-3/6 md:w-3/6 w-full">
@@ -41,7 +41,7 @@ export default function About(): React.ReactElement {
                 <section className="w-full">
                     <div className="mb-10">
                         <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl mb-4">
-                            What I like
+                            Being lucky
                         </h2>
                     </div>
                     <p className="pb-10 leading-relaxed">
@@ -68,11 +68,16 @@ export default function About(): React.ReactElement {
                         at Trinity College, Dublin.
                     </p>
                     <p className="pb-10 leading-relaxed">
-                        While spending hours and hours studying, I realized how lucky I was of
-                        spending time learning something I was passionate about and with great
-                        career possibilities. I also began to understand that I will have to keep
-                        learning all my life which motivated me to spend time getting better with
-                        personal knowledge management, productivity, and all things related to{' '}
+                        After spending countless hours studying, I realized how lucky I was to be
+                        learning something I truly enjoyed—especially knowing it opened doors to
+                        exciting career opportunities.
+                    </p>
+                    <p className="pb-10 leading-relaxed">
+                        {' '}
+                        Along the way, I realized that learning doesn’t stop after graduation; it’s
+                        a lifelong commitment. That realization inspired me to focus on improving
+                        how I learn and grow—diving into personal knowledge management, productivity
+                        systems, and the philosophy of continuous improvement inspired by{' '}
                         <a
                             href="https://www.kaizen.com/what-is-kaizen"
                             target="_blank"
@@ -82,8 +87,20 @@ export default function About(): React.ReactElement {
                         </a>
                         .
                     </p>
+                    <div className="mb-10">
+                        <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl mb-4">
+                            Now
+                        </h2>
+                    </div>
                     <p className="pb-10 leading-relaxed">
-                        As of 2023, I am based in Barcelona, Spain. In my spare time, I enjoy{' '}
+                        As of 2026, I am based in sunny Barcelona, Spain where I enjoy spending time{' '}
+                        <Link
+                            href="/reading"
+                            className="text-emerald-500 hover:text-emerald-600 font-medium"
+                            rel="noopener noreferrer">
+                            reading
+                        </Link>{' '}
+                        in specialty coffee shops,{' '}
                         <Link
                             href="/traveling"
                             className="text-emerald-500 hover:text-emerald-600 font-medium"
@@ -99,6 +116,18 @@ export default function About(): React.ReactElement {
                         </Link>
                         .
                     </p>
+                    <p className="leading-relaxed">
+                        After working in tech for over 10 years, I am currently focused on building
+                        decentralized data systems and empowering high-performing teams at
+                        Thoughtworks. You can see some of my work{' '}
+                        <Link
+                            href="/working"
+                            className="text-emerald-500 hover:text-emerald-600 font-medium"
+                            rel="noopener noreferrer">
+                            here
+                        </Link>
+                        .
+                    </p>
                 </section>
                 <section className="w-full mt-20">
                     <div className="mt-10 mb-10">
@@ -111,15 +140,15 @@ export default function About(): React.ReactElement {
                         something together or just to simple say hi.
                     </p>
                     <p className="pb-10 leading-relaxed">
-                        You can find me at{' '}
+                        You can find me on{' '}
                         <a
-                            href="https://twitter.com/portovep"
+                            href="https://linkedin.com/in/pabloportoveloso"
                             target="_blank"
                             className="text-emerald-500 hover:text-emerald-600 font-medium"
                             rel="noopener noreferrer">
-                            Twitter
+                            LinkedIn
                         </a>{' '}
-                        where I share things mostly related with my work but also on{' '}
+                        where I share things mostly related with my work and on{' '}
                         <a
                             href="https://www.instagram.com/porto.vga/"
                             target="_blank"
@@ -127,7 +156,7 @@ export default function About(): React.ReactElement {
                             rel="noopener noreferrer">
                             Instagram
                         </a>{' '}
-                        where I share my favourite pics from my travels.
+                        where I share my favourite photos from my travels.
                     </p>
                 </section>
             </section>
