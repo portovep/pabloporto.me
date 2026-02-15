@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import websiteLogo from '../../public/android-chrome-192x192.png';
+import { Button } from '@/components/ui/button';
 
 export default function Header(): React.ReactElement {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -70,10 +71,12 @@ export default function Header(): React.ReactElement {
                     </Link>
                 </nav>
                 <div className="sm:hidden item-center flex">
-                    <button
-                        onClick={() => setShowMobileMenu(!showMobileMenu)}
+                    <Button
                         type="button"
-                        className="focus:outline-none w-8 h-8 ml-1 mr-1 rounded"
+                        variant="ghost"
+                        size="icon"
+                        className="ml-1 mr-1 h-8 w-8 text-gray-900"
+                        onClick={() => setShowMobileMenu(!showMobileMenu)}
                         aria-label="Toggle mobile menu"
                         data-testid="mobile-menu-toggle">
                         {showMobileMenu ? (
@@ -81,7 +84,7 @@ export default function Header(): React.ReactElement {
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20"
                                 fill="currentColor"
-                                className="text-gray-900">
+                                aria-hidden="true">
                                 <path
                                     fillRule="evenodd"
                                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -92,14 +95,14 @@ export default function Header(): React.ReactElement {
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20"
                                 fill="currentColor"
-                                className="text-gray-900">
+                                aria-hidden="true">
                                 <path
                                     fillRule="evenodd"
                                     d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
                                     clipRule="evenodd"></path>
                             </svg>
                         )}
-                    </button>
+                    </Button>
                     <div
                         className={`top-[73px] opacity-90 fixed right-0 z-10 w-full h-full overflow-y-auto ${
                             showMobileMenu ? 'duration-300' : 'duration-100'

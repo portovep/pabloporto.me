@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Layout from '../../components/Layout/Layout';
 import { PageHeader } from '../../components/ui';
+import { Button } from '@/components/ui/button';
 
 import chromeStoreCTA from '../../public/images/projects/chrome_store.png';
 import cloujeraScreenshot from '../../public/images/projects/cloujera_framed.png';
@@ -40,22 +41,20 @@ export default function Making(): React.ReactElement {
                             friends have been, and get inspired for future adventures.
                         </p>
                         <div className="flex justify-center mt-8">
-                            <a
-                                href="https://wanderpass.vercel.app"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                <button className="bg-emerald-500 focus:outline-none hover:bg-emerald-600 inline-flex px-6 py-2 text-lg text-white border-0 rounded">
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        fill="currentColor"
-                                        className="mr-3 text-purple-600 text-opacity-50 transform"
-                                        viewBox="0 0 24 24">
+                            <Button
+                                asChild
+                                size="lg"
+                                className="bg-emerald-500 hover:bg-emerald-600 text-white [&_svg]:size-6">
+                                <a
+                                    href="https://wanderpass.vercel.app"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path>
                                     </svg>
                                     Claim your Wanderpass
-                                </button>
-                            </a>
+                                </a>
+                            </Button>
                         </div>
                     </div>
                     <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8">
@@ -92,32 +91,37 @@ export default function Making(): React.ReactElement {
                             sure you&apos;re watching exactly the same frame at the same time.
                         </p>
                         <div className="flex justify-center mt-8">
-                            <a href="https://github.com/portovep/1stream">
-                                <button className="bg-emerald-500 focus:outline-none hover:bg-emerald-600 inline-flex px-6 py-2 text-lg text-white border-0 rounded">
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        fill="currentColor"
-                                        className="mr-3 text-purple-600 text-opacity-50 transform">
+                            <Button
+                                asChild
+                                size="lg"
+                                className="bg-emerald-500 hover:bg-emerald-600 text-white [&_svg]:size-6">
+                                <a href="https://github.com/portovep/1stream">
+                                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path
                                             fillRule="evenodd"
                                             clipRule="evenodd"
                                             d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48C19.137 20.107 22 16.373 22 11.969 22 6.463 17.522 2 12 2z"></path>
                                     </svg>
                                     Fork me
-                                </button>
-                            </a>
+                                </a>
+                            </Button>
                         </div>
-                        <div className="hover:bg-gray-200 focus:outline-none flex items-center justify-center px-0 py-0 mt-4 bg-gray-100 rounded-lg">
-                            <a href="https://chrome.google.com/webstore/detail/1stream/ckgaafkgiajiabimkgpgkiamnolncfkg">
-                                <Image
-                                    priority
-                                    alt="chrome-store-link"
-                                    src={chromeStoreCTA}
-                                    height="60"
-                                    width="225"
-                                />
-                            </a>
+                        <div className="flex justify-center mt-4">
+                            <Button
+                                asChild
+                                variant="outline"
+                                size="lg"
+                                className="bg-gray-100 hover:bg-gray-200">
+                                <a href="https://chrome.google.com/webstore/detail/1stream/ckgaafkgiajiabimkgpgkiamnolncfkg">
+                                    <Image
+                                        priority
+                                        alt="chrome-store-link"
+                                        src={chromeStoreCTA}
+                                        height="60"
+                                        width="225"
+                                    />
+                                </a>
+                            </Button>
                         </div>
                     </div>
                     <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8">
@@ -165,23 +169,27 @@ export default function Making(): React.ReactElement {
                             to save their car profiles on the cloud.
                         </p>
                         <div className="flex justify-center mt-8">
-                            <a href="https://play.google.com/store/apps/details?id=com.ecoshifter.beta">
-                                <button className="hover:bg-gray-200 focus:outline-none inline-flex items-center px-5 py-3 bg-gray-100 rounded-lg">
+                            <Button
+                                asChild
+                                variant="secondary"
+                                size="lg"
+                                className="bg-gray-100 hover:bg-gray-200">
+                                <a href="https://play.google.com/store/apps/details?id=com.ecoshifter.beta">
                                     <svg
-                                        xmlns="http://www.w3.org/2000/svg"
                                         fill="currentColor"
-                                        className="w-6 h-6"
-                                        viewBox="0 0 512 512">
+                                        className="size-6"
+                                        viewBox="0 0 512 512"
+                                        aria-hidden="true">
                                         <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
                                     </svg>
-                                    <span className="flex flex-col items-start ml-4 leading-none">
+                                    <span className="flex flex-col items-start ml-4 leading-none text-left">
                                         <span className="mb-1 text-xs text-gray-600">
                                             GET IT ON
                                         </span>
-                                        <span className="title-font font-medium">Google Play</span>
+                                        <span className="font-medium">Google Play</span>
                                     </span>
-                                </button>
-                            </a>
+                                </a>
+                            </Button>
                         </div>
                     </div>
                     <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 flex justify-center w-5/6 mb-8">
@@ -220,21 +228,20 @@ export default function Making(): React.ReactElement {
                             finishing second among the 100 teams that took part in the hackathon.
                         </p>
                         <div className="flex justify-center mt-8">
-                            <a href="https://github.com/portovep/cloujera">
-                                <button className="bg-emerald-500 focus:outline-none hover:bg-emerald-600 inline-flex px-6 py-2 text-lg text-white border-0 rounded">
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        fill="currentColor"
-                                        className="mr-3 text-purple-600 text-opacity-50 transform">
+                            <Button
+                                asChild
+                                size="lg"
+                                className="bg-emerald-500 hover:bg-emerald-600 text-white [&_svg]:size-6">
+                                <a href="https://github.com/portovep/cloujera">
+                                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path
                                             fillRule="evenodd"
                                             clipRule="evenodd"
                                             d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48C19.137 20.107 22 16.373 22 11.969 22 6.463 17.522 2 12 2z"></path>
                                     </svg>
                                     Fork me
-                                </button>
-                            </a>
+                                </a>
+                            </Button>
                         </div>
                     </div>
                     <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8">
@@ -273,21 +280,20 @@ export default function Making(): React.ReactElement {
                             GPS tracking, Maps API and Google Cloud Messaging.
                         </p>
                         <div className="flex justify-center mt-8">
-                            <a href="https://github.com/portovep/crowdtransport">
-                                <button className="bg-emerald-500 focus:outline-none hover:bg-emerald-600 inline-flex px-6 py-2 text-lg text-white border-0 rounded">
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        fill="currentColor"
-                                        className="mr-3 text-purple-600 text-opacity-50 transform">
+                            <Button
+                                asChild
+                                size="lg"
+                                className="bg-emerald-500 hover:bg-emerald-600 text-white [&_svg]:size-6">
+                                <a href="https://github.com/portovep/crowdtransport">
+                                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path
                                             fillRule="evenodd"
                                             clipRule="evenodd"
                                             d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48C19.137 20.107 22 16.373 22 11.969 22 6.463 17.522 2 12 2z"></path>
                                     </svg>
                                     Fork me
-                                </button>
-                            </a>
+                                </a>
+                            </Button>
                         </div>
                     </div>
                     <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 flex justify-center w-5/6 mb-8">
