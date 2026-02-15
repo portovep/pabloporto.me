@@ -11,9 +11,12 @@ describe('Working page', () => {
         cy.get('[data-testid="project-summary"]').its('length').should('be.at.least', 3);
     });
 
-    it.skip('should expand project item', () => {
+    it('should expand project item', () => {
         cy.get('[data-testid="project-summary"]').first().click();
-        //TODO
+        cy.get('[data-testid="project-summary"]')
+            .first()
+            .contains('Team size')
+            .should('be.visible');
     });
 
     describe('Project filtering by role', () => {

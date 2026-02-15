@@ -11,8 +11,9 @@ describe('Blog page', () => {
         cy.get('[data-testid="post-summary"]').its('length').should('be.at.least', 3);
     });
 
-    it.skip('should open blog post', () => {
-        cy.get('[data-testid="post-summary"]').first().click();
-        //TODO
+    it('should open blog post', () => {
+        cy.get('[data-testid="post-summary"] a[href*="/blog/"]').first().click();
+        cy.url().should('include', '/blog/');
+        cy.get('article').should('be.visible');
     });
 });
