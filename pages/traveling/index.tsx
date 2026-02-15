@@ -1,8 +1,19 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import Layout from '../../components/Layout/Layout';
 import PhotoCard from '../../components/PhotoCard/PhotoCard';
 import { PageHeader } from '../../components/ui';
-import WorldMap from '../../components/WorldMap/WorldMap';
+
+const WorldMap = dynamic(() => import('../../components/WorldMap/WorldMap'), {
+    ssr: false,
+    loading: () => (
+        <div
+            className="min-h-[400px] w-full flex items-center justify-center bg-gray-100 rounded-lg"
+            aria-label="Loading map">
+            <span className="text-gray-500">Loading map…</span>
+        </div>
+    )
+});
 import beachHousePhoto from '../../public/images/photos/IMG_20150525_104418.jpeg';
 import edinburghLandscapePhoto from '../../public/images/photos/IMG_20180224_145152.jpeg';
 import jaipurKidPhoto from '../../public/images/photos/IMG_20180630_212048.jpeg';

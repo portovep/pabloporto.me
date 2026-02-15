@@ -3,7 +3,23 @@ module.exports = {
         config.module.rules.push({
             test: /\.svg$/i,
             issuer: /\.[jt]sx?$/,
-            use: ['@svgr/webpack']
+            use: [
+                {
+                    loader: '@svgr/webpack',
+                    options: {
+                        // Preserve path id attributes (e.g. id="AD") so WorldMap can apply
+                        // visited/lived/land classes. No prefixIds so ids stay as country codes.
+                        svgoConfig: {
+                            plugins: [
+                                {
+                                    name: 'preset-default',
+                                    params: { overrides: { cleanupIds: false } }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
         });
 
         return config;

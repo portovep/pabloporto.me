@@ -1,10 +1,50 @@
-import React from 'react';
-import { travelingStats } from 'content/travels/travelingStats';
+'use client';
+
+import { useEffect, useRef } from 'react';
+import { travelingStats, uniqueVisitedCount } from 'content/travels/travelingStats';
 import MapWithCountries from './worldmap.svg';
 
-export default function WorldMap(): React.ReactElement {
+const livedIds = new Set(travelingStats.lived.map((c) => c.id));
+const visitedIds = new Set(travelingStats.visited.map((c) => c.id));
+
+function getPathClass(id: string): string {
+    if (livedIds.has(id)) return 'lived';
+    if (visitedIds.has(id)) return 'visited';
+    return 'land';
+}
+
+export default function WorldMap() {
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    // Apply land/visited/lived classes to map paths. Run on mount and after a tick so we
+    // catch the SVG when it mounts (e.g. after dynamic import). Path ids are preserved by
+    // next.config.js svgoConfig (cleanupIds: false, no prefixIds).
+    useEffect(() => {
+        const applyPathClasses = () => {
+            const svg = containerRef.current?.querySelector('svg');
+            if (!svg) return;
+            svg.querySelectorAll<SVGPathElement>('path[id]').forEach((path) => {
+                const id = path.getAttribute('id');
+                if (id) path.setAttribute('class', getPathClass(id));
+            });
+        };
+
+        applyPathClasses();
+        const rafId = requestAnimationFrame(applyPathClasses);
+        const timeoutId = window.setTimeout(applyPathClasses, 200);
+
+        return () => {
+            cancelAnimationFrame(rafId);
+            clearTimeout(timeoutId);
+        };
+    }, []);
+
     return (
-        <div>
+        <div
+            ref={containerRef}
+            className="world-map"
+            role="img"
+            aria-label="Map of visited and lived countries">
             <MapWithCountries
                 className="min-h-max w-full min-w-full"
                 viewBox="0 0 1008 650"
@@ -19,7 +59,7 @@ export default function WorldMap(): React.ReactElement {
                         <p className="lg:w-2/3 mx-auto text-xl leading-relaxed">
                             In <span className="text-emerald-500 font-extrabold">green</span> are
                             the countries I visited so far, in
-                            <span className="font-extrabold text-black"> black</span> the ones were
+                            <span className="font-extrabold text-black"> black</span> the ones where
                             I lived for at least one month.
                         </p>
                     </div>
@@ -27,7 +67,7 @@ export default function WorldMap(): React.ReactElement {
                         <div className="md:w-1/3 sm:w-1/2 w-full p-4">
                             <div className="px-4 py-6 border-2 border-gray-200 rounded-lg">
                                 <h2 className="title-font text-3xl font-medium text-gray-900">
-                                    {travelingStats.visited.length}
+                                    {uniqueVisitedCount}
                                 </h2>
                                 <p className="leading-relaxed">countries visited</p>
                             </div>

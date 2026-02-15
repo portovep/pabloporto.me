@@ -46,7 +46,6 @@ export const travelingStats: TravelingStats = {
         { id: 'BA', title: 'Bosnia' },
         { id: 'ME', title: 'Montenegro' },
         { id: 'RO', title: 'Romania' },
-        { id: 'HR', title: 'Croatia' },
         { id: 'CY', title: 'Cyprus' },
         { id: 'GE', title: 'Georgia' }
     ],
@@ -57,3 +56,9 @@ export const travelingStats: TravelingStats = {
         { id: 'NA', title: 'North America' }
     ]
 };
+
+/** Unique count of countries visited (union of visited and lived by id). */
+export const uniqueVisitedCount = new Set([
+    ...travelingStats.visited.map((c) => c.id),
+    ...travelingStats.lived.map((c) => c.id)
+]).size;

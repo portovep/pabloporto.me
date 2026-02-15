@@ -119,3 +119,45 @@
         @apply bg-background text-foreground;
     }
 }
+
+/* World map path styles – scoped so SVGR/SVGO stripping SVG <style> doesn't break colors.
+   !important ensures fills win over Tailwind/base resets (e.g. SVG inheritance). */
+.world-map svg path.land {
+    fill: #cccccc !important;
+    fill-opacity: 1;
+    stroke: white !important;
+    stroke-opacity: 1;
+    stroke-width: 0.5;
+}
+.world-map svg path.land:hover {
+    fill: #959595 !important;
+    fill-opacity: 1;
+    cursor: pointer;
+    stroke-width: 1.5;
+}
+.world-map svg path.visited {
+    fill: #22cd88 !important;
+    fill-opacity: 1;
+    stroke: white !important;
+    stroke-opacity: 1;
+    stroke-width: 0.5;
+}
+.world-map svg path.visited:hover {
+    fill: #22cd88 !important;
+    fill-opacity: 1;
+    cursor: pointer;
+    stroke-width: 1.5;
+}
+.world-map svg path.lived {
+    fill: black !important;
+    fill-opacity: 0.8;
+    stroke: white !important;
+    stroke-opacity: 1;
+    stroke-width: 0.5;
+}
+.world-map svg path.lived:hover {
+    fill: black !important;
+    fill-opacity: 1;
+    cursor: pointer;
+    stroke-width: 1.5;
+}
