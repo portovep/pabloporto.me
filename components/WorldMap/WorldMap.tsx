@@ -40,16 +40,17 @@ export default function WorldMap() {
     }, []);
 
     return (
-        <div
-            ref={containerRef}
-            className="world-map aspect-[1008/650] w-full min-h-0"
-            role="img"
-            aria-label="Map of visited and lived countries">
-            <MapWithCountries
-                className="min-h-max w-full min-w-full"
-                viewBox="0 0 1008 650"
-                alt="Map with my visited and lived countries"
-            />
+        <div ref={containerRef} className="world-map w-full">
+            <div
+                className="aspect-[1008/650] w-full min-h-0"
+                role="img"
+                aria-label="Map of visited and lived countries">
+                <MapWithCountries
+                    className="min-h-max w-full min-w-full"
+                    viewBox="0 0 1008 650"
+                    alt="Map with my visited and lived countries"
+                />
+            </div>
             <section className="body-font text-gray-600">
                 <div className="container px-5 py-12 mx-auto">
                     <div className="mb-14 flex flex-col w-full text-center">
