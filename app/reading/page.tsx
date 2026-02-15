@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { getShelvesByProfileId, getProfileIdFromHandle, type Shelf } from '@/lib/literal';
 import { downloadBookCovers } from '@/lib/bookCovers';
 import ShelfComponent from '@/components/Shelf/Shelf';
+import PageContainer from '@/components/PageContainer/PageContainer';
+import PageHeader from '@/components/ui/PageHeader/PageHeader';
 
 export const metadata: Metadata = {
     title: 'Reading | Pablo Porto',
@@ -128,23 +130,20 @@ export default async function ReadingPage() {
     const shelves = await getShelves();
 
     return (
-        <div className="container mx-auto px-4 sm:px-6 py-8 md:py-12 max-w-7xl">
+        <PageContainer wide>
             <div className="space-y-12 mb-12">
                 <div className="space-y-4" data-testid="reading-intro">
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900">
-                        Reading
-                    </h1>
-                    <p className="text-lg text-gray-600 max-w-2xl">
+                    <PageHeader title="Reading">
                         My book collection and reading lists from{' '}
                         <a
                             href="https://literal.club"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="underline hover:text-gray-900">
+                            className="text-emerald-500 hover:text-emerald-600 font-medium underline">
                             literal.club
                         </a>
                         .
-                    </p>
+                    </PageHeader>
                 </div>
 
                 <div className="space-y-16">
@@ -155,6 +154,6 @@ export default async function ReadingPage() {
                     )}
                 </div>
             </div>
-        </div>
+        </PageContainer>
     );
 }

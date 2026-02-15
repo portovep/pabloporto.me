@@ -33,16 +33,18 @@ import albanianAlpsLandscapePhoto from '../../public/images/photos/IMG-20231005-
 export default function Traveling(): React.ReactElement {
     return (
         <Layout wide pageTitle="Traveling">
-            <section data-testid="traveling-intro" className="mt-10 text-xl leading-6">
+            <section data-testid="traveling-intro" className="mt-8 text-xl leading-6">
                 <PageHeader title="Traveling" />
 
                 <div className="mt-14 p-1 mb-8">
                     <WorldMap />
                 </div>
 
-                <h2 className="font-semibol text-3xl tracking-tight">Photography</h2>
+                <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl mb-4">
+                    Photography
+                </h2>
                 <hr className="my-8 h-0.5 border-t-0 bg-gray-200 opacity-100 dark:opacity-50 w-10" />
-                <div className="md:grid-cols-2 xl:grid-cols-3 gap-x-14 gap-y-28 grid grid-cols-1 mt-12">
+                <div className="md:grid-cols-2 xl:grid-cols-3 gap-x-14 gap-y-8 sm:gap-y-12 md:gap-y-28 grid grid-cols-1 mt-12">
                     <PhotoCard
                         title="Taj Mahal"
                         location="Jaipur, India"

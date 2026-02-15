@@ -13,7 +13,7 @@ import wanderpassScreenshot from '../../public/images/projects/wanderpass_screen
 export default function Making(): React.ReactElement {
     return (
         <Layout wide pageTitle="Making">
-            <section data-testid="making-intro" className="body-font mt-10 text-gray-600">
+            <section data-testid="making-intro" className="body-font mt-8 text-gray-600">
                 <PageHeader title="Making">
                     I love building things to learn new skills. These are some of the apps I made.
                 </PageHeader>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { cn } from '@/app/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { MapPin, ExternalLink } from 'lucide-react';
+import PageContainer from '@/components/PageContainer/PageContainer';
 
 export const metadata: Metadata = {
     title: 'Bucharest Recommendations | Pablo Porto',
@@ -70,10 +71,10 @@ export const metadata: Metadata = {
 
 export default function BucharestPage() {
     return (
-        <>
+        <PageContainer>
             {/* Hero Section */}
-            <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32 px-4 sm:px-6">
-                <div className="container mx-auto flex max-w-[64rem] flex-col items-center gap-4 text-center">
+            <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
+                <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
                     <div className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium flex items-center gap-2">
                         <MapPin className="h-4 w-4" />
                         Travel Guide
@@ -106,6 +107,6 @@ export default function BucharestPage() {
                     </div>
                 </div>
             </section>
-        </>
+        </PageContainer>
     );
 }

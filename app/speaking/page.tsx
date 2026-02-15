@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { getSortedTalks } from '@/lib/talks';
 import TalkCard from '@/components/TalkCard/TalkCard';
+import PageContainer from '@/components/PageContainer/PageContainer';
+import PageHeader from '@/components/ui/PageHeader/PageHeader';
 
 export const metadata: Metadata = {
     title: 'Speaking | Pablo Porto',
@@ -51,16 +53,13 @@ export default async function SpeakingPage() {
     const talks = await getSortedTalks();
 
     return (
-        <div className="container mx-auto px-4 sm:px-6 py-8 md:py-12 max-w-4xl">
+        <PageContainer>
             <div className="space-y-12 mb-12">
                 <div className="space-y-4" data-testid="speaking-intro">
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900">
-                        Speaking
-                    </h1>
-                    <p className="text-lg text-gray-600 max-w-2xl">
+                    <PageHeader title="Speaking">
                         I like to share and teach what I learn. These are some talks I have given at
                         conferences, meetups, and bootcamps.
-                    </p>
+                    </PageHeader>
                 </div>
 
                 <div>
@@ -75,6 +74,6 @@ export default async function SpeakingPage() {
                     )}
                 </div>
             </div>
-        </div>
+        </PageContainer>
     );
 }

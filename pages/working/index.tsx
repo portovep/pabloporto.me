@@ -13,7 +13,7 @@ type WorkingProps = {
 export default function Working({ allProjectData }: WorkingProps): React.ReactElement {
     return (
         <Layout pageTitle="At work">
-            <section data-testid="working-intro" className="mt-10 text-xl leading-6">
+            <section data-testid="working-intro" className="mt-8 text-xl leading-6">
                 <PageHeader title="At work" />
                 <section className="w-full leading-relaxed mt-10 mb-10">
                     <p className="pb-10">
@@ -82,7 +82,7 @@ export default function Working({ allProjectData }: WorkingProps): React.ReactEl
                 <section className="w-full">
                     <div className="container mx-auto mb-20">
                         <div className="mt-10 mb-10">
-                            <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
+                            <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl mb-4">
                                 Principles and practices
                             </h2>
                             <p className="leading-relaxed">
@@ -336,7 +336,7 @@ export default function Working({ allProjectData }: WorkingProps): React.ReactEl
                 </section>
                 <section className="w-full leading-relaxed">
                     <div className="mt-10 mb-10">
-                        <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
+                        <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl mb-4">
                             Projects
                         </h2>
                         <p>
@@ -358,7 +358,7 @@ export default function Working({ allProjectData }: WorkingProps): React.ReactEl
                 </section>
                 <section className="w-full leading-relaxed mt-20 bg-gray-50 rounded-lg">
                     <div className="mt-10 mb-10 py-10">
-                        <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
+                        <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl mb-4">
                             Let&apos;s Connect
                         </h2>
                         <p className="text-gray-700 mb-6">

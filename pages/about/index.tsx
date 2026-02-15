@@ -10,9 +10,9 @@ export default function About(): React.ReactElement {
         <Layout pageTitle="About">
             <section className="max-w-3xl mt-8 text-xl leading-6">
                 <PageHeader title="About" />
-                <h1 className="title-font mt-6 text-3xl font-medium text-gray-900">
+                <p className="mt-6 text-xl font-medium text-gray-900">
                     Software Engineer • Technical lead • Traveler
-                </h1>
+                </p>
                 <div className="md:flex-row container flex flex-col items-center pt-10 pb-24 mx-auto">
                     <div
                         data-testid="about-intro"
@@ -39,8 +39,8 @@ export default function About(): React.ReactElement {
                     </div>
                 </div>
                 <section className="w-full">
-                    <div className="mb-10 text-center">
-                        <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
+                    <div className="mb-10">
+                        <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl mb-4">
                             What I like
                         </h2>
                     </div>
@@ -101,8 +101,8 @@ export default function About(): React.ReactElement {
                     </p>
                 </section>
                 <section className="w-full mt-20">
-                    <div className="mt-10 mb-10 text-center">
-                        <h2 className="title-font sm:text-4xl mb-4 text-3xl font-medium text-gray-900">
+                    <div className="mt-10 mb-10">
+                        <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl mb-4">
                             Let&apos;s get in touch!
                         </h2>
                     </div>

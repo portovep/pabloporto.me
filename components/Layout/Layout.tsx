@@ -16,11 +16,12 @@ export default function Layout({
     pageTitle
 }: LayoutProps): React.ReactElement {
     return (
-        <main className={`${wide ? 'max-w-6xl' : 'max-w-4xl'} px-0 py-0 mx-auto grow`}>
+        <main
+            className={`${wide ? 'max-w-6xl' : 'max-w-4xl'} px-4 sm:px-6 py-0 mx-auto grow antialiased`}>
             <Meta pageTitle={pageTitle} />
-            <section className="mx-4 antialiased">{children}</section>
+            <section>{children}</section>
             {!home && (
-                <div className="ml-7 mt-12 text-lg">
+                <div className="mt-12 text-lg">
                     <Link href="/" rel="noopener noreferrer">
                         <span className="hover:text-emerald-600 font-medium">
                             <span aria-hidden="true" className="mr-2">
