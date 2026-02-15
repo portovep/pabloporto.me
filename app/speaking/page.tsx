@@ -54,7 +54,7 @@ export default async function SpeakingPage() {
 
     return (
         <PageContainer>
-            <div className="space-y-12 mb-12">
+            <div className="space-y-8 mb-8">
                 <div className="space-y-4" data-testid="speaking-intro">
                     <PageHeader title="Speaking">
                         I like to share and teach what I learn. These are some talks I have given at
@@ -62,13 +62,9 @@ export default async function SpeakingPage() {
                     </PageHeader>
                 </div>
 
-                <div>
+                <div className="space-y-6">
                     {talks.length > 0 ? (
-                        talks.map((talk, index) => (
-                            <div key={talk.id} className={index > 0 ? 'mt-6' : ''}>
-                                <TalkCard talk={talk} />
-                            </div>
-                        ))
+                        talks.map((talk) => <TalkCard key={talk.id} talk={talk} />)
                     ) : (
                         <p className="text-gray-500">No talks found.</p>
                     )}

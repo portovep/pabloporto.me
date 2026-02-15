@@ -24,7 +24,7 @@ export default function Blog({ allPostsData }: BlogProps): React.ReactElement {
                         &nbsp;follow me on Medium.
                     </Link>
                 </PageHeader>
-                <ul data-testid="writing-intro" className="mt-8">
+                <ul data-testid="writing-intro" className="mt-8 space-y-6">
                     {allPostsData.map((postData) => {
                         return (
                             <li data-testid="post-summary" key={postData.id}>

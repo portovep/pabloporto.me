@@ -10,7 +10,7 @@ export default function Stacks(): React.ReactElement {
                     Some of the tools in my toolbox. They are the tools I default to when building
                     different types of software systems.
                 </PageHeader>
-                <ul className="flex flex-col mt-4">
+                <ul className="flex flex-col mt-8">
                     <StackItem
                         name="Typescript"
                         link="https://www.typescriptlang.org"

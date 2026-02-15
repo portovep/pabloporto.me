@@ -10,7 +10,7 @@ type PostSummaryProps = {
 export default function PostSummary(props: PostSummaryProps): React.ReactElement {
     const { date, type, title } = props.postData;
     return (
-        <div className="lg:group lg:hover:bg-white lg:hover:shadow-lg mt-6 bg-white border-2 border-gray-200 rounded-lg">
+        <div className="lg:group lg:hover:bg-white lg:hover:shadow-lg bg-white border-2 border-gray-200 rounded-lg">
             <div className="md:pl-10 max-w-4xl py-6 pl-6">
                 <div className="flex items-center justify-between">
                     <span className="text-lg font-light text-gray-600">

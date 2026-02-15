@@ -85,10 +85,10 @@ export default function FilteredProjects({ projects }: FilteredProjectsProps) {
                     </p>
                 )}
             </div>
-            <ul className="mt-10">
+            <ul className="mt-10 space-y-8">
                 {filteredProjects.length > 0 ? (
                     filteredProjects.map((project) => (
-                        <li data-testid="project-summary" className="mb-10" key={project.id}>
+                        <li data-testid="project-summary" key={project.id}>
                             <ProjectSummary project={project} />
                         </li>
                     ))

@@ -21,10 +21,10 @@ export default function Making(): React.ReactElement {
                     data-testid="making-project"
                     className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mt-10 mb-10 border-b border-gray-300">
                     <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
-                        <div className="flex flex-col md:flex-row md:items-baseline md:gap-3 items-center mb-6 w-full md:w-auto">
-                            <h1 className="title-font text-4xl font-medium text-gray-900">
+                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-center mb-6 w-full md:w-auto">
+                            <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl">
                                 Wanderpass
-                            </h1>
+                            </h2>
                             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600 mt-2 md:mt-0">
                                 2024
                             </span>
@@ -74,10 +74,10 @@ export default function Making(): React.ReactElement {
                     data-testid="making-project"
                     className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
                     <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
-                        <div className="flex flex-col md:flex-row md:items-baseline md:gap-3 items-center mb-6 w-full md:w-auto">
-                            <h1 className="title-font text-4xl font-medium text-gray-900">
+                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-center mb-6 w-full md:w-auto">
+                            <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl">
                                 1Stream
-                            </h1>
+                            </h2>
                             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600 mt-2 md:mt-0">
                                 2020
                             </span>
@@ -136,12 +136,12 @@ export default function Making(): React.ReactElement {
                     data-testid="making-project"
                     className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
                     <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
-                        <div className="flex flex-col md:flex-row md:items-baseline md:gap-3 items-center mb-6 w-full md:w-auto">
-                            <h1 className="title-font text-4xl font-medium text-gray-900">
+                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-center mb-6 w-full md:w-auto">
+                            <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl">
                                 EcoShifter
                                 <br className="inline-block" />
                                 Personal Cloud
-                            </h1>
+                            </h2>
                             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600 mt-2 md:mt-0">
                                 2015
                             </span>
@@ -199,10 +199,10 @@ export default function Making(): React.ReactElement {
                     data-testid="making-project"
                     className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-gray-300">
                     <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
-                        <div className="flex flex-col md:flex-row md:items-baseline md:gap-3 items-center mb-6 w-full md:w-auto">
-                            <h1 className="title-font text-4xl font-medium text-gray-900">
+                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-center mb-6 w-full md:w-auto">
+                            <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl">
                                 Cloujera
-                            </h1>
+                            </h2>
                             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600 mt-2 md:mt-0">
                                 2014
                             </span>
@@ -252,10 +252,10 @@ export default function Making(): React.ReactElement {
                     data-testid="making-project"
                     className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10">
                     <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
-                        <div className="flex flex-col md:flex-row md:items-baseline md:gap-3 items-center mb-6 w-full md:w-auto">
-                            <h1 className="title-font text-4xl font-medium text-gray-900">
+                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-center mb-6 w-full md:w-auto">
+                            <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl">
                                 Crowdtransport
-                            </h1>
+                            </h2>
                             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600 mt-2 md:mt-0">
                                 2013
                             </span>

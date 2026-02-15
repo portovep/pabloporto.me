@@ -131,7 +131,7 @@ export default async function ReadingPage() {
 
     return (
         <PageContainer wide>
-            <div className="space-y-12 mb-12">
+            <div className="space-y-8 mb-8">
                 <div className="space-y-4" data-testid="reading-intro">
                     <PageHeader title="Reading">
                         My book collection and reading lists from{' '}

@@ -15,7 +15,7 @@ export default function Working({ allProjectData }: WorkingProps): React.ReactEl
         <Layout pageTitle="At work">
             <section data-testid="working-intro" className="mt-8 text-xl leading-6">
                 <PageHeader title="At work" />
-                <section className="w-full leading-relaxed mt-10 mb-10">
+                <section className="w-full leading-relaxed mt-8 mb-10">
                     <p className="pb-10">
                         With more than a decade of experience building digital products and
                         platforms, I&apos;ve evolved from full-stack engineering to technical
@@ -23,7 +23,7 @@ export default function Working({ allProjectData }: WorkingProps): React.ReactEl
                         in applying modern software engineering practices to data systems, helping
                         organizations unlock value from their data and become truly data-driven.
                     </p>
-                    <ul className="pl-15 px-10 pb-10 space-y-5 list-disc">
+                    <ul className="pl-12 px-10 pb-10 space-y-5 list-disc">
                         <li>
                             I help companies build software and data systems right with modern
                             software and data engineering tools and practices.
