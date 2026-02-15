@@ -1,16 +1,19 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 
-type PhotoCardProps = {
+interface PhotoCardProps {
     imageURL: StaticImageData;
     location: string;
     title: string;
-};
+    /** Set true for the first above-the-fold image to improve LCP (avoids lazy-load). */
+    priority?: boolean;
+}
 
 export default function PhotoCard({
     imageURL,
     location,
-    title
+    title,
+    priority = false
 }: PhotoCardProps): React.ReactElement {
     return (
         <div
@@ -22,11 +25,10 @@ export default function PhotoCard({
                     src={imageURL}
                     placeholder="blur"
                     className="object-cover"
-                    quality={100}
+                    quality={priority ? 100 : 80}
                     fill
-                    sizes="(max-width: 768px) 100vw,
-                        (max-width: 1200px) 50vw,
-                        33vw"
+                    sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 33vw"
+                    priority={priority}
                 />
             </div>
         </div>

@@ -8,7 +8,7 @@ const WorldMap = dynamic(() => import('../../components/WorldMap/WorldMap'), {
     ssr: false,
     loading: () => (
         <div
-            className="min-h-[400px] w-full flex items-center justify-center bg-gray-100 rounded-lg"
+            className="aspect-[1008/650] w-full min-h-0 flex items-center justify-center bg-gray-100 rounded-lg"
             aria-label="Loading map">
             <span className="text-gray-500">Loading map…</span>
         </div>
@@ -47,6 +47,7 @@ export default function Traveling(): React.ReactElement {
                         title="Taj Mahal"
                         location="Jaipur, India"
                         imageURL={tajMahalPhoto}
+                        priority
                     />
                     <PhotoCard
                         title="Taj Mahal Facade"

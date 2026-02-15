@@ -42,7 +42,7 @@ export default function WorldMap() {
     return (
         <div
             ref={containerRef}
-            className="world-map"
+            className="world-map aspect-[1008/650] w-full min-h-0"
             role="img"
             aria-label="Map of visited and lived countries">
             <MapWithCountries
