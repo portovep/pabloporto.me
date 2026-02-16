@@ -1,31 +1,36 @@
 import React from 'react';
 import Image from 'next/image';
 
+import { HeartIcon } from '@/components/ui/heart';
+import { CoffeeIcon } from '@/components/ui/coffee';
+
 export default function Footer(): React.ReactElement {
     return (
         <footer
             data-testid="footer"
             className="group h-28 mt-14 items-center justify-center w-full bg-white border-t border-gray-300 border-solid">
-            <div className="sm:text-xl flex items-center justify-center mt-4 text-base cursor-default">
-                Made with &nbsp;
-                <span className="group-hover:text-red-600" aria-label="heart" role="img">
-                    ♥️
-                </span>
-                &nbsp; and decaf &nbsp;
-                <span aria-label="coffee" role="img">
-                    ☕️
-                </span>
-                &nbsp; in Spain, {new Date().getFullYear()}™
+            <div className="sm:text-xl flex items-center justify-center gap-1 mt-4 text-base cursor-default">
+                Made with{' '}
+                <span className="inline-flex cursor-pointer hover:text-red-600" aria-hidden="true">
+                    <HeartIcon size={20} className="shrink-0" />
+                </span>{' '}
+                and flat whites{' '}
+                <span
+                    className="inline-flex cursor-pointer hover:text-amber-800"
+                    aria-hidden="true">
+                    <CoffeeIcon size={20} className="shrink-0" />
+                </span>{' '}
+                in Spain, {new Date().getFullYear()}™
             </div>
             <div className="flex items-center justify-center mt-4">
                 <a
                     className="mr-3.5"
-                    href="https://twitter.com/portovep"
+                    href="https://medium.com/@pablo.porto"
                     target="_blank"
                     rel="noopener noreferrer">
                     <Image
-                        src="/images/logos/twitter.svg"
-                        alt="Twitter Logo"
+                        src="/images/logos/medium.svg"
+                        alt="Medium Logo"
                         width="20"
                         height="20"
                     />
