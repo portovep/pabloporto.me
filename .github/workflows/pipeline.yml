@@ -39,7 +39,7 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v4
 
-            - name: Cypress run
+            - name: Run E2E tests
               uses: cypress-io/github-action@v6
               with:
                   build: npm run build
