@@ -6,44 +6,20 @@ import PageContainer from '@/components/PageContainer/PageContainer';
 import PageHeader from '@/components/ui/PageHeader/PageHeader';
 
 export const metadata: Metadata = {
-    title: 'Reading | Pablo Porto',
+    title: 'Reading',
     description: 'My book collection and reading lists from literal.club',
     keywords: ['books', 'reading', 'library', 'literature'],
-    authors: [{ name: 'Pablo Porto' }],
-    creator: 'Pablo Porto',
-    publisher: 'Pablo Porto',
-    formatDetection: {
-        email: false,
-        address: false,
-        telephone: false
-    },
-    metadataBase: new URL('https://pabloporto.me'),
     alternates: {
         canonical: '/reading'
     },
     openGraph: {
-        title: 'Reading | Pablo Porto',
+        title: 'Reading',
         description: 'My book collection and reading lists from literal.club',
-        url: '/reading',
-        siteName: 'Pablo Porto',
-        locale: 'en_US',
-        type: 'website'
+        url: '/reading'
     },
     twitter: {
-        card: 'summary',
-        title: 'Reading | Pablo Porto',
+        title: 'Reading',
         description: 'My book collection and reading lists from literal.club'
-    },
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1
-        }
     }
 };
 
