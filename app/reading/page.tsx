@@ -128,7 +128,6 @@ async function getShelves(): Promise<Shelf[]> {
 
 export default async function ReadingPage() {
     const shelves = await getShelves();
-
     return (
         <PageContainer wide>
             <div className="space-y-8 mb-8">
