@@ -20,6 +20,7 @@
         "prepare": "husky"
     },
     "dependencies": {
+        "@fontsource/cal-sans": "^5.2.3",
         "@radix-ui/react-collapsible": "^1.0.2",
         "@radix-ui/react-dropdown-menu": "^2.1.16",
         "@radix-ui/react-slot": "^1.2.3",
