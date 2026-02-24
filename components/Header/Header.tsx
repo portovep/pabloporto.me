@@ -27,7 +27,7 @@ export default function Header(): React.ReactElement {
     return (
         <header
             data-testid="navbar"
-            className="sticky top-0 z-20 py-5 mb-6 border-b border-border bg-background">
+            className="sticky top-0 z-20 py-5 mb-6 border-b border-border bg-background text-foreground">
             <div className="lg:max-w-4xl md:px-0 container flex items-center justify-between px-6 mx-auto">
                 <Link
                     href="/"
