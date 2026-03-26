@@ -40,3 +40,7 @@ deployment-url.txt
 #cypress
 cypress/screenshots
 cypress/videos  
+
+
+#claude
+.claude
