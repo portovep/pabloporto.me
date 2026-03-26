@@ -6,7 +6,7 @@ import { MapPin, ExternalLink } from 'lucide-react';
 import PageContainer from '@/components/PageContainer/PageContainer';
 
 export const metadata: Metadata = {
-    title: 'Bucharest Recommendations | Pablo Porto',
+    title: 'Bucharest Recommendations',
     description:
         'My personal recommendations for Bucharest, Romania. Discover the incredible specialty coffee scene, stunning architecture, and exceptional fine cuisine that made this city special to me.',
     keywords: [
@@ -19,24 +19,14 @@ export const metadata: Metadata = {
         'attractions',
         'travel guide'
     ],
-    authors: [{ name: 'Pablo Porto' }],
-    creator: 'Pablo Porto',
-    publisher: 'Pablo Porto',
-    formatDetection: {
-        email: false,
-        address: false,
-        telephone: false
-    },
-    metadataBase: new URL('https://pabloporto.me'),
     alternates: {
         canonical: '/bucharest'
     },
     openGraph: {
-        title: 'Bucharest Recommendations | Pablo Porto',
+        title: 'Bucharest Recommendations',
         description:
             'My personal recommendations for Bucharest, Romania. Discover the incredible specialty coffee scene, stunning architecture, and exceptional fine cuisine that made this city special to me.',
         url: '/bucharest',
-        siteName: 'Pablo Porto',
         images: [
             {
                 url: '/images/bucharest-og.jpg',
@@ -44,28 +34,15 @@ export const metadata: Metadata = {
                 height: 630,
                 alt: 'Bucharest city skyline and recommendations'
             }
-        ],
-        locale: 'en_US',
-        type: 'website'
+        ]
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Bucharest Recommendations | Pablo Porto',
+        title: 'Bucharest Recommendations',
         description:
             'My personal recommendations for Bucharest: incredible specialty coffee scene, stunning architecture, and exceptional fine cuisine.',
         images: ['/images/bucharest-og.jpg'],
         creator: '@pabloporto'
-    },
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1
-        }
     }
 };
 

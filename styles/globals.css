@@ -1,10 +1,12 @@
+@import '@fontsource/cal-sans';
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 @plugin '@tailwindcss/typography';
 
 @theme inline {
+    --font-heading: 'Cal Sans', ui-sans-serif, system-ui, sans-serif;
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
@@ -117,6 +119,9 @@
     }
     body {
         @apply bg-background text-foreground;
+        font-feature-settings:
+            'rlig' 1,
+            'calt' 1;
     }
 }
 

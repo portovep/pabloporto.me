@@ -5,47 +5,23 @@ import PageContainer from '@/components/PageContainer/PageContainer';
 import PageHeader from '@/components/ui/PageHeader/PageHeader';
 
 export const metadata: Metadata = {
-    title: 'Speaking | Pablo Porto',
+    title: 'Speaking',
     description:
         'Talks and speaking engagements I have given on software engineering, data engineering, and agile practices.',
     keywords: ['speaking', 'talks', 'conferences', 'presentations', 'software engineering'],
-    authors: [{ name: 'Pablo Porto' }],
-    creator: 'Pablo Porto',
-    publisher: 'Pablo Porto',
-    formatDetection: {
-        email: false,
-        address: false,
-        telephone: false
-    },
-    metadataBase: new URL('https://pabloporto.me'),
     alternates: {
         canonical: '/speaking'
     },
     openGraph: {
-        title: 'Speaking | Pablo Porto',
+        title: 'Speaking',
         description:
             'Talks and speaking engagements I have given on software engineering, data engineering, and agile practices.',
-        url: '/speaking',
-        siteName: 'Pablo Porto',
-        locale: 'en_US',
-        type: 'website'
+        url: '/speaking'
     },
     twitter: {
-        card: 'summary',
-        title: 'Speaking | Pablo Porto',
+        title: 'Speaking',
         description:
             'Talks and speaking engagements I have given on software engineering, data engineering, and agile practices.'
-    },
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1
-        }
     }
 };
 

@@ -22,7 +22,10 @@ export default function Layout({
             <section>{children}</section>
             {!home && (
                 <div className="mt-12 text-lg">
-                    <Link href="/" rel="noopener noreferrer">
+                    <Link
+                        href="/"
+                        rel="noopener noreferrer"
+                        className="rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
                         <span className="hover:text-emerald-600 font-medium">
                             <span aria-hidden="true" className="mr-2">
                                 ←
