@@ -23,7 +23,7 @@ export default function ProjectSummary(props: ProjectSummaryProps) {
             <Collapsible.Trigger
                 className={`${
                     open && 'bg-muted'
-                } focus:ring-4 focus:ring-border hover:bg-muted flex items-center justify-between w-full p-5 text-left`}>
+                } focus:ring-4 focus:ring-border hover:bg-muted flex items-center justify-between w-full p-5 text-left cursor-pointer`}>
                 <div className="my-5">
                     <h3 className="font-semibol text-2xl font-bold text-foreground">{name}</h3>
                     <p className="max-w-2xl mt-2 text-lg text-muted-foreground">

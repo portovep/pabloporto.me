@@ -30,8 +30,9 @@ export default function HomePage() {
                         Nice to meet you.
                     </h2>
                     <p className="mt-7 text-muted-foreground sm:text-xl sm:leading-8 leading-normal">
-                        I help engineering leaders build scalable and efficient systems while
-                        empowering their teams. More&nbsp;
+                        Engineer by craft, explorer by heart. I help engineering leaders build
+                        scalable software systems and bring their teams along for the ride.
+                        More&nbsp;
                         <Link
                             href="/about"
                             className="text-emerald-500 hover:text-emerald-600 font-medium"
@@ -47,7 +48,7 @@ export default function HomePage() {
                 <div className="md:max-w-4xl md:flex-row flex flex-col flex-wrap items-stretch md:justify-center justify-center max-w-full mx-auto gap-4">
                     <Card
                         title="Writing"
-                        description="A collection of half-baked articles, research, and other written stuff."
+                        description="Articles and notes on software engineering and beyond."
                         linkURL="/blog"
                     />
                     <Card
@@ -57,12 +58,12 @@ export default function HomePage() {
                     />
                     <Card
                         title="Speaking"
-                        description="Talks and speaking engagements on software engineering."
+                        description="Talks given at conferences, meetups, and bootcamps."
                         linkURL="/speaking"
                     />
                     <Card
                         title="Working"
-                        description="My experience as a software engineer."
+                        description="My experience building software and leading engineering teams."
                         linkURL="/working"
                     />
                     <Card
