@@ -30,11 +30,22 @@
 
 ### Next.js App Router (Primary)
 
+This is a **hybrid site**: the `pages/` directory still contains legacy routes (`/`, `/about`, `/blog`, `/making`, `/stack`, `/traveling`, `/working`) which remain on Pages Router. New routes (`/reading`, `/speaking`, `/bucharest`) live in `app/`.
+
 - **MUST** use Next.js 15 App Router (`app/` directory) for all new pages
 - **MUST NOT** create new Pages Router (`pages/`) routes
 - **MUST** use Server Components by default (no `'use client'` unless needed)
 - **MUST** use async Server Components for data fetching
 - **MUST** export `metadata` object for SEO (not `<Head>` component)
+
+### Data Sources
+
+- **Markdown files** in `content/posts/`, `content/projects/`, `content/travels/` — parsed by `lib/posts.ts`, `lib/projects.ts`
+- **Literal.club GraphQL API** (`lib/literal.ts`) — powers the reading page; requires env vars (see [Environment Variables](#environment-variables)). All fetch functions catch errors and return empty arrays/null to avoid breaking the build.
+
+### Theming
+
+Dark mode uses `next-themes` plus a blocking inline script in `app/layout.tsx` to prevent flash on load. The localStorage key is `pabloporto-theme`. CSS variables are defined in `styles/globals.css`. Use the `dark:` Tailwind prefix for dark-mode variants.
 
 ### React Patterns
 
@@ -42,7 +53,7 @@
 - **MUST NOT** import React unless using React APIs (hooks, types)
 - **MUST** use Server Components for data fetching
 - **MUST** mark Client Components with `'use client'` directive
-- **MUST** use `forwardRef` for components that need ref forwarding
+- **MUST** accept `ref` as a regular prop for components that need ref forwarding (React 19 — `forwardRef` is deprecated)
 
 ### Example: Server Component Pattern
 
@@ -99,7 +110,7 @@ export default function InteractiveComponent() {
 ### Adding New shadcn/ui Components
 
 - **MUST** use `npx shadcn@latest add [component]` command
-- **MUST** follow shadcn/ui conventions (forwardRef, displayName, etc.)
+- **MUST** follow shadcn/ui conventions (ref as prop, displayName, etc.)
 - **MUST** export from `components/ui/index.ts` if needed
 
 ### Example: Using UI Components
@@ -129,6 +140,8 @@ export default function MyComponent({ className }: { className?: string }) {
 ## TypeScript Conventions
 
 ### Type Safety
+
+Note: `tsconfig.json` has `strict: false` and `strictNullChecks: false`, so the compiler does not enforce strict null safety. The rules below are intended conventions, not all of them are enforced at compile time.
 
 - **MUST** use TypeScript for all new files (`.ts` or `.tsx`)
 - **MUST** define proper types for all component props
@@ -481,7 +494,7 @@ generation. Resolves CVE-2024-XXXXX.
 
 ### Test File Naming
 
-- **MUST** use kebab-case: `navigation_test.ts`, `blog_page_test.ts`
+- **MUST** use snake_case: `navigation_test.ts`, `blog_page_test.ts`
 - **MUST** suffix with `_test.ts` or `.test.ts`
 
 ### Running Tests
@@ -560,7 +573,7 @@ generation. Resolves CVE-2024-XXXXX.
 - **MUST** use `priority` for above-the-fold images
 - **MUST** use `quality` prop (default: 75, use 100 for hero images)
 - **MUST** use `sizes` prop for responsive images
-- **MUST** use `placeholder="blur"` when possible
+- **MUST** use `placeholder="blur"` for statically imported local images (Next.js generates `blurDataURL` automatically); for remote images (e.g., API URLs) you must supply `blurDataURL` explicitly or omit the prop
 
 ### Image Examples
 
@@ -631,6 +644,14 @@ export default async function ReadingPage() {
 ---
 
 ## Environment Variables
+
+### Required Variables
+
+These are needed for the reading page and for the production build to succeed:
+
+- `LITERAL_API_TOKEN` — Literal.club API bearer token
+- `LITERAL_PROFILE_ID` — Literal.club profile ID
+- `LITERAL_PROFILE_HANDLE` — Literal.club profile handle
 
 ### Validation
 

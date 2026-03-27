@@ -1,7 +1,3 @@
-# Build, test, deploy to preview on push to main or pull_request.
-# Performance check and deploy to prod are manual: add "Required reviewers" to
-# the "performance" and "production" environments in repo Settings → Environments.
-# Deploy to prod runs only on push to main (not on PRs).
 name: CD Pipeline
 
 on:
@@ -40,8 +36,6 @@ jobs:
     test:
         name: Test
         runs-on: ubuntu-latest
-        needs: [build]
-
         steps:
             - name: Checkout code
               uses: actions/checkout@v4

@@ -1,7 +1,6 @@
 'use client';
 
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
-import { ThemeSync } from '@/components/ThemeSync';
 
 interface ThemeProviderProps {
     children: React.ReactNode;
@@ -15,7 +14,6 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
             enableSystem
             storageKey="pabloporto-theme"
             enableColorScheme>
-            <ThemeSync />
             {children}
         </NextThemesProvider>
     );

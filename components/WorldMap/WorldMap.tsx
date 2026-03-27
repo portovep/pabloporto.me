@@ -51,39 +51,39 @@ export default function WorldMap() {
                     alt="Map with my visited and lived countries"
                 />
             </div>
-            <section className="body-font text-gray-600">
+            <section className="body-font text-muted-foreground">
                 <div className="container px-5 py-12 mx-auto">
                     <div className="mb-14 flex flex-col w-full text-center">
-                        <h1 className="sm:text-3xl title-font mb-4 text-2xl font-medium text-gray-900">
+                        <h1 className="sm:text-3xl title-font mb-4 text-2xl font-medium text-foreground">
                             Exploring the world
                         </h1>
                         <p className="lg:w-2/3 mx-auto text-xl leading-relaxed">
                             In <span className="text-emerald-500 font-extrabold">green</span> are
                             the countries I visited so far, in
-                            <span className="font-extrabold text-black"> black</span> the ones where
-                            I lived for at least one month.
+                            <span className="font-extrabold text-foreground"> black</span> the ones
+                            where I lived for at least one month.
                         </p>
                     </div>
                     <div className="flex flex-wrap -m-4 text-center">
                         <div className="md:w-1/3 sm:w-1/2 w-full p-4">
-                            <div className="px-4 py-6 border-2 border-gray-200 rounded-lg">
-                                <h2 className="title-font text-3xl font-medium text-gray-900">
+                            <div className="px-4 py-6 border-2 border-border rounded-lg">
+                                <h2 className="title-font text-3xl font-medium text-foreground">
                                     {uniqueVisitedCount}
                                 </h2>
                                 <p className="leading-relaxed">countries visited</p>
                             </div>
                         </div>
                         <div className="md:w-1/3 sm:w-1/2 w-full p-4">
-                            <div className="px-4 py-6 border-2 border-gray-200 rounded-lg">
-                                <h2 className="title-font text-3xl font-medium text-gray-900">
+                            <div className="px-4 py-6 border-2 border-border rounded-lg">
+                                <h2 className="title-font text-3xl font-medium text-foreground">
                                     {travelingStats.lived.length}
                                 </h2>
                                 <p className="leading-relaxed">countries lived</p>
                             </div>
                         </div>
                         <div className="md:w-1/3 sm:w-1/2 w-full p-4">
-                            <div className="px-4 py-6 border-2 border-gray-200 rounded-lg">
-                                <h2 className="title-font text-3xl font-medium text-gray-900">
+                            <div className="px-4 py-6 border-2 border-border rounded-lg">
+                                <h2 className="title-font text-3xl font-medium text-foreground">
                                     {travelingStats.continents.length}
                                 </h2>
                                 <p className="leading-relaxed">continents visited</p>

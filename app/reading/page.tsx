@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import { getShelvesByProfileId, getProfileIdFromHandle, type Shelf } from '@/lib/literal';
+import { env } from '@/lib/env';
 import { downloadBookCovers } from '@/lib/bookCovers';
-import ShelfComponent from '@/components/Shelf/Shelf';
-import PageContainer from '@/components/PageContainer/PageContainer';
+import ShelfComponent from '@/components/Shelf';
+import PageContainer from '@/components/PageContainer';
 import PageHeader from '@/components/ui/PageHeader/PageHeader';
 
 export const metadata: Metadata = {
@@ -27,9 +28,9 @@ export const metadata: Metadata = {
 const EXCLUDED_SHELF_SLUGS: string[] = ['work-2023-p92i4e5', 'career-vl09pnx'];
 
 async function getShelves(): Promise<Shelf[]> {
-    const apiToken = process.env.LITERAL_API_TOKEN;
-    const profileId = process.env.LITERAL_PROFILE_ID;
-    const profileHandle = process.env.LITERAL_PROFILE_HANDLE;
+    const apiToken = env.LITERAL_API_TOKEN;
+    const profileId = env.LITERAL_PROFILE_ID;
+    const profileHandle = env.LITERAL_PROFILE_HANDLE;
 
     // During build time, if env vars are not set, return empty array instead of throwing
     if (!profileId && !profileHandle) {
@@ -44,7 +45,7 @@ async function getShelves(): Promise<Shelf[]> {
     // If only handle is provided, fetch profile ID
     if (!finalProfileId && profileHandle) {
         try {
-            finalProfileId = await getProfileIdFromHandle(profileHandle);
+            finalProfileId = (await getProfileIdFromHandle(profileHandle)) ?? undefined;
             if (!finalProfileId) {
                 console.warn(`Could not find profile with handle: ${profileHandle}`);
                 return [];
@@ -125,7 +126,7 @@ export default async function ReadingPage() {
                     {shelves.length > 0 ? (
                         shelves.map((shelf) => <ShelfComponent key={shelf.id} shelf={shelf} />)
                     ) : (
-                        <p className="text-gray-500">No shelves found.</p>
+                        <p className="text-muted-foreground">No shelves found.</p>
                     )}
                 </div>
             </div>
