@@ -1,5 +1,3 @@
-import React from 'react';
-
 type PageHeaderProps = {
     title: string;
     children?: React.ReactNode;

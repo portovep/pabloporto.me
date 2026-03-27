@@ -1,1 +1,2 @@
-import pluginCypress from 'eslint-plugin-cypress'
+const config = {};
+export default config;

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getSortedTalks } from '@/lib/talks';
-import TalkCard from '@/components/TalkCard/TalkCard';
-import PageContainer from '@/components/PageContainer/PageContainer';
+import TalkCard from '@/components/TalkCard';
+import PageContainer from '@/components/PageContainer';
 import PageHeader from '@/components/ui/PageHeader/PageHeader';
 
 export const metadata: Metadata = {
@@ -42,7 +42,7 @@ export default async function SpeakingPage() {
                     {talks.length > 0 ? (
                         talks.map((talk) => <TalkCard key={talk.id} talk={talk} />)
                     ) : (
-                        <p className="text-gray-500">No talks found.</p>
+                        <p className="text-muted-foreground">No talks found.</p>
                     )}
                 </div>
             </div>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { cn } from '@/app/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { MapPin, ExternalLink } from 'lucide-react';
-import PageContainer from '@/components/PageContainer/PageContainer';
+import PageContainer from '@/components/PageContainer';
 
 export const metadata: Metadata = {
     title: 'Bucharest Recommendations',
@@ -60,9 +60,9 @@ export default function BucharestPage() {
                         Bucharest
                     </h1>
                     <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-                        During my time in Romania's captivating capital, I discovered three things
-                        that made Bucharest truly special: an incredible specialty coffee scene,
-                        stunning Belle Époque architecture, and really high quality
+                        During my time in Romania&apos;s captivating capital, I discovered three
+                        things that made Bucharest truly special: an incredible specialty coffee
+                        scene, stunning Belle Époque architecture, and really high quality
                         restaurants.{' '}
                     </p>
                     <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">

@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 type StackItemProps = {
@@ -12,10 +11,10 @@ export default function StackItem(props: StackItemProps): React.ReactElement {
     return (
         <li
             data-testid="stack-item"
-            className="lg:hover:bg-white lg:hover:shadow-lg lg:hover:border-emerald-400 mt-6 transition-colors duration-150 bg-white border-2 border-gray-200 rounded-lg">
+            className="lg:hover:bg-card lg:hover:shadow-lg lg:hover:border-emerald-400 mt-6 transition-colors duration-150 bg-card border-2 border-border rounded-lg">
             <a className="flex px-4 py-4 rounded" href={link}>
                 <Image
-                    className="rounded-xl border border-gray-100"
+                    className="rounded-xl border border-border"
                     src={`/images/stack/${name
                         .toLowerCase()
                         .replace('.', '')

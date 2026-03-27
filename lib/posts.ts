@@ -2,18 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { parseMarkdownContent } from './markdown';
+import { PostFrontmatterSchema } from './content-types';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
 export type PostData = {
     id: string;
-    title: string;
-    date: string;
-    type: string;
-    link?: string;
     contentHtml?: string;
-    tag?: string;
-};
+} & ReturnType<typeof PostFrontmatterSchema.parse>;
 
 export const getPostData = async (id: string): Promise<PostData> => {
     return await parsePost(`${id}.md`);
@@ -45,7 +41,7 @@ export const getAllPostIds = async (): Promise<{ params: { id: string } }[]> => 
     });
 };
 
-const parsePost = async (fileName: string) => {
+const parsePost = async (fileName: string): Promise<PostData> => {
     const id = fileName.replace(/\.md$/, '');
 
     const fullPath = path.join(postsDirectory, fileName);
@@ -53,10 +49,11 @@ const parsePost = async (fileName: string) => {
 
     const matterResult = matter(fileContents);
     const contentHtml = parseMarkdownContent(matterResult.content);
+    const frontmatter = PostFrontmatterSchema.parse(matterResult.data);
 
     return {
         id,
         contentHtml,
-        ...matterResult.data
-    } as PostData;
+        ...frontmatter
+    };
 };

@@ -1,6 +1,11 @@
 const selectTheme = (theme: 'Light' | 'Dark' | 'System') => {
+    // ensure any previously open menu is fully unmounted before opening a new one
+    cy.get('[role="menu"]').should('not.exist');
     cy.get('[data-testid="theme-toggle"]').click();
-    cy.get('[role="menuitem"]').contains(theme).click();
+    cy.get('[role="menu"]').should('be.visible');
+    cy.contains('[role="menuitem"]', theme).click();
+    // wait for the portal to unmount before returning
+    cy.get('[role="menu"]').should('not.exist');
 };
 
 describe('Theme switcher', () => {
@@ -36,6 +41,7 @@ describe('Theme switcher', () => {
 
     it('should persist light mode after page reload', () => {
         selectTheme('Dark');
+        cy.get('html').should('have.class', 'dark');
         selectTheme('Light');
 
         cy.reload();
