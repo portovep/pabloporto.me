@@ -58,7 +58,7 @@ export default function HomePage() {
                     />
                     <Card
                         title="Speaking"
-                        description="Talks given at conferences, meetups, and bootcamps."
+                        description="Talks given at conferences, meetups and bootcamps."
                         linkURL="/speaking"
                     />
                     <Card
@@ -73,7 +73,7 @@ export default function HomePage() {
                     />
                     <Card
                         title="Making"
-                        description="Some of the things I built on the side."
+                        description="Some of the things I built just for fun."
                         linkURL="/making"
                     />
                 </div>

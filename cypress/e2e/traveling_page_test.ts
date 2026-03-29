@@ -44,4 +44,17 @@ describe('Traveling page', () => {
     it('should render at least 3 photos', () => {
         cy.get('[data-testid="photo-card"]').its('length').should('be.at.least', 3);
     });
+
+    it('should show country name tooltip when hovering a country', () => {
+        cy.get('.world-map svg path.visited', { timeout: 10000 }).should('have.length.at.least', 1);
+
+        cy.get('.world-map svg path[id="PT"]').trigger('mousemove', {
+            bubbles: true,
+            force: true,
+            clientX: 500,
+            clientY: 500
+        });
+
+        cy.get('[data-testid="map-tooltip"]').should('exist').and('contain.text', 'Portugal');
+    });
 });

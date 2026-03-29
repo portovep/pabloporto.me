@@ -1,11 +1,15 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { travelingStats, uniqueVisitedCount } from 'content/travels/travelingStats';
 import MapWithCountries from './worldmap.svg';
 
 const livedIds = new Set(travelingStats.lived.map((c) => c.id));
 const visitedIds = new Set(travelingStats.visited.map((c) => c.id));
+const idToName = new Map<string, string>([
+    ...travelingStats.visited.map((c) => [c.id, c.title] as const),
+    ...travelingStats.lived.map((c) => [c.id, c.title] as const)
+]);
 
 function getPathClass(id: string): string {
     if (livedIds.has(id)) return 'lived';
@@ -15,6 +19,7 @@ function getPathClass(id: string): string {
 
 export default function WorldMap() {
     const containerRef = useRef<HTMLDivElement>(null);
+    const [tooltip, setTooltip] = useState<{ x: number; y: number; name: string } | null>(null);
 
     // Apply land/visited/lived classes to map paths. Run on mount and after a tick so we
     // catch the SVG when it mounts (e.g. after dynamic import). Path ids are preserved by
@@ -40,7 +45,22 @@ export default function WorldMap() {
     }, []);
 
     return (
-        <div ref={containerRef} className="world-map w-full">
+        <div
+            ref={containerRef}
+            className="world-map w-full"
+            onMouseMove={(e) => {
+                const target = e.target as SVGPathElement;
+                if (target.tagName === 'path') {
+                    const id = target.getAttribute('id');
+                    const name = id ? (idToName.get(id) ?? null) : null;
+                    if (name) {
+                        setTooltip({ x: e.clientX, y: e.clientY, name });
+                        return;
+                    }
+                }
+                setTooltip(null);
+            }}
+            onMouseLeave={() => setTooltip(null)}>
             <div
                 className="aspect-[1008/650] w-full min-h-0"
                 role="img"
@@ -51,6 +71,14 @@ export default function WorldMap() {
                     alt="Map with my visited and lived countries"
                 />
             </div>
+            {tooltip && (
+                <div
+                    data-testid="map-tooltip"
+                    className="fixed z-50 pointer-events-none px-2 py-1 text-xs font-medium rounded-md bg-primary text-primary-foreground shadow"
+                    style={{ left: tooltip.x + 12, top: tooltip.y + 12 }}>
+                    {tooltip.name}
+                </div>
+            )}
             <section className="body-font text-muted-foreground">
                 <div className="container px-5 py-12 mx-auto">
                     <div className="mb-14 flex flex-col w-full text-center">
@@ -60,8 +88,15 @@ export default function WorldMap() {
                         <p className="lg:w-2/3 mx-auto text-xl leading-relaxed">
                             In <span className="text-emerald-500 font-extrabold">green</span> are
                             the countries I visited so far, in
-                            <span className="font-extrabold text-foreground"> black</span> the ones
-                            where I lived for at least one month.
+                            <span className="font-extrabold text-foreground dark:hidden">
+                                {' '}
+                                black
+                            </span>
+                            <span className="font-extrabold text-foreground hidden dark:inline">
+                                {' '}
+                                white
+                            </span>{' '}
+                            the ones where I lived for at least one month.
                         </p>
                     </div>
                     <div className="flex flex-wrap -m-4 text-center">

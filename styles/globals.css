@@ -169,21 +169,21 @@
 
 /* Dark mode overrides for world map */
 .dark .world-map svg path.land {
-    fill: #4a4a4a !important;
-    stroke: #1a1a1a !important;
+    fill: #64748b !important;
+    stroke: #0f172a !important;
 }
 .dark .world-map svg path.land:hover {
-    fill: #666666 !important;
+    fill: #94a3b8 !important;
 }
 .dark .world-map svg path.visited {
-    stroke: #1a1a1a !important;
+    stroke: #0f172a !important;
 }
 .dark .world-map svg path.visited:hover {
-    stroke: #1a1a1a !important;
+    stroke: #0f172a !important;
 }
 .dark .world-map svg path.lived {
-    fill: #e0e0e0 !important;
-    stroke: #1a1a1a !important;
+    fill: #f1f5f9 !important;
+    stroke: #0f172a !important;
 }
 .dark .world-map svg path.lived:hover {
     fill: #ffffff !important;
