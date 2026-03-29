@@ -15,10 +15,9 @@ describe('Navigation functionality', () => {
 
         navigationRoutes.forEach((route) => {
             it(`should navigate to ${route.name} page from home card`, () => {
-                cy.get(`[data-testid="home-card-${route.testId}"]`).within(() => {
-                    cy.get('a').should('have.attr', 'href', route.path);
-                    cy.get('a').click();
-                });
+                cy.get(`[data-testid="home-card-${route.testId}"]`)
+                    .should('have.attr', 'href', route.path)
+                    .click();
                 cy.url().should('include', route.path);
             });
         });

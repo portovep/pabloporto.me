@@ -36,7 +36,6 @@ describe('Reading page', () => {
     it('should have external links to literal.club for books', () => {
         cy.get('[data-testid="book-card"]')
             .first()
-            .parent()
             .should('have.attr', 'href')
             .and('include', 'literal.club');
     });
