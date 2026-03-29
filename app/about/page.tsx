@@ -41,6 +41,7 @@ export default function AboutPage() {
                             src={aboutPagePhoto}
                             className="h-auto max-w-full rounded"
                             placeholder="blur"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
                     </div>
                 </div>
