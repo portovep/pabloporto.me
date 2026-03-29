@@ -4,6 +4,7 @@ import FilteredProjects from '@/components/FilteredProjects';
 import { PageHeader } from '@/components/ui';
 import { getSortedProjectData } from '@/lib/projects';
 import { createMetadata } from '@/lib/metadata';
+import GetInTouch from '@/components/GetInTouch';
 
 export const metadata = createMetadata(
     'At work',
@@ -377,53 +378,7 @@ export default async function WorkingPage() {
                     </div>
                     <FilteredProjects projects={allProjectData} />
                 </section>
-                <section className="w-full leading-relaxed mt-20">
-                    <div className="mt-10 mb-10 py-10">
-                        <h2 className="text-3xl font-semibold text-foreground sm:text-4xl mb-4">
-                            Let&apos;s Connect
-                        </h2>
-                        <p className="text-muted-foreground mb-4">
-                            I am always looking forward to meeting new people. If you want to
-                            connect, you can find me on{' '}
-                            <a
-                                href="https://linkedin.com/in/pabloportoveloso"
-                                target="_blank"
-                                className="text-emerald-500 hover:text-emerald-600 font-medium"
-                                rel="noopener noreferrer">
-                                LinkedIn
-                            </a>
-                            ,{' '}
-                            <a
-                                href="https://github.com/portovep"
-                                target="_blank"
-                                className="text-emerald-500 hover:text-emerald-600 font-medium"
-                                rel="noopener noreferrer">
-                                Github
-                            </a>
-                            , or{' '}
-                            <a
-                                href="https://www.instagram.com/porto.vga"
-                                target="_blank"
-                                className="text-emerald-500 hover:text-emerald-600 font-medium"
-                                rel="noopener noreferrer">
-                                Instagram
-                            </a>
-                            .
-                        </p>
-                        <div className="flex justify-start gap-4">
-                            <a
-                                href="mailto:pablo@pabloporto.me"
-                                className="px-6 py-3 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600">
-                                Get in Touch
-                            </a>
-                            <Link
-                                href="/blog"
-                                className="px-6 py-3 border border-emerald-500 text-emerald-600 rounded-lg hover:bg-emerald-50">
-                                Read My Blog
-                            </Link>
-                        </div>
-                    </div>
-                </section>
+                <GetInTouch />
             </section>
         </PageContainer>
     );
