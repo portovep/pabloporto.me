@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 import PageContainer from '@/components/PageContainer';
 import PostBody from '@/components/PostBody';
 import { getAllPostIds, getPostData } from '@/lib/posts';
@@ -27,6 +29,12 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
 
     return (
         <PageContainer>
+            <Link
+                href="/blog"
+                className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8">
+                <ArrowLeft className="h-4 w-4" />
+                See all posts
+            </Link>
             <div className="md:-mb-10 flex justify-around -mb-10">
                 <span className="relative inline-flex">
                     <Image
@@ -76,6 +84,14 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                     <PostBody contentHtml={postData.contentHtml ?? ''} />
                 </div>
             </article>
+            <div className="flex justify-center mt-4 mb-8">
+                <Link
+                    href="/blog"
+                    className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    <ArrowLeft className="h-4 w-4" />
+                    See all posts
+                </Link>
+            </div>
         </PageContainer>
     );
 }
