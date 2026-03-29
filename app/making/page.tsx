@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function MakingPage() {
     return (
         <PageContainer wide>
-            <section data-testid="making-intro" className="body-font mt-8 text-muted-foreground">
+            <section data-testid="making-intro" className="body-font text-muted-foreground">
                 <PageHeader title="Making">
                     I love building things to learn new skills. These are some of the apps I made.
                 </PageHeader>

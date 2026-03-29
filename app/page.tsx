@@ -20,7 +20,7 @@ export default function HomePage() {
                 </Link>
             </div>
             <div data-testid="home-intro" className="pt-10 text-xl leading-6">
-                <div className="max-w-2xl mx-auto text-center px-6 sm:px-0">
+                <div className="max-w-2xl mx-auto text-center px-8 sm:px-0">
                     <h2 className="sm:text-5xl md:text-6xl text-3xl font-bold tracking-tighter">
                         Hi,{' '}
                         <span className="text-emerald-500 pl-1 font-bold rounded">
@@ -44,7 +44,7 @@ export default function HomePage() {
                 </div>
             </div>
 
-            <div className="flex flex-col items-center justify-center mt-10">
+            <div className="flex flex-col items-center justify-center mt-10 px-8 sm:px-0">
                 <div className="md:max-w-4xl md:flex-row flex flex-col flex-wrap items-stretch md:justify-center justify-center max-w-full mx-auto gap-4">
                     <Card
                         title="Writing"

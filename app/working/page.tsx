@@ -14,7 +14,7 @@ export default async function WorkingPage() {
 
     return (
         <PageContainer>
-            <section data-testid="working-intro" className="mt-8 text-xl leading-6">
+            <section data-testid="working-intro" className="text-xl leading-6">
                 <PageHeader title="At work" />
                 <section className="w-full leading-relaxed mt-8 mb-10">
                     <p className="pb-6">

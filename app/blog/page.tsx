@@ -14,7 +14,7 @@ export default async function BlogPage() {
 
     return (
         <PageContainer>
-            <section className="mt-8 text-xl leading-6">
+            <section className="text-xl leading-6">
                 <PageHeader title="Blog">
                     A collection of articles and papers about software and data engineering. You can
                     also

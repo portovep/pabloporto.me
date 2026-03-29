@@ -8,7 +8,7 @@ export default function PageContainer({
     wide = false
 }: PageContainerProps): React.ReactElement {
     return (
-        <div className={`${wide ? 'max-w-6xl' : 'max-w-4xl'} mx-auto px-4 py-8 sm:px-6 md:py-12`}>
+        <div className={`${wide ? 'max-w-6xl' : 'max-w-4xl'} mx-auto px-8 py-6 lg:py-10`}>
             {children}
         </div>
     );

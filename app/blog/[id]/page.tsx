@@ -48,7 +48,7 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                     />
                 </span>
             </div>
-            <article className="md:px-10 max-w-5xl px-4 py-6 my-4">
+            <article className="md:px-10 max-w-5xl py-6 my-4">
                 <div className="flex items-center justify-between">
                     <span className="font-light text-muted-foreground">
                         <Date dateString={postData.date} />

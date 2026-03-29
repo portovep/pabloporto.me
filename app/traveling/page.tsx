@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function TravelingPage() {
     return (
         <PageContainer wide>
-            <section data-testid="traveling-intro" className="mt-8 text-xl leading-6">
+            <section data-testid="traveling-intro" className="text-xl leading-6">
                 <PageHeader title="Traveling" />
 
                 <div className="mt-14 p-1 mb-8">
