@@ -1,6 +1,6 @@
 'use client';
 
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Monitor, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 import {
@@ -56,9 +56,18 @@ export function ThemeToggle(): React.ReactElement {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuItem onSelect={handleSelect('light')}>Light</DropdownMenuItem>
-                <DropdownMenuItem onSelect={handleSelect('dark')}>Dark</DropdownMenuItem>
-                <DropdownMenuItem onSelect={handleSelect('system')}>System</DropdownMenuItem>
+                <DropdownMenuItem onSelect={handleSelect('light')}>
+                    <Sun className="mr-2 h-4 w-4" />
+                    Light
+                </DropdownMenuItem>
+                <DropdownMenuItem onSelect={handleSelect('dark')}>
+                    <Moon className="mr-2 h-4 w-4" />
+                    Dark
+                </DropdownMenuItem>
+                <DropdownMenuItem onSelect={handleSelect('system')}>
+                    <Monitor className="mr-2 h-4 w-4" />
+                    System
+                </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
     );
