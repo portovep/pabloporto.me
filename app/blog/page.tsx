@@ -1,13 +1,15 @@
-import { Metadata } from 'next';
 import Link from 'next/link';
 import PageContainer from '@/components/PageContainer';
 import PostSummary from '@/components/PostSummary';
 import { PageHeader } from '@/components/ui';
 import { getSortedPostsData } from '@/lib/posts';
+import { createMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-    title: 'Blog'
-};
+export const metadata = createMetadata(
+    'Blog',
+    'Articles and notes on software engineering, data systems, and technical leadership.',
+    '/blog'
+);
 
 export default async function BlogPage() {
     const allPostsData = await getSortedPostsData();

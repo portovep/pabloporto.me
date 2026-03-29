@@ -1,28 +1,16 @@
-import { Metadata } from 'next';
 import { getShelvesByProfileId, getProfileIdFromHandle, type Shelf } from '@/lib/literal';
 import { env } from '@/lib/env';
 import { downloadBookCovers } from '@/lib/bookCovers';
 import ShelfComponent from '@/components/Shelf';
 import PageContainer from '@/components/PageContainer';
 import PageHeader from '@/components/ui/PageHeader/PageHeader';
+import { createMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-    title: 'Reading',
-    description: 'My book collection and reading lists from literal.club',
-    keywords: ['books', 'reading', 'library', 'literature'],
-    alternates: {
-        canonical: '/reading'
-    },
-    openGraph: {
-        title: 'Reading',
-        description: 'My book collection and reading lists from literal.club',
-        url: '/reading'
-    },
-    twitter: {
-        title: 'Reading',
-        description: 'My book collection and reading lists from literal.club'
-    }
-};
+export const metadata = createMetadata(
+    'Reading',
+    'My book collection and reading lists from literal.club',
+    '/reading'
+);
 
 // Shelves to exclude from display
 const EXCLUDED_SHELF_SLUGS: string[] = ['work-2023-p92i4e5', 'career-vl09pnx'];

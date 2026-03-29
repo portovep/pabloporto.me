@@ -1,13 +1,15 @@
-import { Metadata } from 'next';
 import Link from 'next/link';
 import PageContainer from '@/components/PageContainer';
 import FilteredProjects from '@/components/FilteredProjects';
 import { PageHeader } from '@/components/ui';
 import { getSortedProjectData } from '@/lib/projects';
+import { createMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-    title: 'At work'
-};
+export const metadata = createMetadata(
+    'At work',
+    'Over 10 years helping startups and enterprises build scalable software systems and high-performing engineering teams.',
+    '/working'
+);
 
 export default async function WorkingPage() {
     const allProjectData = await getSortedProjectData();

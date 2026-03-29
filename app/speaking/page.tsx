@@ -1,29 +1,14 @@
-import { Metadata } from 'next';
 import { getSortedTalks } from '@/lib/talks';
 import TalkCard from '@/components/TalkCard';
 import PageContainer from '@/components/PageContainer';
 import PageHeader from '@/components/ui/PageHeader/PageHeader';
+import { createMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-    title: 'Speaking',
-    description:
-        'Talks and speaking engagements I have given on software engineering, data engineering, and agile practices.',
-    keywords: ['speaking', 'talks', 'conferences', 'presentations', 'software engineering'],
-    alternates: {
-        canonical: '/speaking'
-    },
-    openGraph: {
-        title: 'Speaking',
-        description:
-            'Talks and speaking engagements I have given on software engineering, data engineering, and agile practices.',
-        url: '/speaking'
-    },
-    twitter: {
-        title: 'Speaking',
-        description:
-            'Talks and speaking engagements I have given on software engineering, data engineering, and agile practices.'
-    }
-};
+export const metadata = createMetadata(
+    'Speaking',
+    'Talks and speaking engagements I have given on software engineering, data engineering, and agile practices.',
+    '/speaking'
+);
 
 export default async function SpeakingPage() {
     const talks = await getSortedTalks();

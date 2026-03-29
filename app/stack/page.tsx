@@ -1,10 +1,12 @@
-import { Metadata } from 'next';
 import PageContainer from '@/components/PageContainer';
 import { PageHeader, StackItem } from '@/components/ui';
+import { createMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-    title: 'My stack'
-};
+export const metadata = createMetadata(
+    'My stack',
+    'The tools and technologies I default to when building software systems — from TypeScript and Next.js to Terraform and AWS.',
+    '/stack'
+);
 
 export default function StackPage() {
     return (

@@ -1,32 +1,20 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { createMetadata } from '@/lib/metadata';
 import { cn } from '@/app/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { MapPin, ExternalLink } from 'lucide-react';
 import PageContainer from '@/components/PageContainer';
 
+const bucharestDescription =
+    'My personal recommendations for Bucharest, Romania. Discover the incredible specialty coffee scene, stunning architecture, and exceptional fine cuisine that made this city special to me.';
+
+const base = createMetadata('Bucharest Recommendations', bucharestDescription, '/bucharest');
+
 export const metadata: Metadata = {
-    title: 'Bucharest Recommendations',
-    description:
-        'My personal recommendations for Bucharest, Romania. Discover the incredible specialty coffee scene, stunning architecture, and exceptional fine cuisine that made this city special to me.',
-    keywords: [
-        'Bucharest',
-        'Romania',
-        'travel',
-        'recommendations',
-        'restaurants',
-        'cafes',
-        'attractions',
-        'travel guide'
-    ],
-    alternates: {
-        canonical: '/bucharest'
-    },
+    ...base,
     openGraph: {
-        title: 'Bucharest Recommendations',
-        description:
-            'My personal recommendations for Bucharest, Romania. Discover the incredible specialty coffee scene, stunning architecture, and exceptional fine cuisine that made this city special to me.',
-        url: '/bucharest',
+        ...base.openGraph,
         images: [
             {
                 url: '/images/bucharest-og.jpg',
@@ -37,10 +25,8 @@ export const metadata: Metadata = {
         ]
     },
     twitter: {
+        ...base.twitter,
         card: 'summary_large_image',
-        title: 'Bucharest Recommendations',
-        description:
-            'My personal recommendations for Bucharest: incredible specialty coffee scene, stunning architecture, and exceptional fine cuisine.',
         images: ['/images/bucharest-og.jpg'],
         creator: '@pabloporto'
     }

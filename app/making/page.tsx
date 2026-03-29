@@ -1,8 +1,8 @@
-import { Metadata } from 'next';
 import Image from 'next/image';
 import PageContainer from '@/components/PageContainer';
 import { PageHeader } from '@/components/ui';
 import { Button } from '@/components/ui/button';
+import { createMetadata } from '@/lib/metadata';
 
 import chromeStoreCTA from '@/public/images/projects/chrome_store.png';
 import cloujeraScreenshot from '@/public/images/projects/cloujera_framed.png';
@@ -11,9 +11,11 @@ import crowdtransportScreenshot from '@/public/images/projects/media_crowdtransp
 import oneStreamScreenshot from '@/public/images/projects/1stream_screenshot.png';
 import wanderpassScreenshot from '@/public/images/projects/wanderpass_screenshot.png';
 
-export const metadata: Metadata = {
-    title: 'Making'
-};
+export const metadata = createMetadata(
+    'Making',
+    'Apps and side projects I built for fun — from Chrome extensions to mobile apps and web platforms.',
+    '/making'
+);
 
 export default function MakingPage() {
     return (

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
+import { createMetadata } from '@/lib/metadata';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import PageContainer from '@/components/PageContainer';
@@ -20,7 +21,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { id } = await params;
     const postData = await getPostData(id);
-    return { title: postData.title };
+    return createMetadata(postData.title, postData.title, `/blog/${id}`);
 }
 
 export default async function PostPage(props: { params: Promise<{ id: string }> }) {

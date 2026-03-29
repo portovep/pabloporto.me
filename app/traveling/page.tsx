@@ -1,8 +1,8 @@
-import { Metadata } from 'next';
 import PageContainer from '@/components/PageContainer';
 import PhotoCard from '@/components/PhotoCard';
 import { PageHeader } from '@/components/ui';
 import WorldMapClient from './WorldMapClient';
+import { createMetadata } from '@/lib/metadata';
 
 import beachHousePhoto from '@/public/images/photos/IMG_20150525_104418.jpeg';
 import edinburghLandscapePhoto from '@/public/images/photos/IMG_20180224_145152.jpeg';
@@ -20,9 +20,11 @@ import corfuMonastery from '@/public/images/photos/IMG20230925093628.jpeg';
 import albanianChurchPhoto from '@/public/images/photos/IMG20231004114145.jpg';
 import albanianAlpsLandscapePhoto from '@/public/images/photos/IMG-20231005-WA0139~2.jpg';
 
-export const metadata: Metadata = {
-    title: 'Traveling'
-};
+export const metadata = createMetadata(
+    'Traveling',
+    'Favourite travel destinations and photography from around the world.',
+    '/traveling'
+);
 
 export default function TravelingPage() {
     return (

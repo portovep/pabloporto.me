@@ -1,13 +1,15 @@
-import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import PageContainer from '@/components/PageContainer';
 import { PageHeader } from '@/components/ui';
+import { createMetadata } from '@/lib/metadata';
 import aboutPagePhoto from '@/public/images/about.jpeg';
 
-export const metadata: Metadata = {
-    title: 'About'
-};
+export const metadata = createMetadata(
+    'About',
+    'Software engineer, coffee lover, and traveler based in Barcelona. Learn more about my background, work, and interests.',
+    '/about'
+);
 
 export default function AboutPage() {
     return (
