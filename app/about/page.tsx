@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <PageContainer>
-            <section className="max-w-3xl mt-8 text-xl leading-6">
+            <section className="max-w-3xl text-xl leading-6">
                 <PageHeader title="About" />
                 <p className="mt-6 text-xl font-medium text-foreground">
                     Software Engineer • Coffee Lover • Traveler

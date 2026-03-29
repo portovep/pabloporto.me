@@ -48,7 +48,7 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                     />
                 </span>
             </div>
-            <article className="md:px-10 max-w-5xl py-6 my-4">
+            <article className="md:px-10 max-w-5xl pt-20">
                 <div className="flex items-center justify-between">
                     <span className="font-light text-muted-foreground">
                         <Date dateString={postData.date} />
@@ -84,7 +84,7 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                     <PostBody contentHtml={postData.contentHtml ?? ''} />
                 </div>
             </article>
-            <div className="flex justify-center mt-4 mb-8">
+            <div className="flex justify-center mt-12 mb-8">
                 <Link
                     href="/blog"
                     className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors">

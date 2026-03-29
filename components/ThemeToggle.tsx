@@ -47,7 +47,7 @@ export function ThemeToggle(): React.ReactElement {
                 <Button
                     variant="outline"
                     size="icon"
-                    className="h-8 w-8 text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    className="h-8 w-8 cursor-pointer text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                     aria-label="Toggle theme"
                     data-testid="theme-toggle">
                     <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
