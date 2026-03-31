@@ -1,7 +1,7 @@
 # AI Coding Agent Guidelines
 
-**Last Updated:** 2025-01-27  
-**Purpose:** System-level guardrails and conventions for AI coding agents working on this codebase
+**Last Updated:** 2026-03-30
+**Purpose:** Project-specific guardrails for AI coding agents. Documents only what cannot be inferred from reading the code.
 
 ---
 
@@ -17,762 +17,279 @@
 8. [Code Formatting](#code-formatting)
 9. [Git & Commits](#git--commits)
 10. [Testing](#testing)
-11. [Accessibility](#accessibility)
-12. [Performance](#performance)
-13. [Image Optimization](#image-optimization)
-14. [Error Handling](#error-handling)
-15. [Environment Variables](#environment-variables)
-16. [Pre-commit Checks](#pre-commit-checks)
+11. [Image Optimization](#image-optimization)
+12. [Environment Variables](#environment-variables)
+13. [Pre-commit Checks](#pre-commit-checks)
 
 ---
 
 ## Architecture & Framework
 
-### Next.js App Router (Primary)
+### Next.js App Router
 
-This is a **hybrid site**: the `pages/` directory still contains legacy routes (`/`, `/about`, `/blog`, `/making`, `/stack`, `/traveling`, `/working`) which remain on Pages Router. New routes (`/reading`, `/speaking`, `/bucharest`) live in `app/`.
+This is a **fully App Router site** — all routes live in `app/`. The `pages/` directory has been removed.
 
-- **MUST** use Next.js 15 App Router (`app/` directory) for all new pages
-- **MUST NOT** create new Pages Router (`pages/`) routes
-- **MUST** use Server Components by default (no `'use client'` unless needed)
-- **MUST** use async Server Components for data fetching
-- **MUST** export `metadata` object for SEO (not `<Head>` component)
-
-### Data Sources
-
-- **Markdown files** in `content/posts/`, `content/projects/`, `content/travels/` — parsed by `lib/posts.ts`, `lib/projects.ts`
-- **Literal.club GraphQL API** (`lib/literal.ts`) — powers the reading page; requires env vars (see [Environment Variables](#environment-variables)). All fetch functions catch errors and return empty arrays/null to avoid breaking the build.
+- **MUST** use Server Components by default — only add `'use client'` when the component needs browser APIs, event handlers, or React state
+- **MUST** use async Server Components for data fetching (no `useEffect` + fetch)
+- **MUST** export `metadata` or call `createMetadata()` from `lib/metadata.ts` for SEO on every page
 
 ### Theming
 
-Dark mode uses `next-themes` plus a blocking inline script in `app/layout.tsx` to prevent flash on load. The localStorage key is `pabloporto-theme`. CSS variables are defined in `styles/globals.css`. Use the `dark:` Tailwind prefix for dark-mode variants.
+Dark mode uses `next-themes` with class-based `.dark` on `<html>`. Preference is persisted in `localStorage` under the key `pabloporto-theme`. A blocking inline script in `app/layout.tsx` prevents flash on load. Use the `dark:` Tailwind prefix for dark-mode variants.
 
 ### React Patterns
 
-- **MUST** use React 19 patterns (no unnecessary React imports)
-- **MUST NOT** import React unless using React APIs (hooks, types)
-- **MUST** use Server Components for data fetching
-- **MUST** mark Client Components with `'use client'` directive
-- **MUST** accept `ref` as a regular prop for components that need ref forwarding (React 19 — `forwardRef` is deprecated)
-
-### Example: Server Component Pattern
-
-```typescript
-// ✅ CORRECT: App Router Server Component
-import { Metadata } from 'next';
-import { getSortedPostsData } from '@/lib/posts';
-
-export const metadata: Metadata = {
-  title: 'Blog | Pablo Porto',
-  description: '...'
-};
-
-export default async function BlogPage() {
-  const posts = await getSortedPostsData();
-  return <div>...</div>;
-}
-```
-
-### Example: Client Component Pattern
-
-```typescript
-// ✅ CORRECT: Client Component with 'use client'
-'use client';
-
-import { useState } from 'react';
-
-export default function InteractiveComponent() {
-  const [state, setState] = useState(false);
-  return <button onClick={() => setState(!state)}>...</button>;
-}
-```
+- **MUST** use React 19 patterns — no `import React from 'react'` unless using a React API
+- **MUST** use `ref` as a regular prop (React 19 — `forwardRef` is deprecated)
+- **MUST NOT** add explicit return types to React components (TypeScript infers them)
 
 ---
 
 ## Component Library
 
-### shadcn/ui Components
+### Use shadcn/ui first
 
-- **MUST** use existing shadcn/ui components from `components/ui/`
-- **MUST** import from `@/components/ui` using path aliases
-- **MUST NOT** create custom implementations of existing UI components
-- **MUST** use `cn()` utility for className merging (from `@/lib/utils`)
+- **MUST** check shadcn/ui before building any UI element — buttons, badges, dialogs, inputs, selects, tabs, tooltips, dropdowns, cards all have shadcn equivalents
+- **MUST NOT** hand-roll components that shadcn/ui already provides
+- **MUST** install missing shadcn components with `npx shadcn@latest add [component]`
+- **MUST** use the `asChild` prop (Radix Slot pattern) when a Button needs to render as `<a>` or `<Link>`
+- **MAY** create custom components only for domain-specific UI with no shadcn equivalent (e.g. `WorldMap`, `PhotoCard`, `PostSummary`)
+- Full component list: https://ui.shadcn.com/components
 
 ### Available UI Components
 
-- `Button` - Use for all button interactions
+Importable from `@/components/ui`:
+
+- `Button` — all interactive buttons; use `asChild` for link-buttons
+- `Badge` — tags and labels
 - `Card`, `CardHeader`, `CardContent`, `CardFooter`, `CardTitle`, `CardDescription`
-- `Date` - Date formatting component
-- `Label` - Form labels
-- `PageHeader` - Page headers
-- `StackItem` - Stack display items
+- `Date` — date formatting
+- `PageHeader` — page title + subtitle layout
+- `StackItem` — stack page list items
 
 ### Adding New shadcn/ui Components
 
-- **MUST** use `npx shadcn@latest add [component]` command
-- **MUST** follow shadcn/ui conventions (ref as prop, displayName, etc.)
-- **MUST** export from `components/ui/index.ts` if needed
-
-### Example: Using UI Components
-
-```typescript
-// ✅ CORRECT: Using existing UI components
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
-
-export default function MyComponent({ className }: { className?: string }) {
-  return (
-    <Card className={cn('custom-class', className)}>
-      <CardHeader>
-        <CardTitle>Title</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <Button variant="default">Click me</Button>
-      </CardContent>
-    </Card>
-  );
-}
+```bash
+npx shadcn@latest add [component]
 ```
+
+After installing, fix the generated import path: shadcn defaults to `@/lib/utils` which is correct for this project — verify the import resolves to `lib/utils.ts` at root.
+
+Export from `components/ui/index.ts` if the component is used across multiple pages.
 
 ---
 
 ## TypeScript Conventions
 
-### Type Safety
+`tsconfig.json` has `strict: true` and `strictNullChecks: true`.
 
-Note: `tsconfig.json` has `strict: false` and `strictNullChecks: false`, so the compiler does not enforce strict null safety. The rules below are intended conventions, not all of them are enforced at compile time.
-
-- **MUST** use TypeScript for all new files (`.ts` or `.tsx`)
-- **MUST** define proper types for all component props
-- **MUST** use interfaces for component props (not types, for consistency)
+- **MUST** define typed props for all components using `interface` (not `type`)
 - **MUST** use `type` for utility types and unions
-- **MUST NOT** use `any` type (use `unknown` if needed)
-- **MUST** type function parameters and return values for utilities
-
-### Type Definitions
-
-- **MUST** co-locate types with components when used only there
-- **MUST** place shared types in `lib/types.ts` or appropriate lib file
-- **MUST** use descriptive type names (e.g., `PostData`, `ProjectData`)
-
-### Example: Type Definitions
-
-```typescript
-// ✅ CORRECT: Component with typed props
-interface CardProps {
-  title: string;
-  description: string;
-  linkURL?: string;
-}
-
-export default function Card({ title, description, linkURL }: CardProps) {
-  return <div>...</div>;
-}
-
-// ✅ CORRECT: Shared types in lib file
-// lib/posts.ts
-export type PostData = {
-  id: string;
-  title: string;
-  date: string;
-  contentHtml?: string;
-};
-```
-
-### Return Types
-
+- **MUST NOT** use `any` — use `unknown` if the type is truly unknown
 - **MUST NOT** add explicit return types to React components (let TypeScript infer)
-- **MUST** add return types to utility functions for clarity
-- **MUST** use `React.ReactElement` only when necessary for type constraints
-
-```typescript
-// ✅ CORRECT: No return type annotation
-export default function Card({ title }: CardProps) {
-  return <div>...</div>;
-}
-
-// ✅ CORRECT: Return type for utility function
-export function formatDate(date: Date): string {
-  return date.toISOString();
-}
-```
+- **MUST** add return types to utility functions: `export function formatDate(d: Date): string`
+- **MUST** co-locate prop types with their component; place shared types in the relevant `lib/` file
 
 ---
 
 ## File Structure & Organization
 
-### Directory Structure
-
 ```
-app/                    # Next.js App Router pages
-  [route]/
-    page.tsx           # Page component
-    layout.tsx         # Route-specific layout (optional)
-components/            # React components
-  ComponentName.tsx    # Single-file components (preferred)
-  ComponentName/       # Multi-file components (tests, styles, etc.)
-    ComponentName.tsx
-    ComponentName.test.tsx
-lib/                   # Utility functions and helpers
-  utility-name.ts      # kebab-case for file names
-content/               # Markdown content files
-  posts/
-  projects/
-cypress/               # E2E tests
-  e2e/
-public/                # Static assets
-styles/                # Global styles
+app/                    # Routes only — pages, layouts, route handlers
+  [route]/page.tsx
+  layout.tsx
+  error.tsx
+  not-found.tsx
+components/             # Reusable React components (flat by default)
+  ui/                   # shadcn/ui + custom primitives
+    index.ts            # Barrel export
+content/                # Source content
+  posts/                # Markdown blog posts
+  projects/             # Markdown project entries
+  travels/              # Travel data
+  talks.ts              # Talk data (TypeScript)
+lib/                    # Utilities and data fetching
+  utils.ts              # cn() helper — import as @/lib/utils
+  metadata.ts           # createMetadata() helper
+  env.ts                # Typed env vars
+  posts.ts / projects.ts / talks.ts / literal.ts
+styles/
+  globals.css           # Design tokens (CSS vars), Tailwind base
+public/images/          # Static assets
+cypress/e2e/            # E2E tests
 ```
 
-### File Naming
-
-- **MUST** use PascalCase for component files: `ComponentName.tsx`
-- **MUST** use kebab-case for utility files: `utility-name.ts`
-- **MUST** use kebab-case for page routes: `app/blog/[id]/page.tsx`
-- **MUST** use descriptive names (avoid abbreviations)
-
-### Component Organization
-
-- **MUST** prefer single-file components when possible
-- **MUST** use folders only for components with multiple related files
-- **MUST** export components as default exports
-- **MUST** export types/interfaces as named exports
+- **MUST** prefer single-file components (`Header.tsx`) over folders
+- **MUST** use folders only when a component has multiple related files
+- **MUST** export components as default exports, types as named exports
 
 ---
 
 ## Styling & CSS
 
-### Tailwind CSS
+See **`docs/brand-guidelines.md`** for the full colour palette, typography scale, spacing tokens, and dark mode guidance. Key rules:
 
-- **MUST** use Tailwind CSS for all styling (no custom CSS unless necessary)
-- **MUST** use Tailwind v4 syntax (`@import 'tailwindcss'`)
-- **MUST** use `cn()` utility for conditional classes
-- **MUST** use responsive prefixes (`sm:`, `md:`, `lg:`) for responsive design
-- **MUST** use design tokens from `styles/globals.css` (CSS variables)
-
-### Class Organization
-
-- **MUST** organize Tailwind classes in this order:
-    1. Layout (flex, grid, etc.)
-    2. Spacing (margin, padding)
-    3. Sizing (width, height)
-    4. Typography (text-_, font-_)
-    5. Colors (bg-_, text-_, border-\*)
-    6. Effects (shadow, opacity, etc.)
-    7. Transitions/animations
-
-### Example: Tailwind Usage
-
-```typescript
-// ✅ CORRECT: Well-organized Tailwind classes
-<div className="flex flex-col items-center justify-center mt-10 px-4 py-6 bg-white rounded-lg shadow-md">
-  <h1 className="text-4xl font-bold text-gray-900">Title</h1>
-</div>
-
-// ✅ CORRECT: Using cn() for conditional classes
-import { cn } from '@/lib/utils';
-
-<div className={cn(
-  'base-classes',
-  isActive && 'active-classes',
-  className
-)}>
-```
-
-### Custom CSS
-
-- **MUST NOT** create custom CSS files unless absolutely necessary
-- **MUST** use CSS variables defined in `styles/globals.css` for theming
-- **MUST** use `@tailwindcss/typography` for prose content
+- **MUST** use Tailwind CSS for all styling — no custom CSS unless required for complex animations or third-party overrides
+- **MUST** use semantic tokens (`bg-background`, `text-foreground`, `text-muted-foreground`, `border-border`) for shared UI so light/dark themes stay consistent
+- **MUST** use `cn()` from `@/lib/utils` for conditional or merged class names
+- **MUST** use `emerald-500` / `emerald-600` as the accent colour for links, CTAs, and hover states (see brand guidelines)
+- **MUST** use design tokens defined in `styles/globals.css` — do not hardcode OKLCH values in component files
+- **MUST** use `@tailwindcss/typography` for prose/markdown content
 
 ---
 
 ## Import Patterns
 
-### Path Aliases
-
-- **MUST** use `@/` alias for all imports (configured in `tsconfig.json`)
-- **MUST** use absolute imports, not relative imports
-- **MUST** organize imports in this order:
-    1. React/Next.js core imports
-    2. Third-party library imports
-    3. Internal component imports (`@/components`)
-    4. Internal utility imports (`@/lib`)
-    5. Type imports (with `type` keyword)
-
-### Import Examples
+- **MUST** use `@/` path alias for all imports — no relative imports (`../../`)
+- **MUST** use barrel exports from `@/components/ui` when available; import directly from the component file otherwise
+- Key aliases: `@/components`, `@/lib`, `@/app`
 
 ```typescript
-// ✅ CORRECT: Organized imports with aliases
-import { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-
+// ✅ Correct
 import { Card, CardContent } from '@/components/ui';
 import { getSortedPostsData } from '@/lib/posts';
-import type { PostData } from '@/lib/posts';
+import { cn } from '@/lib/utils';
 
-// ❌ INCORRECT: Relative imports
+// ❌ Wrong — relative import
 import { Card } from '../../components/ui/card';
 ```
-
-### Barrel Exports
-
-- **MUST** use barrel exports from `components/ui/index.ts` when available
-- **MUST** import directly from component files when barrel doesn't exist
 
 ---
 
 ## Naming Conventions
 
-### Components
-
-- **MUST** use PascalCase: `Card`, `PostSummary`, `BookCard`
-- **MUST** use descriptive names that indicate purpose
-- **MUST** match component name to file name
-
-### Functions
-
-- **MUST** use camelCase: `getSortedPostsData`, `formatDate`
-- **MUST** use verb prefixes for functions: `get`, `set`, `is`, `has`, `format`
-- **MUST** use descriptive names
-
-### Variables
-
-- **MUST** use camelCase: `postData`, `isLoading`
-- **MUST** use boolean prefixes: `is`, `has`, `should`, `can`
-- **MUST** use descriptive names (avoid single letters except in loops)
-
-### Constants
-
-- **MUST** use UPPER_SNAKE_CASE: `EXCLUDED_SHELF_SLUGS`, `DATE_FORMAT`
-- **MUST** define at module level or in dedicated constants file
-
-### Files & Directories
-
-- **MUST** use PascalCase for component files: `Card.tsx`
-- **MUST** use kebab-case for utility files: `markdown.ts`, `posts.ts`
-- **MUST** use kebab-case for routes: `app/blog/[id]/page.tsx`
+- **Component files:** PascalCase — `PostSummary.tsx`, `BookCard.tsx`
+- **Utility/lib files:** kebab-case — `posts.ts`, `markdown.ts`
+- **Constants:** UPPER_SNAKE_CASE — `DATE_FORMAT_MONTH_DAY_YEAR`
+- **Test files:** snake_case with `_test.ts` suffix — `blog_page_test.ts`
 
 ---
 
 ## Code Formatting
 
-### Prettier Configuration
+Prettier config (`.prettierrc`):
 
-- **MUST** follow Prettier config in `.prettierrc`:
-    - `semi: true` - Always use semicolons
-    - `tabWidth: 4` - Use 4 spaces for indentation
-    - `printWidth: 100` - Max line length 100 characters
-    - `singleQuote: true` - Use single quotes
-    - `trailingComma: 'none'` - No trailing commas
-    - `bracketSameLine: true` - JSX closing bracket on same line
+| Setting           | Value    |
+| ----------------- | -------- |
+| `tabWidth`        | 4        |
+| `printWidth`      | 100      |
+| `singleQuote`     | true     |
+| `semi`            | true     |
+| `trailingComma`   | `'none'` |
+| `bracketSameLine` | true     |
 
-### Formatting Commands
-
-- **MUST** run `npm run format:fix` before committing
-- **MUST** ensure code passes `npm run format` check
-- **MUST** format all `.ts`, `.tsx`, `.css`, `.md`, `.json` files
-
-### ESLint
-
-- **MUST** follow ESLint rules from `.eslintrc.json`
-- **MUST** run `npm run lint` before committing
-- **MUST** fix all linting errors (use `npm run lint:fix` when possible)
+`prettier-plugin-tailwindcss` auto-sorts Tailwind class order — do not manually reorder classes.
 
 ---
 
 ## Git & Commits
 
-### Commit Message Convention
+### Commit Message Format
 
-- **MUST** use conventional commits format:
-
-    ```
-    <type>(<scope>): <subject>
-
-    <body>
-
-    <footer>
-    ```
-
-### Commit Types
-
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation changes
-- `style`: Code style changes (formatting, semicolons, etc.)
-- `refactor`: Code refactoring
-- `perf`: Performance improvements
-- `test`: Adding or updating tests
-- `chore`: Maintenance tasks (dependencies, config, etc.)
-- `build`: Build system changes
-- `ci`: CI/CD changes
-
-### Commit Examples
-
-```bash
-# ✅ CORRECT: Feature commit with why
-feat(blog): add pagination to blog listing page
-
-Improves page load performance by reducing initial render time for
-large blog archives. Users can now navigate through posts more efficiently.
-
-# ✅ CORRECT: Fix commit with why
-fix(header): resolve mobile menu closing issue
-
-The menu was closing immediately after opening due to event propagation.
-Prevents accidental menu dismissal and improves mobile UX.
-
-# ✅ CORRECT: Refactor commit with why
-refactor(components): migrate Card to App Router pattern
-
-Migrates Card component to use Server Components by default, reducing
-client bundle size and improving initial page load performance.
-
-# ✅ CORRECT: Style commit (why may be implicit)
-style: format all files with Prettier
-
-# ✅ CORRECT: Chore commit with why
-chore(deps): update Next.js to 15.3.2
-
-Includes security patches and performance improvements for static
-generation. Resolves CVE-2024-XXXXX.
 ```
+<type>(<scope>): <subject>
+
+<body — explain the why, not the what>
+```
+
+Types: `feat`, `fix`, `refactor`, `perf`, `chore`, `docs`, `style`, `test`, `build`, `ci`
 
 ### Commit Best Practices
 
-- **MUST** write clear, descriptive commit messages
+- **MUST** run `npm run format:fix` and `npm run lint` before every commit — fix all issues before proceeding
 - **MUST** keep commits focused (one logical change per commit)
-- **MUST** state the "why" behind the change in the commit body when not immediately obvious
-- **MUST** keep commit message content concise (subject line ≤ 72 chars, body lines ≤ 100 chars)
-- **MUST** use the body to explain what and why, not just what changed
-- **MUST** reference issue numbers if applicable: `fix(blog): resolve #123`
-- **MUST NOT** commit directly to `main` branch
-- **MUST** create feature branches for changes
-- **MUST** always ask the user for explicit permission before committing changes
-- **MUST NOT** commit changes automatically without user approval
-- **MUST** show a summary of what will be committed before asking for permission
-
-### Commit Message Structure
-
-- **Subject line**: Concise summary (≤ 72 characters)
-    - Use imperative mood: "add" not "added" or "adds"
-    - No period at the end
-    - Capitalize first letter
-- **Body** (optional but recommended):
-
-    - Explain the "why" behind the change
-    - Separate from subject with blank line
-    - Wrap at 100 characters
-    - Use bullet points for multiple changes
-    - Focus on motivation and impact, not implementation details
-
-- **Footer** (optional):
-    - Reference issues: `Closes #123` or `Fixes #456`
-    - Breaking changes: `BREAKING CHANGE: description`
+- **MUST NOT** commit directly to `main` — always use a feature branch
+- **MUST** always ask the user for explicit permission before committing
+- **MUST** show a summary of changes before asking for permission
 
 ---
 
 ## Testing
 
-### Cypress E2E Tests
-
-- **MUST** write E2E tests for critical user flows
-- **MUST** use `data-testid` attributes for test selectors
-- **MUST** follow existing test patterns in `cypress/e2e/`
-- **MUST** run `npm run test:e2e` before committing
-
-### Test Data Attributes
-
-- **MUST** add `data-testid` to interactive elements:
-    ```typescript
-    <button data-testid="mobile-menu-toggle">Menu</button>
-    <nav data-testid="desktop-menu">...</nav>
-    ```
-
-### Test File Naming
-
-- **MUST** use snake_case: `navigation_test.ts`, `blog_page_test.ts`
-- **MUST** suffix with `_test.ts` or `.test.ts`
-
-### Running Tests
-
-- **MUST** run `npm run test:e2e` to verify tests pass
-- **MUST** update tests when changing component structure
-- **MUST** ensure all tests pass before merging
-
----
-
-## Accessibility
-
-### ARIA Attributes
-
-- **MUST** use semantic HTML elements (`<nav>`, `<main>`, `<article>`, etc.)
-- **MUST** add `aria-label` to icon-only buttons
-- **MUST** use `aria-hidden="true"` for decorative elements
-- **MUST** ensure proper heading hierarchy (`h1` → `h2` → `h3`)
-
-### Keyboard Navigation
-
-- **MUST** ensure all interactive elements are keyboard accessible
-- **MUST** use proper focus management
-- **MUST** add `focus-visible:` Tailwind classes for focus states
-
-### Screen Readers
-
-- **MUST** provide alternative text for images (`alt` attribute)
-- **MUST** use `sr-only` class for screen-reader-only content
-- **MUST** ensure form inputs have associated labels
-
-### Example: Accessible Component
-
-```typescript
-// ✅ CORRECT: Accessible button
-<button
-  type="button"
-  aria-label="Toggle mobile menu"
-  data-testid="mobile-menu-toggle"
-  className="focus:outline-none focus-visible:ring-2"
->
-  <svg aria-hidden="true">...</svg>
-</button>
-```
-
----
-
-## Performance
-
-### Code Splitting
-
-- **MUST** use dynamic imports for heavy components: `next/dynamic`
-- **MUST** use Server Components for data fetching (no client-side fetching unless needed)
-- **MUST** avoid importing large libraries in client components
-
-### Bundle Size
-
-- **MUST** import only needed functions from libraries
-- **MUST** use tree-shakeable imports
-- **MUST** avoid unnecessary dependencies
-
-### Rendering
-
-- **MUST** use Server Components by default
-- **MUST** mark Client Components explicitly with `'use client'`
-- **MUST** use `React.memo` only when profiling shows it's needed
+- **MUST** write Cypress E2E tests for critical user flows
+- **MUST** use `data-testid` attributes as test selectors (not CSS classes or text)
+- **MUST** run `npm run test:e2e` before committing UI changes
+- **MUST** update tests when changing component structure or `data-testid` values
+- Test files live in `cypress/e2e/` and follow the `page-name_test.ts` naming pattern
 
 ---
 
 ## Image Optimization
 
-### Next.js Image Component
-
 - **MUST** use `next/image` for all images
-- **MUST** provide `width` and `height` or use `fill` with parent container
-- **MUST** use `priority` for above-the-fold images
-- **MUST** use `quality` prop (default: 75, use 100 for hero images)
-- **MUST** use `sizes` prop for responsive images
-- **MUST** use `placeholder="blur"` for statically imported local images (Next.js generates `blurDataURL` automatically); for remote images (e.g., API URLs) you must supply `blurDataURL` explicitly or omit the prop
-
-### Image Examples
-
-```typescript
-// ✅ CORRECT: Optimized image
-import Image from 'next/image';
-import profilePic from '@/public/images/profile.png';
-
-<Image
-  src={profilePic}
-  alt="Profile picture"
-  width={144}
-  height={144}
-  priority
-  quality={75}
-  className="rounded-full"
-/>
-
-// ✅ CORRECT: Responsive image with fill
-<div className="relative aspect-[2/3] w-full">
-  <Image
-    src={coverSrc}
-    alt={book.title}
-    fill
-    sizes="(max-width: 768px) 50vw, 33vw"
-    className="object-contain"
-  />
-</div>
-```
-
-### Image File Organization
-
-- **MUST** store images in `public/images/` directory
-- **MUST** use descriptive filenames
-- **MUST** optimize images before committing (use appropriate formats)
-
----
-
-## Error Handling
-
-### Error Boundaries
-
-- **MUST** create `app/error.tsx` for error boundaries
-- **MUST** handle errors gracefully with user-friendly messages
-- **MUST** log errors appropriately (console.error in development)
-
-### API Error Handling
-
-- **MUST** validate API responses
-- **MUST** provide fallback UI for failed data fetches
-- **MUST** use try-catch for async operations
-
-### Example: Error Handling
-
-```typescript
-// ✅ CORRECT: Error handling in Server Component
-export default async function ReadingPage() {
-  try {
-    const shelves = await getShelves();
-    return <div>...</div>;
-  } catch (error) {
-    console.error('Error fetching shelves:', error);
-    return <div>Error loading shelves. Please try again later.</div>;
-  }
-}
-```
+- **MUST** add `priority` to above-the-fold images
+- **MUST** use `placeholder="blur"` for statically imported local images (Next.js auto-generates `blurDataURL`); for remote URLs you must supply `blurDataURL` explicitly or omit the prop
+- **MUST** add `sizes` prop for responsive images
 
 ---
 
 ## Environment Variables
 
-### Required Variables
+Required at build time (reading page and API integrations):
 
-These are needed for the reading page and for the production build to succeed:
+- `LITERAL_API_TOKEN`
+- `LITERAL_PROFILE_ID`
+- `LITERAL_PROFILE_HANDLE`
 
-- `LITERAL_API_TOKEN` — Literal.club API bearer token
-- `LITERAL_PROFILE_ID` — Literal.club profile ID
-- `LITERAL_PROFILE_HANDLE` — Literal.club profile handle
-
-### Validation
-
-- **MUST** validate environment variables at build time
-- **MUST** use Zod or similar for runtime validation
-- **MUST** provide helpful error messages for missing variables
-
-### Usage
-
-- **MUST** access env vars through validated schema
-- **MUST** use `process.env` only in Server Components or API routes
-- **MUST NOT** expose sensitive variables to client
-
-### Example: Environment Variables
+Access through `lib/env.ts` — do not read `process.env` directly in components.
 
 ```typescript
-// ✅ CORRECT: Validated environment variables
 // lib/env.ts
-import { z } from 'zod';
-
-const envSchema = z.object({
-    LITERAL_API_TOKEN: z.string().optional(),
-    LITERAL_PROFILE_ID: z.string().optional()
-});
-
-export const env = envSchema.parse(process.env);
-
-// Usage
-import { env } from '@/lib/env';
-const apiToken = env.LITERAL_API_TOKEN;
+export const env = {
+    LITERAL_API_TOKEN: process.env.LITERAL_API_TOKEN,
+    LITERAL_PROFILE_ID: process.env.LITERAL_PROFILE_ID,
+    LITERAL_PROFILE_HANDLE: process.env.LITERAL_PROFILE_HANDLE
+} as const;
 ```
 
 ---
 
 ## Pre-commit Checks
 
-### Husky Hooks
+The Husky pre-commit hook runs `npm run format` and `npm run lint` automatically. If it fails, fix the issues and commit again — never use `--no-verify`.
 
-- **MUST** ensure pre-commit hook runs (`npm run format` and `npm run lint`)
-- **MUST** fix all formatting and linting errors before committing
-- **MUST NOT** skip hooks (`--no-verify`)
+Manual checklist before committing:
 
-### Pre-commit Checklist
+- [ ] `npm run format:fix` — formatting clean
+- [ ] `npm run lint` — no errors
+- [ ] `npm run build` — build succeeds
+- [ ] `npm run test:e2e` — all tests pass (for UI changes)
 
-Before every commit, ensure:
+---
 
-- [ ] Code is formatted (`npm run format:fix`)
-- [ ] No linting errors (`npm run lint`)
-- [ ] Build succeeds (`npm run build`)
-- [ ] Tests pass (`npm run test:e2e`)
-- [ ] Commit message follows convention
+## Anti-Patterns
+
+1. **Hand-rolling shadcn components** — always check https://ui.shadcn.com/components first
+2. **Relative imports** — always use `@/` aliases
+3. **Importing React unnecessarily** — only import when using React APIs
+4. **Using `any`** — use `unknown` or a proper type
+5. **Inline styles** — use Tailwind classes
+6. **Hardcoding OKLCH/hex colours in components** — use semantic tokens or the emerald palette (see brand guidelines)
+7. **New Pages Router routes** — all new routes go in `app/`
+8. **Skipping `data-testid`** on interactive elements
+9. **Committing without running lint + format**
 
 ---
 
 ## Quick Reference
 
-### Common Commands
-
 ```bash
-# Development
-npm run dev              # Start dev server
-npm run build            # Build for production
-npm run start            # Start production server
-
-# Code Quality
-npm run lint             # Check linting
-npm run lint:fix         # Fix linting issues
-npm run format           # Check formatting
-npm run format:fix       # Fix formatting
-
-# Testing
-npm run test:e2e         # Run E2E tests
-
-# Performance
-npm run performance:check # Run Lighthouse CI
+npm run dev              # Start dev server (Turbopack)
+npm run build            # Production build
+npm run lint             # ESLint check
+npm run lint:fix         # ESLint auto-fix
+npm run format           # Prettier check
+npm run format:fix       # Prettier auto-fix
+npm run test:e2e         # Cypress E2E tests
 ```
 
-### Path Aliases
+**Key files:**
 
-- `@/components` → `components/`
-- `@/lib` → `lib/`
-- `@/app` → `app/`
-- `@/hooks` → `hooks/` (if exists)
-
-### Key Files
-
-- `tsconfig.json` - TypeScript configuration
-- `.prettierrc` - Prettier configuration
-- `.eslintrc.json` - ESLint configuration
-- `components.json` - shadcn/ui configuration
-- `tailwind.config.js` - Tailwind CSS configuration
-- `next.config.js` - Next.js configuration
-
----
-
-## Anti-Patterns to Avoid
-
-### ❌ DO NOT:
-
-1. **Mix routing patterns** - Don't use Pages Router for new routes
-2. **Import React unnecessarily** - Don't import React unless using React APIs
-3. **Use relative imports** - Always use `@/` aliases
-4. **Skip type definitions** - Always type component props and functions
-5. **Ignore formatting** - Always run Prettier before committing
-6. **Commit without testing** - Always verify build and tests pass
-7. **Use inline styles** - Use Tailwind classes instead
-8. **Create duplicate components** - Check existing UI components first
-9. **Skip accessibility** - Always add proper ARIA attributes
-10. **Hardcode values** - Use constants or environment variables
-
----
-
-## Additional Resources
-
-- [Next.js 15 Documentation](https://nextjs.org/docs)
-- [React Server Components](https://react.dev/reference/rsc/server-components)
-- [shadcn/ui Components](https://ui.shadcn.com/)
-- [Tailwind CSS v4](https://tailwindcss.com/docs)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
-- [Conventional Commits](https://www.conventionalcommits.org/)
-
----
-
-**Remember:** When in doubt, follow existing patterns in the codebase. Consistency is key.
+- `tsconfig.json` — TypeScript config
+- `.prettierrc` — Prettier config
+- `eslint.config.mjs` — ESLint flat config
+- `components.json` — shadcn/ui config
+- `tailwind.config.js` — Tailwind config
+- `next.config.ts` — Next.js config
+- `styles/globals.css` — design tokens
+- `docs/brand-guidelines.md` — colours, typography, spacing

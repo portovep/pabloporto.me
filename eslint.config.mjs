@@ -14,7 +14,7 @@ const compat = new FlatCompat({
 
 export default [
     {
-        ignores: ['.next/**', 'node_modules/**', 'public/**', 'next-env.d.ts', '*.config.js', '*.config.mjs']
+        ignores: ['.next/**', '.claude/**', 'node_modules/**', 'public/**', 'next-env.d.ts', '*.config.js', '*.config.mjs']
     },
     ...compat.extends(
         'next/core-web-vitals',
