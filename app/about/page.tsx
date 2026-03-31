@@ -113,7 +113,7 @@ export default function AboutPage() {
                         .
                     </p>
                     <p className="leading-relaxed">
-                        I currently work as tech principal consultant at{' '}
+                        I work as Tech Principal Consultant at{' '}
                         <a
                             href="https://thoughtworks.com"
                             target="_blank"
@@ -121,11 +121,11 @@ export default function AboutPage() {
                             rel="noopener noreferrer">
                             Thoughtworks
                         </a>
-                        , leading high-performing delivery teams building decentralized data systems
-                        and digital platforms that help our clients scale and ship better software.
-                        You can see some of my work{' '}
+                        , where I lead high-performing software teams building decentralized data
+                        systems and engineering platforms — helping our clients scale their systems
+                        and ship better software. Check out some of{' '}
                         <Link href="/working" className={linkClass}>
-                            here
+                            my work experience
                         </Link>
                         .
                     </p>
