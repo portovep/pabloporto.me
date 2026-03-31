@@ -2,67 +2,49 @@
 
 [![CD Pipeline](https://github.com/portovep/pabloporto.me/actions/workflows/pipeline.yml/badge.svg?branch=main)](https://github.com/portovep/pabloporto.me/actions/workflows/pipeline.yml)
 
-My personal website built with React, TypeScript, NextJS and Tailwind. Live at [pabloporto.me](https://pabloporto.me).
+My personal website built with Next.js, TypeScript, Tailwind CSS and shadcn/ui. Live at [pabloporto.me](https://pabloporto.me).
 
 ## About
 
-I change the tech stack that use to build my personal website every few years.
-I started using Wordpress, then moved to Jekyll, then React/Redux and finally
-Next.js.
-
-This project serves as my playground for experimenting with modern frontend technologies and CI/CD practices. It demonstrates a complete deployment pipeline with GitHub Actions, including automated code formatting, linting, dependecy checks and [web
-vitals checks](https://web.dev/vitals/).
+This project serves as my playground for experimenting with modern frontend technologies and CI/CD practices. It includes a complete deployment pipeline with GitHub Actions covering formatting, linting, dependency checks, E2E tests, and [web vitals checks](https://web.dev/vitals/).
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org/) - React framework
+- [Next.js 15](https://nextjs.org/) - React 19 framework with App Router and Turbopack
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [Vercel](https://vercel.com/) - Hosting
+- [Tailwind CSS v4](https://tailwindcss.com/) - Styling
+- [shadcn/ui](https://ui.shadcn.com/) - UI component library
+- [Vercel](https://vercel.com/) - Hosting and analytics
+- [Cypress](https://www.cypress.io/) - E2E testing
 - [GitHub Actions](https://github.com/features/actions) - CI/CD
 
 ## Features
 
-- ✅ Code formatting and linting
+- ✅ Code formatting and linting (ESLint + Prettier)
 - ✅ Continuous deployment pipeline
 - ✅ Performance monitoring
 - ✅ Pre-commit hooks
 - ✅ E2E testing
-- ⏳ Unit testing with Jest
+- ✅ Vercel Analytics
+- ✅ Sitemap generation
+- ⏳ Unit testing
 - ⏳ i18n support
 - ⏳ Automated secret scanning
 
 ## Development
 
 ```bash
-# Start development server
-npm run dev
-```
-
-To run the linter:
-
-```bash
-npm run lint
-# or
-npm run lint:fix
-```
-
-To run the code formatter:
-
-```bash
-npm run format
-# or
-npm run format:fix
+npm run dev        # start dev server (Turbopack)
+npm run lint       # run ESLint
+npm run format     # check formatting
+npm run format:fix # fix formatting
 ```
 
 ## Testing
 
 ```bash
-# Run end-to-end tests
-npm run test:e2e
-
-# Check performance metrics
-npm run performance:check
+npm run test:e2e          # run Cypress E2E tests
+npm run performance:check # check web vitals
 ```
 
 ## Git Hooks
