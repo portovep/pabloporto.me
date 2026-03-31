@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const linkClass = 'text-emerald-500 hover:text-emerald-600 font-medium';
 
@@ -37,16 +38,15 @@ export default function GetInTouch() {
                 .
             </p>
             <div className="flex justify-start gap-4">
-                <a
-                    href="mailto:pablo@pabloporto.me"
-                    className="px-6 py-3 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600">
-                    Get in Touch
-                </a>
-                <Link
-                    href="/blog"
-                    className="px-6 py-3 border border-emerald-500 text-emerald-500 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-950">
-                    Read My Blog
-                </Link>
+                <Button asChild className="bg-emerald-500 hover:bg-emerald-600 text-white">
+                    <a href="mailto:pablo@pabloporto.me">Get in Touch</a>
+                </Button>
+                <Button
+                    variant="outline"
+                    asChild
+                    className="border-emerald-500 text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-950">
+                    <Link href="/blog">Read My Blog</Link>
+                </Button>
             </div>
         </section>
     );

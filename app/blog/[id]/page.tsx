@@ -6,7 +6,8 @@ import { ArrowLeft } from 'lucide-react';
 import PageContainer from '@/components/PageContainer';
 import PostBody from '@/components/PostBody';
 import { getAllPostIds, getPostData } from '@/lib/posts';
-import { Date, Label } from '@/components/ui';
+import { Date } from '@/components/ui';
+import { Badge } from '@/components/ui/badge';
 import profilePic from '@/public/images/profile.png';
 
 export async function generateStaticParams() {
@@ -54,7 +55,9 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                     <span className="font-light text-muted-foreground">
                         <Date dateString={postData.date} />
                     </span>
-                    <Label text={postData.tag || 'Random'} />
+                    <Badge className="bg-emerald-500 text-white hover:bg-emerald-600">
+                        {postData.tag || 'Random'}
+                    </Badge>
                 </div>
                 <div className="mt-9">
                     {postData.tag === 'Draft' && (

@@ -3,6 +3,7 @@ import * as Collapsible from '@radix-ui/react-collapsible';
 
 import { ProjectData } from '@/lib/projects';
 import { Date } from '@/components/ui';
+import { Badge } from '@/components/ui/badge';
 
 type ProjectSummaryProps = {
     project: ProjectData;
@@ -81,11 +82,11 @@ export default function ProjectSummary(props: ProjectSummaryProps) {
                             <dt className="text-sm font-medium text-muted-foreground">Role</dt>
                             <dd className="sm:mt-0 sm:col-span-2 mt-1 text-sm text-foreground">
                                 {roles.map((role) => (
-                                    <span
+                                    <Badge
                                         key={role}
-                                        className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-emerald-400 text-white">
+                                        className="uppercase mr-0.5 mb-0.5 bg-emerald-500 text-white hover:bg-emerald-600 cursor-default">
                                         {role}
-                                    </span>
+                                    </Badge>
                                 ))}
                             </dd>
                         </div>

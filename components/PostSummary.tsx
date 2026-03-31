@@ -1,5 +1,6 @@
 import { PostData } from '@/lib/posts';
-import { Date, Label } from '@/components/ui';
+import { Date } from '@/components/ui';
+import { Badge } from '@/components/ui/badge';
 
 type PostSummaryProps = {
     postData: PostData;
@@ -15,7 +16,9 @@ export default function PostSummary(props: PostSummaryProps): React.ReactElement
                         <Date dateString={date} />
                     </span>
                     <div className="mr-6">
-                        <Label text={type || 'Post'} />
+                        <Badge className="bg-emerald-500 text-white hover:bg-emerald-600">
+                            {type || 'Post'}
+                        </Badge>
                     </div>
                 </div>
                 <div className="pr-6 mt-4 text-2xl font-bold text-foreground">{title}</div>
