@@ -6,7 +6,7 @@ type CardProps = {
     linkURL?: string;
 };
 
-export default function Card({ title, description, linkURL }: CardProps): React.ReactElement {
+export default function Card({ title, description, linkURL }: CardProps) {
     return (
         <Link
             href={linkURL || '/404'}

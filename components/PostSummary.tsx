@@ -6,7 +6,7 @@ type PostSummaryProps = {
     postData: PostData;
 };
 
-export default function PostSummary(props: PostSummaryProps): React.ReactElement {
+export default function PostSummary(props: PostSummaryProps) {
     const { date, type, title } = props.postData;
     return (
         <div className="lg:group lg:hover:bg-card lg:hover:shadow-lg bg-card border-2 border-border rounded-lg">

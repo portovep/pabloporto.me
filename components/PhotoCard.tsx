@@ -8,12 +8,7 @@ interface PhotoCardProps {
     priority?: boolean;
 }
 
-export default function PhotoCard({
-    imageURL,
-    location,
-    title,
-    priority = false
-}: PhotoCardProps): React.ReactElement {
+export default function PhotoCard({ imageURL, location, title, priority = false }: PhotoCardProps) {
     return (
         <div
             data-testid="photo-card"

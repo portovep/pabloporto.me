@@ -1,756 +1,241 @@
 # Modernization Plan for pabloporto.me
 
-**Last Updated:** 2026-02-24
+**Last Updated:** 2026-03-30
 **Status:** In Progress
-**Target:** Complete migration to Next.js 15 App Router with modern best practices
 
 ---
 
-## Overview
+## Current State (2026-03-30)
 
-This document outlines a comprehensive modernization plan for migrating from a mixed Pages Router/App Router architecture to a fully App Router-based Next.js 15 application, with TypeScript strict mode, modern React patterns, and improved code quality.
-
----
-
-## Current State Assessment (2026-02-24)
-
-Analysis of the live codebase against this plan:
-
-### App Router pages already migrated (outside original list):
-
-- `app/reading/page.tsx` ✅
-- `app/speaking/page.tsx` ✅
-- `app/bucharest/page.tsx` ✅
-- `app/loading.tsx` ✅ (not in plan, bonus)
-
-### App Router pages still in `pages/` (Phase 1 core work remaining):
-
-- `pages/index.tsx`, `pages/about/`, `pages/blog/`, `pages/making/`, `pages/working/`, `pages/traveling/`, `pages/stack/`
-
-### Phase 2 / Phase 3 status:
-
-| Task                                | Status                                            |
-| ----------------------------------- | ------------------------------------------------- |
-| TypeScript strict mode              | ❌ `strict: false`, `strictNullChecks: false`     |
-| Remove React imports                | ❌ ~14 files still import React                   |
-| Remove return type annotations      | ❌ Most components still use `React.ReactElement` |
-| `lib/env.ts` (env validation)       | ❌ Not created                                    |
-| `lib/metadata.ts` (shared metadata) | ❌ Not created                                    |
-| Flatten component folders           | ❌ All components still in nested folders         |
-| `next.config.ts` (TypeScript)       | ❌ Still `next.config.js`                         |
-| `app/error.tsx`                     | ✅ Done                                           |
-| `app/not-found.tsx`                 | ❌ Not created                                    |
-| Analytics in `app/layout.tsx`       | ❌ Only in `pages/_app.tsx`                       |
-| `pages/api/hello.ts` cleanup        | ❌ Still exists                                   |
-| `components/Meta/Meta.tsx` cleanup  | ❌ Still exists (awaiting Task 1.1)               |
+| Area                                      | Status                                                                    |
+| ----------------------------------------- | ------------------------------------------------------------------------- |
+| App Router migration                      | ✅ Complete — `pages/` fully removed                                      |
+| TypeScript strict mode                    | ✅ Complete — `strict: true`, `strictNullChecks: true`                    |
+| Remove React imports                      | ✅ Complete — zero legacy imports                                         |
+| `lib/metadata.ts`                         | ✅ Complete — `createMetadata()` helper used across all pages             |
+| `lib/env.ts`                              | ✅ Complete — simple `as const` approach (Zod skipped as unnecessary)     |
+| `next.config.ts`                          | ✅ Complete — TypeScript config                                           |
+| `app/error.tsx`                           | ✅ Complete                                                               |
+| `app/not-found.tsx`                       | ✅ Complete                                                               |
+| `components/Meta/Meta.tsx`                | ✅ Deleted                                                                |
+| `pages/api/hello.ts`                      | ✅ Deleted                                                                |
+| shadcn/ui adoption                        | ✅ Complete — Button, Card, Dropdown, Tooltip, Badge installed and in use |
+| Dark mode                                 | ✅ Complete — shadcn ThemeProvider, system/light/dark toggle              |
+| Node.js 24                                | ✅ Complete — `.nvmrc`, `package.json`, CI pipeline updated               |
+| Remove `: React.ReactElement` annotations | ✅ Complete                                                               |
+| Flatten `ui/` subfolders                  | ⚠️ Partial — `Date/`, `PageHeader/`, `StackItem/` still nested            |
+| `WorldMap/WorldMap.tsx` flatten           | ⚠️ Skipped — keep subfolder (client/server split needed)                  |
+| Vercel Analytics in layout                | ❌ Not done                                                               |
+| Turbopack for dev                         | ❌ Not done                                                               |
+| ESLint flat config migration              | ❌ Not done                                                               |
 
 ---
 
-## Phase 1: Critical Architectural Changes
+## Next Steps
 
-### Task 1.1: Migrate Pages Router to App Router
-
-**Priority:** 🔴 Critical  
-**Estimated Effort:** High  
-**Dependencies:** None
-
-#### Pages to Migrate:
-
-Already migrated (not in original plan):
-
-- `app/reading/page.tsx` ✅
-- `app/speaking/page.tsx` ✅
-- `app/bucharest/page.tsx` ✅
-
-Still to migrate:
-
-- `pages/index.tsx` → `app/page.tsx`
-- `pages/about/index.tsx` → `app/about/page.tsx`
-- `pages/blog/index.tsx` → `app/blog/page.tsx`
-- `pages/blog/[id].tsx` → `app/blog/[id]/page.tsx`
-- `pages/making/index.tsx` → `app/making/page.tsx`
-- `pages/working/index.tsx` → `app/working/page.tsx`
-- `pages/traveling/index.tsx` → `app/traveling/page.tsx`
-- `pages/stack/index.tsx` → `app/stack/page.tsx`
-
-#### Migration Steps:
-
-1. Create corresponding `app/` directory structure
-2. Convert `getStaticProps` → Server Components with direct data fetching
-3. Convert `getStaticPaths` → `generateStaticParams`
-4. Replace `Meta` component with `metadata` export
-5. Update imports to use `@/` aliases
-6. Remove `Layout` wrapper (handled by root layout)
-7. Update Cypress tests to reflect new routes
-8. Delete old `pages/` files after verification
-
-#### Key Changes:
-
-- Remove `GetStaticProps` and `GetStaticPaths` types
-- Use async Server Components
-- Export `metadata` object instead of using `<Meta>` component
-- Use `generateStaticParams` for dynamic routes
-
-#### Example Migration Pattern:
-
-```typescript
-// Before (Pages Router)
-export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = await getSortedPostsData();
-  return { props: { allPostsData } };
-};
-
-export default function Blog({ allPostsData }: BlogProps) {
-  return <Layout pageTitle="Blog">...</Layout>;
-}
-
-// After (App Router)
-export const metadata: Metadata = {
-  title: 'Blog | Pablo Porto',
-  description: '...'
-};
-
-export default async function BlogPage() {
-  const allPostsData = await getSortedPostsData();
-  return <div>...</div>;
-}
-```
-
-**Files to Modify:**
-
-- `app/page.tsx` (new)
-- `app/about/page.tsx` (new)
-- `app/blog/page.tsx` (new)
-- `app/blog/[id]/page.tsx` (new)
-- `app/making/page.tsx` (new)
-- `app/working/page.tsx` (new)
-- `app/traveling/page.tsx` (new)
-- `app/stack/page.tsx` (new)
-- `cypress/e2e/*.ts` (update routes)
-
-**Files to Delete:**
-
-- `pages/index.tsx`
-- `pages/about/index.tsx`
-- `pages/blog/index.tsx`
-- `pages/blog/[id].tsx`
-- `pages/making/index.tsx`
-- `pages/working/index.tsx`
-- `pages/traveling/index.tsx`
-- `pages/stack/index.tsx`
-- `pages/_app.tsx`
-- `pages/_document.tsx`
-- `components/Meta/Meta.tsx` (after migration)
+Priority order — each step is independently completable.
 
 ---
 
-### Task 1.2: Consolidate Layout Logic
+### Step 1 — Remove `: React.ReactElement` return type annotations
 
-**Priority:** 🔴 Critical  
-**Estimated Effort:** Low  
-**Dependencies:** Task 1.1
+**Effort:** Low · **Risk:** None
 
-#### Actions:
+TypeScript infers JSX return types automatically. Explicit annotations add noise with no benefit.
 
-1. Ensure `app/layout.tsx` contains all layout logic
-2. Remove duplicate layout code from `pages/_app.tsx`
-3. Update `components/Layout/Layout.tsx` to work with App Router
-4. Remove `home` prop pattern (use route detection instead)
-5. Integrate Vercel Analytics in root layout
+Files to update (11):
 
-#### Current State:
+| File                                      | Change                        |
+| ----------------------------------------- | ----------------------------- |
+| `components/PostSummary.tsx`              | Remove `: React.ReactElement` |
+| `components/PageContainer.tsx`            | Remove `: React.ReactElement` |
+| `components/ThemeToggle.tsx`              | Remove `: React.ReactElement` |
+| `components/Card.tsx`                     | Remove `: React.ReactElement` |
+| `components/Header.tsx`                   | Remove `: React.ReactElement` |
+| `components/Footer.tsx`                   | Remove `: React.ReactElement` |
+| `components/PostBody.tsx`                 | Remove `: React.ReactElement` |
+| `components/PhotoCard.tsx`                | Remove `: React.ReactElement` |
+| `components/ui/StackItem/StackItem.tsx`   | Remove `: React.ReactElement` |
+| `components/ui/PageHeader/PageHeader.tsx` | Remove `: React.ReactElement` |
+| `components/ui/Date/Date.tsx`             | Remove `: React.ReactElement` |
 
-- `app/layout.tsx` - Basic layout
-- `pages/_app.tsx` - Duplicate layout with Analytics
+Pattern:
 
-#### Target State:
-
-- Single `app/layout.tsx` with Header, Footer, Analytics
-- `components/Layout/Layout.tsx` simplified for page-level layout
-
-**Files to Modify:**
-
-- `app/layout.tsx`
-- `components/Layout/Layout.tsx`
-- `pages/_app.tsx` (delete after migration)
-
----
-
-### Task 1.3: Enable TypeScript Strict Mode
-
-**Priority:** 🔴 Critical  
-**Estimated Effort:** Medium  
-**Dependencies:** None (can be done in parallel)
-
-#### Steps:
-
-1. Enable `strict: true` in `tsconfig.json`
-2. Enable `strictNullChecks: true`
-3. Fix type errors incrementally
-4. Add proper type definitions for markdown frontmatter
-5. Type API responses properly
-
-#### Configuration Changes:
-
-```json
-{
-    "compilerOptions": {
-        "strict": true,
-        "strictNullChecks": true
-    }
-}
-```
-
-#### Type Improvements Needed:
-
-- Markdown frontmatter types (`PostData`, `ProjectData`)
-- API response types (`literal.ts`)
-- Environment variable types
-- Component prop types
-
-**Files to Modify:**
-
-- `tsconfig.json`
-- `lib/posts.ts`
-- `lib/projects.ts`
-- `lib/talks.ts`
-- `lib/literal.ts`
-- All component files with type errors
-
----
-
-## Phase 2: Code Quality Improvements
-
-### Task 2.1: Remove Unnecessary React Imports
-
-**Priority:** 🟡 High  
-**Estimated Effort:** Low  
-**Dependencies:** None
-
-#### Actions:
-
-1. Remove `import React from 'react'` from all files
-2. Keep React imports only when using React APIs (hooks, types)
-3. Update ESLint config if needed
-
-#### Files Affected (28+ files):
-
-- `components/Header/Header.tsx`
-- `components/Card/Card.tsx`
-- `components/Footer/Footer.tsx`
-- `components/Layout/Layout.tsx`
-- `components/Meta/Meta.tsx`
-- `pages/*.tsx` (all)
-- `app/layout.tsx`
-- All component files
-
-**Script to Find:**
-
-```bash
-grep -r "import React from 'react'" --include="*.tsx" --include="*.ts"
-```
-
----
-
-### Task 2.2: Remove Return Type Annotations
-
-**Priority:** 🟡 High  
-**Estimated Effort:** Low  
-**Dependencies:** Task 1.3 (TypeScript strict mode)
-
-#### Actions:
-
-1. Remove `: React.ReactElement` from all component functions
-2. Let TypeScript infer return types
-3. Keep return types only for exported utility functions where it adds clarity
-
-#### Pattern:
-
-```typescript
+```tsx
 // Before
 export default function Card({ title }: CardProps): React.ReactElement {
-  return <div>...</div>;
-}
 
 // After
 export default function Card({ title }: CardProps) {
-  return <div>...</div>;
+```
+
+Verify: `npm run build && npm run lint`
+
+---
+
+### Step 2 — Flatten `components/ui/` subfolders
+
+**Effort:** Low · **Risk:** Low (update imports)
+
+Three single-file components are still in nested folders inside `components/ui/`. Flatten them
+to match the rest of the component structure.
+
+| Current path                              | Target path                    |
+| ----------------------------------------- | ------------------------------ |
+| `components/ui/Date/Date.tsx`             | `components/ui/Date.tsx`       |
+| `components/ui/PageHeader/PageHeader.tsx` | `components/ui/PageHeader.tsx` |
+| `components/ui/StackItem/StackItem.tsx`   | `components/ui/StackItem.tsx`  |
+
+Update barrel export in `components/ui/index.ts` accordingly.
+Update any direct imports of these components across the codebase.
+
+Verify: `npm run build` + all E2E tests pass.
+
+---
+
+### Step 3 — Add Vercel Analytics to `app/layout.tsx`
+
+**Effort:** Low · **Risk:** None
+
+Analytics was previously in `pages/_app.tsx` and was lost during the App Router migration.
+
+```bash
+npm install @vercel/analytics
+```
+
+```tsx
+// app/layout.tsx
+import { Analytics } from '@vercel/analytics/react';
+
+export default function RootLayout({ children }) {
+    return (
+        <html>
+            <body>
+                <ThemeProvider>
+                    <Header />
+                    <main>{children}</main>
+                    <Footer />
+                </ThemeProvider>
+                <Analytics />
+            </body>
+        </html>
+    );
 }
 ```
 
-**Files Affected:** All component files
+Verify: Deploy to Vercel preview and confirm events appear in the Analytics dashboard.
 
 ---
 
-### Task 2.3: Add Environment Variable Validation
+### Step 4 — Enable Turbopack for dev
 
-**Priority:** 🟡 High  
-**Estimated Effort:** Medium  
-**Dependencies:** None
+**Effort:** Trivial · **Risk:** None
 
-#### Implementation:
+One flag change for faster hot reload during local development. No code changes required.
 
-1. Install `zod`: `npm install zod`
-2. Create `lib/env.ts` with validation schema
-3. Validate at build time
-4. Provide helpful error messages
-
-#### Example Implementation:
-
-```typescript
-// lib/env.ts
-import { z } from 'zod';
-
-const envSchema = z.object({
-    LITERAL_API_TOKEN: z.string().optional(),
-    LITERAL_PROFILE_ID: z.string().optional(),
-    LITERAL_PROFILE_HANDLE: z.string().optional(),
-    NODE_ENV: z.enum(['development', 'production', 'test']).default('development')
-});
-
-export const env = envSchema.parse(process.env);
+```json
+// package.json
+"dev": "next dev --turbo"
 ```
 
-#### Usage:
+Verify: `npm run dev` starts without errors and HMR works as expected.
 
-```typescript
-// Before
-const apiToken = process.env.LITERAL_API_TOKEN;
+---
 
-// After
-import { env } from '@/lib/env';
-const apiToken = env.LITERAL_API_TOKEN;
+### Step 5 — Migrate to ESLint flat config
+
+**Effort:** Low · **Risk:** Low
+
+`next lint` is deprecated in favour of the ESLint CLI. Next.js 16 will remove it entirely.
+Running `npx @next/codemod@canary next-lint-to-eslint-cli .` automates the migration.
+
+```bash
+npx @next/codemod@canary next-lint-to-eslint-cli .
 ```
 
-**Files to Create:**
+This replaces `.eslintrc.json` with `eslint.config.mjs` and updates `package.json` lint script
+from `next lint` to `eslint .`.
 
-- `lib/env.ts`
-
-**Files to Modify:**
-
-- `app/reading/page.tsx`
-- `lib/literal.ts`
-- `scripts/get-literal-token.ts`
+Verify: `npm run lint` passes with no warnings.
 
 ---
 
-### Task 2.4: Standardize Metadata API Usage
+## Completed — for reference
 
-**Priority:** 🟡 High  
-**Estimated Effort:** Low  
-**Dependencies:** Task 1.1
+### shadcn/ui Design System
 
-#### Actions:
+Adopted shadcn/ui as the component library. Installed components:
 
-1. Ensure all App Router pages use `metadata` export
-2. Create shared metadata utilities for common patterns
-3. Remove `Meta` component after migration
+| Component     | File                              | Used in                                                        |
+| ------------- | --------------------------------- | -------------------------------------------------------------- |
+| Button        | `components/ui/button.tsx`        | Header, ThemeToggle, FilteredProjects, GetInTouch, making page |
+| Card          | `components/ui/card.tsx`          | Home page cards                                                |
+| Dropdown Menu | `components/ui/dropdown-menu.tsx` | ThemeToggle                                                    |
+| Tooltip       | `components/ui/tooltip.tsx`       | WorldMap                                                       |
+| Badge         | `components/ui/badge.tsx`         | Blog post tags, PostSummary, ProjectSummary                    |
 
-#### Shared Metadata Pattern:
+Migration pattern for link-buttons: use `asChild` prop with `<a>` or `<Link>`.
 
-```typescript
-// lib/metadata.ts
-import { Metadata } from 'next';
-
-export function createPageMetadata(title: string, description: string, path: string): Metadata {
-    return {
-        title: `${title} | Pablo Porto`,
-        description,
-        metadataBase: new URL('https://pabloporto.me'),
-        alternates: { canonical: path },
-        openGraph: {
-            title: `${title} | Pablo Porto`,
-            description,
-            url: path,
-            siteName: 'Pablo Porto',
-            locale: 'en_US',
-            type: 'website'
-        },
-        twitter: {
-            card: 'summary',
-            title: `${title} | Pablo Porto`,
-            description
-        }
-    };
-}
+```tsx
+<Button asChild className="bg-emerald-500 hover:bg-emerald-600 text-white">
+    <a href="mailto:pablo@pabloporto.me">Get in Touch</a>
+</Button>
 ```
 
-**Files to Create:**
+Custom components remaining in `components/ui/` (intentional — not shadcn equivalents):
 
-- `lib/metadata.ts`
-
-**Files to Modify:**
-
-- All `app/**/page.tsx` files
-
----
-
-## Phase 3: Structural Improvements
-
-### Task 3.1: Reorganize Component Structure
-
-**Priority:** 🟢 Medium  
-**Estimated Effort:** Medium  
-**Dependencies:** None
-
-#### Actions:
-
-1. Flatten single-file component folders
-2. Keep folders only for components with multiple files
-3. Update imports across codebase
-
-#### Migration Pattern:
-
-- `components/Card/Card.tsx` → `components/Card.tsx`
-- `components/Footer/Footer.tsx` → `components/Footer.tsx`
-- `components/Header/Header.tsx` → `components/Header.tsx`
-- Keep `components/ui/` structure (has multiple files)
-
-**Files to Move:**
-
-- `components/Card/Card.tsx` → `components/Card.tsx`
-- `components/Footer/Footer.tsx` → `components/Footer.tsx`
-- `components/Header/Header.tsx` → `components/Header.tsx`
-- `components/Layout/Layout.tsx` → `components/Layout.tsx`
-- `components/Meta/Meta.tsx` → Delete (after migration)
-- `components/PostBody/PostBody.tsx` → `components/PostBody.tsx`
-- `components/PostSummary/PostSummary.tsx` → `components/PostSummary.tsx`
-- `components/ProjectSummary/ProjectSummary.tsx` → `components/ProjectSummary.tsx`
-- `components/BookCard/BookCard.tsx` → `components/BookCard.tsx`
-- `components/PhotoCard/PhotoCard.tsx` → `components/PhotoCard.tsx`
-- `components/Shelf/Shelf.tsx` → `components/Shelf.tsx`
-- `components/TalkCard/TalkCard.tsx` → `components/TalkCard.tsx`
-- `components/WorldMap/WorldMap.tsx` → `components/WorldMap.tsx`
-
-**Files to Update:** All files importing these components
+- `Date.tsx` — date formatter using `date-fns`
+- `PageHeader.tsx` — page title + subtitle layout
+- `StackItem.tsx` — stack page list item with logo
+- `coffee.tsx` / `heart.tsx` — animated SVG icons (Framer Motion)
 
 ---
 
-### Task 3.2: Modernize Next.js Configuration
+## Architecture reference
 
-**Priority:** 🟢 Medium  
-**Estimated Effort:** Low  
-**Dependencies:** None
-
-#### Actions:
-
-1. Convert `next.config.js` to TypeScript (`next.config.ts`)
-2. Add proper typing
-3. Update ESLint dirs to reflect App Router
-
-#### New Configuration:
-
-```typescript
-// next.config.ts
-import type { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
-    webpack(config) {
-        config.module.rules.push({
-            test: /\.svg$/i,
-            issuer: /\.[jt]sx?$/,
-            use: ['@svgr/webpack']
-        });
-        return config;
-    },
-    eslint: {
-        dirs: ['app', 'components', 'lib', 'cypress']
-    }
-};
-
-export default nextConfig;
 ```
+app/
+  layout.tsx          # Root layout — Header, Footer, ThemeProvider
+  page.tsx            # Home
+  about/page.tsx
+  blog/
+    page.tsx
+    [id]/page.tsx
+  working/page.tsx
+  making/page.tsx
+  traveling/page.tsx
+  reading/page.tsx
+  speaking/page.tsx
+  stack/page.tsx
+  error.tsx
+  not-found.tsx
 
-**Files to Modify:**
+components/
+  ui/                 # shadcn/ui + custom primitives
+    button.tsx        # shadcn
+    card.tsx          # shadcn
+    badge.tsx         # shadcn
+    dropdown-menu.tsx # shadcn
+    tooltip.tsx       # shadcn
+    Date/             # custom (to be flattened — Step 2)
+    PageHeader/       # custom (to be flattened — Step 2)
+    StackItem/        # custom (to be flattened — Step 2)
+    coffee.tsx        # custom animated icon
+    heart.tsx         # custom animated icon
+    index.ts          # barrel export
+  WorldMap/           # kept as folder — WorldMap.tsx + WorldMapClient.tsx
+  Header.tsx
+  Footer.tsx
+  ...
 
-- `next.config.js` → `next.config.ts` (rename and convert)
+lib/
+  metadata.ts         # createMetadata() helper
+  env.ts              # typed env vars
+  posts.ts
+  projects.ts
+  talks.ts
+  literal.ts
 
----
-
-### Task 3.3: Improve Error Handling
-
-**Priority:** 🟢 Medium  
-**Estimated Effort:** Medium  
-**Dependencies:** Task 1.1
-
-#### Actions:
-
-1. ~~Add error boundaries for App Router~~ ✅ Done
-2. ~~Create `app/error.tsx` for global error handling~~ ✅ Done (`app/error.tsx` exists)
-3. Add `app/not-found.tsx` for 404 pages
-4. Improve error messages for environment variables
-
-#### Implementation:
-
-```typescript
-// app/error.tsx
-'use client';
-
-export default function Error({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string };
-  reset: () => void;
-}) {
-  return (
-    <div>
-      <h2>Something went wrong!</h2>
-      <button onClick={() => reset()}>Try again</button>
-    </div>
-  );
-}
+styles/
+  globals.css         # Tailwind + shadcn CSS variables + dark mode overrides
 ```
-
-**Files to Create:**
-
-- ~~`app/error.tsx`~~ ✅ Done
-- `app/not-found.tsx`
-
-**Files to Modify:**
-
-- `app/reading/page.tsx` (improve error handling)
-- `lib/literal.ts` (better error messages)
-
----
-
-### Task 3.4: Remove Unused Code
-
-**Priority:** 🟢 Medium  
-**Estimated Effort:** Low  
-**Dependencies:** Task 1.1
-
-#### Actions:
-
-1. Delete `pages/api/hello.ts` if unused
-2. Remove `components/Meta/Meta.tsx` after migration
-3. Clean up unused imports
-4. Remove duplicate utility functions
-
-**Files to Delete:**
-
-- `pages/api/hello.ts` (verify unused first)
-- `components/Meta/Meta.tsx` (after Task 1.1)
-
----
-
-## Phase 4: Optimization & Polish
-
-### Task 4.1: Standardize Image Optimization
-
-**Priority:** 🔵 Low  
-**Estimated Effort:** Low  
-**Dependencies:** None
-
-#### Actions:
-
-1. Create shared image configuration
-2. Standardize quality settings
-3. Ensure all images use Next.js Image component properly
-
-#### Create Image Config:
-
-```typescript
-// lib/image-config.ts
-export const imageConfig = {
-    quality: 85,
-    sizes: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-} as const;
-```
-
-**Files to Create:**
-
-- `lib/image-config.ts`
-
-**Files to Modify:**
-
-- `pages/index.tsx`
-- `pages/blog/[id].tsx`
-- `components/PhotoCard/PhotoCard.tsx`
-- `components/BookCard/BookCard.tsx`
-
----
-
-### Task 4.2: Improve Type Safety for Content
-
-**Priority:** 🔵 Low  
-**Estimated Effort:** Medium  
-**Dependencies:** Task 1.3
-
-#### Actions:
-
-1. Create strict types for markdown frontmatter
-2. Validate frontmatter at build time
-3. Add type guards for content data
-
-#### Implementation:
-
-```typescript
-// lib/content-types.ts
-import { z } from 'zod';
-
-export const PostFrontmatterSchema = z.object({
-    title: z.string(),
-    date: z.string(),
-    type: z.enum(['Post', 'Paper']),
-    link: z.string().url().optional(),
-    tag: z.string().optional()
-});
-
-export type PostFrontmatter = z.infer<typeof PostFrontmatterSchema>;
-```
-
-**Files to Create:**
-
-- `lib/content-types.ts`
-
-**Files to Modify:**
-
-- `lib/posts.ts`
-- `lib/projects.ts`
-
----
-
-### Task 4.3: Update ESLint Configuration
-
-**Priority:** 🔵 Low  
-**Estimated Effort:** Low  
-**Dependencies:** Task 1.1
-
-#### Actions:
-
-1. Update ESLint config for App Router
-2. Add rules for React Server Components
-3. Configure import order
-
-**Files to Modify:**
-
-- `.eslintrc.json`
-
----
-
-## Testing Strategy
-
-### After Each Phase:
-
-1. Run `npm run build` to verify no build errors
-2. Run `npm run lint` to check code quality
-3. Run `npm run test:e2e` to verify E2E tests pass
-4. Manually test critical user flows
-
-### Test Updates Required:
-
-- Update Cypress tests for new routes
-- Verify all navigation links work
-- Test dynamic routes (`/blog/[id]`)
-- Verify metadata is correct
-
-**Files to Modify:**
-
-- `cypress/e2e/navigation_test.ts`
-- `cypress/e2e/blog_page_test.ts`
-- All other E2E test files
-
----
-
-## Migration Checklist
-
-### Pre-Migration
-
-- [ ] Backup current codebase
-- [ ] Create feature branch: `modernization/migrate-to-app-router`
-- [ ] Review all Pages Router routes
-
-### Phase 1: Critical
-
-- [ ] Task 1.1: Migrate all pages to App Router
-- [ ] Task 1.2: Consolidate layout logic
-- [ ] Task 1.3: Enable TypeScript strict mode
-- [ ] Verify build passes
-- [ ] Update E2E tests
-
-### Phase 2: Code Quality
-
-- [ ] Task 2.1: Remove React imports
-- [ ] Task 2.2: Remove return type annotations
-- [ ] Task 2.3: Add env validation
-- [ ] Task 2.4: Standardize metadata API
-
-### Phase 3: Structural
-
-- [ ] Task 3.1: Reorganize components
-- [ ] Task 3.2: Modernize Next.js config
-- [x] Task 3.3: Improve error handling (partial — `error.tsx` done, `not-found.tsx` remaining)
-- [ ] Task 3.4: Remove unused code
-
-### Phase 4: Polish
-
-- [ ] Task 4.1: Standardize images
-- [ ] Task 4.2: Improve content types
-- [ ] Task 4.3: Update ESLint
-
-### Post-Migration
-
-- [ ] Delete `pages/` directory
-- [ ] Update README with new structure
-- [ ] Run performance check
-- [ ] Deploy to preview environment
-- [ ] Verify all functionality works
-- [ ] Merge to main
-
----
-
-## Risk Mitigation
-
-### Potential Issues:
-
-1. **Breaking Changes**: Test thoroughly before deleting old code
-2. **Type Errors**: Fix incrementally, don't enable all strict checks at once
-3. **Route Changes**: Update all internal links and external references
-4. **SEO Impact**: Verify metadata is correctly migrated
-
-### Rollback Plan:
-
-- Keep `pages/` directory until verification complete
-- Use feature flags if needed
-- Maintain git history for easy rollback
-
----
-
-## Notes for AI Agents
-
-### When Executing Tasks:
-
-1. **Always test after changes**: Run `npm run build` and `npm run lint`
-2. **Update imports**: Use `@/` alias consistently
-3. **Preserve functionality**: Don't change behavior, only structure
-4. **Commit incrementally**: Small, focused commits per task
-5. **Update tests**: Keep E2E tests in sync with changes
-
-### Common Patterns:
-
-- Server Components: Use `async` functions, fetch data directly
-- Metadata: Export `metadata` object, not component
-- Layout: Use `app/layout.tsx` for global layout
-- Dynamic Routes: Use `[id]/page.tsx` structure with `generateStaticParams`
-
-### File Path Conventions:
-
-- Components: `components/ComponentName.tsx`
-- Pages: `app/route-name/page.tsx`
-- Dynamic: `app/route/[id]/page.tsx`
-- Utils: `lib/utility-name.ts`
-- Types: `lib/types.ts` or co-located
-
----
-
-## Resources
-
-- [Next.js App Router Migration Guide](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration)
-- [React Server Components](https://react.dev/reference/rsc/server-components)
-- [TypeScript Strict Mode](https://www.typescriptlang.org/tsconfig#strict)
-- [Zod Documentation](https://zod.dev/)
-
----
-
-**Status Tracking:** Update this document as tasks are completed.

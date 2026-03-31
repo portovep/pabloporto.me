@@ -6,7 +6,7 @@ import Link from 'next/link';
 import websiteLogo from '@/public/android-chrome-192x192.png';
 import { Button } from '@/components/ui/button';
 
-export default function Header(): React.ReactElement {
+export default function Header() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
     const toggleRef = useRef<HTMLButtonElement>(null);
     const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);

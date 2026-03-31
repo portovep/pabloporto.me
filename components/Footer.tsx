@@ -4,7 +4,7 @@ import { HeartIcon } from '@/components/ui/heart';
 import { CoffeeIcon } from '@/components/ui/coffee';
 import { ThemeToggle } from '@/components/ThemeToggle';
 
-export default function Footer(): React.ReactElement {
+export default function Footer() {
     return (
         <footer
             data-testid="footer"

@@ -28,7 +28,7 @@ function applyThemeToDocument(theme: 'light' | 'dark' | 'system'): void {
     root.style.colorScheme = resolved;
 }
 
-export function ThemeToggle(): React.ReactElement {
+export function ThemeToggle() {
     const { setTheme } = useTheme();
 
     const handleSelect = (theme: 'light' | 'dark' | 'system') => () => {

@@ -6,7 +6,7 @@ type StackItemProps = {
     link: string;
 };
 
-export default function StackItem(props: StackItemProps): React.ReactElement {
+export default function StackItem(props: StackItemProps) {
     const { name, description, link } = props;
     return (
         <li
