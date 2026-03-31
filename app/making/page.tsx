@@ -2,6 +2,7 @@ import Image from 'next/image';
 import PageContainer from '@/components/PageContainer';
 import { PageHeader } from '@/components/ui';
 import { Button } from '@/components/ui/button';
+import GetInTouch from '@/components/GetInTouch';
 import { createMetadata } from '@/lib/metadata';
 
 import chromeStoreCTA from '@/public/images/projects/chrome_store.png';
@@ -26,9 +27,9 @@ export default function MakingPage() {
                 </PageHeader>
                 <div
                     data-testid="making-project"
-                    className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mt-10 mb-10 border-b border-border">
-                    <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
-                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-center mb-6 w-full md:w-auto">
+                    className="pb-14 md:flex-row container flex flex-col items-start pt-10 mx-auto mt-10 mb-10 border-b border-border">
+                    <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col items-start order-last mb-0">
+                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-start mb-6 w-full md:w-auto">
                             <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">
                                 Wanderpass
                             </h2>
@@ -46,7 +47,7 @@ export default function MakingPage() {
                             statistics. Wanderpass also lets you discover travel buddies, see where
                             friends have been, and get inspired for future adventures.
                         </p>
-                        <div className="flex justify-center mt-8">
+                        <div className="flex justify-start mt-8">
                             <Button
                                 asChild
                                 size="lg"
@@ -63,7 +64,7 @@ export default function MakingPage() {
                             </Button>
                         </div>
                     </div>
-                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8">
+                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-full mb-8">
                         <Image
                             priority
                             className="object-center rounded rounded-b-none"
@@ -77,9 +78,9 @@ export default function MakingPage() {
                 </div>
                 <div
                     data-testid="making-project"
-                    className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-border">
-                    <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
-                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-center mb-6 w-full md:w-auto">
+                    className="pb-14 md:flex-row container flex flex-col items-start pt-10 mx-auto mb-10 border-b border-border">
+                    <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col items-start order-last mb-0">
+                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-start mb-6 w-full md:w-auto">
                             <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">
                                 1Stream
                             </h2>
@@ -96,7 +97,22 @@ export default function MakingPage() {
                             synchronizes video playback between you and your friend so you can be
                             sure you&apos;re watching exactly the same frame at the same time.
                         </p>
-                        <div className="flex justify-center mt-8">
+                        <div className="flex flex-col items-start gap-4 mt-8">
+                            <Button
+                                asChild
+                                variant="outline"
+                                size="lg"
+                                className="bg-muted hover:bg-accent dark:bg-muted/50">
+                                <a href="https://chrome.google.com/webstore/detail/1stream/ckgaafkgiajiabimkgpgkiamnolncfkg">
+                                    <Image
+                                        priority
+                                        alt="chrome-store-link"
+                                        src={chromeStoreCTA}
+                                        height="60"
+                                        width="225"
+                                    />
+                                </a>
+                            </Button>
                             <Button
                                 asChild
                                 size="lg"
@@ -108,29 +124,12 @@ export default function MakingPage() {
                                             clipRule="evenodd"
                                             d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48C19.137 20.107 22 16.373 22 11.969 22 6.463 17.522 2 12 2z"></path>
                                     </svg>
-                                    Fork me
-                                </a>
-                            </Button>
-                        </div>
-                        <div className="flex justify-center mt-4">
-                            <Button
-                                asChild
-                                variant="outline"
-                                size="lg"
-                                className="bg-muted hover:bg-accent">
-                                <a href="https://chrome.google.com/webstore/detail/1stream/ckgaafkgiajiabimkgpgkiamnolncfkg">
-                                    <Image
-                                        priority
-                                        alt="chrome-store-link"
-                                        src={chromeStoreCTA}
-                                        height="60"
-                                        width="225"
-                                    />
+                                    View on GitHub
                                 </a>
                             </Button>
                         </div>
                     </div>
-                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8">
+                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-full mb-8">
                         <Image
                             priority
                             className="object-center rounded rounded-b-none"
@@ -144,9 +143,9 @@ export default function MakingPage() {
                 </div>
                 <div
                     data-testid="making-project"
-                    className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-border">
-                    <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
-                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-center mb-6 w-full md:w-auto">
+                    className="pb-14 md:flex-row container flex flex-col items-start pt-10 mx-auto mb-10 border-b border-border">
+                    <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col items-start order-last mb-0">
+                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-start mb-6 w-full md:w-auto">
                             <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">
                                 EcoShifter
                                 <br className="inline-block" />
@@ -174,12 +173,12 @@ export default function MakingPage() {
                             The new API allows users to choose existing makes and models offered and
                             to save their car profiles on the cloud.
                         </p>
-                        <div className="flex justify-center mt-8">
+                        <div className="flex justify-start mt-8">
                             <Button
                                 asChild
-                                variant="secondary"
+                                variant="outline"
                                 size="lg"
-                                className="bg-muted hover:bg-accent">
+                                className="bg-muted hover:bg-accent dark:bg-muted/50">
                                 <a href="https://play.google.com/store/apps/details?id=com.ecoshifter.beta">
                                     <svg
                                         fill="currentColor"
@@ -198,7 +197,7 @@ export default function MakingPage() {
                             </Button>
                         </div>
                     </div>
-                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 flex justify-center w-5/6 mb-8">
+                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-full mb-8">
                         <Image
                             className="object-cover object-center rounded"
                             alt="Ecoshifter screenshoot"
@@ -211,9 +210,9 @@ export default function MakingPage() {
                 </div>
                 <div
                     data-testid="making-project"
-                    className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10 border-b border-border">
-                    <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
-                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-center mb-6 w-full md:w-auto">
+                    className="pb-14 md:flex-row container flex flex-col items-start pt-10 mx-auto mb-10 border-b border-border">
+                    <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col items-start order-last mb-0">
+                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-start mb-6 w-full md:w-auto">
                             <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">
                                 Cloujera
                             </h2>
@@ -233,7 +232,7 @@ export default function MakingPage() {
                             app. We ended up winning the public&apos;s favourite award while
                             finishing second among the 100 teams that took part in the hackathon.
                         </p>
-                        <div className="flex justify-center mt-8">
+                        <div className="flex justify-start mt-8">
                             <Button
                                 asChild
                                 size="lg"
@@ -245,12 +244,12 @@ export default function MakingPage() {
                                             clipRule="evenodd"
                                             d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48C19.137 20.107 22 16.373 22 11.969 22 6.463 17.522 2 12 2z"></path>
                                     </svg>
-                                    Fork me
+                                    View on GitHub
                                 </a>
                             </Button>
                         </div>
                     </div>
-                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8">
+                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-full mb-8">
                         <Image
                             className="object-center rounded rounded-b-none"
                             alt="Cloujera screenshoot"
@@ -263,9 +262,9 @@ export default function MakingPage() {
                 </div>
                 <div
                     data-testid="making-project"
-                    className="pb-14 md:flex-row container flex flex-col items-center pt-10 mx-auto mb-10">
-                    <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left flex flex-col items-center order-last mb-0 text-center">
-                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-center mb-6 w-full md:w-auto">
+                    className="pb-14 md:flex-row container flex flex-col items-start pt-10 mx-auto mb-10">
+                    <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col items-start order-last mb-0">
+                        <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-start mb-6 w-full md:w-auto">
                             <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">
                                 Crowdtransport
                             </h2>
@@ -285,7 +284,7 @@ export default function MakingPage() {
                             of the art Android technologies like text to speech processing (TTS),
                             GPS tracking, Maps API and Google Cloud Messaging.
                         </p>
-                        <div className="flex justify-center mt-8">
+                        <div className="flex justify-start mt-8">
                             <Button
                                 asChild
                                 size="lg"
@@ -297,12 +296,12 @@ export default function MakingPage() {
                                             clipRule="evenodd"
                                             d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48C19.137 20.107 22 16.373 22 11.969 22 6.463 17.522 2 12 2z"></path>
                                     </svg>
-                                    Fork me
+                                    View on GitHub
                                 </a>
                             </Button>
                         </div>
                     </div>
-                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 flex justify-center w-5/6 mb-8">
+                    <div className="md:mb-0 lg:max-w-lg lg:w-full md:w-1/2 w-full mb-8">
                         <Image
                             className="object-cover object-center rounded"
                             alt="Crowdtransport screenshoot"
@@ -313,6 +312,7 @@ export default function MakingPage() {
                     </div>
                 </div>
             </section>
+            <GetInTouch />
         </PageContainer>
     );
 }

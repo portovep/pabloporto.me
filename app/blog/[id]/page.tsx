@@ -88,7 +88,7 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                     <PostBody contentHtml={postData.contentHtml ?? ''} />
                 </div>
             </article>
-            <div className="flex justify-center mt-12 mb-8">
+            <div className="flex justify-start mt-12 mb-8">
                 <Link
                     href="/blog"
                     className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors">

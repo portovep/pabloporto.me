@@ -8,7 +8,7 @@ export default function Footer() {
     return (
         <footer
             data-testid="footer"
-            className="group mt-14 flex flex-col items-center justify-center w-full border-t border-border bg-background text-foreground pb-10 pt-10">
+            className="group mt-14 flex flex-col items-center justify-center w-full border-t border-border bg-background text-foreground pb-10 pt-10 px-6 md:px-0">
             <div className="sm:text-xl flex items-center justify-center gap-1 mt-4 text-base cursor-default text-foreground">
                 Made with{' '}
                 <span className="inline-flex hover:text-red-600" aria-hidden="true">
