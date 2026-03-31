@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 
 const inter = Inter({
@@ -70,6 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <main className="flex-1 flex flex-col">{children}</main>
                     <Footer />
                 </ThemeProvider>
+                <Analytics />
             </body>
         </html>
     );
