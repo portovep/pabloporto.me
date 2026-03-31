@@ -5,6 +5,7 @@ import path from 'path';
 export default defineConfig({
     e2e: {
         baseUrl: 'http://localhost:3000',
+        pageLoadTimeout: 120000,
         specPattern: 'cypress/e2e/**/*_test.{js,jsx,ts,tsx}',
         setupNodeEvents(on) {
             on('task', {

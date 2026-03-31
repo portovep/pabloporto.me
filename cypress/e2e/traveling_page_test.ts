@@ -1,5 +1,7 @@
 describe('Traveling page', () => {
     beforeEach(() => {
+        // Stub image requests so the 15 photos don't block window.load
+        cy.intercept('GET', '/_next/image*', { statusCode: 200, body: '' });
         cy.visit('/traveling');
     });
 
