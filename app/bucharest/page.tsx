@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { createMetadata } from '@/lib/metadata';
-import { cn } from '@/app/lib/utils';
+import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { MapPin, ExternalLink } from 'lucide-react';
 import PageContainer from '@/components/PageContainer';

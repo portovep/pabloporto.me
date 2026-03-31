@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import ProjectSummary from '@/components/ProjectSummary';
 import { Button } from '@/components/ui/button';
 import { ProjectData } from '@/lib/projects';
-import { cn } from '@/app/lib/utils';
+import { cn } from '@/lib/utils';
 
 interface FilteredProjectsProps {
     projects: ProjectData[];
