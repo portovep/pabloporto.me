@@ -1,7 +1,7 @@
 import { getSortedTalks } from '@/lib/talks';
 import TalkCard from '@/components/TalkCard';
 import PageContainer from '@/components/PageContainer';
-import PageHeader from '@/components/ui/PageHeader/PageHeader';
+import PageHeader from '@/components/ui/PageHeader';
 import { createMetadata } from '@/lib/metadata';
 
 export const metadata = createMetadata(

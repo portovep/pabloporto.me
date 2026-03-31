@@ -3,7 +3,7 @@ import { env } from '@/lib/env';
 import { downloadBookCovers } from '@/lib/bookCovers';
 import ShelfComponent from '@/components/Shelf';
 import PageContainer from '@/components/PageContainer';
-import PageHeader from '@/components/ui/PageHeader/PageHeader';
+import PageHeader from '@/components/ui/PageHeader';
 import { createMetadata } from '@/lib/metadata';
 
 export const metadata = createMetadata(

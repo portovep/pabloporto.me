@@ -23,7 +23,7 @@
 | Dark mode                                 | ✅ Complete — shadcn ThemeProvider, system/light/dark toggle              |
 | Node.js 24                                | ✅ Complete — `.nvmrc`, `package.json`, CI pipeline updated               |
 | Remove `: React.ReactElement` annotations | ✅ Complete                                                               |
-| Flatten `ui/` subfolders                  | ⚠️ Partial — `Date/`, `PageHeader/`, `StackItem/` still nested            |
+| Flatten `ui/` subfolders                  | ✅ Complete                                                               |
 | `WorldMap/WorldMap.tsx` flatten           | ⚠️ Skipped — keep subfolder (client/server split needed)                  |
 | Vercel Analytics in layout                | ❌ Not done                                                               |
 | Turbopack for dev                         | ❌ Not done                                                               |
