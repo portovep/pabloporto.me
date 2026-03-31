@@ -27,7 +27,7 @@
 | `WorldMap/WorldMap.tsx` flatten           | ⚠️ Skipped — keep subfolder (client/server split needed)                  |
 | Vercel Analytics in layout                | ✅ Complete                                                               |
 | Turbopack for dev                         | ✅ Complete                                                               |
-| ESLint flat config migration              | ❌ Not done                                                               |
+| ESLint flat config migration              | ✅ Complete                                                               |
 
 ---
 
