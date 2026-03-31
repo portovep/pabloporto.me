@@ -17,7 +17,7 @@ export default function PhotoCard({
     return (
         <div
             data-testid="photo-card"
-            className="h-96 w-72 rounded-xl shadow-gray-500 m-auto overflow-hidden shadow-xl cursor-pointer">
+            className="h-96 w-72 rounded-xl shadow-gray-500 m-auto overflow-hidden shadow-xl dark:shadow-none cursor-pointer">
             <div className="h-96 w-72 relative">
                 <Image
                     alt={`${title} taken at ${location}`}
