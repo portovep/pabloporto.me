@@ -43,3 +43,6 @@ cypress/videos
 
 # claude
 .claude
+
+# playwright-mcp
+.playwright-mcp
