@@ -8,17 +8,19 @@ export default function Footer() {
     return (
         <footer
             data-testid="footer"
-            className="group mt-14 flex flex-col items-center justify-center w-full border-t border-border bg-background text-foreground pb-10 pt-10 px-6 md:px-0">
-            <div className="sm:text-xl flex items-center justify-center gap-1 mt-4 text-base cursor-default text-foreground">
-                Made with{' '}
-                <span className="inline-flex hover:text-red-600" aria-hidden="true">
-                    <HeartIcon size={20} className="shrink-0" />
-                </span>{' '}
-                and flat whites{' '}
-                <span className="inline-flex hover:text-amber-800" aria-hidden="true">
-                    <CoffeeIcon size={20} className="shrink-0" />
-                </span>{' '}
-                in Spain, {new Date().getFullYear()}™
+            className="group mt-14 flex flex-col items-center justify-center w-full border-t border-border bg-background text-foreground pb-10 pt-6 md:pt-10 px-6 md:px-0">
+            <div className="sm:text-xl flex flex-wrap items-center justify-center gap-1 mt-4 text-base cursor-default text-foreground">
+                <span className="flex items-center gap-1">
+                    Made with{' '}
+                    <span className="inline-flex hover:text-red-600" aria-hidden="true">
+                        <HeartIcon size={20} className="shrink-0" />
+                    </span>{' '}
+                    and flat whites{' '}
+                    <span className="inline-flex hover:text-amber-800" aria-hidden="true">
+                        <CoffeeIcon size={20} className="shrink-0" />
+                    </span>
+                </span>
+                <span className="flex items-center">in Spain, {new Date().getFullYear()}™</span>
             </div>
             <div className="flex items-center justify-center mt-4 dark:[&_img]:invert">
                 <a
