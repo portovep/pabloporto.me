@@ -105,8 +105,8 @@ export default function AboutPage() {
                         <Link href="/traveling" className={linkClass}>
                             exploring the world
                         </Link>{' '}
-                        for both work and fun, playing and watching sports (I am a big snowboard and
-                        cycling fan), and{' '}
+                        for both work and fun, playing and watching sports (I am a big snowboarding
+                        and cycling fan), and{' '}
                         <Link href="/making" className={linkClass}>
                             building things on the internet
                         </Link>
