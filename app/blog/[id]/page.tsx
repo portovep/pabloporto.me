@@ -41,7 +41,7 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                 <span className="relative inline-flex">
                     <Image
                         priority
-                        quality={100}
+                        quality={75}
                         src={profilePic}
                         className="h-auto max-w-full rounded-full"
                         height={108}

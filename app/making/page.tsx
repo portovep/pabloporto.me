@@ -108,8 +108,9 @@ export default function MakingPage() {
                                         priority
                                         alt="chrome-store-link"
                                         src={chromeStoreCTA}
-                                        height="60"
-                                        width="225"
+                                        height={60}
+                                        width={225}
+                                        style={{ width: 'auto' }}
                                     />
                                 </a>
                             </Button>
@@ -202,9 +203,10 @@ export default function MakingPage() {
                             className="object-cover object-center rounded"
                             alt="Ecoshifter screenshoot"
                             src={ecoshifterScreenshot}
-                            height="500"
-                            width="300"
+                            height={500}
+                            width={300}
                             placeholder="blur"
+                            style={{ width: 'auto' }}
                         />
                     </div>
                 </div>

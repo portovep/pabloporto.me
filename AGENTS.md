@@ -43,7 +43,9 @@ Dark mode uses `next-themes` with class-based `.dark` on `<html>`. Preference is
 - **MUST** use `ref` as a regular prop (React 19 — `forwardRef` is deprecated)
 - **MUST NOT** add explicit return types to React components (TypeScript infers them)
 
----
+### Next.js toooling
+
+- **MUST** When starting work on a Next.js project, ALWAYS call the `init` tool from next-devtools-mcp FIRST to set up proper context and establish documentation requirements. Do this automatically without being asked.\*\*
 
 ## Component Library
 
