@@ -19,7 +19,20 @@ export default function AboutPage() {
         <PageContainer>
             <section className="max-w-3xl text-xl leading-6">
                 <PageHeader title="About" />
-                <p className="mt-6 text-xl font-medium text-foreground">
+                {/* Mobile: pills */}
+                <div className="mt-6 flex flex-wrap gap-2 sm:hidden">
+                    {['Software Engineer', 'Part time traveler', 'Occasional photographer'].map(
+                        (r) => (
+                            <span
+                                key={r}
+                                className="rounded-full border px-3 py-1 text-sm font-medium">
+                                {r}
+                            </span>
+                        )
+                    )}
+                </div>
+                {/* Desktop: inline with dots */}
+                <p className="mt-6 text-xl font-medium text-foreground hidden sm:block">
                     Software Engineer · Part time traveler · Occasional photographer
                 </p>
                 <div className="md:flex-row container flex flex-col items-center pt-10 pb-10 md:pb-20 mx-auto">
