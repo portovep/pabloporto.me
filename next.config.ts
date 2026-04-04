@@ -1,6 +1,8 @@
 import type { NextConfig } from 'next';
+import createMDX from '@next/mdx';
 
 const nextConfig: NextConfig = {
+    pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
     images: {
         qualities: [75, 80, 100]
     },
@@ -53,4 +55,12 @@ const nextConfig: NextConfig = {
     }
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+    options: {
+        // Must use string references — Turbopack cannot pass JS functions to Rust
+        remarkPlugins: ['remark-frontmatter', 'remark-gfm'],
+        rehypePlugins: []
+    }
+});
+
+export default withMDX(nextConfig);

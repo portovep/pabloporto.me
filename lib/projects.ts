@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { parseMarkdownContent } from './markdown';
+import { micromark } from 'micromark';
+import { gfm, gfmHtml } from 'micromark-extension-gfm';
 import { ProjectFrontmatterSchema } from './content-types';
 
 const projectDirectory = path.join(process.cwd(), 'content/projects');
@@ -32,7 +33,10 @@ const parseProject = async (fileName: string): Promise<ProjectData> => {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     const matterResult = matter(fileContents);
-    const contentHtml = parseMarkdownContent(matterResult.content).toString();
+    const contentHtml = micromark(matterResult.content, {
+        extensions: [gfm()],
+        htmlExtensions: [gfmHtml()]
+    });
     const frontmatter = ProjectFrontmatterSchema.parse(matterResult.data);
 
     return {

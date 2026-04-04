@@ -4,7 +4,6 @@ import { createMetadata } from '@/lib/metadata';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import PageContainer from '@/components/PageContainer';
-import PostBody from '@/components/PostBody';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { Date } from '@/components/ui';
 import { Badge } from '@/components/ui/badge';
@@ -85,7 +84,11 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                     <h2 className="md:text-5xl text-4xl font-bold text-foreground">
                         {postData.title}
                     </h2>
-                    <PostBody contentHtml={postData.contentHtml ?? ''} />
+                    {postData.Content && (
+                        <div className="lg:prose-xl prose-a:text-emerald-500 hover:prose-a:text-emerald-600 hover:prose-a:font-medium prose-a:no-underline prose-table:m-1 prose-table:p-2 mt-10 prose dark:prose-invert">
+                            <postData.Content />
+                        </div>
+                    )}
                 </div>
             </article>
             <div className="flex justify-start mt-12 mb-8">
