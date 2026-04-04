@@ -7,7 +7,7 @@ import PageContainer from '@/components/PageContainer';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { Date } from '@/components/ui';
 import { Badge } from '@/components/ui/badge';
-import profilePic from '@/public/images/profile.png';
+import profilePic from '@/public/images/profile.webp';
 
 export async function generateStaticParams() {
     const paths = await getAllPostIds();

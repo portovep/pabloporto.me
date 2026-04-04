@@ -1,7 +1,7 @@
 import Card from '@/components/Card';
 import Link from 'next/link';
 import Image from 'next/image';
-import profilePic from '@/public/images/profile.png';
+import profilePic from '@/public/images/profile.webp';
 
 export default function HomePage() {
     return (
