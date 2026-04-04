@@ -6,10 +6,13 @@ import type { ComponentType } from 'react';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
-export type PostData = {
+export type PostFrontmatter = {
     id: string;
-    Content?: ComponentType;
 } & ReturnType<typeof PostFrontmatterSchema.parse>;
+
+export type PostData = PostFrontmatter & {
+    Content: ComponentType;
+};
 
 export const getPostData = async (id: string): Promise<PostData> => {
     const fullPath = path.join(postsDirectory, `${id}.mdx`);
@@ -21,7 +24,7 @@ export const getPostData = async (id: string): Promise<PostData> => {
     return { id, Content, ...frontmatter };
 };
 
-export const getSortedPostsData = async (): Promise<PostData[]> => {
+export const getSortedPostsData = async (): Promise<PostFrontmatter[]> => {
     const fileNames = fs.readdirSync(postsDirectory);
 
     const posts = fileNames.map((fileName) => {
@@ -33,7 +36,7 @@ export const getSortedPostsData = async (): Promise<PostData[]> => {
         return { id, ...frontmatter };
     });
 
-    return posts.sort((a: PostData, b: PostData) => {
+    return posts.sort((a: PostFrontmatter, b: PostFrontmatter) => {
         if (a.date < b.date) {
             return 1;
         } else {

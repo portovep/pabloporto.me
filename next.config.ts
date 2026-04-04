@@ -59,7 +59,7 @@ const withMDX = createMDX({
     options: {
         // Must use string references — Turbopack cannot pass JS functions to Rust
         remarkPlugins: ['remark-frontmatter', 'remark-gfm'],
-        rehypePlugins: []
+        rehypePlugins: [['rehype-pretty-code', { theme: 'github-dark' }]]
     }
 });
 

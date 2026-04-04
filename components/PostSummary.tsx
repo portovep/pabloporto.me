@@ -1,9 +1,9 @@
-import { PostData } from '@/lib/posts';
+import { PostFrontmatter } from '@/lib/posts';
 import { Date } from '@/components/ui';
 import { Badge } from '@/components/ui/badge';
 
 type PostSummaryProps = {
-    postData: PostData;
+    postData: PostFrontmatter;
 };
 
 export default function PostSummary(props: PostSummaryProps) {
