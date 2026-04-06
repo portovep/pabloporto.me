@@ -88,6 +88,12 @@ export default function Header() {
                         data-testid="desktop-menu-about">
                         About
                     </Link>
+                    <Link
+                        href="/now"
+                        className="hover:text-emerald-600 text-muted-foreground sm:text-base mr-5 text-lg font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                        data-testid="desktop-menu-now">
+                        Now
+                    </Link>
                 </nav>
                 <div className="sm:hidden flex items-center">
                     <Button
@@ -195,6 +201,15 @@ export default function Header() {
                                     onClick={() => setShowMobileMenu(false)}
                                     data-testid="mobile-menu-about">
                                     About
+                                </Link>
+                            </div>
+                            <div className="px-12 py-4">
+                                <Link
+                                    href="/now"
+                                    className="rounded-sm hover:text-emerald-600 mr-5 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                                    onClick={() => setShowMobileMenu(false)}
+                                    data-testid="mobile-menu-now">
+                                    Now
                                 </Link>
                             </div>
                         </nav>
