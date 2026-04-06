@@ -21,7 +21,7 @@ export default function PostSummary(props: PostSummaryProps) {
                         </Badge>
                     </div>
                 </div>
-                <div className="pr-6 mt-4 text-2xl font-bold text-foreground">{title}</div>
+                <div className="pr-6 mt-4 text-2xl font-semibold text-foreground">{title}</div>
                 <div className="flex items-center justify-between mt-5">
                     <div className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium">
                         {type === 'Post' ? 'Read more' : 'Check it out'}

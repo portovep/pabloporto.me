@@ -16,13 +16,13 @@ export default async function BlogPage() {
 
     return (
         <PageContainer>
-            <section className="text-xl leading-6">
+            <section>
                 <PageHeader title="Blog">
                     A collection of articles and papers about software and data engineering. You can
                     also
                     <Link
                         href="https://medium.com/@pablo.porto"
-                        className="text-emerald-500 hover:text-emerald-600 font-medium"
+                        className="text-link"
                         rel="noopener noreferrer">
                         &nbsp;follow me on Medium.
                     </Link>

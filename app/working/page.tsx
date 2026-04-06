@@ -17,21 +17,16 @@ export default async function WorkingPage() {
 
     return (
         <PageContainer>
-            <section data-testid="working-intro" className="text-xl leading-6">
+            <section data-testid="working-intro">
                 <WorkingIntro />
                 <section className="w-full leading-relaxed">
                     <div className="mt-10 mb-10">
-                        <h2 className="text-3xl font-semibold text-foreground sm:text-4xl mb-4">
-                            Projects
-                        </h2>
+                        <h2 className="heading-section mb-4">Projects</h2>
                         <p>
                             A selection of projects showcasing my experience across data
                             engineering, infrastructure engineering, and technical leadership. You
                             can also{' '}
-                            <Link
-                                href="/stack"
-                                className="text-emerald-500 hover:text-emerald-600 font-medium"
-                                rel="noopener noreferrer">
+                            <Link href="/stack" className="text-link" rel="noopener noreferrer">
                                 explore my preferred tools and technologies
                             </Link>
                             .

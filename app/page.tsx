@@ -33,10 +33,7 @@ export default function HomePage() {
                         Engineer by craft, explorer by heart. I help engineering leaders build
                         scalable software systems and bring their teams along for the ride.
                         More&nbsp;
-                        <Link
-                            href="/about"
-                            className="text-emerald-500 hover:text-emerald-600 font-medium"
-                            rel="noopener noreferrer">
+                        <Link href="/about" className="text-link" rel="noopener noreferrer">
                             about me
                         </Link>
                         .

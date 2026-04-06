@@ -125,7 +125,7 @@ export default function ProjectSummary(props: ProjectSummaryProps) {
                                 {technologies.map((technology) => (
                                     <span
                                         key={technology}
-                                        className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-emerald-400 text-white">
+                                        className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-emerald-500 text-white">
                                         {technology}
                                     </span>
                                 ))}

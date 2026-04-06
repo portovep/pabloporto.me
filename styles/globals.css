@@ -188,3 +188,84 @@
 .dark .world-map svg path.lived:hover {
     fill: #ffffff !important;
 }
+
+/* ─── Heading utilities ──────────────────────────────────────────────────────
+   Single source of truth for the two h2 tiers used across the site.
+   Spacing (mb-*) stays at the call site — it belongs to layout, not the heading.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+@layer components {
+    .heading-section {
+        @apply text-3xl sm:text-4xl font-semibold text-foreground;
+    }
+    .heading-subsection {
+        @apply text-2xl font-semibold text-foreground;
+    }
+    /* Emerald accent links — used across pages, MDX, and components */
+    .text-link {
+        @apply text-emerald-500 hover:text-emerald-600 font-medium;
+    }
+    /* Navigation links in Header (desktop + mobile) */
+    .nav-link {
+        @apply text-muted-foreground hover:text-emerald-600 font-semibold mr-5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm;
+    }
+}
+
+/* ─── Prose (Tailwind Typography) customisation ─────────────────────────────
+   Overrides the default plugin styles to match existing page design tokens.
+   Applied via `prose dark:prose-invert max-w-none` on content sections.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.prose {
+    --tw-prose-body: var(--foreground);
+    --tw-prose-headings: var(--foreground);
+    --tw-prose-bold: var(--foreground);
+    --tw-prose-bullets: var(--muted-foreground);
+    --tw-prose-counters: var(--muted-foreground);
+    --tw-prose-links: oklch(0.702 0.152 157); /* emerald-500 */
+    --tw-prose-invert-body: var(--foreground);
+    --tw-prose-invert-headings: var(--foreground);
+    --tw-prose-invert-bold: var(--foreground);
+    --tw-prose-invert-links: oklch(0.702 0.152 157);
+}
+
+/* h2: text-3xl font-semibold, responsive sm:text-4xl */
+.prose h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .prose h2 {
+        font-size: 2.25rem;
+    }
+}
+
+/* Paragraphs: leading-relaxed + mb-6 (font-size handled by prose-lg) */
+.prose p {
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+}
+
+/* Links: no underline, font-medium, emerald colours */
+.prose a {
+    font-weight: 500;
+    text-decoration: none;
+    color: oklch(0.702 0.152 157);
+}
+
+.prose a:hover {
+    color: oklch(0.596 0.145 163); /* emerald-600 */
+}
+
+/* Lists: match original pl-12 spacing */
+.prose ul {
+    padding-left: 2.5rem;
+}
+
+.prose li {
+    margin-bottom: 1.25rem;
+    line-height: 1.625;
+}

@@ -29,24 +29,22 @@ export const metadata = createMetadata(
 export default function TravelingPage() {
     return (
         <PageContainer wide>
-            <section data-testid="traveling-intro" className="text-xl leading-6">
+            <section data-testid="traveling-intro">
                 <PageHeader title="Traveling" />
 
                 <div className="mt-14 p-1 mb-8">
                     <WorldMapClient />
                 </div>
 
-                <h2 className="text-3xl font-semibold text-foreground sm:text-4xl mb-4">
-                    Shooting
-                </h2>
-                <p className="text-muted-foreground mb-2">
+                <h2 className="heading-section mb-4">Shooting</h2>
+                <p className="text-lg text-muted-foreground mb-2">
                     Here are some of the photos I&apos;ve taken. Shot with a Sony A6400 or Oneplus
                     13R. More on{' '}
                     <a
                         href="https://www.instagram.com/porto.vga"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-emerald-500 hover:text-emerald-600 font-medium">
+                        className="text-link">
                         Instagram
                     </a>
                     .

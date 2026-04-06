@@ -46,52 +46,31 @@ export default function Header() {
                 <nav
                     className="md:flex md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-border flex-wrap items-center justify-center hidden text-base"
                     data-testid="desktop-menu">
-                    <Link
-                        href="/blog"
-                        className="hover:text-emerald-600 text-muted-foreground sm:text-base mr-5 text-lg font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-                        data-testid="desktop-menu-writing">
+                    <Link href="/blog" className="nav-link" data-testid="desktop-menu-writing">
                         Writing
                     </Link>
-                    <Link
-                        href="/reading"
-                        className="hover:text-emerald-600 text-muted-foreground sm:text-base mr-5 text-lg font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-                        data-testid="desktop-menu-reading">
+                    <Link href="/reading" className="nav-link" data-testid="desktop-menu-reading">
                         Reading
                     </Link>
-                    <Link
-                        href="/speaking"
-                        className="hover:text-emerald-600 text-muted-foreground sm:text-base mr-5 text-lg font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-                        data-testid="desktop-menu-speaking">
+                    <Link href="/speaking" className="nav-link" data-testid="desktop-menu-speaking">
                         Speaking
                     </Link>
-                    <Link
-                        href="/working"
-                        className="hover:text-emerald-600 text-muted-foreground sm:text-base mr-5 text-lg font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-                        data-testid="desktop-menu-working">
+                    <Link href="/working" className="nav-link" data-testid="desktop-menu-working">
                         Working
                     </Link>
                     <Link
                         href="/traveling"
-                        className="hover:text-emerald-600 text-muted-foreground sm:text-base mr-5 text-lg font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                        className="nav-link"
                         data-testid="desktop-menu-traveling">
                         Traveling
                     </Link>
-                    <Link
-                        href="/making"
-                        className="hover:text-emerald-600 text-muted-foreground sm:text-base mr-5 text-lg font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-                        data-testid="desktop-menu-making">
+                    <Link href="/making" className="nav-link" data-testid="desktop-menu-making">
                         Making
                     </Link>
-                    <Link
-                        href="/about"
-                        className="hover:text-emerald-600 text-muted-foreground sm:text-base mr-5 text-lg font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-                        data-testid="desktop-menu-about">
+                    <Link href="/about" className="nav-link" data-testid="desktop-menu-about">
                         About
                     </Link>
-                    <Link
-                        href="/now"
-                        className="hover:text-emerald-600 text-muted-foreground sm:text-base mr-5 text-lg font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-                        data-testid="desktop-menu-now">
+                    <Link href="/now" className="nav-link" data-testid="desktop-menu-now">
                         Now
                     </Link>
                 </nav>
@@ -143,7 +122,7 @@ export default function Header() {
                                 <Link
                                     ref={firstMobileLinkRef}
                                     href="/blog"
-                                    className="rounded-sm hover:text-emerald-600 mr-5 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                                    className="nav-link"
                                     onClick={() => setShowMobileMenu(false)}
                                     data-testid="mobile-menu-writing">
                                     Writing
@@ -152,7 +131,7 @@ export default function Header() {
                             <div className="px-12 py-4">
                                 <Link
                                     href="/reading"
-                                    className="rounded-sm hover:text-emerald-600 mr-5 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                                    className="nav-link"
                                     onClick={() => setShowMobileMenu(false)}
                                     data-testid="mobile-menu-reading">
                                     Reading
@@ -161,7 +140,7 @@ export default function Header() {
                             <div className="px-12 py-4">
                                 <Link
                                     href="/speaking"
-                                    className="rounded-sm hover:text-emerald-600 mr-5 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                                    className="nav-link"
                                     onClick={() => setShowMobileMenu(false)}
                                     data-testid="mobile-menu-speaking">
                                     Speaking
@@ -170,7 +149,7 @@ export default function Header() {
                             <div className="px-12 py-4">
                                 <Link
                                     href="/working"
-                                    className="rounded-sm hover:text-emerald-600 mr-5 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                                    className="nav-link"
                                     onClick={() => setShowMobileMenu(false)}
                                     data-testid="mobile-menu-working">
                                     Working
@@ -179,7 +158,7 @@ export default function Header() {
                             <div className="px-12 py-4">
                                 <Link
                                     href="/traveling"
-                                    className="rounded-sm hover:text-emerald-600 mr-5 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                                    className="nav-link"
                                     onClick={() => setShowMobileMenu(false)}
                                     data-testid="mobile-menu-traveling">
                                     Traveling
@@ -188,7 +167,7 @@ export default function Header() {
                             <div className="px-12 py-4">
                                 <Link
                                     href="/making"
-                                    className="rounded-sm hover:text-emerald-600 mr-5 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                                    className="nav-link"
                                     onClick={() => setShowMobileMenu(false)}
                                     data-testid="mobile-menu-making">
                                     Making
@@ -197,7 +176,7 @@ export default function Header() {
                             <div className="px-12 py-4">
                                 <Link
                                     href="/about"
-                                    className="rounded-sm hover:text-emerald-600 mr-5 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                                    className="nav-link"
                                     onClick={() => setShowMobileMenu(false)}
                                     data-testid="mobile-menu-about">
                                     About
@@ -206,7 +185,7 @@ export default function Header() {
                             <div className="px-12 py-4">
                                 <Link
                                     href="/now"
-                                    className="rounded-sm hover:text-emerald-600 mr-5 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                                    className="nav-link"
                                     onClick={() => setShowMobileMenu(false)}
                                     data-testid="mobile-menu-now">
                                     Now

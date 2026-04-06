@@ -1,21 +1,17 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
-const linkClass = 'text-emerald-500 hover:text-emerald-600 font-medium';
-
 export default function GetInTouch() {
     return (
         <section className="w-full mt-16">
-            <h2 className="text-3xl font-semibold text-foreground sm:text-4xl mb-6">
-                Let&apos;s get in touch!
-            </h2>
+            <h2 className="heading-section mb-6">Let&apos;s get in touch!</h2>
             <p className="mb-6 leading-relaxed">
                 Feel free to reach out — whether to work on something together or just to say hi.
                 You can find me on{' '}
                 <a
                     href="https://linkedin.com/in/pabloportoveloso"
                     target="_blank"
-                    className={linkClass}
+                    className="text-link"
                     rel="noopener noreferrer">
                     LinkedIn
                 </a>
@@ -23,7 +19,7 @@ export default function GetInTouch() {
                 <a
                     href="https://github.com/portovep"
                     target="_blank"
-                    className={linkClass}
+                    className="text-link"
                     rel="noopener noreferrer">
                     GitHub
                 </a>
@@ -31,7 +27,7 @@ export default function GetInTouch() {
                 <a
                     href="https://www.instagram.com/porto.vga/"
                     target="_blank"
-                    className={linkClass}
+                    className="text-link"
                     rel="noopener noreferrer">
                     Instagram
                 </a>
