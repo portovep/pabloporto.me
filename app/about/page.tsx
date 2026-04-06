@@ -12,7 +12,7 @@ export const metadata = createMetadata(
 export default function AboutPage() {
     return (
         <PageContainer>
-            <section className="max-w-3xl text-xl leading-6">
+            <section className="max-w-3xl">
                 <AboutContent />
                 <GetInTouch />
             </section>

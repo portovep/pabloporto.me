@@ -11,7 +11,7 @@ export const metadata = createMetadata(
 export default function NowPage() {
     return (
         <PageContainer>
-            <section className="w-full text-xl leading-6">
+            <section className="w-full">
                 <NowContent />
             </section>
         </PageContainer>

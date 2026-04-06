@@ -46,3 +46,7 @@ cypress/videos
 
 # playwright-mcp
 .playwright-mcp
+.playwright-cli/
+
+# screenshot artefacts from browser automation
+*.png

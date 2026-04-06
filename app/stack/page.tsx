@@ -11,7 +11,7 @@ export const metadata = createMetadata(
 export default function StackPage() {
     return (
         <PageContainer>
-            <section data-testid="stack-intro" className="text-xl leading-6">
+            <section data-testid="stack-intro">
                 <StackContent />
             </section>
         </PageContainer>
