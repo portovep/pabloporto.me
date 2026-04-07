@@ -28,7 +28,7 @@ export function NowEntry({
                 {image && <div className="-mx-8 md:-mx-16 lg:-mx-24 mb-6">{image}</div>}
                 <div className="max-w-3xl">
                     <div
-                        className="prose prose-lg dark:prose-invert prose-a:text-emerald-500 hover:prose-a:text-emerald-600 prose-a:no-underline"
+                        className="prose prose-lg dark:prose-invert"
                         data-testid="now-entry-content">
                         {children}
                     </div>
@@ -50,7 +50,7 @@ export function NowEntry({
                 {date}
             </CollapsibleTrigger>
             <CollapsibleContent
-                className="mt-4 prose prose-lg dark:prose-invert prose-a:text-emerald-500 hover:prose-a:text-emerald-600 prose-a:no-underline"
+                className="mt-4 prose prose-lg dark:prose-invert"
                 data-testid="now-entry-content">
                 {children}
             </CollapsibleContent>

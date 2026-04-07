@@ -8,7 +8,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
         img: ({ src, alt }: ComponentPropsWithoutRef<'img'>) => (
             <Image
-                src={src as string}
+                src={typeof src === 'string' ? src : ''}
                 alt={alt || ''}
                 width={800}
                 height={450}

@@ -24,7 +24,7 @@ export const getPostData = async (id: string): Promise<PostData> => {
     return { id, Content, ...frontmatter };
 };
 
-export const getSortedPostsData = async (): Promise<PostFrontmatter[]> => {
+export const getSortedPostsData = (): PostFrontmatter[] => {
     const fileNames = fs.readdirSync(postsDirectory);
 
     const posts = fileNames.map((fileName) => {
@@ -45,7 +45,7 @@ export const getSortedPostsData = async (): Promise<PostFrontmatter[]> => {
     });
 };
 
-export const getAllPostIds = async (): Promise<{ params: { id: string } }[]> => {
+export const getAllPostIds = (): { params: { id: string } }[] => {
     const fileNames = fs.readdirSync(postsDirectory);
 
     return fileNames.map((fileName) => {

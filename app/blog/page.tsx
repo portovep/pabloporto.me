@@ -12,7 +12,7 @@ export const metadata = createMetadata(
 );
 
 export default async function BlogPage() {
-    const allPostsData = await getSortedPostsData();
+    const allPostsData = getSortedPostsData();
 
     return (
         <PageContainer>

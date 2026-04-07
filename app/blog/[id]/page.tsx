@@ -10,7 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import profilePic from '@/public/images/profile.webp';
 
 export async function generateStaticParams() {
-    const paths = await getAllPostIds();
+    const paths = getAllPostIds();
     return paths.map(({ params }) => ({ id: params.id }));
 }
 
