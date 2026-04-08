@@ -5,7 +5,7 @@ export default function GetInTouch() {
     return (
         <section className="w-full mt-16">
             <h2 className="heading-section mb-6">Let&apos;s get in touch!</h2>
-            <p className="mb-6 leading-relaxed">
+            <p className="mb-6 text-lg leading-relaxed">
                 Feel free to reach out — whether to work on something together or just to say hi.
                 You can find me on{' '}
                 <a
