@@ -18,7 +18,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             />
         ),
         a: ({ href, children, ...rest }: ComponentPropsWithoutRef<'a'>) => {
-            if (href?.startsWith('/')) {
+            if (href?.startsWith('/') || href?.startsWith('#')) {
                 return (
                     <Link href={href} {...rest}>
                         {children}
