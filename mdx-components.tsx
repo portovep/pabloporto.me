@@ -3,6 +3,7 @@ import type { ComponentPropsWithoutRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PageHeader } from '@/components/ui';
+import GetInTouch from '@/components/GetInTouch';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
@@ -29,6 +30,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 </a>
             );
         },
+        GetInTouch,
         Image,
         Link,
         PageHeader,

@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { createMetadata } from '@/lib/metadata';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-import PageContainer from '@/components/PageContainer';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { Date } from '@/components/ui';
 import { Badge } from '@/components/ui/badge';
@@ -29,7 +28,7 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
     const postData = await getPostData(id);
 
     return (
-        <PageContainer>
+        <>
             <Link
                 href="/blog"
                 className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8">
@@ -97,6 +96,6 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                     See all posts
                 </Link>
             </div>
-        </PageContainer>
+        </>
     );
 }

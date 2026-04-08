@@ -1,5 +1,12 @@
+import { createMetadata } from '@/lib/metadata';
 import { NowEntry } from '@/components/NowEntry';
 import northernLights from '@/public/images/now/northern-lights.jpg';
+
+export const metadata = createMetadata(
+    'Now',
+    'What I am currently focused on — work, reading, building, and exploring.',
+    '/now'
+);
 
 <PageHeader title="Now" />
 <div className="mt-2 text-lg text-muted-foreground">What I'm up to these days.</div>

@@ -2,7 +2,6 @@ import { getShelvesByProfileId, getProfileIdFromHandle, type Shelf } from '@/lib
 import { env } from '@/lib/env';
 import { downloadBookCovers } from '@/lib/bookCovers';
 import ShelfComponent from '@/components/Shelf';
-import PageContainer from '@/components/PageContainer';
 import PageHeader from '@/components/ui/PageHeader';
 import { createMetadata } from '@/lib/metadata';
 
@@ -94,30 +93,28 @@ async function getShelves(): Promise<Shelf[]> {
 export default async function ReadingPage() {
     const shelves = await getShelves();
     return (
-        <PageContainer wide>
-            <div className="space-y-8 mb-8">
-                <div className="space-y-4" data-testid="reading-intro">
-                    <PageHeader title="Reading">
-                        My book collection and reading lists from{' '}
-                        <a
-                            href="https://literal.club"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-emerald-500 hover:text-emerald-600 font-medium underline">
-                            literal.club
-                        </a>
-                        .
-                    </PageHeader>
-                </div>
-
-                <div className="space-y-16">
-                    {shelves.length > 0 ? (
-                        shelves.map((shelf) => <ShelfComponent key={shelf.id} shelf={shelf} />)
-                    ) : (
-                        <p className="text-muted-foreground">No shelves found.</p>
-                    )}
-                </div>
+        <div className="space-y-8 mb-8">
+            <div className="space-y-4" data-testid="reading-intro">
+                <PageHeader title="Reading">
+                    My book collection and reading lists from{' '}
+                    <a
+                        href="https://literal.club"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-500 hover:text-emerald-600 font-medium underline">
+                        literal.club
+                    </a>
+                    .
+                </PageHeader>
             </div>
-        </PageContainer>
+
+            <div className="space-y-16">
+                {shelves.length > 0 ? (
+                    shelves.map((shelf) => <ShelfComponent key={shelf.id} shelf={shelf} />)
+                ) : (
+                    <p className="text-muted-foreground">No shelves found.</p>
+                )}
+            </div>
+        </div>
     );
 }

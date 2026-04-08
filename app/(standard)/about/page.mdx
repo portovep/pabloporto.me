@@ -1,5 +1,13 @@
-import Image from 'next/image';
+import { createMetadata } from '@/lib/metadata';
 import aboutPagePhoto from '@/public/images/about.jpeg';
+
+export const metadata = createMetadata(
+    'About',
+    'Software engineer, coffee lover, and traveler based in Barcelona. Learn more about my background, work, and interests.',
+    '/about'
+);
+
+<section className="max-w-3xl">
 
 <PageHeader title="About" />
 {/* Mobile: pills */}
@@ -66,5 +74,9 @@ platforms — helping our clients scale their systems and ship better software. 
 some of [my work experience](/working).
 
 For a more current snapshot of what I'm working on, see my [now page](/now).
+
+</section>
+
+<GetInTouch />
 
 </section>
