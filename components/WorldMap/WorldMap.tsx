@@ -102,23 +102,19 @@ export default function WorldMap() {
                     <div className="flex flex-wrap -m-4 text-center">
                         <div className="md:w-1/3 sm:w-1/2 w-full p-4">
                             <div className="px-4 py-6 border-2 border-border rounded-lg">
-                                <h2 className="title-font text-3xl font-medium text-foreground">
-                                    {uniqueVisitedCount}
-                                </h2>
+                                <h2 className="heading-section">{uniqueVisitedCount}</h2>
                                 <p className="leading-relaxed">countries visited</p>
                             </div>
                         </div>
                         <div className="md:w-1/3 sm:w-1/2 w-full p-4">
                             <div className="px-4 py-6 border-2 border-border rounded-lg">
-                                <h2 className="title-font text-3xl font-medium text-foreground">
-                                    {travelingStats.lived.length}
-                                </h2>
+                                <h2 className="heading-section">{travelingStats.lived.length}</h2>
                                 <p className="leading-relaxed">countries lived</p>
                             </div>
                         </div>
                         <div className="md:w-1/3 sm:w-1/2 w-full p-4">
                             <div className="px-4 py-6 border-2 border-border rounded-lg">
-                                <h2 className="title-font text-3xl font-medium text-foreground">
+                                <h2 className="heading-section">
                                     {travelingStats.continents.length}
                                 </h2>
                                 <p className="leading-relaxed">continents visited</p>

@@ -1,0 +1,56 @@
+import { createMetadata } from '@/lib/metadata';
+import { NowEntry } from '@/components/NowEntry';
+import northernLights from '@/public/images/now/northern-lights.jpg';
+
+export const metadata = createMetadata(
+    'Now',
+    'What I am currently focused on — work, reading, building, and exploring.',
+    '/now'
+);
+
+<PageHeader title="Now" />
+<div className="mt-2 text-lg text-muted-foreground">What I'm up to these days.</div>
+
+<div className="mt-10">
+
+<NowEntry date="March 2026" collapsible={false} image={<Image src={northernLights} alt="Northern Lights over Lapland, Finland" className="rounded w-full h-auto" placeholder="blur" sizes="100vw" />}>
+
+**Location:** Barcelona
+
+I am back in Barcelona after a lot of traveling in the first quarter of the year. I had the pleasure of doing a trip to the Baltics (Lithuania, Latvia and Estonia) and visiting Lapland in Finland. I got lucky and got to see the Northern Lights.
+
+I keep dividing my focus between two pet projects. (Not good...) I continue rewriting <Link href="https://wanderpass.app" target="_blank" rel="noopener noreferrer" className="text-link">Wanderpass.app</Link> to React Native to experiment with building mobile apps with <Link href="https://claude.ai/code" target="_blank" rel="noopener noreferrer" className="text-link">Claude Code</Link>.
+
+I also spent quite a lot of my spare time between travels revamping this website. I added a <Link href="/reading" className="text-link">reading page</Link> and started migrating the content pipeline to use MDX.
+
+Other than that, I am planning upcoming trips for the second quarter of the year and spending weekends cycling around Barcelona. The weather is getting good enough to go to the beach and play volleyball.
+
+</NowEntry>
+
+<NowEntry date="January 2026">
+
+**Location:** Barcelona
+
+I am back in Barcelona after spending the holidays in Galicia, Spain.
+
+Some random life things:
+
+- I continue to work on <Link href="https://wanderpass.app" target="_blank" rel="noopener noreferrer" className="text-link">Wanderpass.app</Link> in my spare time. I am using the project to experiment with different AI-assisted coding workflows and test the new AI coding features in <Link href="https://claude.ai/code" target="_blank" rel="noopener noreferrer" className="text-link">Claude Code</Link>.
+- The snowboard season is starting — I hope I can make it to the slopes a couple of times in the Pyrenees.
+- I started the year reading <Link href="https://www.goodreads.com/book/show/217159342-tiny-experiments" target="_blank" rel="noopener noreferrer" className="text-link">Tiny Experiments</Link> by Anne-Laure Le Cunff. I wanted to try a new way to set goals for myself this upcoming year and the concept of PACTs and experiments really resonated with me.
+
+</NowEntry>
+
+</div>
+
+<div className="mt-16 text-sm text-muted-foreground max-w-3xl">
+    Inspired by{' '}
+    <Link
+        href="https://nownownow.com/about"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-link">
+        Derek Sivers' idea.
+    </Link>
+
+</div>

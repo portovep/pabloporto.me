@@ -1,7 +1,7 @@
 import Card from '@/components/Card';
 import Link from 'next/link';
 import Image from 'next/image';
-import profilePic from '@/public/images/profile.png';
+import profilePic from '@/public/images/profile.webp';
 
 export default function HomePage() {
     return (
@@ -33,10 +33,7 @@ export default function HomePage() {
                         Engineer by craft, explorer by heart. I help engineering leaders build
                         scalable software systems and bring their teams along for the ride.
                         More&nbsp;
-                        <Link
-                            href="/about"
-                            className="text-emerald-500 hover:text-emerald-600 font-medium"
-                            rel="noopener noreferrer">
+                        <Link href="/about" className="text-link" rel="noopener noreferrer">
                             about me
                         </Link>
                         .

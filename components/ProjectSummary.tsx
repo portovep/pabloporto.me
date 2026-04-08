@@ -26,8 +26,10 @@ export default function ProjectSummary(props: ProjectSummaryProps) {
                     open && 'bg-muted'
                 } focus:ring-4 focus:ring-border hover:bg-muted flex items-center justify-between w-full p-5 text-left cursor-pointer`}>
                 <div className="my-5">
-                    <h3 className="font-semibol text-2xl font-bold text-foreground">{name}</h3>
-                    <p className="max-w-2xl mt-2 text-lg text-muted-foreground">
+                    <span className="font-semibol text-2xl font-bold text-foreground block">
+                        {name}
+                    </span>
+                    <span className="max-w-2xl mt-2 text-lg text-muted-foreground flex items-center">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="inline h-4 w-4 mr-1.5 align-baseline"
@@ -42,7 +44,7 @@ export default function ProjectSummary(props: ProjectSummaryProps) {
                             />
                         </svg>
                         <Date dateString={date} dateFormat={DATE_FORMAT_YEAR} />
-                    </p>
+                    </span>
                 </div>
                 <svg
                     data-accordion-icon
@@ -123,7 +125,7 @@ export default function ProjectSummary(props: ProjectSummaryProps) {
                                 {technologies.map((technology) => (
                                     <span
                                         key={technology}
-                                        className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-emerald-400 text-white">
+                                        className="uppercase py-1 px-1.5 mr-0.5 mb-0.5 inline-flex text-xs leading-5 font-semibold rounded-sm cursor-default bg-emerald-500 text-white">
                                         {technology}
                                     </span>
                                 ))}

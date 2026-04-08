@@ -14,7 +14,7 @@ export default function Shelf({ shelf }: ShelfProps) {
     return (
         <section className="space-y-6" data-testid="shelf">
             <div className="space-y-1">
-                <h2 className="text-lg font-semibold text-foreground">{shelf.title}</h2>
+                <h2 className="heading-subsection mb-2">{shelf.title}</h2>
                 {shelf.description && (
                     <p className="text-muted-foreground text-sm max-w-2xl">{shelf.description}</p>
                 )}

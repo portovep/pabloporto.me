@@ -19,7 +19,7 @@ export default function Card({ title, description, linkURL }: CardProps) {
                     →
                 </span>
             </h3>
-            <p className="m-0 text-xl leading-7">{description}</p>
+            <p className="m-0 text-base leading-relaxed">{description}</p>
         </Link>
     );
 }
