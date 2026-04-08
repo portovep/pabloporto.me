@@ -13,7 +13,7 @@ export const metadata = createMetadata(
 );
 
 export default async function WorkingPage() {
-    const allProjectData = await getSortedProjectData();
+    const allProjectData = getSortedProjectData();
 
     return (
         <PageContainer>
