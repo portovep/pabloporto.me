@@ -14,6 +14,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 width={800}
                 height={450}
                 className="rounded w-full h-auto"
+                sizes="(max-width: 768px) 100vw, 800px"
             />
         ),
         a: ({ href, children, ...rest }: ComponentPropsWithoutRef<'a'>) => {
