@@ -29,6 +29,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 </a>
             );
         },
+        Image,
         Link,
         PageHeader,
         ...components
