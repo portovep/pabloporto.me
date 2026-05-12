@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getAllPostIds } from '@/lib/posts';
+import { collections } from '@/content/photography';
 
 const baseUrl = 'https://pabloporto.me';
 
@@ -12,6 +13,11 @@ const staticRoutes = [
     { path: '/reading', priority: 0.8, changeFrequency: 'weekly' as const },
     { path: '/making', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/traveling', priority: 0.7, changeFrequency: 'monthly' as const },
+    ...collections.map((c) => ({
+        path: `/photography/${c.slug}`,
+        priority: 0.6,
+        changeFrequency: 'monthly' as const
+    })),
     { path: '/now', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/stack', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/bucharest', priority: 0.6, changeFrequency: 'monthly' as const }
