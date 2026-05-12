@@ -42,6 +42,7 @@ export default function TravelingPage() {
                     <Link
                         key={col.slug}
                         href={`/photography/${col.slug}`}
+                        data-testid="collection-card"
                         className="group block active:scale-[0.98] transition-transform">
                         <div className="overflow-hidden rounded-[20px] shadow-xl dark:shadow-none aspect-[3/4] relative">
                             <Image

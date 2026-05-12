@@ -1,6 +1,6 @@
 describe('Traveling page', () => {
     beforeEach(() => {
-        // Stub image requests so the 15 photos don't block window.load
+        // Stub image requests so collection cover images don't block window.load
         cy.intercept('GET', '/_next/image*', { statusCode: 200, body: '' });
         cy.visit('/traveling');
     });
@@ -43,8 +43,8 @@ describe('Traveling page', () => {
         cy.get('[data-testid="traveling-intro"]').should('be.visible');
     });
 
-    it('should render at least 3 photos', () => {
-        cy.get('[data-testid="photo-card"]').its('length').should('be.at.least', 3);
+    it('should render at least 3 photography collection cards', () => {
+        cy.get('[data-testid="collection-card"]').its('length').should('be.at.least', 3);
     });
 
     it('should show country name tooltip when hovering a country', () => {
