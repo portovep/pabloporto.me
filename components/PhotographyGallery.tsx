@@ -3,6 +3,13 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogTitle
+} from '@/components/ui/dialog';
 import { Photo } from '@/content/photography';
 
 interface Props {
@@ -12,19 +19,8 @@ interface Props {
 
 export default function PhotographyGallery({ photos, collectionName }: Props) {
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-    const [closing, setClosing] = useState(false);
     const touchStartX = useRef<number | null>(null);
 
-    const close = useCallback(() => {
-        setClosing((prev) => {
-            if (prev) return prev;
-            setTimeout(() => {
-                setSelectedIndex(null);
-                setClosing(false);
-            }, 200);
-            return true;
-        });
-    }, []);
     const prev = useCallback(
         () =>
             setSelectedIndex((i) => (i !== null ? (i - 1 + photos.length) % photos.length : null)),
@@ -60,20 +56,7 @@ export default function PhotographyGallery({ photos, collectionName }: Props) {
         });
     }, [selectedIndex, photos]);
 
-    useEffect(() => {
-        if (selectedIndex === null) return;
-        const onKey = (e: KeyboardEvent) => {
-            if (e.key === 'Escape') close();
-            if (e.key === 'ArrowLeft') prev();
-            if (e.key === 'ArrowRight') next();
-        };
-        window.addEventListener('keydown', onKey);
-        document.body.style.overflow = 'hidden';
-        return () => {
-            window.removeEventListener('keydown', onKey);
-            document.body.style.overflow = '';
-        };
-    }, [selectedIndex, close, prev, next]);
+    const current = selectedIndex !== null ? photos[selectedIndex] : null;
 
     return (
         <>
@@ -108,60 +91,67 @@ export default function PhotographyGallery({ photos, collectionName }: Props) {
                 ))}
             </div>
 
-            {selectedIndex !== null && (
-                <div
-                    className={`fixed inset-0 z-50 bg-black/90 flex items-center justify-center duration-200 ${
-                        closing ? 'animate-out fade-out-0' : 'animate-in fade-in-0'
-                    }`}
-                    onClick={close}
+            <Dialog
+                open={selectedIndex !== null}
+                onOpenChange={(open) => {
+                    if (!open) setSelectedIndex(null);
+                }}>
+                <DialogContent
+                    showCloseButton={false}
+                    className="max-w-none w-screen h-screen p-0 bg-black/90 border-0 rounded-none flex items-center justify-center translate-x-0 translate-y-0 top-0 left-0"
                     onTouchStart={onTouchStart}
-                    onTouchEnd={onTouchEnd}>
-                    <div
-                        className="relative w-full h-full max-w-5xl mx-auto"
-                        onClick={(e) => e.stopPropagation()}>
-                        <Image
-                            src={photos[selectedIndex].src}
-                            alt={photos[selectedIndex].title}
-                            fill
-                            className="object-contain"
-                            quality={100}
-                            sizes="100vw"
-                        />
-                    </div>
-                    <button
-                        onClick={close}
+                    onTouchEnd={onTouchEnd}
+                    onKeyDown={(e) => {
+                        if (e.key === 'ArrowLeft') prev();
+                        if (e.key === 'ArrowRight') next();
+                    }}>
+                    <DialogTitle className="sr-only">{current?.title ?? ''}</DialogTitle>
+                    <DialogDescription className="sr-only">
+                        {collectionName} photo viewer
+                    </DialogDescription>
+                    {current && (
+                        <div className="relative w-full h-full max-w-5xl mx-auto">
+                            <Image
+                                src={current.src}
+                                alt={current.title}
+                                fill
+                                className="object-contain"
+                                quality={100}
+                                sizes="100vw"
+                            />
+                        </div>
+                    )}
+                    <DialogClose
                         className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
                         aria-label="Close">
                         <X size={32} />
-                    </button>
+                    </DialogClose>
                     {photos.length > 1 && (
                         <>
                             <button
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    prev();
-                                }}
+                                onClick={prev}
                                 className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors"
                                 aria-label="Previous photo">
                                 <ChevronLeft size={48} />
                             </button>
                             <button
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    next();
-                                }}
+                                onClick={next}
                                 className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors"
                                 aria-label="Next photo">
                                 <ChevronRight size={48} />
                             </button>
                         </>
                     )}
-                    <p className="absolute bottom-6 left-0 right-0 text-center text-white/60 text-sm">
-                        {photos[selectedIndex].title}
-                        {photos.length > 1 && ` · ${selectedIndex + 1} / ${photos.length}`}
-                    </p>
-                </div>
-            )}
+                    {current && (
+                        <p className="absolute bottom-6 left-0 right-0 text-center text-white/60 text-sm">
+                            {current.title}
+                            {photos.length > 1 &&
+                                selectedIndex !== null &&
+                                ` · ${selectedIndex + 1} / ${photos.length}`}
+                        </p>
+                    )}
+                </DialogContent>
+            </Dialog>
         </>
     );
 }
