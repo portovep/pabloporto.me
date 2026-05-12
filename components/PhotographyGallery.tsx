@@ -77,7 +77,9 @@ export default function PhotographyGallery({ photos, collectionName }: Props) {
 
     return (
         <>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 mt-8 w-full">
+            <div
+                className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 mt-8 w-full"
+                data-testid="photography-gallery">
                 {photos.map((photo, index) => (
                     <div
                         key={photo.src.src}
@@ -88,6 +90,7 @@ export default function PhotographyGallery({ photos, collectionName }: Props) {
                         onKeyDown={(e) => {
                             if (e.key === 'Enter' || e.key === ' ') setSelectedIndex(index);
                         }}
+                        data-testid="gallery-photo"
                         aria-label={`Open ${photo.title}`}>
                         <div className="overflow-hidden shadow-xl shadow-black/10 dark:shadow-none">
                             <Image
