@@ -82,8 +82,8 @@ export default function PhotographyGallery({ photos, collectionName }: Props) {
                                 placeholder="blur"
                                 quality={80}
                                 style={{ width: '100%', height: 'auto', display: 'block' }}
-                                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 33vw"
-                                priority={index < 3}
+                                sizes="(max-width: 768px) 90vw, 45vw"
+                                priority={index < 2}
                                 className="transition-transform duration-500 group-hover:scale-105"
                             />
                         </div>
@@ -116,7 +116,8 @@ export default function PhotographyGallery({ photos, collectionName }: Props) {
                                 alt={current.title}
                                 fill
                                 className="object-contain"
-                                quality={100}
+                                placeholder="blur"
+                                quality={90}
                                 sizes="100vw"
                             />
                         </div>
