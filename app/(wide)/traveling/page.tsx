@@ -52,8 +52,8 @@ export default function TravelingPage() {
                                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 placeholder="blur"
                                 quality={80}
-                                sizes="(max-width: 768px) 45vw, 33vw"
-                                priority={i < 2}
+                                sizes="(max-width: 640px) 90vw, 33vw"
+                                priority={i < 3}
                             />
                         </div>
                         <p className="font-heading mt-4 text-2xl font-semibold text-foreground">

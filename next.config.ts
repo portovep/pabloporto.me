@@ -4,7 +4,9 @@ import createMDX from '@next/mdx';
 const nextConfig: NextConfig = {
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
     images: {
-        qualities: [75, 80, 100]
+        formats: ['image/avif', 'image/webp'],
+        qualities: [80, 90],
+        minimumCacheTTL: 31536000
     },
     turbopack: {
         rules: {
