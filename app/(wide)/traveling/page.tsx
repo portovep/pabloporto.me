@@ -20,7 +20,7 @@ export default function TravelingPage() {
                 <WorldMapClient />
             </div>
 
-            <div className="space-y-4 mt-10 mb-10">
+            <div id="photography" className="space-y-4 mt-10 mb-10">
                 <h2 className="font-heading text-foreground text-4xl sm:text-5xl inline-block font-extrabold tracking-tight">
                     Photography
                 </h2>

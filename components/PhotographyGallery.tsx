@@ -98,7 +98,7 @@ export default function PhotographyGallery({ photos, collectionName }: Props) {
                 }}>
                 <DialogContent
                     showCloseButton={false}
-                    className="max-w-none w-screen h-screen p-0 bg-black/90 border-0 rounded-none flex items-center justify-center translate-x-0 translate-y-0 top-0 left-0"
+                    className="max-w-none sm:max-w-none w-screen h-screen p-0 bg-black/90 border-0 rounded-none flex items-center justify-center translate-x-0 translate-y-0 top-0 left-0"
                     onTouchStart={onTouchStart}
                     onTouchEnd={onTouchEnd}
                     onKeyDown={(e) => {
@@ -118,7 +118,7 @@ export default function PhotographyGallery({ photos, collectionName }: Props) {
                                 className="object-contain"
                                 placeholder="blur"
                                 quality={90}
-                                sizes="100vw"
+                                sizes="(max-width: 1024px) 100vw, 1024px"
                             />
                         </div>
                     )}
@@ -144,7 +144,7 @@ export default function PhotographyGallery({ photos, collectionName }: Props) {
                         </>
                     )}
                     {current && (
-                        <p className="absolute bottom-6 left-0 right-0 text-center text-white/60 text-sm">
+                        <p className="absolute bottom-[calc(1.5rem_+_env(safe-area-inset-bottom,_0px))] left-0 right-0 text-center text-white/60 text-sm">
                             {current.title}
                             {photos.length > 1 &&
                                 selectedIndex !== null &&

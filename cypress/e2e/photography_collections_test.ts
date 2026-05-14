@@ -14,7 +14,7 @@ describe('Photography collections', () => {
 
     it('returns to /traveling via the back link', () => {
         cy.get('[data-testid="collection-card"]').first().click();
-        cy.contains('a', 'Back to Traveling').click();
+        cy.contains('a', 'Back to Photography').click();
         cy.url().should('include', '/traveling');
         cy.get('[data-testid="traveling-intro"]').should('be.visible');
     });

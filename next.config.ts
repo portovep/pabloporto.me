@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
     images: {
         formats: ['image/avif', 'image/webp'],
-        qualities: [80, 90],
+        qualities: [75, 80, 90],
         minimumCacheTTL: 31536000
     },
     turbopack: {
