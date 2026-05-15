@@ -1,29 +1,35 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import websiteLogo from '@/public/android-chrome-192x192.png';
 import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet';
+
+const navLinks = [
+    { href: '/blog', label: 'Writing', testId: 'writing' },
+    { href: '/reading', label: 'Reading', testId: 'reading' },
+    { href: '/speaking', label: 'Speaking', testId: 'speaking' },
+    { href: '/working', label: 'Working', testId: 'working' },
+    { href: '/traveling', label: 'Traveling', testId: 'traveling' },
+    { href: '/making', label: 'Making', testId: 'making' },
+    { href: '/about', label: 'About', testId: 'about' },
+    { href: '/now', label: 'Now', testId: 'now' }
+];
 
 export default function Header() {
-    const [showMobileMenu, setShowMobileMenu] = useState(false);
-    const toggleRef = useRef<HTMLButtonElement>(null);
-    const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);
-    const prevMenuOpenRef = useRef(false);
+    const [open, setOpen] = useState(false);
 
     useEffect(() => {
-        if (showMobileMenu) {
-            firstMobileLinkRef.current?.focus();
-        }
-    }, [showMobileMenu]);
+        const mq = window.matchMedia('(min-width: 768px)');
+        const close = (e: MediaQueryListEvent) => {
+            if (e.matches) setOpen(false);
+        };
+        mq.addEventListener('change', close);
+        return () => mq.removeEventListener('change', close);
+    }, []);
 
-    useEffect(() => {
-        if (prevMenuOpenRef.current && !showMobileMenu) {
-            toggleRef.current?.focus();
-        }
-        prevMenuOpenRef.current = showMobileMenu;
-    }, [showMobileMenu]);
     return (
         <header
             data-testid="navbar"
@@ -46,153 +52,73 @@ export default function Header() {
                 <nav
                     className="md:flex md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-border flex-wrap items-center justify-center hidden text-base"
                     data-testid="desktop-menu">
-                    <Link href="/blog" className="nav-link" data-testid="desktop-menu-writing">
-                        Writing
-                    </Link>
-                    <Link href="/reading" className="nav-link" data-testid="desktop-menu-reading">
-                        Reading
-                    </Link>
-                    <Link href="/speaking" className="nav-link" data-testid="desktop-menu-speaking">
-                        Speaking
-                    </Link>
-                    <Link href="/working" className="nav-link" data-testid="desktop-menu-working">
-                        Working
-                    </Link>
-                    <Link
-                        href="/traveling"
-                        className="nav-link"
-                        data-testid="desktop-menu-traveling">
-                        Traveling
-                    </Link>
-                    <Link href="/making" className="nav-link" data-testid="desktop-menu-making">
-                        Making
-                    </Link>
-                    <Link href="/about" className="nav-link" data-testid="desktop-menu-about">
-                        About
-                    </Link>
-                    <Link href="/now" className="nav-link" data-testid="desktop-menu-now">
-                        Now
-                    </Link>
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className="nav-link"
+                            data-testid={`desktop-menu-${link.testId}`}>
+                            {link.label}
+                        </Link>
+                    ))}
                 </nav>
-                <div className="sm:hidden flex items-center">
-                    <Button
-                        ref={toggleRef}
-                        type="button"
-                        variant="ghost"
-                        size="icon"
-                        className="ml-1 mr-1 h-8 w-8 text-foreground"
-                        onClick={() => setShowMobileMenu(!showMobileMenu)}
-                        aria-label={showMobileMenu ? 'Close menu' : 'Open menu'}
-                        aria-expanded={showMobileMenu}
-                        data-testid="mobile-menu-toggle">
-                        {showMobileMenu ? (
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                                aria-hidden="true">
-                                <path
-                                    fillRule="evenodd"
-                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                    clipRule="evenodd"></path>
-                            </svg>
-                        ) : (
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                                aria-hidden="true">
-                                <path
-                                    fillRule="evenodd"
-                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                    clipRule="evenodd"></path>
-                            </svg>
-                        )}
-                    </Button>
-                    <div
-                        className={`top-[73px] opacity-90 fixed right-0 z-10 w-full h-full overflow-y-auto ${
-                            showMobileMenu ? 'duration-300' : 'duration-100'
-                        } ease-in transform ${
-                            showMobileMenu ? 'translate-x-0' : 'translate-x-full'
-                        } bg-muted`}>
-                        <nav
-                            className="fixed h-full mt-8 text-foreground"
-                            data-testid="mobile-menu">
-                            <div className="px-12 py-4">
-                                <Link
-                                    ref={firstMobileLinkRef}
-                                    href="/blog"
-                                    className="nav-link"
-                                    onClick={() => setShowMobileMenu(false)}
-                                    data-testid="mobile-menu-writing">
-                                    Writing
-                                </Link>
-                            </div>
-                            <div className="px-12 py-4">
-                                <Link
-                                    href="/reading"
-                                    className="nav-link"
-                                    onClick={() => setShowMobileMenu(false)}
-                                    data-testid="mobile-menu-reading">
-                                    Reading
-                                </Link>
-                            </div>
-                            <div className="px-12 py-4">
-                                <Link
-                                    href="/speaking"
-                                    className="nav-link"
-                                    onClick={() => setShowMobileMenu(false)}
-                                    data-testid="mobile-menu-speaking">
-                                    Speaking
-                                </Link>
-                            </div>
-                            <div className="px-12 py-4">
-                                <Link
-                                    href="/working"
-                                    className="nav-link"
-                                    onClick={() => setShowMobileMenu(false)}
-                                    data-testid="mobile-menu-working">
-                                    Working
-                                </Link>
-                            </div>
-                            <div className="px-12 py-4">
-                                <Link
-                                    href="/traveling"
-                                    className="nav-link"
-                                    onClick={() => setShowMobileMenu(false)}
-                                    data-testid="mobile-menu-traveling">
-                                    Traveling
-                                </Link>
-                            </div>
-                            <div className="px-12 py-4">
-                                <Link
-                                    href="/making"
-                                    className="nav-link"
-                                    onClick={() => setShowMobileMenu(false)}
-                                    data-testid="mobile-menu-making">
-                                    Making
-                                </Link>
-                            </div>
-                            <div className="px-12 py-4">
-                                <Link
-                                    href="/about"
-                                    className="nav-link"
-                                    onClick={() => setShowMobileMenu(false)}
-                                    data-testid="mobile-menu-about">
-                                    About
-                                </Link>
-                            </div>
-                            <div className="px-12 py-4">
-                                <Link
-                                    href="/now"
-                                    className="nav-link"
-                                    onClick={() => setShowMobileMenu(false)}
-                                    data-testid="mobile-menu-now">
-                                    Now
-                                </Link>
-                            </div>
-                        </nav>
-                    </div>
+                <div className="md:hidden flex items-center">
+                    <Sheet open={open} onOpenChange={setOpen}>
+                        <SheetTrigger asChild>
+                            <Button
+                                type="button"
+                                variant="ghost"
+                                size="icon"
+                                className="ml-1 mr-1 h-8 w-8 text-foreground"
+                                aria-label={open ? 'Close menu' : 'Open menu'}
+                                aria-expanded={open}
+                                data-testid="mobile-menu-toggle">
+                                {open ? (
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                ) : (
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                )}
+                            </Button>
+                        </SheetTrigger>
+                        <SheetContent
+                            side="right"
+                            className="bg-muted w-72 pt-12"
+                            aria-describedby={undefined}>
+                            <SheetTitle className="sr-only">Navigation</SheetTitle>
+                            <nav data-testid="mobile-menu">
+                                {navLinks.map((link) => (
+                                    <SheetClose asChild key={link.href}>
+                                        <Link
+                                            href={link.href}
+                                            className="nav-link flex items-center w-full px-8 py-4 dark:text-primary"
+                                            data-testid={`mobile-menu-${link.testId}`}>
+                                            {link.label}
+                                        </Link>
+                                    </SheetClose>
+                                ))}
+                            </nav>
+                        </SheetContent>
+                    </Sheet>
                 </div>
             </div>
         </header>
