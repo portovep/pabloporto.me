@@ -31,6 +31,8 @@ export default function BookCard({ book, coverPath }: BookCardProps) {
                     fill
                     className="object-cover"
                     sizes="(max-width: 640px) 128px, (max-width: 1024px) 25vw, 16vw"
+                    placeholder="blur"
+                    blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
                 />
             </div>
             <div className="space-y-0.5">

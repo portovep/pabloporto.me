@@ -15,6 +15,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 height={450}
                 className="rounded w-full h-auto"
                 sizes="(max-width: 768px) 100vw, 800px"
+                placeholder="blur"
+                blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
             />
         ),
         a: ({ href, children, ...rest }: ComponentPropsWithoutRef<'a'>) => {
