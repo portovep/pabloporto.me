@@ -102,8 +102,10 @@ export default function Header() {
                         </SheetTrigger>
                         <SheetContent
                             side="right"
-                            className="bg-muted w-72 pt-12"
-                            aria-describedby={undefined}>
+                            className="bg-background w-72 top-[73px] bottom-0 h-auto pt-8"
+                            aria-describedby={undefined}
+                            showCloseButton={false}
+                            overlayClassName="top-[73px]">
                             <SheetTitle className="sr-only">Navigation</SheetTitle>
                             <nav data-testid="mobile-menu">
                                 {navLinks.map((link) => (
