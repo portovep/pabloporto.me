@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import websiteLogo from '@/public/android-chrome-192x192.png';
@@ -20,6 +20,7 @@ const navLinks = [
 
 export default function Header() {
     const [open, setOpen] = useState(false);
+    const triggerRef = useRef<HTMLButtonElement>(null);
 
     useEffect(() => {
         const mq = window.matchMedia('(min-width: 768px)');
@@ -66,10 +67,11 @@ export default function Header() {
                     <Sheet open={open} onOpenChange={setOpen}>
                         <SheetTrigger asChild>
                             <Button
+                                ref={triggerRef}
                                 type="button"
                                 variant="ghost"
                                 size="icon"
-                                className="ml-1 mr-1 h-8 w-8 text-foreground"
+                                className="ml-1 mr-1 h-8 w-8 text-foreground pointer-events-auto"
                                 aria-label={open ? 'Close menu' : 'Open menu'}
                                 aria-expanded={open}
                                 data-testid="mobile-menu-toggle">
@@ -105,7 +107,15 @@ export default function Header() {
                             className="bg-background w-72 top-[73px] bottom-0 h-auto pt-8"
                             aria-describedby={undefined}
                             showCloseButton={false}
-                            overlayClassName="top-[73px]">
+                            overlayClassName="top-[73px]"
+                            onPointerDownOutside={(e) => {
+                                if (
+                                    e.target instanceof Node &&
+                                    triggerRef.current?.contains(e.target)
+                                ) {
+                                    e.preventDefault();
+                                }
+                            }}>
                             <SheetTitle className="sr-only">Navigation</SheetTitle>
                             <nav data-testid="mobile-menu">
                                 {navLinks.map((link) => (
