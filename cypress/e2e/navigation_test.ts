@@ -56,11 +56,11 @@ describe('Navigation functionality', () => {
 
         it('should toggle mobile menu', () => {
             cy.get('[data-testid="mobile-menu-toggle"]').should('be.visible');
-            cy.get('[data-testid="mobile-menu"]').should('not.be.visible');
+            cy.get('[data-testid="mobile-menu"]').should('not.exist');
             cy.get('[data-testid="mobile-menu-toggle"]').click();
             cy.get('[data-testid="mobile-menu"]').should('be.visible');
             cy.get('[data-testid="mobile-menu-toggle"]').click();
-            cy.get('[data-testid="mobile-menu"]').should('not.be.visible');
+            cy.get('[data-testid="mobile-menu"]').should('not.exist');
         });
 
         navigationRoutes.forEach((route) => {
@@ -83,7 +83,7 @@ describe('Navigation functionality', () => {
             cy.url().should('include', '/reading');
             // Menu should be closed after navigation
             cy.visit('/');
-            cy.get('[data-testid="mobile-menu"]').should('not.be.visible');
+            cy.get('[data-testid="mobile-menu"]').should('not.exist');
         });
     });
 });
