@@ -63,10 +63,10 @@ All main UI colors are defined as CSS variables in `:root` and `.dark` using OKL
 
 **Scale and weight:**
 
-- **Page title (PageHeader):** `font-heading text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground`
+- **Page title (PageHeader):** `font-heading text-foreground text-4xl sm:text-5xl inline-block font-extrabold tracking-tight`
 - **Page subtitle:** `text-xl text-muted-foreground`
 - **Section headings:** `text-3xl font-semibold text-foreground sm:text-4xl` (or semantic tokens)
-- **Nav / links:** `text-lg font-semibold` (nav), `text-emerald-500 hover:text-emerald-600 font-medium` (content links)
+- **Nav / links:** `.nav-link` utility in `styles/globals.css` (`text-muted-foreground hover:text-emerald-600 font-semibold`); content links use `text-emerald-500 hover:text-emerald-600 font-medium`
 - **Body / intro:** `text-xl`, `leading-normal`, `text-muted-foreground` or `text-gray-600` / `text-gray-700`
 - **Small labels / badges:** `text-xs font-medium`, `text-sm font-medium`
 - **Logo/name in header:** `font-bold tracking-wider text-foreground`
@@ -76,8 +76,8 @@ All main UI colors are defined as CSS variables in `:root` and `.dark` using OKL
 ### Spacing and layout
 
 - **Border radius:** Base `--radius: 0.625rem`; derived `--radius-sm`, `--radius-md`, `--radius-lg`, `--radius-xl` in `@theme`
-- **Page container:** `max-w-4xl` (default) or `max-w-6xl` (wide), `mx-auto px-4 py-8 sm:px-6 md:py-12`
-- **Header:** `lg:max-w-4xl`, `container`, `px-6`, `py-5`, `mb-6`
+- **Page container:** `PageContainer` component — `max-w-4xl` (default) or `max-w-6xl` (`wide` prop), with `mx-auto px-6 sm:px-8 pt-4 sm:pt-6 pb-6`. Applied via `(standard)` and `(wide)` route-group layouts.
+- **Header:** sticky `top-0 z-20 py-5 border-b border-border`; inner container uses `container lg:max-w-4xl px-6 md:px-0 mx-auto`
 - **Section spacing:** `space-y-4`, `space-y-6`, `space-y-8`; `pb-8 pt-6 md:pb-12 md:pt-10` (hero-style sections)
 
 ## Features
@@ -120,17 +120,7 @@ All main UI colors are defined as CSS variables in `:root` and `.dark` using OKL
 
 ### Class organisation
 
-When writing Tailwind classes, follow this order (per project AGENTS.md):
-
-1. Layout (flex, grid)
-2. Spacing (margin, padding)
-3. Sizing (width, height)
-4. Typography (text-_, font-_)
-5. Colors (bg-_, text-_, border-\_)
-6. Effects (shadow, opacity)
-7. Transitions/animations
-
-Use the `cn()` utility from `@/lib/utils` for conditional or merged class names.
+Tailwind class ordering is enforced by `prettier-plugin-tailwind-css` on save / pre-commit. Use the `cn()` utility from `@/lib/utils` for conditional or merged class names — see also the styling MUSTs in `AGENTS.md` (semantic tokens, no hardcoded OKLCH, emerald accent).
 
 ### Where styles live
 

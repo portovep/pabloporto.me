@@ -10,7 +10,7 @@ This project serves as my playground for experimenting with modern frontend tech
 
 ## Tech Stack
 
-- [Next.js 15](https://nextjs.org/) - React 19 framework with App Router and Turbopack
+- [Next.js 16](https://nextjs.org/) - React 19 framework with App Router and Turbopack
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 - [Tailwind CSS v4](https://tailwindcss.com/) - Styling
 - [shadcn/ui](https://ui.shadcn.com/) - UI component library
