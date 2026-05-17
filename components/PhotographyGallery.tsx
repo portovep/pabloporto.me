@@ -98,7 +98,7 @@ export default function PhotographyGallery({ photos, collectionName }: Props) {
                 }}>
                 <DialogContent
                     showCloseButton={false}
-                    className="max-w-none sm:max-w-none w-screen h-screen p-0 bg-black/90 border-0 rounded-none flex items-center justify-center translate-x-0 translate-y-0 top-0 left-0"
+                    className="max-w-none sm:max-w-none w-screen h-screen p-0 bg-black/90 border-0 rounded-none flex items-center justify-center !translate-x-0 !translate-y-0 !top-0 !left-0"
                     onTouchStart={onTouchStart}
                     onTouchEnd={onTouchEnd}
                     onKeyDown={(e) => {
