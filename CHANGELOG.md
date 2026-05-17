@@ -41,3 +41,39 @@
 - Fix Literal API endpoint and improve error handling ([`90dc388`](https://github.com/portovep/pabloporto.me/commit/90dc388))
 
 [6.0.0]: https://github.com/portovep/pabloporto.me/releases/tag/v6.0.0
+
+## [5.0.0] - 2023-07-20
+
+### Changed
+
+- Migrate codebase to TypeScript ([`9674656`](https://github.com/portovep/pabloporto.me/commit/9674656))
+- Migrate CSS to Tailwind CSS ([`ad367f7`](https://github.com/portovep/pabloporto.me/commit/ad367f7))
+- Migrate projects content from JSON to Markdown ([`791e10f`](https://github.com/portovep/pabloporto.me/commit/791e10f))
+- Switch to `next/image` for image optimization ([`e27a281`](https://github.com/portovep/pabloporto.me/commit/e27a281))
+- Migrate to `@next/font` with Inter typeface ([`1601ffb`](https://github.com/portovep/pabloporto.me/commit/1601ffb))
+- Refactor page headers into a single reusable component ([`b207b11`](https://github.com/portovep/pabloporto.me/commit/b207b11))
+- Collapse project summaries on working page for a cleaner layout ([`c359cf2`](https://github.com/portovep/pabloporto.me/commit/c359cf2))
+- Add multi-role support for project entries ([`aa10982`](https://github.com/portovep/pabloporto.me/commit/aa10982))
+
+### Added
+
+- Add traveling page with interactive world map ([`329d7ec`](https://github.com/portovep/pabloporto.me/commit/329d7ec))
+- Add hover effect on visited and lived countries on world map ([`d78f1b1`](https://github.com/portovep/pabloporto.me/commit/d78f1b1))
+- Add about page with biography and skills section ([`e441cf9`](https://github.com/portovep/pabloporto.me/commit/e441cf9))
+- Add stack page ([`501c8bf`](https://github.com/portovep/pabloporto.me/commit/501c8bf))
+- Add making page showcasing pet projects ([`a791a51`](https://github.com/portovep/pabloporto.me/commit/a791a51))
+- Add blog posts list and full post pages ([`56a5db2`](https://github.com/portovep/pabloporto.me/commit/56a5db2))
+- Add desktop and mobile navigation ([`5ebd6d4`](https://github.com/portovep/pabloporto.me/commit/5ebd6d4))
+- Add logo to header ([`1adc415`](https://github.com/portovep/pabloporto.me/commit/1adc415))
+- Add Vercel Analytics ([`2b99571`](https://github.com/portovep/pabloporto.me/commit/2b99571))
+- Add Lighthouse CI integration for performance monitoring ([`930445c`](https://github.com/portovep/pabloporto.me/commit/930445c))
+- Add E2E test coverage with Cypress ([`58afae0`](https://github.com/portovep/pabloporto.me/commit/58afae0))
+- Add `robots.txt` and OG/meta tags for SEO ([`a3bb71f`](https://github.com/portovep/pabloporto.me/commit/a3bb71f))
+- Add Dependabot configuration for automated dependency updates ([`535655b`](https://github.com/portovep/pabloporto.me/commit/535655b))
+
+### Fixed
+
+- Calculate footer year dynamically ([`eb73e51`](https://github.com/portovep/pabloporto.me/commit/eb73e51))
+- Fix nested `<a>` accessibility issue in post summaries ([`14739c4`](https://github.com/portovep/pabloporto.me/commit/14739c4))
+
+[5.0.0]: https://github.com/portovep/pabloporto.me/releases/tag/v5
