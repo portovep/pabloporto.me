@@ -45,8 +45,10 @@ deployment-url.txt
 cypress/screenshots
 cypress/videos
 
-# claude
+# claude & AI agents
 .claude
+skills-lock.json
+.agents
 
 # playwright-mcp
 .playwright-mcp
