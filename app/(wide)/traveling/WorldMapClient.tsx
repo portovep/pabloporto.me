@@ -9,7 +9,7 @@ const WorldMap = dynamic(() => import('@/components/WorldMap/WorldMap'), {
             <div className="aspect-[1008/650] w-full min-h-0 bg-muted rounded-lg" />
             <section className="body-font text-muted-foreground">
                 <div className="container py-12 mx-auto">
-                    <div className="mb-14 flex flex-col w-full items-center">
+                    <div className="mb-14 flex flex-col w-full sm:items-center">
                         <div className="h-8 w-48 bg-muted rounded mb-4" />
                         <div className="h-5 w-2/3 bg-muted rounded" />
                     </div>
