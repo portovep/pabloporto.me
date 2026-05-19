@@ -61,7 +61,7 @@
         "eslint": "^9.31.0",
         "eslint-config-next": "16.2.6",
         "eslint-config-prettier": "^10.1.5",
-        "eslint-plugin-cypress": "^5.1.0",
+        "eslint-plugin-cypress": "^6.4.1",
         "husky": "^9.1.7",
         "postcss": "^8.5.14",
         "prettier": "^3.0.0",
