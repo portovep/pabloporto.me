@@ -2,6 +2,7 @@ import Card from '@/components/Card';
 import Link from 'next/link';
 import Image from 'next/image';
 import profilePic from '@/public/images/profile.webp';
+import { sections } from '@/lib/navigation';
 
 export default function HomePage() {
     return (
@@ -43,36 +44,14 @@ export default function HomePage() {
 
             <div className="flex flex-col items-center justify-center mt-10 px-8 sm:px-0">
                 <div className="md:max-w-4xl md:flex-row flex flex-col flex-wrap items-stretch md:justify-center justify-center max-w-full mx-auto gap-4">
-                    <Card
-                        title="Writing"
-                        description="Articles and notes on software engineering and beyond."
-                        linkURL="/blog"
-                    />
-                    <Card
-                        title="Reading"
-                        description="The books that shaped my thinking."
-                        linkURL="/reading"
-                    />
-                    <Card
-                        title="Speaking"
-                        description="Talks given at conferences, meetups and bootcamps."
-                        linkURL="/speaking"
-                    />
-                    <Card
-                        title="Working"
-                        description="My experience building software and leading engineering teams."
-                        linkURL="/working"
-                    />
-                    <Card
-                        title="Traveling"
-                        description="Some of my favourite travel destinations and photos."
-                        linkURL="/traveling"
-                    />
-                    <Card
-                        title="Making"
-                        description="Some of the things I built just for fun."
-                        linkURL="/making"
-                    />
+                    {sections.map((section) => (
+                        <Card
+                            key={section.href}
+                            title={section.label}
+                            description={section.description}
+                            linkURL={section.href}
+                        />
+                    ))}
                 </div>
             </div>
         </>

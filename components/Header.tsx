@@ -3,24 +3,31 @@
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import websiteLogo from '@/public/android-chrome-192x192.png';
+import { cn } from '@/lib/utils';
+// `sections` and `directLinks` drive the desktop "Explore" menu and the
+// top-level right-hand links; `navLinks` is the full list for the mobile sheet.
+import { navLinks, sections, directLinks } from '@/lib/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet';
+import {
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger
+} from '@/components/ui/navigation-menu';
 
-const navLinks = [
-    { href: '/blog', label: 'Writing', testId: 'writing' },
-    { href: '/reading', label: 'Reading', testId: 'reading' },
-    { href: '/speaking', label: 'Speaking', testId: 'speaking' },
-    { href: '/working', label: 'Working', testId: 'working' },
-    { href: '/traveling', label: 'Traveling', testId: 'traveling' },
-    { href: '/making', label: 'Making', testId: 'making' },
-    { href: '/about', label: 'About', testId: 'about' },
-    { href: '/now', label: 'Now', testId: 'now' }
-];
+function isActiveRoute(pathname: string, href: string): boolean {
+    return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 export default function Header() {
     const [open, setOpen] = useState(false);
     const triggerRef = useRef<HTMLButtonElement>(null);
+    const pathname = usePathname();
 
     useEffect(() => {
         const mq = window.matchMedia('(min-width: 768px)');
@@ -36,33 +43,94 @@ export default function Header() {
             data-testid="navbar"
             className="sticky top-0 z-20 py-5 border-b border-border bg-background text-foreground">
             <div className="lg:max-w-4xl md:px-0 container flex items-center justify-between px-6 mx-auto">
-                <Link
-                    href="/"
-                    className="rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-                    <div className="flex justify-start mr-2">
-                        <div className="sm:h-10 sm:w-10 relative w-8 h-8">
-                            <Image priority alt="Website logo" src={websiteLogo} />
+                <div className="flex items-center">
+                    <Link
+                        href="/"
+                        className="rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                        <div className="flex justify-start mr-2">
+                            <div className="sm:h-10 sm:w-10 relative w-8 h-8">
+                                <Image priority alt="Website logo" src={websiteLogo} />
+                            </div>
                         </div>
-                    </div>
-                </Link>
-                <Link
-                    href="/"
-                    className="rounded-sm font-bold tracking-wider text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-                    Pablo Porto
-                </Link>
-                <nav
-                    className="md:flex md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-border flex-wrap items-center justify-center hidden text-base"
+                    </Link>
+                    <Link
+                        href="/"
+                        className="rounded-sm font-bold tracking-wider text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                        Pablo Porto
+                    </Link>
+                </div>
+                <NavigationMenu
+                    viewport={false}
+                    className="md:flex hidden"
                     data-testid="desktop-menu">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            className="nav-link"
-                            data-testid={`desktop-menu-${link.testId}`}>
-                            {link.label}
-                        </Link>
-                    ))}
-                </nav>
+                    <NavigationMenuList className="gap-0">
+                        <NavigationMenuItem className="static">
+                            <NavigationMenuTrigger
+                                className="nav-link mr-2 h-auto cursor-pointer rounded-md px-4 py-2 text-base font-semibold text-muted-foreground hover:bg-transparent hover:text-emerald-600 focus:bg-transparent data-[state=open]:bg-accent data-[state=open]:text-emerald-600"
+                                data-testid="desktop-menu-trigger"
+                                onPointerMove={(event) => event.preventDefault()}
+                                onPointerLeave={(event) => event.preventDefault()}>
+                                Explore
+                            </NavigationMenuTrigger>
+                            <NavigationMenuContent
+                                className="left-auto right-0 z-50"
+                                onPointerEnter={(event) => event.preventDefault()}
+                                onPointerLeave={(event) => event.preventDefault()}>
+                                <ul className="grid w-150 grid-cols-2 gap-2 p-3">
+                                    {sections.map((link) => {
+                                        const Icon = link.icon;
+                                        const active = isActiveRoute(pathname, link.href);
+                                        return (
+                                            <li key={link.href}>
+                                                <NavigationMenuLink asChild>
+                                                    <Link
+                                                        href={link.href}
+                                                        data-testid={`desktop-menu-${link.testId}`}
+                                                        className="h-full w-full flex-row items-start gap-3 rounded-md p-3">
+                                                        <Icon
+                                                            className={cn(
+                                                                'mt-0.5 size-5 shrink-0',
+                                                                active && 'text-emerald-600'
+                                                            )}
+                                                        />
+                                                        <div className="flex flex-col gap-0.5">
+                                                            <span
+                                                                className={cn(
+                                                                    'font-semibold text-foreground',
+                                                                    active && 'text-emerald-600'
+                                                                )}>
+                                                                {link.label}
+                                                            </span>
+                                                            <span className="text-sm text-muted-foreground">
+                                                                {link.description}
+                                                            </span>
+                                                        </div>
+                                                    </Link>
+                                                </NavigationMenuLink>
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                            </NavigationMenuContent>
+                        </NavigationMenuItem>
+                        {directLinks.map((link) => {
+                            const active = isActiveRoute(pathname, link.href);
+                            return (
+                                <NavigationMenuItem key={link.href}>
+                                    <Link
+                                        href={link.href}
+                                        data-testid={`desktop-menu-${link.testId}`}
+                                        className={cn(
+                                            'nav-link text-base',
+                                            active && 'text-emerald-600'
+                                        )}>
+                                        {link.label}
+                                    </Link>
+                                </NavigationMenuItem>
+                            );
+                        })}
+                    </NavigationMenuList>
+                </NavigationMenu>
                 <div className="md:hidden flex items-center">
                     <Sheet open={open} onOpenChange={setOpen}>
                         <SheetTrigger asChild>

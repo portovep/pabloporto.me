@@ -36,12 +36,14 @@ describe('Navigation functionality', () => {
 
         navigationRoutes.forEach((route) => {
             it(`should navigate to ${route.name} page from desktop menu`, () => {
+                cy.get('[data-testid="desktop-menu-trigger"]').should('be.visible').click();
                 cy.get(`[data-testid="desktop-menu-${route.testId}"]`).should('be.visible').click();
                 cy.url().should('include', route.path);
             });
         });
 
         it('should navigate to About page from desktop menu', () => {
+            cy.get('[data-testid="desktop-menu-trigger"]').should('be.visible').click();
             cy.get('[data-testid="desktop-menu-about"]').should('be.visible').click();
             cy.url().should('include', '/about');
         });
