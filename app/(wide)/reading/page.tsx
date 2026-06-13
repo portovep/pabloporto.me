@@ -104,7 +104,8 @@ export default async function ReadingPage() {
                         className="text-emerald-500 hover:text-emerald-600 font-medium underline">
                         literal.club
                     </a>
-                    .
+                    . I read to collect timeless ideas from books on tech, philosophy, lifestyle,
+                    and entrepreneurship.
                 </PageHeader>
             </div>
 
