@@ -7,7 +7,7 @@ describe('Photography collections', () => {
 
     it('navigates from /traveling into a collection gallery', () => {
         cy.get('[data-testid="collection-card"]').first().click();
-        cy.url().should('match', /\/photography\/[a-z-]+$/);
+        cy.url().should('match', /\/photography\/[a-z0-9-]+$/);
         cy.get('[data-testid="photography-gallery"]').should('be.visible');
         cy.get('[data-testid="gallery-photo"]').its('length').should('be.at.least', 1);
     });
