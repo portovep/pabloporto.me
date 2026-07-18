@@ -20,7 +20,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { id } = await params;
     const postData = await getPostData(id);
-    return createMetadata(postData.title, postData.title, `/blog/${id}`);
+    return createMetadata(
+        postData.title,
+        postData.description ?? postData.title,
+        `/blog/${id}`,
+        postData.canonicalUrl
+    );
 }
 
 export default async function PostPage(props: { params: Promise<{ id: string }> }) {

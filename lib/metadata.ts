@@ -1,12 +1,17 @@
 import { Metadata } from 'next';
 
-export function createMetadata(title: string, description: string, path: string): Metadata {
+export function createMetadata(
+    title: string,
+    description: string,
+    path: string,
+    canonicalUrl?: string
+): Metadata {
     const fullTitle = `${title} | Pablo Porto`;
     return {
         title,
         description,
         alternates: {
-            canonical: path
+            canonical: canonicalUrl ?? path
         },
         openGraph: {
             title: fullTitle,
