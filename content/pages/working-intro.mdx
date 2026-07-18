@@ -1,8 +1,10 @@
 import PrinciplesList from '@/components/PrinciplesList';
+import atWorkPhoto from '@/public/images/at-work.jpg';
 
 <PageHeader title="At work" />
 
-<section className="w-full prose prose-lg dark:prose-invert max-w-none mt-8 mb-10">
+<div className="md:flex-row flex flex-col items-center gap-10 mt-8">
+    <div className="prose prose-lg dark:prose-invert max-w-none md:w-1/2">
 
 I've worked in tech for over 10 years. I am passionate about enabling teams to adopt
 effective software and data engineering practices and helping other engineers build a
@@ -11,6 +13,21 @@ sustainable but effective career in tech.
 Over the years, I have helped startups build MVPs fast, scale-ups improve their software
 engineering practices to achieve fast flow and stability, and large enterprises scale by
 implementing decentralised architectures like microservices and data mesh.
+
+    </div>
+    <div className="md:w-1/2 w-full">
+        <Image
+            priority
+            alt="Me working at my standing desk"
+            src={atWorkPhoto}
+            className="h-auto max-w-full rounded"
+            placeholder="blur"
+            sizes="(max-width: 768px) 100vw, 50vw"
+        />
+    </div>
+</div>
+
+<section className="w-full prose prose-lg dark:prose-invert max-w-none mt-8 mb-10">
 
 I've also played a variety of roles, some of these include: full stack engineer,
 infrastructure engineer, agile development trainer, data engineer and tech lead.
