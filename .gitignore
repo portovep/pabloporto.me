@@ -54,7 +54,7 @@ skills-lock.json
 .playwright-mcp
 .playwright-cli/
 
-# screenshot artefacts from browser automation
-*.png
+# screenshot artefacts from browser automation (repo root only, not nested content images)
+/*.png
 
 docs/plans/
