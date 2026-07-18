@@ -7,7 +7,9 @@ export const PostFrontmatterSchema = z.object({
     link: z.string().optional(),
     tag: z.string().optional(),
     description: z.string().optional(),
-    canonicalUrl: z.string().url().optional()
+    canonicalUrl: z.string().url().optional(),
+    image: z.string().optional(),
+    imageAlt: z.string().optional()
 });
 
 export type PostFrontmatter = z.infer<typeof PostFrontmatterSchema>;

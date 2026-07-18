@@ -31,6 +31,9 @@ export async function generateMetadata({
 export default async function PostPage(props: { params: Promise<{ id: string }> }) {
     const { id } = await props.params;
     const postData = await getPostData(id);
+    const heroImage = postData.image
+        ? (await import(`@/public/images/${postData.image}`)).default
+        : undefined;
 
     return (
         <>
@@ -88,6 +91,15 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                     <h2 className="md:text-5xl text-4xl font-bold text-foreground">
                         {postData.title}
                     </h2>
+                    {heroImage && (
+                        <Image
+                            src={heroImage}
+                            alt={postData.imageAlt ?? ''}
+                            className="rounded w-full h-auto mt-8"
+                            placeholder="blur"
+                            sizes="(max-width: 1024px) 100vw, 1024px"
+                        />
+                    )}
                     <div className="prose prose-lg lg:prose-xl prose-table:m-1 prose-table:p-2 mt-10 dark:prose-invert">
                         <postData.Content />
                     </div>
