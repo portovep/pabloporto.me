@@ -56,3 +56,5 @@ skills-lock.json
 
 # screenshot artefacts from browser automation
 *.png
+
+docs/plans/
