@@ -1,11 +1,22 @@
 import { z } from 'zod';
 
+export const PostTagSchema = z.enum(['life-updates', 'thinking', 'work']);
+
+export type PostTag = z.infer<typeof PostTagSchema>;
+
+export const POST_TAG_LABELS: Record<PostTag, string> = {
+    'life-updates': 'Life Updates',
+    thinking: 'Thinking',
+    work: 'Work'
+};
+
 export const PostFrontmatterSchema = z.object({
     title: z.string(),
     date: z.string(),
     type: z.string(),
     link: z.string().optional(),
-    tag: z.string().optional(),
+    tag: PostTagSchema,
+    draft: z.boolean().optional(),
     description: z.string().optional(),
     canonicalUrl: z.string().url().optional(),
     image: z.string().optional(),

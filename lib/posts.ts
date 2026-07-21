@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { PostFrontmatterSchema } from './content-types';
+import { PostFrontmatterSchema, PostTag } from './content-types';
 import type { ComponentType } from 'react';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
@@ -66,6 +66,14 @@ export const groupPostsByYear = (posts: PostFrontmatter[]): PostsByYear => {
     return Array.from(groups.entries())
         .sort(([a], [b]) => b - a)
         .map(([year, yearPosts]) => ({ year, posts: yearPosts }));
+};
+
+export const getRelatedPosts = (currentId: string, tag: PostTag, limit = 3): PostFrontmatter[] => {
+    const candidates = getSortedPostsData().filter((post) => post.id !== currentId && !post.draft);
+    const sameTag = candidates.filter((post) => post.tag === tag);
+    const rest = candidates.filter((post) => post.tag !== tag);
+
+    return [...sameTag, ...rest].slice(0, limit);
 };
 
 export const getAllPostIds = (): { params: { id: string } }[] => {

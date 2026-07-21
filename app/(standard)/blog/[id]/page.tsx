@@ -6,6 +6,8 @@ import { ArrowLeft } from 'lucide-react';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { Date } from '@/components/ui';
 import { Badge } from '@/components/ui/badge';
+import { POST_TAG_LABELS } from '@/lib/content-types';
+import PostRecommendations from '@/components/PostRecommendations';
 import profilePic from '@/public/images/profile.webp';
 
 export async function generateStaticParams() {
@@ -62,11 +64,11 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                         <Date dateString={postData.date} />
                     </span>
                     <Badge className="bg-emerald-500 text-white hover:bg-emerald-600">
-                        {postData.tag || 'Random'}
+                        {POST_TAG_LABELS[postData.tag]}
                     </Badge>
                 </div>
                 <div className="mt-9">
-                    {postData.tag === 'Draft' && (
+                    {postData.draft && (
                         <div
                             className="flex p-4 mt-4 mb-8 text-foreground bg-muted rounded-lg"
                             role="alert">
@@ -105,6 +107,7 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                     </div>
                 </div>
             </article>
+            <PostRecommendations currentId={id} tag={postData.tag} />
             <div className="flex justify-start mt-12 mb-8">
                 <Link
                     href="/blog"
