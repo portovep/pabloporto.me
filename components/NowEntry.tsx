@@ -49,10 +49,9 @@ export function NowEntry({
                 />
                 {date}
             </CollapsibleTrigger>
-            <CollapsibleContent
-                className="mt-4 prose prose-lg dark:prose-invert"
-                data-testid="now-entry-content">
-                {children}
+            <CollapsibleContent className="mt-4" data-testid="now-entry-content">
+                {image && <div className="-mx-8 md:-mx-16 lg:-mx-24 mb-6">{image}</div>}
+                <div className="prose prose-lg dark:prose-invert">{children}</div>
             </CollapsibleContent>
         </Collapsible>
     );
