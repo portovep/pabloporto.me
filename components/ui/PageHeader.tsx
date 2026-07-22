@@ -9,7 +9,7 @@ export default function PageHeader({ title, children }: PageHeaderProps) {
             <h1 className="font-heading text-foreground text-4xl sm:text-5xl inline-block font-extrabold tracking-tight">
                 {title}
             </h1>
-            {children && <p className="text-muted-foreground text-xl">{children}</p>}
+            {children && <div className="text-muted-foreground text-xl">{children}</div>}
         </div>
     );
 }
