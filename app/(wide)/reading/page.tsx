@@ -5,11 +5,7 @@ import ShelfComponent from '@/components/Shelf';
 import PageHeader from '@/components/ui/PageHeader';
 import { createMetadata } from '@/lib/metadata';
 
-export const metadata = createMetadata(
-    'Reading',
-    'My book collection and reading lists from literal.club',
-    '/reading'
-);
+export const metadata = createMetadata('Reading', 'The books that shaped my thinking.', '/reading');
 
 // Shelves to exclude from display
 const EXCLUDED_SHELF_SLUGS: string[] = ['work-2023-p92i4e5', 'career-vl09pnx'];
@@ -96,7 +92,7 @@ export default async function ReadingPage() {
         <div className="space-y-8 mb-8">
             <div className="space-y-4" data-testid="reading-intro">
                 <PageHeader title="Reading">
-                    My book collection and reading lists from{' '}
+                    The books that shaped my thinking. Curated in{' '}
                     <a
                         href="https://literal.club"
                         target="_blank"
@@ -104,8 +100,7 @@ export default async function ReadingPage() {
                         className="text-emerald-500 hover:text-emerald-600 font-medium underline">
                         literal.club
                     </a>
-                    . I read to collect timeless ideas from books on tech, philosophy, lifestyle,
-                    and entrepreneurship.
+                    .
                 </PageHeader>
             </div>
 
