@@ -8,7 +8,7 @@ import { env } from '@/lib/env';
 
 export const metadata = createMetadata(
     'Blog',
-    'Articles and notes on software engineering, data systems, and technical leadership.',
+    'Long-form writing on software engineering, data platforms, AI-assisted delivery, and technical leadership, with career lessons from 12+ years in the industry.',
     '/blog'
 );
 
@@ -18,8 +18,8 @@ export default async function BlogPage() {
     return (
         <section>
             <PageHeader title="Blog">
-                A collection of articles and papers about software and data engineering. You can
-                also
+                Long-form writing on software engineering, data platforms, and technical leadership
+                — plus the occasional life update. You can also
                 <Link
                     href="https://medium.com/@pablo.porto"
                     className="text-link"

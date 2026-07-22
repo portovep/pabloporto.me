@@ -31,7 +31,7 @@ export default function HomePage() {
                         Nice to meet you.
                     </h2>
                     <p className="mt-7 text-muted-foreground sm:text-xl sm:leading-8 leading-normal">
-                        I&apos;m a Principal Engineer at{' '}
+                        I work as a Principal Engineer at{' '}
                         <Link
                             href="https://www.thoughtworks.com"
                             className="text-link"
@@ -40,7 +40,7 @@ export default function HomePage() {
                             Thoughtworks
                         </Link>
                         , where I help engineering leaders build software systems that scale and put
-                        their data to work with AI. When I&apos;m not working, I&apos;m usually{' '}
+                        their data to work with AI. Outside of work, I&apos;m usually{' '}
                         <Link href="/traveling" className="text-link">
                             travelling
                         </Link>{' '}
@@ -48,11 +48,7 @@ export default function HomePage() {
                         <Link href="/traveling#photography" className="text-link">
                             taking photos
                         </Link>
-                        . More&nbsp;
-                        <Link href="/about" className="text-link" rel="noopener noreferrer">
-                            about me
-                        </Link>
-                        &nbsp;»
+                        .
                     </p>
                 </div>
             </div>
