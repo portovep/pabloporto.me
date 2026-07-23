@@ -42,7 +42,7 @@ export default function HomePage() {
                         </Link>
                         , and{' '}
                         <Link href="/blog" className="text-link">
-                            writing down things
+                            writing things down
                         </Link>
                         .
                     </p>

@@ -38,7 +38,7 @@ function PostRow({ post }: PostRowProps) {
     const className = 'block border-b border-border/60';
 
     return (
-        <li data-testid="post-summary">
+        <li data-testid="post-summary" data-tag={post.tag}>
             {isExternal ? (
                 <a
                     href={post.link}

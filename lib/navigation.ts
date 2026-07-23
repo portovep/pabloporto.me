@@ -27,7 +27,7 @@ export const sections: NavLink[] = [
         label: 'Writing',
         testId: 'writing',
         icon: PenLine,
-        description: 'Articles and notes on software engineering and beyond.'
+        description: 'Articles and notes on software engineering and living a balanced life.'
     },
     {
         href: '/reading',
@@ -55,14 +55,14 @@ export const sections: NavLink[] = [
         label: 'Traveling',
         testId: 'traveling',
         icon: Plane,
-        description: 'Some of my favourite travel destinations and photos.'
+        description: 'Some of my favourite travel memories and photos.'
     },
     {
         href: '/making',
         label: 'Making',
         testId: 'making',
         icon: Hammer,
-        description: 'Some of the things I built just for fun.'
+        description: 'Some of the apps and things I made.'
     }
 ];
 

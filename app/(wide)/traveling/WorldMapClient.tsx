@@ -10,8 +10,7 @@ const WorldMap = dynamic(() => import('@/components/WorldMap/WorldMap'), {
             <section className="text-muted-foreground">
                 <div className="container py-12 mx-auto">
                     <div className="mb-14 flex flex-col w-full sm:items-center">
-                        <div className="h-8 w-48 bg-muted rounded mb-4" />
-                        <div className="h-5 w-2/3 bg-muted rounded" />
+                        <div className="h-8 w-48 bg-muted rounded" />
                     </div>
                     <div className="flex flex-wrap -m-4 text-center">
                         {[0, 1, 2].map((i) => (

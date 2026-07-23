@@ -62,7 +62,7 @@ interface CardProps {
 
 **Design tokens** — colours, typography, and spacing are defined as CSS variables in `styles/`. See `docs/brand-guidelines.md` for the full palette and scale.
 
-**MDX** — blog posts use `@next/mdx` with `remark-gfm`, `remark-frontmatter`, and `rehype-pretty-code`. Frontmatter is parsed via `gray-matter`.
+**MDX** — blog posts use `@next/mdx` with `remark-gfm`, `remark-frontmatter`, and `rehype-pretty-code`. Frontmatter is parsed via `gray-matter`. Keep JSX comments on a single line: Prettier rewrites a multi-line `{/* … */}` into `{/_ … _/}`, which fails the build with "Could not parse expression with acorn".
 
 **Testing** — E2E only (no unit tests). Use `data-testid` attributes for Cypress selectors. Routes are auto-discovered from the `app/` directory by `cypress/support/tasks.ts`.
 

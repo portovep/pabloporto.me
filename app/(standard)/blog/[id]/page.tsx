@@ -6,7 +6,7 @@ import { ArrowLeft } from 'lucide-react';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { Date } from '@/components/ui';
 import { Badge } from '@/components/ui/badge';
-import { POST_TAG_LABELS } from '@/lib/content-types';
+import { formatTagLabel } from '@/lib/content-types';
 import PostRecommendations from '@/components/PostRecommendations';
 import profilePic from '@/public/images/profile.webp';
 
@@ -61,7 +61,7 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                             <Date dateString={postData.date} />
                         </span>
                     </div>
-                    <Badge variant="accent">{POST_TAG_LABELS[postData.tag]}</Badge>
+                    <Badge variant="accent">{formatTagLabel(postData.tag)}</Badge>
                 </div>
                 <div className="mt-9">
                     {postData.draft && (

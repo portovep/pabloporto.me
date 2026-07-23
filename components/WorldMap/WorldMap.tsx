@@ -82,22 +82,9 @@ export default function WorldMap() {
             <section className="text-muted-foreground">
                 <div className="container py-12 mx-auto">
                     <div className="mb-14 flex flex-col w-full sm:text-center">
-                        <h1 className="sm:text-3xl title-font mb-4 text-2xl font-medium text-foreground">
+                        <h2 className="sm:text-3xl title-font text-2xl font-medium text-foreground">
                             Exploring the world
-                        </h1>
-                        <p className="lg:w-2/3 mx-auto text-xl leading-relaxed">
-                            In <span className="text-emerald-500 font-extrabold">green</span> are
-                            the countries I visited so far, in
-                            <span className="font-extrabold text-foreground dark:hidden">
-                                {' '}
-                                black
-                            </span>
-                            <span className="font-extrabold text-foreground hidden dark:inline">
-                                {' '}
-                                white
-                            </span>{' '}
-                            the ones where I lived for at least one month.
-                        </p>
+                        </h2>
                     </div>
                     <div className="flex flex-wrap -m-4 text-center">
                         <div className="md:w-1/3 sm:w-1/2 w-full p-4">

@@ -1,5 +1,9 @@
 import { createMetadata } from '@/lib/metadata';
+import PhotoStrip from '@/components/PhotoStrip';
 import aboutPagePhoto from '@/public/images/about.jpeg';
+import azoresPhoto from '@/public/images/about/azores.jpg';
+import azoresTwoPhoto from '@/public/images/about/azores-2.jpg';
+import georgiaHikingPhoto from '@/public/images/about/georgia-hiking.jpg';
 
 export const metadata = createMetadata(
     'About',
@@ -28,17 +32,18 @@ export const metadata = createMetadata(
         className="lg:grow md:w-1/2 lg:pr-10 md:pr-14 md:items-start md:mb-0 flex flex-col items-center mb-16">
         <div className="mb-6 text-lg leading-relaxed">
             Specialty coffee hunter, aspiring minimalist, [occasional
-            photographer](https://www.instagram.com/porto.vga/), and just a curious person. Based in
-            sunny Barcelona, [exploring new countries](/traveling) whenever I can and just trying to
-            live an interesting, balanced life.
+            photographer](https://www.instagram.com/porto.vga/), and just a curious person. I am
+            based in sunny Barcelona, where I [explore new countries](/traveling) whenever I can
+            while trying to live an interesting but balanced life.
         </div>
         <div className="mb-6 text-lg leading-relaxed">
-            This is where I document that life, the [books I'm reading](/reading), the places I've
-            been, [the ideas that resonated](/blog) and made me think.
+            This is where I document that life, the [books I'm reading](/reading), the [places I've
+            been](/traveling) and [the ideas that resonated](/blog) with me.
         </div>
         <div className="text-lg leading-relaxed">
-            I work as Principal Engineer at [Thoughtworks](https://thoughtworks.com), leading teams
-            that build data and AI systems for our clients.
+            I made this lifestyle possible by working remotely as Principal Engineer at
+            [Thoughtworks](https://thoughtworks.com), leading engineering teams that build data and
+            AI systems for our clients.
         </div>
     </div>
     <div className="lg:max-w-lg lg:w-3/6 md:w-3/6 w-full">
@@ -61,25 +66,37 @@ As a kid, I loved tinkering with computers and surfing the web. I spent quite a 
 building websites for my hobbies in the early days of the Web 2.0 and assembling personal
 computers from scratch.
 
-All these passions led me to pursue an education in something related to computers. I ended
+All these passions led me to pursue a career in something related to computers. I ended
 up studying a [BSC in Computer Science](https://www.usc.gal/en/studies/degrees/engineering-and-architecture/computer-science-degree)
 at the University of Santiago and later on a
 [MSC in Networks & Distributed Systems](https://www.scss.tcd.ie/personnel/networks-and-distributed-systems.php)
 at Trinity College, Dublin.
 
-After countless hours studying, I realized how lucky I was — I genuinely loved it, and what
+After countless hours studying, I realized how lucky I was. I genuinely loved it, and what
 I was learning let me build real things from scratch, starting with just an idea.
+
+Several years later, I still love building things from scratch. But what I love the most is the lifestyle this career in tech gave me.
+
+I was able to explore the world by working and living in new places like Manchester, Glasgow, India, and Hamburg. It also allowed me to become open-minded and learn from awesome people from different cultures and countries. Moreover, it allowed me to start building abundance and freedom in several areas of my life.
+
+<PhotoStrip
+    photos={[
+        { src: azoresPhoto, alt: 'Hiking a green ridge in the Azores' },
+        { src: georgiaHikingPhoto, alt: 'On a trail in the Caucasus mountains, Georgia' },
+        { src: azoresTwoPhoto, alt: 'Coastline and craters in the Azores' }
+    ]}
+/>
 
 ## Now
 
 As of 2026, I am based in sunny Barcelona, Spain where I enjoy spending time
 [reading](/reading) in specialty coffee shops, [exploring the world](/traveling) for both
-work and fun, playing and watching sports and
+work and fun and
 [building things on the internet](/making).
 
-I work as Principal Engineer, Data & AI at [Thoughtworks](https://thoughtworks.com), where I
-lead high-performing software teams building decentralized data systems and engineering
-platforms — helping our clients scale their systems and ship better software. Check out
+I work as Principal Engineer at [Thoughtworks](https://thoughtworks.com) Data & AI, where I
+lead high-performing teams building decentralized data systems and engineering
+platforms. Helping our clients scale their systems and ship better software. Check out
 some of [my work experience](/working).
 
 For a more current snapshot of what I'm working on, see my [now page](/now). For a list of tools I use everyday, check my

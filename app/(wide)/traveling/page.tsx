@@ -14,7 +14,17 @@ export const metadata = createMetadata(
 export default function TravelingPage() {
     return (
         <section data-testid="traveling-intro">
-            <PageHeader title="Traveling" />
+            <PageHeader title="Traveling">
+                Exploring the world is one of my main passions. In{' '}
+                <span className="text-emerald-500 font-extrabold">green</span> are the countries I
+                visited so far and in
+                <span className="font-extrabold text-foreground dark:hidden"> black</span>
+                <span className="font-extrabold text-foreground hidden dark:inline">
+                    {' '}
+                    white
+                </span>{' '}
+                the ones where I lived for at least one month.
+            </PageHeader>
 
             <div className="mt-14 p-1 mb-8">
                 <WorldMapClient />

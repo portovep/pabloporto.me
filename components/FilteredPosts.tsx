@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react';
 import PostIndex from '@/components/PostIndex';
 import { Button } from '@/components/ui/button';
-import { POST_TAG_LABELS, type PostTag } from '@/lib/content-types';
+import { formatTagLabel, type PostTag } from '@/lib/content-types';
 import type { PostFrontmatter } from '@/lib/posts';
 import { cn } from '@/lib/utils';
 
@@ -11,10 +11,15 @@ interface FilteredPostsProps {
     posts: PostFrontmatter[];
 }
 
-const TAGS = Object.keys(POST_TAG_LABELS) as PostTag[];
-
 export default function FilteredPosts({ posts }: FilteredPostsProps) {
     const [selectedTag, setSelectedTag] = useState<PostTag | null>(null);
+
+    const tags = useMemo(() => {
+        const uniqueTags = new Set(posts.map((post) => post.tag));
+        return Array.from(uniqueTags).sort((a, b) =>
+            formatTagLabel(a).localeCompare(formatTagLabel(b))
+        );
+    }, [posts]);
 
     const filteredPosts = useMemo(
         () => (selectedTag ? posts.filter((post) => post.tag === selectedTag) : posts),
@@ -39,7 +44,7 @@ export default function FilteredPosts({ posts }: FilteredPostsProps) {
                     data-selected={(!selectedTag).toString()}>
                     All
                 </Button>
-                {TAGS.map((tag) => {
+                {tags.map((tag) => {
                     const isSelected = selectedTag === tag;
                     return (
                         <Button
@@ -50,7 +55,7 @@ export default function FilteredPosts({ posts }: FilteredPostsProps) {
                             className="rounded-full"
                             data-testid={`tag-filter-${tag}`}
                             data-selected={isSelected.toString()}>
-                            {POST_TAG_LABELS[tag]}
+                            {formatTagLabel(tag)}
                         </Button>
                     );
                 })}
