@@ -45,24 +45,22 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                 <ArrowLeft className="h-4 w-4" />
                 See all posts
             </Link>
-            <div className="md:-mb-10 flex justify-around -mb-10">
-                <span className="relative inline-flex">
-                    <Image
-                        priority
-                        quality={75}
-                        src={profilePic}
-                        className="h-auto max-w-full rounded-full"
-                        height={108}
-                        width={108}
-                        alt={'Author photo'}
-                    />
-                </span>
-            </div>
-            <article className="md:px-10 max-w-5xl pt-20">
+            <article className="md:px-10 max-w-5xl">
                 <div className="flex items-center justify-between">
-                    <span className="font-light text-muted-foreground">
-                        <Date dateString={postData.date} />
-                    </span>
+                    <div className="flex items-center gap-2">
+                        <Image
+                            priority
+                            quality={75}
+                            src={profilePic}
+                            className="h-9 w-9 rounded-full object-cover"
+                            height={36}
+                            width={36}
+                            alt="Pablo Porto"
+                        />
+                        <span className="font-light text-muted-foreground">
+                            <Date dateString={postData.date} />
+                        </span>
+                    </div>
                     <Badge className="bg-emerald-500 text-white hover:bg-emerald-600">
                         {POST_TAG_LABELS[postData.tag]}
                     </Badge>
