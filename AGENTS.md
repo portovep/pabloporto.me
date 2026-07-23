@@ -24,7 +24,7 @@ Personal website built with **Next.js 16 App Router**, **React 19**, **TypeScrip
 ### Folder layout
 
 - `app/` — Routes only. Two layout groups:
-    - `app/(standard)/` — Standard-width layout: blog, speaking, working, about, now, bucharest
+    - `app/(standard)/` — Standard-width layout: blog, speaking, working, about, now, uses, bucharest
     - `app/(wide)/` — Wide layout: photography, travels
     - Root `app/` — Homepage and root layout
 - `components/` — Reusable components. `components/ui/` holds shadcn/ui primitives.
