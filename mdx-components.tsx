@@ -20,6 +20,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
             />
         ),
+        // House style for markdown tables — see .md-table in styles/globals.css
+        table: ({ className, ...rest }: ComponentPropsWithoutRef<'table'>) => (
+            <table className={cn('md-table', className)} {...rest} />
+        ),
         a: ({ href, children, className, ...rest }: ComponentPropsWithoutRef<'a'>) => {
             const linkClassName = cn('text-link', className);
             if (href?.startsWith('/') || href?.startsWith('#')) {

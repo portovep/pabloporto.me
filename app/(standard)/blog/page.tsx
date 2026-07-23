@@ -37,7 +37,7 @@ export default async function BlogPage() {
                                 {postData.type === 'Post' ? (
                                     <Link
                                         href={`/blog/${postData.id}`}
-                                        className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium"
+                                        className="text-link"
                                         rel="noopener noreferrer">
                                         <PostSummary postData={postData} />
                                     </Link>
@@ -45,7 +45,7 @@ export default async function BlogPage() {
                                     <a
                                         href={postData.link}
                                         target="_blank"
-                                        className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium"
+                                        className="text-link"
                                         rel="noopener noreferrer">
                                         <PostSummary postData={postData} />
                                     </a>

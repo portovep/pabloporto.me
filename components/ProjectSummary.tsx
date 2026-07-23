@@ -26,9 +26,7 @@ export default function ProjectSummary(props: ProjectSummaryProps) {
                     open && 'bg-muted'
                 } focus:ring-4 focus:ring-border hover:bg-muted flex items-center justify-between w-full p-5 text-left cursor-pointer`}>
                 <div className="my-5">
-                    <span className="font-semibol text-2xl font-bold text-foreground block">
-                        {name}
-                    </span>
+                    <span className="text-2xl font-bold text-foreground block">{name}</span>
                     <span className="max-w-2xl mt-2 text-lg text-muted-foreground flex items-center">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +84,8 @@ export default function ProjectSummary(props: ProjectSummaryProps) {
                                 {roles.map((role) => (
                                     <Badge
                                         key={role}
-                                        className="uppercase mr-0.5 mb-0.5 bg-emerald-500 text-white hover:bg-emerald-600 cursor-default">
+                                        variant="accent"
+                                        className="uppercase mr-0.5 mb-0.5 cursor-default">
                                         {role}
                                     </Badge>
                                 ))}
@@ -141,7 +140,7 @@ export default function ProjectSummary(props: ProjectSummaryProps) {
                             <dt className="text-sm font-medium text-muted-foreground">About</dt>
                             <dd className="sm:mt-0 sm:col-span-2 mt-1 text-sm text-foreground">
                                 <div
-                                    className="lg:prose-sm prose-purple prose dark:prose-invert"
+                                    className="lg:prose-sm prose dark:prose-invert"
                                     dangerouslySetInnerHTML={{ __html: contentHtml ?? '' }}
                                 />
                             </dd>

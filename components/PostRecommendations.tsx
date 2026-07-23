@@ -12,7 +12,7 @@ export default function PostRecommendations({ currentId, tag }: PostRecommendati
     const relatedPosts = getRelatedPosts(currentId, tag);
 
     return (
-        <div className="md:px-10 max-w-5xl mt-12 border-t border-border pt-8 text-muted-foreground">
+        <div className="md:px-10 mt-12 border-t border-border pt-8 text-muted-foreground">
             <p>
                 Follow me via{' '}
                 <a href="/feed.xml" className="text-link">

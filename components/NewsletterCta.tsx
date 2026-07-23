@@ -32,10 +32,7 @@ export default function NewsletterCta({ className }: NewsletterCtaProps) {
                     data-testid="newsletter-email"
                     className="sm:max-w-xs"
                 />
-                <Button
-                    type="submit"
-                    data-testid="newsletter-submit"
-                    className="bg-emerald-500 hover:bg-emerald-600 text-white">
+                <Button type="submit" data-testid="newsletter-submit" variant="accent">
                     Subscribe
                 </Button>
             </form>

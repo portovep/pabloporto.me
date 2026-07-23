@@ -189,21 +189,60 @@
     fill: #ffffff !important;
 }
 
-/* ─── Heading utilities ──────────────────────────────────────────────────────
-   Single source of truth for the two h2 tiers used across the site.
+/* ─── Shared text patterns ───────────────────────────────────────────────────
+   Single source of truth for cross-page text styles. Declared with @utility so
+   they can be @apply-ed elsewhere (e.g. the .prose overrides below) — Tailwind
+   v4 cannot @apply classes from @layer components.
    Spacing (mb-*) stays at the call site — it belongs to layout, not the heading.
    ─────────────────────────────────────────────────────────────────────────── */
 
+@utility heading-section {
+    @apply text-3xl sm:text-4xl font-semibold text-foreground;
+}
+@utility heading-subsection {
+    @apply text-2xl font-semibold text-foreground;
+}
+/* Small-caps section label (e.g. the /uses category headings) */
+@utility heading-eyebrow {
+    @apply font-heading text-foreground text-sm font-semibold tracking-widest uppercase;
+}
+/* Emerald accent links — used across pages, MDX, and components.
+   The group-hover variant lets list rows highlight their link on row hover. */
+@utility text-link {
+    @apply text-emerald-500 hover:text-emerald-600 lg:group-hover:text-emerald-600 font-medium;
+}
+
 @layer components {
-    .heading-section {
-        @apply text-3xl sm:text-4xl font-semibold text-foreground;
+    /* Wrapper that renders every markdown h2 inside it as an eyebrow label */
+    .eyebrow-headings h2 {
+        @apply heading-eyebrow mt-12;
     }
-    .heading-subsection {
-        @apply text-2xl font-semibold text-foreground;
+    /* House style for markdown tables — applied to every MDX <table> via
+       mdx-components.tsx. Two-column label/value look: subtle small-caps header,
+       hairline row dividers, fixed-width name column. Cells stack below sm. */
+    .md-table {
+        @apply mt-4 w-full table-fixed;
     }
-    /* Emerald accent links — used across pages, MDX, and components */
-    .text-link {
-        @apply text-emerald-500 hover:text-emerald-600 font-medium;
+    .md-table thead {
+        @apply hidden sm:table-header-group;
+    }
+    .md-table th {
+        @apply text-muted-foreground pb-2 text-left text-xs font-semibold tracking-widest uppercase;
+    }
+    .md-table th:first-child {
+        @apply sm:w-58 sm:pr-6;
+    }
+    .md-table tr {
+        @apply border-border/60 border-b last:border-b-0;
+    }
+    .md-table td {
+        @apply block pb-3 sm:table-cell sm:py-3 sm:align-baseline;
+    }
+    .md-table td:first-child {
+        @apply text-foreground pt-3 pb-1 font-medium sm:pr-6 sm:pb-3;
+    }
+    .md-table td:last-child {
+        @apply text-muted-foreground;
     }
     /* Navigation links in Header (desktop + mobile) */
     .nav-link {
@@ -229,18 +268,9 @@
     --tw-prose-invert-links: oklch(0.702 0.152 157);
 }
 
-/* h2: text-3xl font-semibold, responsive sm:text-4xl */
+/* h2: same design as .heading-section — single source of truth */
 .prose h2 {
-    font-size: 1.875rem;
-    font-weight: 600;
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
-}
-
-@media (min-width: 640px) {
-    .prose h2 {
-        font-size: 2.25rem;
-    }
+    @apply heading-section mt-12 mb-6;
 }
 
 /* Paragraphs: leading-relaxed + mb-6 (font-size handled by prose-lg) */
@@ -249,15 +279,9 @@
     margin-bottom: 1.5rem;
 }
 
-/* Links: no underline, font-medium, emerald colours */
+/* Links: same design as .text-link, minus the typography plugin's underline */
 .prose a {
-    font-weight: 500;
-    text-decoration: none;
-    color: oklch(0.702 0.152 157);
-}
-
-.prose a:hover {
-    color: oklch(0.596 0.145 163); /* emerald-600 */
+    @apply text-link no-underline;
 }
 
 /* Lists: match original pl-12 spacing */

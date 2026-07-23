@@ -27,7 +27,7 @@ export default function ProjectCard({
             <div className="md:order-first lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col items-start order-last mb-0">
                 <div className="flex flex-col md:flex-row md:items-center md:gap-3 items-start mb-6 w-full md:w-auto">
                     <h2 className="heading-section">{title}</h2>
-                    <Badge className="bg-emerald-500 text-white hover:bg-emerald-600 mt-2 md:mt-0">
+                    <Badge variant="accent" className="mt-2 md:mt-0">
                         {year}
                     </Badge>
                 </div>

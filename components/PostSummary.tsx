@@ -16,14 +16,12 @@ export default function PostSummary(props: PostSummaryProps) {
                         <Date dateString={date} />
                     </span>
                     <div className="mr-6">
-                        <Badge className="bg-emerald-500 text-white hover:bg-emerald-600">
-                            {type || 'Post'}
-                        </Badge>
+                        <Badge variant="accent">{type || 'Post'}</Badge>
                     </div>
                 </div>
                 <div className="pr-6 mt-4 text-2xl font-semibold text-foreground">{title}</div>
                 <div className="flex items-center justify-between mt-5">
-                    <div className="text-emerald-500 lg:group-hover:text-emerald-600 font-medium">
+                    <div className="text-link">
                         {type === 'Post' ? 'Read more' : 'Check it out'}
                         <span aria-hidden="true" className="ml-2">
                             →

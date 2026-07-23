@@ -97,7 +97,7 @@ export default async function ReadingPage() {
                         href="https://literal.club"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-emerald-500 hover:text-emerald-600 font-medium underline">
+                        className="text-link underline">
                         literal.club
                     </a>
                     .

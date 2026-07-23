@@ -4,7 +4,6 @@ import { useState, useMemo } from 'react';
 import ProjectSummary from '@/components/ProjectSummary';
 import { Button } from '@/components/ui/button';
 import { ProjectData } from '@/lib/projects';
-import { cn } from '@/lib/utils';
 
 interface FilteredProjectsProps {
     projects: ProjectData[];
@@ -54,14 +53,10 @@ export default function FilteredProjects({ projects }: FilteredProjectsProps) {
                         return (
                             <Button
                                 key={role}
-                                variant={isSelected ? 'default' : 'outline'}
+                                variant={isSelected ? 'accent' : 'outline'}
                                 size="sm"
                                 onClick={() => toggleRole(role)}
-                                className={cn(
-                                    'transition-colors',
-                                    isSelected &&
-                                        '!bg-emerald-500 hover:!bg-emerald-600 !text-white !border-emerald-500'
-                                )}
+                                className="transition-colors"
                                 data-testid={`role-filter-${role.toLowerCase().replace(/\s+/g, '-')}`}
                                 data-selected={isSelected.toString()}>
                                 {role}

@@ -45,7 +45,7 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                 <ArrowLeft className="h-4 w-4" />
                 See all posts
             </Link>
-            <article className="md:px-10 max-w-5xl">
+            <article className="md:px-10">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                         <Image
@@ -61,9 +61,7 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                             <Date dateString={postData.date} />
                         </span>
                     </div>
-                    <Badge className="bg-emerald-500 text-white hover:bg-emerald-600">
-                        {POST_TAG_LABELS[postData.tag]}
-                    </Badge>
+                    <Badge variant="accent">{POST_TAG_LABELS[postData.tag]}</Badge>
                 </div>
                 <div className="mt-9">
                     {postData.draft && (
@@ -100,7 +98,7 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                             sizes="(max-width: 1024px) 100vw, 1024px"
                         />
                     )}
-                    <div className="prose prose-lg lg:prose-xl prose-table:m-1 prose-table:p-2 mt-10 dark:prose-invert">
+                    <div className="prose prose-lg lg:prose-xl mt-10 dark:prose-invert">
                         <postData.Content />
                     </div>
                 </div>

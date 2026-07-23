@@ -42,9 +42,7 @@ All main UI colors are defined as CSS variables in `:root` and `.dark` using OKL
 
 **Literal palette (used alongside semantic tokens):**
 
-- **Primary accent (links, CTAs, hover):** `text-emerald-500`, `hover:text-emerald-600`, `bg-emerald-500`, `hover:bg-emerald-600`
-- **Body & secondary (content):** `text-gray-600`, `text-gray-700`, `text-slate-600`, `text-slate-900` where semantic tokens are not yet applied
-- **Neutral UI:** `bg-gray-100`, `hover:bg-gray-200`, `text-gray-500`
+- **Primary accent (links, CTAs, hover):** via `.text-link` and the `accent` Badge/Button variant (`emerald-500` / `emerald-600`)
 - **Playful accent (footer):** `group-hover:text-red-600`
 
 **World map (special case):**
@@ -65,13 +63,18 @@ All main UI colors are defined as CSS variables in `:root` and `.dark` using OKL
 
 - **Page title (PageHeader):** `font-heading text-foreground text-4xl sm:text-5xl inline-block font-extrabold tracking-tight`
 - **Page subtitle:** `text-xl text-muted-foreground`
-- **Section headings:** `text-3xl font-semibold text-foreground sm:text-4xl` (or semantic tokens)
-- **Nav / links:** `.nav-link` utility in `styles/globals.css` (`text-muted-foreground hover:text-emerald-600 font-semibold`); content links use `text-emerald-500 hover:text-emerald-600 font-medium`
-- **Body / intro:** `text-xl`, `leading-normal`, `text-muted-foreground` or `text-gray-600` / `text-gray-700`
+- **Section headings:** `.heading-section` utility (`text-3xl sm:text-4xl font-semibold text-foreground`); subsections use `.heading-subsection` (`text-2xl`)
+- **Eyebrow labels:** `.heading-eyebrow` utility (small-caps category label, e.g. /uses section headings); the `.eyebrow-headings` wrapper class renders every markdown `h2` inside it as an eyebrow
+- **Nav / links:** `.nav-link` utility in `styles/globals.css`; content links use `.text-link` (emerald, includes a `lg:group-hover` variant so list rows can highlight their link on row hover) — never hand-roll `text-emerald-*` link classes
+- **Body / intro:** `text-xl`, `leading-normal`, `text-muted-foreground`
 - **Small labels / badges:** `text-xs font-medium`, `text-sm font-medium`
 - **Logo/name in header:** `font-bold tracking-wider text-foreground`
 
-**Prose (blog/content):** `@tailwindcss/typography` is used; prefer semantic tokens or the same gray scale for prose where customisation is needed.
+**Prose (blog/content):** `@tailwindcss/typography` with overrides in `styles/globals.css` that `@apply` the shared utilities (`.prose h2` → `.heading-section`, `.prose a` → `.text-link`), so prose and non-prose pages share one definition and cannot drift.
+
+**Markdown tables:** every MDX `<table>` gets the house style automatically — `mdx-components.tsx` applies `.md-table` (two-column label/value look: subtle small-caps header, hairline row dividers, fixed-width first column, cells stack below `sm`). Do not restyle tables per page.
+
+**Emerald CTAs:** use the `accent` variant on `Badge` and `Button` (`variant="accent"`) instead of hand-rolled `bg-emerald-500 hover:bg-emerald-600 text-white` classes.
 
 ### Spacing and layout
 
@@ -103,11 +106,11 @@ All main UI colors are defined as CSS variables in `:root` and `.dark` using OKL
 
 - Page title: **Cal Sans** (`font-heading`), large, extrabold, tight tracking, `text-foreground`
 - Section headings: 3xl–4xl, semibold
-- Body and subtitles: `text-muted-foreground` or gray-600/700, with `leading-normal` or `leading-relaxed` where appropriate
+- Body and subtitles: `text-muted-foreground`, with `leading-normal` or `leading-relaxed` where appropriate
 
 ### Component styling
 
-- Buttons use `buttonVariants` (primary, secondary, outline, ghost, link, destructive) from `components/ui/button.tsx`, which rely on semantic tokens
+- Buttons use `buttonVariants` (primary, secondary, outline, ghost, link, destructive, accent) from `components/ui/button.tsx`, which rely on semantic tokens; `accent` is the emerald CTA
 - Cards and other shadcn/ui components use the same token system; use `cn()` for conditional or overridden classes
 
 ## Technical Details
@@ -125,6 +128,8 @@ Tailwind class ordering is enforced by `prettier-plugin-tailwind-css` on save / 
 ### Where styles live
 
 - **Design tokens:** `styles/globals.css` (`:root`, `.dark`, `@theme inline` for colors, radius, `--font-heading`)
+- **Shared text patterns:** `@utility` declarations in `styles/globals.css` (`heading-section`, `heading-subsection`, `heading-eyebrow`, `text-link`) — declared as utilities (not `@layer components`) so they can be `@apply`-ed by other rules, e.g. the prose overrides. The layering doctrine: tokens → shared text utilities → components/MDX element overrides; never inline walls of arbitrary variants in pages.
+- **MDX element styling:** `mdx-components.tsx` (global `img`, `a`, `table` overrides — the single hook for how markdown renders site-wide)
 - **Font config:** `app/layout.tsx` (Inter via next/font), `styles/globals.css` (Cal Sans via `@fontsource/cal-sans` and `@theme inline`)
 - **Global base:** `@layer base` in `styles/globals.css` (`body`: `bg-background text-foreground`, `font-feature-settings: 'rlig' 1, 'calt' 1`)
 - **World map:** `.world-map` rules in `styles/globals.css` (fills and strokes for land/visited/lived)
