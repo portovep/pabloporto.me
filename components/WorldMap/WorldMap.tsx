@@ -81,11 +81,6 @@ export default function WorldMap() {
             )}
             <section className="text-muted-foreground">
                 <div className="container py-12 mx-auto">
-                    <div className="mb-14 flex flex-col w-full sm:text-center">
-                        <h2 className="sm:text-3xl title-font text-2xl font-medium text-foreground">
-                            Exploring the world
-                        </h2>
-                    </div>
                     <div className="flex flex-wrap -m-4 text-center">
                         <div className="md:w-1/3 sm:w-1/2 w-full p-4">
                             <div className="px-4 py-6 border-2 border-border rounded-lg">
