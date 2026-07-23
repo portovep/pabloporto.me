@@ -6,7 +6,7 @@ describe('Reading page', () => {
     it('should render intro', () => {
         cy.get('[data-testid="reading-intro"]').should('be.visible');
         cy.contains('Reading').should('be.visible');
-        cy.contains('My book collection and reading lists').should('be.visible');
+        cy.contains('The books that shaped my thinking').should('be.visible');
     });
 
     it('should render at least one shelf', () => {
