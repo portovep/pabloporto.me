@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import FilteredProjects from '@/components/FilteredProjects';
 import { getSortedProjectData } from '@/lib/projects';
 import { createMetadata } from '@/lib/metadata';
@@ -20,14 +19,6 @@ export default async function WorkingPage() {
             <section className="w-full leading-relaxed">
                 <div className="mt-10 mb-10">
                     <h2 className="heading-section mb-4">Projects</h2>
-                    <p className="text-lg">
-                        A selection of projects showcasing my experience across data engineering,
-                        infrastructure engineering, and technical leadership. You can also{' '}
-                        <Link href="/stack" className="text-link" rel="noopener noreferrer">
-                            explore my preferred tools and technologies
-                        </Link>
-                        .
-                    </p>
                 </div>
                 <FilteredProjects projects={allProjectData} />
             </section>

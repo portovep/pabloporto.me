@@ -31,22 +31,18 @@ export default function HomePage() {
                         Nice to meet you.
                     </h2>
                     <p className="mt-7 text-muted-foreground sm:text-xl sm:leading-8 leading-normal">
-                        I work as a Principal Engineer at{' '}
-                        <Link
-                            href="https://www.thoughtworks.com"
-                            className="text-link"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            Thoughtworks
-                        </Link>
-                        , where I help engineering leaders build software systems that scale and put
-                        their data to work with AI. Outside of work, I&apos;m usually{' '}
+                        I lead engineering teams and build systems that put data to work with AI.
+                        Outside of that, I&apos;m chasing freedom mostly through{' '}
                         <Link href="/traveling" className="text-link">
-                            travelling
-                        </Link>{' '}
-                        or{' '}
+                            travel
+                        </Link>
+                        ,{' '}
                         <Link href="/traveling#photography" className="text-link">
-                            taking photos
+                            capturing memories
+                        </Link>
+                        , and{' '}
+                        <Link href="/blog" className="text-link">
+                            writing down things
                         </Link>
                         .
                     </p>
