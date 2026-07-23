@@ -64,7 +64,7 @@ interface CardProps {
 
 **MDX** — blog posts use `@next/mdx` with `remark-gfm`, `remark-frontmatter`, and `rehype-pretty-code`. Frontmatter is parsed via `gray-matter`. Keep JSX comments on a single line: Prettier rewrites a multi-line `{/* … */}` into `{/_ … _/}`, which fails the build with "Could not parse expression with acorn".
 
-**Testing** — E2E only (no unit tests). Use `data-testid` attributes for Cypress selectors. Routes are auto-discovered from the `app/` directory by `cypress/support/tasks.ts`.
+**Testing** — E2E only (no unit tests). Use `data-testid` attributes for Cypress selectors. Routes are auto-discovered from the `app/` directory by `cypress/support/tasks.ts`. Always run the full E2E suite (`npm run test:e2e`) before committing.
 
 **Commits** — follow `<type>(<scope>): <subject>` format (e.g. `feat(blog): add tag filtering`). Types: `feat`, `fix`, `refactor`, `perf`, `chore`, `docs`, `style`, `test`, `build`, `ci`. Always ask the user for explicit permission before committing; show a summary of changes first. Never commit directly to `main`.
 

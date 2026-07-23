@@ -1,5 +1,7 @@
 describe('Working page', () => {
     beforeEach(() => {
+        // Stub Next image requests so blur placeholders don't stall window.load
+        cy.intercept('GET', '/_next/image*', { statusCode: 200, body: '' });
         cy.visit('/working');
     });
 
