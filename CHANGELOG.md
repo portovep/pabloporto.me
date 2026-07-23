@@ -1,5 +1,34 @@
 # Changelog
 
+## [6.1.0] - 2026-07-23
+
+### Added
+
+- Add `/uses` page for tools and gear ([`4d7bac7`](https://github.com/portovep/pabloporto.me/commit/4d7bac7))
+- Add Explore mega-menu to desktop navigation ([`d6e5ab9`](https://github.com/portovep/pabloporto.me/commit/d6e5ab9))
+- Add tag filtering and year-grouped index to the blog ([`55a84a3`](https://github.com/portovep/pabloporto.me/commit/55a84a3), [`91b02c0`](https://github.com/portovep/pabloporto.me/commit/91b02c0))
+- Extract `/now` entries into standalone life update posts ([`b42d764`](https://github.com/portovep/pabloporto.me/commit/b42d764))
+- Add related posts list, RSS feed, and Substack CTA to post footer ([`823f18c`](https://github.com/portovep/pabloporto.me/commit/823f18c), [`e13d4fc`](https://github.com/portovep/pabloporto.me/commit/e13d4fc))
+- Add syndicated posts with canonical links to their newsletter source ([`d598ec3`](https://github.com/portovep/pabloporto.me/commit/d598ec3), [`45db291`](https://github.com/portovep/pabloporto.me/commit/45db291))
+
+### Changed
+
+- Migrate uses page content to MDX ([`7217bbb`](https://github.com/portovep/pabloporto.me/commit/7217bbb))
+- Rework about and homepage copy, simplify GetInTouch ([`818bc8c`](https://github.com/portovep/pabloporto.me/commit/818bc8c))
+- Rewrite homepage hero statement and "what i do" section ([`f3d0703`](https://github.com/portovep/pabloporto.me/commit/f3d0703))
+- Consolidate shared text patterns and emerald variants ([`26b1a78`](https://github.com/portovep/pabloporto.me/commit/26b1a78))
+- Remove unlinked stack page ([`07fabc0`](https://github.com/portovep/pabloporto.me/commit/07fabc0))
+- Resolve npm audit vulnerabilities and upgrade dependencies ([`515795d`](https://github.com/portovep/pabloporto.me/commit/515795d))
+
+### Fixed
+
+- Fix nested `<p>` hydration bug in prose links ([`ba4ce83`](https://github.com/portovep/pabloporto.me/commit/ba4ce83))
+- Reserve scrollbar gutter to avoid layout shift ([`9f4a6b8`](https://github.com/portovep/pabloporto.me/commit/9f4a6b8))
+- Sync about and working page metadata with content ([`090490b`](https://github.com/portovep/pabloporto.me/commit/090490b))
+- Fix mobile lightbox positioning and traveling map CLS/layout issues ([`3f4b3c9`](https://github.com/portovep/pabloporto.me/commit/3f4b3c9), [`7cd394d`](https://github.com/portovep/pabloporto.me/commit/7cd394d), [`2180442`](https://github.com/portovep/pabloporto.me/commit/2180442))
+
+[6.1.0]: https://github.com/portovep/pabloporto.me/releases/tag/v6.1.0
+
 ## [6.0.0] - 2026-05-17
 
 ### Changed
