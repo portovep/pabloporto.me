@@ -117,6 +117,12 @@
     * {
         @apply border-border outline-ring/50;
     }
+    /* Always reserve the scrollbar gutter. Without it, pages that shrink below the
+       viewport (e.g. filtering the blog index down to a few posts) lose the scrollbar
+       and every centred element jumps sideways by half its width. */
+    html {
+        scrollbar-gutter: stable;
+    }
     body {
         @apply bg-background text-foreground;
         font-feature-settings:
