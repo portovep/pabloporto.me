@@ -6,7 +6,7 @@ import WorkingIntro from '@/content/pages/working-intro.mdx';
 
 export const metadata = createMetadata(
     'At work',
-    'Over 10 years helping startups and enterprises build scalable software systems and high-performing engineering teams.',
+    'Over 12 years leading engineering teams and building data and AI systems for startups and enterprises. See my work and the principles behind it.',
     '/working'
 );
 
