@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NewsletterCta from '@/components/NewsletterCta';
 import { getRelatedPosts } from '@/lib/posts';
 import type { PostTag } from '@/lib/content-types';
 
@@ -41,6 +42,7 @@ export default function PostRecommendations({ currentId, tag }: PostRecommendati
                     </ul>
                 </div>
             )}
+            <NewsletterCta className="mt-8" />
         </div>
     );
 }
