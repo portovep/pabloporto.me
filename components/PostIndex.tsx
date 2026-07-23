@@ -1,10 +1,12 @@
 import Link from 'next/link';
-import { groupPostsByYear, type PostFrontmatter } from '@/lib/posts';
+import { groupPostsByYear } from '@/lib/posts-by-year';
+import type { PostFrontmatter } from '@/lib/posts';
 import { Date } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
 interface PostIndexProps {
     posts: PostFrontmatter[];
+    className?: string;
 }
 
 interface PostRowProps {
@@ -54,11 +56,11 @@ function PostRow({ post }: PostRowProps) {
     );
 }
 
-export default function PostIndex({ posts }: PostIndexProps) {
+export default function PostIndex({ posts, className }: PostIndexProps) {
     const postsByYear = groupPostsByYear(posts);
 
     return (
-        <div data-testid="writing-intro" className="mt-10 space-y-10">
+        <div data-testid="writing-intro" className={cn('mt-10 space-y-10', className)}>
             {postsByYear.map(({ year, posts: yearPosts }) => (
                 <section key={year} data-testid="post-year-group">
                     <h2 className="text-muted-foreground mb-1 text-sm font-medium tracking-wide">

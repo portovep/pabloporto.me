@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import PostSummary from '@/components/PostSummary';
-import PostIndex from '@/components/PostIndex';
+import FilteredPosts from '@/components/FilteredPosts';
 import { PageHeader } from '@/components/ui';
 import { getSortedPostsData } from '@/lib/posts';
 import { createMetadata } from '@/lib/metadata';
@@ -18,17 +18,17 @@ export default async function BlogPage() {
     return (
         <section>
             <PageHeader title="Blog">
-                Long-form writing on software engineering, data platforms, and technical leadership
-                — plus the occasional life update. You can also
+                My writing on software engineering, technical leadership and how to live a balanced
+                life. Plus the occasional life update. You can also
                 <Link
                     href="https://medium.com/@pablo.porto"
                     className="text-link"
                     rel="noopener noreferrer">
-                    &nbsp;follow me on Medium.
+                    &nbsp;follow my writing on Medium.
                 </Link>
             </PageHeader>
             {env.FEATURE_BLOG_MINIMAL_LIST ? (
-                <PostIndex posts={allPostsData} />
+                <FilteredPosts posts={allPostsData} />
             ) : (
                 <ul data-testid="writing-intro" className="mt-8 space-y-6">
                     {allPostsData.map((postData) => {

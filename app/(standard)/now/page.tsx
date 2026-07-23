@@ -13,7 +13,7 @@ export const metadata = createMetadata(
 );
 
 export default async function NowPage() {
-    const lifeUpdates = getSortedPostsData().filter((post) => post.id.startsWith('life-update-'));
+    const lifeUpdates = getSortedPostsData().filter((post) => post.tag === 'life-updates');
     const entries = await Promise.all(
         lifeUpdates.map(async (post) => {
             const postData = await getPostData(post.id);
