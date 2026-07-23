@@ -19,7 +19,7 @@ export default async function BlogPage() {
         <section>
             <PageHeader title="Blog">
                 My writing on software engineering, technical leadership and how to live a balanced
-                life. Plus the occasional life update. You can also
+                life. You can also
                 <Link
                     href="https://medium.com/@pablo.porto"
                     className="text-link"

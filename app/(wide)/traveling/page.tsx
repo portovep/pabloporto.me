@@ -35,8 +35,8 @@ export default function TravelingPage() {
                     Photography
                 </h2>
                 <p className="text-muted-foreground text-xl">
-                    Here are some of the photos I&apos;ve taken. Shot with a Sony A6400 or Oneplus
-                    13R. More on{' '}
+                    Some of my favourite photos. Shot with a Sony A6400 plus a Sigma 18-50mm F2.8 or
+                    my phone. More on{' '}
                     <a
                         href="https://www.instagram.com/porto.vga"
                         target="_blank"
