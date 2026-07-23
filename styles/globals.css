@@ -290,9 +290,10 @@
     @apply text-link no-underline;
 }
 
-/* Lists: match original pl-12 spacing */
-.prose ul {
-    padding-left: 2.5rem;
+/* Lists: keep markers close to the body text column */
+.prose ul,
+.prose ol {
+    padding-left: 1.25rem;
 }
 
 .prose li {
