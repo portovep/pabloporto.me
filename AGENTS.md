@@ -12,7 +12,7 @@ npm run lint:fix     # Auto-fix lint issues
 npm run format       # Check formatting with Prettier
 npm run format:fix   # Auto-fix formatting
 npm run test:e2e     # Run Cypress E2E tests
-npm run performance:check  # Check web vitals with Lighthouse
+npm run performance:check  # Check web vitals across the sitemap with Unlighthouse
 ```
 
 Pre-commit hooks (Husky) auto-run lint and format on staged files.

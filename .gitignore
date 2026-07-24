@@ -38,8 +38,8 @@ yarn-error.log*
 .vercel
 deployment-url.txt
 
-# lighthouseci
-.lighthouseci
+# unlighthouse
+.unlighthouse
 
 #cypress
 cypress/screenshots

@@ -1,8 +1,14 @@
 import { MetadataRoute } from 'next';
 import { getAllPostIds } from '@/lib/posts';
 import { collections } from '@/content/photography';
+import { env } from '@/lib/env';
 
-const baseUrl = 'https://pabloporto.me';
+const baseUrl =
+    env.VERCEL_ENV === 'production'
+        ? 'https://pabloporto.me'
+        : env.VERCEL_URL
+          ? `https://${env.VERCEL_URL}`
+          : 'http://localhost:3000';
 
 const staticRoutes = [
     { path: '', priority: 1.0, changeFrequency: 'monthly' as const },
