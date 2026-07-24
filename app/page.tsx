@@ -3,10 +3,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import profilePic from '@/public/images/profile.webp';
 import { sections } from '@/lib/navigation';
+import JsonLd from '@/components/JsonLd';
+import { buildPersonSchema } from '@/lib/structured-data';
 
 export default function HomePage() {
     return (
         <>
+            <JsonLd data={buildPersonSchema()} />
             <div className="md:mt-10 mt-14 flex flex-col items-center">
                 <Link href="/about">
                     <Image
@@ -22,9 +25,9 @@ export default function HomePage() {
             </div>
             <div data-testid="home-intro" className="pt-10 text-xl leading-6">
                 <div className="max-w-2xl mx-auto text-center px-8 sm:px-0">
-                    <h2 className="sm:text-5xl md:text-6xl text-3xl font-bold tracking-tighter">
+                    <h2 className="font-heading sm:text-5xl md:text-6xl text-3xl font-extrabold tracking-tight">
                         Hi,{' '}
-                        <span className="text-emerald-500 pl-1 font-bold rounded">
+                        <span className="text-emerald-500 pl-1 font-extrabold rounded">
                             I&apos;m Pablo
                         </span>
                         .<br />

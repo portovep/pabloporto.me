@@ -6,13 +6,19 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
+import { ogImageUrl } from '@/lib/metadata';
 
 const inter = Inter({
     subsets: ['latin'],
+    display: 'swap',
     variable: '--font-inter'
 });
 
 const siteUrl = 'https://pabloporto.me';
+const homeOgImage = ogImageUrl(
+    'Pablo Porto',
+    'Engineering leader building systems that put data to work with AI.'
+);
 
 export const metadata: Metadata = {
     title: {
@@ -21,6 +27,10 @@ export const metadata: Metadata = {
     },
     description: 'Personal website of Pablo Porto',
     metadataBase: new URL(siteUrl),
+    // Default canonical for routes that don't set their own (e.g. the homepage).
+    alternates: {
+        canonical: '/'
+    },
     authors: [{ name: 'Pablo Porto' }],
     creator: 'Pablo Porto',
     publisher: 'Pablo Porto',
@@ -46,12 +56,14 @@ export const metadata: Metadata = {
         type: 'website',
         title: 'Pablo Porto',
         description: 'Personal website of Pablo Porto',
-        url: '/'
+        url: '/',
+        images: [{ url: homeOgImage, width: 1200, height: 630, alt: 'Pablo Porto' }]
     },
     twitter: {
-        card: 'summary',
+        card: 'summary_large_image',
         title: 'Pablo Porto',
-        description: 'Personal website of Pablo Porto'
+        description: 'Personal website of Pablo Porto',
+        images: [homeOgImage]
     }
 };
 

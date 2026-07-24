@@ -8,28 +8,12 @@ import { MapPin, ExternalLink } from 'lucide-react';
 const bucharestDescription =
     'My personal recommendations for Bucharest, Romania. Discover the incredible specialty coffee scene, stunning architecture, and exceptional fine cuisine that made this city special to me.';
 
-const base = createMetadata('Bucharest Recommendations', bucharestDescription, '/bucharest');
-
-export const metadata: Metadata = {
-    ...base,
-    openGraph: {
-        ...base.openGraph,
-        images: [
-            {
-                url: '/images/bucharest-og.jpg',
-                width: 1200,
-                height: 630,
-                alt: 'Bucharest city skyline and recommendations'
-            }
-        ]
-    },
-    twitter: {
-        ...base.twitter,
-        card: 'summary_large_image',
-        images: ['/images/bucharest-og.jpg'],
-        creator: '@pabloporto'
-    }
-};
+export const metadata: Metadata = createMetadata(
+    'Bucharest Recommendations',
+    bucharestDescription,
+    '/bucharest',
+    { eyebrow: 'Pablo Porto · City guide' }
+);
 
 export default function BucharestPage() {
     return (
@@ -40,7 +24,7 @@ export default function BucharestPage() {
                     <MapPin className="h-4 w-4" />
                     Travel Guide
                 </div>
-                <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+                <h1 className="font-heading text-4xl sm:text-5xl font-extrabold tracking-tight">
                     Bucharest
                 </h1>
                 <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">

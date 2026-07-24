@@ -7,6 +7,7 @@ export default [
         ignores: [
             '.next/**',
             '.claude/**',
+            '.unlighthouse/**',
             'node_modules/**',
             'public/**',
             'next-env.d.ts',

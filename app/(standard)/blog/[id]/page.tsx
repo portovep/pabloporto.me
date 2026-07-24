@@ -8,6 +8,9 @@ import { Date } from '@/components/ui';
 import { Badge } from '@/components/ui/badge';
 import { formatTagLabel } from '@/lib/content-types';
 import PostRecommendations from '@/components/PostRecommendations';
+import JsonLd from '@/components/JsonLd';
+import { buildBlogPostingSchema } from '@/lib/structured-data';
+import { toIsoDate } from '@/lib/dates';
 import profilePic from '@/public/images/profile.webp';
 
 export async function generateStaticParams() {
@@ -22,12 +25,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { id } = await params;
     const postData = await getPostData(id);
-    return createMetadata(
-        postData.title,
-        postData.description ?? postData.title,
-        `/blog/${id}`,
-        postData.canonicalUrl
-    );
+    return createMetadata(postData.title, postData.description ?? postData.title, `/blog/${id}`, {
+        canonicalUrl: postData.canonicalUrl,
+        type: 'article',
+        publishedTime: toIsoDate(postData.date),
+        eyebrow: 'Pablo Porto · Blog'
+    });
 }
 
 export default async function PostPage(props: { params: Promise<{ id: string }> }) {
@@ -39,6 +42,15 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
 
     return (
         <>
+            <JsonLd
+                data={buildBlogPostingSchema({
+                    id,
+                    title: postData.title,
+                    description: postData.description ?? postData.title,
+                    datePublished: postData.date,
+                    image: postData.image
+                })}
+            />
             <Link
                 href="/blog"
                 className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8">
@@ -86,7 +98,7 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                             </div>
                         </div>
                     )}
-                    <h2 className="md:text-5xl text-4xl font-bold text-foreground">
+                    <h2 className="font-heading md:text-5xl text-4xl font-extrabold tracking-tight text-foreground">
                         {postData.title}
                     </h2>
                     {heroImage && (
