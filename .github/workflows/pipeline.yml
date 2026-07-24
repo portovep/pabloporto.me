@@ -39,6 +39,10 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v6
+            - name: Setup Node.js ${{ env.NODE_VERSION }}
+              uses: actions/setup-node@v6
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
 
             - name: Run E2E tests
               uses: cypress-io/github-action@v7
