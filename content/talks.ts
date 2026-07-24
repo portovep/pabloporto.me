@@ -10,7 +10,7 @@ export const talks: TalkData[] = [
     {
         id: 'coding-assistants-2025-client',
         year: 2025,
-        title: 'An introduction to coding assistants',
+        title: 'An introduction to coding agents',
         event: 'Client'
     },
     {
@@ -41,14 +41,14 @@ export const talks: TalkData[] = [
     {
         id: 'tdd-in-sql-thoughtworks-2023',
         year: 2023,
-        title: 'Test-driven development in SQL',
+        title: 'Test Driven Development in SQL',
         event: 'Thoughtworks'
     },
     {
         id: 'learning-continuous-delivery-factoria5-2022',
         year: 2022,
         title: 'Learning continous delivery with examples',
-        event: 'Factoria5 bootcamp'
+        event: 'Factoria5 Bootcamp'
     },
     {
         id: 'data-project-postmortem-thoughtworks-2022',
@@ -60,7 +60,7 @@ export const talks: TalkData[] = [
         id: 'functional-programming-factoria5-2021',
         year: 2021,
         title: 'Introduction to functional programming',
-        event: 'Factoria5 bootcamp'
+        event: 'Factoria5 Bootcamp'
     },
     {
         id: 'observability-distributed-tracing-client-2020',
@@ -89,7 +89,7 @@ export const talks: TalkData[] = [
     {
         id: 'phoenix-server-pattern-thoughtworks-2016',
         year: 2016,
-        title: 'Introduction to the phoenix server pattern',
+        title: 'Introduction to the infrastructure phoenix server pattern',
         event: 'Thoughtworks'
     },
     {
@@ -102,7 +102,7 @@ export const talks: TalkData[] = [
         id: 'roles-in-agile-team-meetup-2016',
         year: 2016,
         title: 'What are the different roles in an agile team',
-        event: 'Meetup'
+        event: 'Meetup in Germany'
     },
     {
         id: 'securing-web-applications-thoughtworks-2015',
