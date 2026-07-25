@@ -29,7 +29,8 @@ export async function generateMetadata({
         canonicalUrl: postData.canonicalUrl,
         type: 'article',
         publishedTime: toIsoDate(postData.date),
-        eyebrow: 'Pablo Porto · Blog'
+        // Supplied by the colocated opengraph-image.tsx / twitter-image.tsx.
+        generatedImage: true
     });
 }
 

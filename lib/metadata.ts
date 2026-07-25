@@ -1,22 +1,26 @@
 import { Metadata } from 'next';
 
+// The generic share card, committed as a static asset. Regenerate it with
+// `npm run og:card` after changing the design in lib/og-image.tsx.
+export const OG_CARD = {
+    url: '/images/og-card.png',
+    width: 1200,
+    height: 630,
+    alt: 'Pablo Porto — pabloporto.me'
+} as const;
+
 interface CreateMetadataOptions {
     // Override the canonical URL when a post is cross-posted from elsewhere.
     canonicalUrl?: string;
-    // Blog posts should be `article`; everything else defaults to `website`.
+    // Blog posts should be `article`; everything else defaults to `website'.
     type?: 'website' | 'article';
     // ISO date used for `article:published_time` on blog posts.
     publishedTime?: string;
-    // Small label rendered above the title on the generated share card.
-    eyebrow?: string;
-}
-
-// Builds the URL of a per-page share card served by app/og/route.tsx.
-export function ogImageUrl(title: string, subtitle?: string, eyebrow?: string): string {
-    const params = new URLSearchParams({ title });
-    if (subtitle) params.set('subtitle', subtitle);
-    if (eyebrow) params.set('eyebrow', eyebrow);
-    return `/og?${params.toString()}`;
+    // Set by routes that ship their own opengraph-image file, so the generic
+    // card isn't named here. Next replaces the whole `openGraph` object rather
+    // than merging it, so an `images` set below would win over the file
+    // convention and every post would share one card.
+    generatedImage?: boolean;
 }
 
 export function createMetadata(
@@ -25,9 +29,8 @@ export function createMetadata(
     path: string,
     options: CreateMetadataOptions = {}
 ): Metadata {
-    const { canonicalUrl, type = 'website', publishedTime, eyebrow } = options;
+    const { canonicalUrl, type = 'website', publishedTime, generatedImage = false } = options;
     const fullTitle = `${title} | Pablo Porto`;
-    const image = ogImageUrl(title, description, eyebrow);
 
     return {
         title,
@@ -42,7 +45,7 @@ export function createMetadata(
             title: fullTitle,
             description,
             url: path,
-            images: [{ url: image, width: 1200, height: 630, alt: fullTitle }],
+            ...(generatedImage ? {} : { images: [OG_CARD] }),
             ...(type === 'article' && publishedTime
                 ? { publishedTime, authors: ['Pablo Porto'] }
                 : {})
@@ -51,7 +54,7 @@ export function createMetadata(
             card: 'summary_large_image',
             title: fullTitle,
             description,
-            images: [image]
+            ...(generatedImage ? {} : { images: [OG_CARD.url] })
         }
     };
 }

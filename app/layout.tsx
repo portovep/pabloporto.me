@@ -7,7 +7,7 @@ import ScrollToTop from '@/components/ScrollToTop';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
-import { ogImageUrl } from '@/lib/metadata';
+import { OG_CARD } from '@/lib/metadata';
 
 const inter = Inter({
     subsets: ['latin'],
@@ -16,10 +16,6 @@ const inter = Inter({
 });
 
 const siteUrl = 'https://pabloporto.me';
-const homeOgImage = ogImageUrl(
-    'Pablo Porto',
-    'Engineering leader building systems that put data to work with AI.'
-);
 
 export const metadata: Metadata = {
     title: {
@@ -58,13 +54,13 @@ export const metadata: Metadata = {
         title: 'Pablo Porto',
         description: 'Personal website of Pablo Porto',
         url: '/',
-        images: [{ url: homeOgImage, width: 1200, height: 630, alt: 'Pablo Porto' }]
+        images: [OG_CARD]
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Pablo Porto',
         description: 'Personal website of Pablo Porto',
-        images: [homeOgImage]
+        images: [OG_CARD.url]
     }
 };
 

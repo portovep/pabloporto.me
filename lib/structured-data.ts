@@ -54,9 +54,9 @@ export function buildBlogPostingSchema({
 }: BlogPostingInput) {
     const url = `${SITE_URL}/blog/${id}`;
     const publishedDate = toIsoDate(datePublished);
-    const imageUrl = image
-        ? `${SITE_URL}/images/${image}`
-        : `${SITE_URL}/og?title=${encodeURIComponent(title)}`;
+    // Posts without a hero image fall back to the generic share card. The real
+    // per-post card lives at a build-hashed URL that isn't constructible here.
+    const imageUrl = image ? `${SITE_URL}/images/${image}` : `${SITE_URL}/images/og-card.png`;
 
     return {
         '@context': 'https://schema.org',

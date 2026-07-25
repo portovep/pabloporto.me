@@ -11,8 +11,7 @@ const bucharestDescription =
 export const metadata: Metadata = createMetadata(
     'Bucharest Recommendations',
     bucharestDescription,
-    '/bucharest',
-    { eyebrow: 'Pablo Porto · City guide' }
+    '/bucharest'
 );
 
 export default function BucharestPage() {
