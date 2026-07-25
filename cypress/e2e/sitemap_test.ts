@@ -15,9 +15,10 @@ describe('Sitemap', () => {
         cy.task('getAppRoutes').then((routes) => {
             cy.request('/sitemap.xml').then((response) => {
                 const body = response.body as string;
+                const baseUrl = Cypress.config('baseUrl');
                 (routes as string[]).forEach((route) => {
                     expect(body, `Missing route in sitemap: ${route}`).to.include(
-                        `https://pabloporto.me${route}`
+                        `${baseUrl}${route}`
                     );
                 });
             });
@@ -26,7 +27,8 @@ describe('Sitemap', () => {
 
     it('should include blog post URLs', () => {
         cy.request('/sitemap.xml').then((response) => {
-            expect(response.body).to.include('https://pabloporto.me/blog/');
+            const baseUrl = Cypress.config('baseUrl');
+            expect(response.body).to.include(`${baseUrl}/blog/`);
         });
     });
 });
