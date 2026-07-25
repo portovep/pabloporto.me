@@ -12,7 +12,7 @@ interface NewsletterCtaProps {
 export default function NewsletterCta({ className }: NewsletterCtaProps) {
     return (
         <section data-testid="newsletter-cta" className={cn(className)}>
-            <p className="text-foreground font-medium">Get new posts by email.</p>
+            <p className="text-foreground font-medium">Get my new posts by email.</p>
             <form
                 method="get"
                 action={SUBSTACK_SUBSCRIBE_URL}
@@ -36,7 +36,6 @@ export default function NewsletterCta({ className }: NewsletterCtaProps) {
                     Subscribe
                 </Button>
             </form>
-            <p className="mt-2 text-sm">No spam. Unsubscribe anytime.</p>
         </section>
     );
 }
