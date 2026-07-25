@@ -218,6 +218,15 @@
     @apply text-emerald-500 hover:text-emerald-600 lg:group-hover:text-emerald-600 font-medium;
 }
 
+/* Hide the native scrollbar on horizontal scrollers. Snapping and the partially
+   visible next card carry the scroll affordance instead. */
+@utility no-scrollbar {
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 @layer components {
     /* Wrapper that renders every markdown h2 inside it as an eyebrow label */
     .eyebrow-headings h2 {
