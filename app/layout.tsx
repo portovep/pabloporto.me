@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import ScrollToTop from '@/components/ScrollToTop';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
@@ -81,6 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body
                 className={`${inter.variable} font-sans text-foreground antialiased bg-background flex flex-col min-h-screen overflow-x-clip`}>
                 <ThemeProvider>
+                    <ScrollToTop />
                     <Header />
                     <main className="flex-1 flex flex-col">{children}</main>
                     <Footer />
