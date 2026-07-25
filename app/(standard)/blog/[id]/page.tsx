@@ -98,7 +98,7 @@ export default async function PostPage(props: { params: Promise<{ id: string }> 
                             </div>
                         </div>
                     )}
-                    <h2 className="font-heading md:text-5xl text-4xl font-extrabold tracking-tight text-foreground">
+                    <h2 className="md:text-5xl text-4xl font-bold text-foreground">
                         {postData.title}
                     </h2>
                     {heroImage && (
